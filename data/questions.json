@@ -1,44 +1,234 @@
 {
-  "version": "0.1.0-draft",
-  "status": "draft_unreviewed",
-  "bubbles": [
-    {"id": "vivienda", "label": "Vivienda", "categories": ["housing"]},
-    {"id": "economia", "label": "Economía e impuestos", "categories": ["economy"]},
-    {"id": "empleo", "label": "Empleo y ayudas", "categories": ["employment", "social"]},
-    {"id": "sanidad", "label": "Sanidad", "categories": ["health"]},
-    {"id": "educacion", "label": "Educación", "categories": ["education"]},
-    {"id": "inmigracion", "label": "Inmigración", "categories": ["immigration"]},
-    {"id": "clima", "label": "Clima y energía", "categories": ["climate"]},
-    {"id": "defensa", "label": "Defensa y exterior", "categories": ["defence", "eu"]},
-    {"id": "derechos", "label": "Derechos e igualdad", "categories": ["rights"]},
-    {"id": "territorio", "label": "Modelo territorial", "categories": ["territory"]}
-  ],
-  "categories": {
-    "housing": "Vivienda", "economy": "Economía e impuestos", "employment": "Empleo",
-    "social": "Pensiones y protección social", "health": "Sanidad", "education": "Educación",
-    "climate": "Clima y energía", "immigration": "Inmigración", "defence": "Seguridad y defensa",
-    "rights": "Derechos e igualdad", "territory": "Instituciones y territorio", "eu": "UE y política exterior"
+ "version": "0.2.0-draft",
+ "status": "draft_unreviewed",
+ "bubbles": [
+  {
+   "id": "vivienda",
+   "label": "Vivienda",
+   "categories": [
+    "housing"
+   ]
   },
-  "questions": [
-    {"id": "Q01", "category": "housing", "text": "El Estado debe limitar por ley el precio de los alquileres en las zonas con precios más altos."},
-    {"id": "Q02", "category": "housing", "text": "Debe prohibirse la compra de vivienda a quienes no residen en España."},
-    {"id": "Q03", "category": "economy", "text": "Debe existir un impuesto permanente a las grandes fortunas."},
-    {"id": "Q04", "category": "economy", "text": "Debe bajar el impuesto sobre la renta (IRPF) en todos los tramos."},
-    {"id": "Q05", "category": "employment", "text": "La jornada laboral máxima debe bajar a 37,5 horas semanales sin reducir el salario."},
-    {"id": "Q06", "category": "employment", "text": "El salario mínimo debe subir cada año, como mínimo, lo mismo que los precios."},
-    {"id": "Q07", "category": "social", "text": "Debe crearse una ayuda universal por cada hijo o hija menor de edad."},
-    {"id": "Q08", "category": "health", "text": "Las personas inmigrantes en situación irregular deben tener acceso a la sanidad pública."},
-    {"id": "Q09", "category": "health", "text": "La sanidad pública debe contratar más servicios con hospitales privados."},
-    {"id": "Q10", "category": "education", "text": "Los colegios concertados deben seguir recibiendo financiación pública."},
-    {"id": "Q11", "category": "education", "text": "El castellano debe ser lengua vehicular en las escuelas de toda España."},
-    {"id": "Q12", "category": "climate", "text": "Las centrales nucleares deben seguir funcionando después de las fechas de cierre previstas."},
-    {"id": "Q13", "category": "immigration", "text": "Debe regularizarse a las personas inmigrantes que ya viven y trabajan en España sin papeles."},
-    {"id": "Q14", "category": "immigration", "text": "Las personas con nacionalidad española deben tener prioridad en el acceso a las ayudas sociales."},
-    {"id": "Q15", "category": "defence", "text": "España debe gastar en defensa más del 2 % del PIB."},
-    {"id": "Q16", "category": "rights", "text": "Para cambiar el sexo en el Registro Civil debe exigirse un informe médico."},
-    {"id": "Q17", "category": "rights", "text": "El derecho al aborto debe incluirse en la Constitución."},
-    {"id": "Q18", "category": "territory", "text": "Las comunidades autónomas deben poder celebrar referéndums de autodeterminación."},
-    {"id": "Q19", "category": "territory", "text": "Las comunidades autónomas que lo pidan deben poder recaudar todos los impuestos en su territorio."},
-    {"id": "Q20", "category": "eu", "text": "España debe seguir enviando ayuda militar a Ucrania."}
-  ]
+  {
+   "id": "economia",
+   "label": "Economía e impuestos",
+   "categories": [
+    "economy"
+   ]
+  },
+  {
+   "id": "empleo",
+   "label": "Empleo y ayudas",
+   "categories": [
+    "employment",
+    "social"
+   ]
+  },
+  {
+   "id": "sanidad",
+   "label": "Sanidad",
+   "categories": [
+    "health"
+   ]
+  },
+  {
+   "id": "educacion",
+   "label": "Educación",
+   "categories": [
+    "education"
+   ]
+  },
+  {
+   "id": "inmigracion",
+   "label": "Inmigración",
+   "categories": [
+    "immigration"
+   ]
+  },
+  {
+   "id": "clima",
+   "label": "Clima y energía",
+   "categories": [
+    "climate"
+   ]
+  },
+  {
+   "id": "defensa",
+   "label": "Defensa y exterior",
+   "categories": [
+    "defence",
+    "eu"
+   ]
+  },
+  {
+   "id": "derechos",
+   "label": "Derechos e igualdad",
+   "categories": [
+    "rights"
+   ]
+  },
+  {
+   "id": "territorio",
+   "label": "Modelo territorial",
+   "categories": [
+    "territory"
+   ]
+  }
+ ],
+ "categories": {
+  "housing": "Vivienda",
+  "economy": "Economía e impuestos",
+  "employment": "Empleo",
+  "social": "Pensiones y protección social",
+  "health": "Sanidad",
+  "education": "Educación",
+  "climate": "Clima y energía",
+  "immigration": "Inmigración",
+  "defence": "Seguridad y defensa",
+  "rights": "Derechos e igualdad",
+  "territory": "Instituciones y territorio",
+  "eu": "UE y política exterior"
+ },
+ "questions": [
+  {
+   "id": "Q01",
+   "category": "housing",
+   "text": "El Estado debe limitar por ley el precio de los alquileres en las zonas con precios más altos.",
+   "info": "Hoy la ley de vivienda permite declarar «zonas tensionadas» y limitar allí las subidas del alquiler.",
+   "image": null
+  },
+  {
+   "id": "Q02",
+   "category": "housing",
+   "text": "La compra de vivienda debe reservarse a quienes residen en España.",
+   "info": "Afectaría a quienes viven fuera de España y compran casa aquí, por ejemplo como inversión o segunda residencia.",
+   "image": null
+  },
+  {
+   "id": "Q03",
+   "category": "economy",
+   "text": "Debe existir un impuesto permanente a las grandes fortunas.",
+   "info": "En 2022 se creó como temporal un impuesto estatal a los patrimonios de más de 3 millones de euros.",
+   "image": null
+  },
+  {
+   "id": "Q04",
+   "category": "economy",
+   "text": "Debe bajar el impuesto sobre la renta (IRPF) en todos los tramos.",
+   "info": "El IRPF es el impuesto sobre los ingresos de las personas. Se paga por tramos: a más ingresos, mayor porcentaje.",
+   "image": null
+  },
+  {
+   "id": "Q05",
+   "category": "employment",
+   "text": "La jornada laboral máxima debe bajar a 37,5 horas semanales sin reducir el salario.",
+   "info": "La jornada máxima legal es hoy de 40 horas semanales.",
+   "image": null
+  },
+  {
+   "id": "Q06",
+   "category": "employment",
+   "text": "El salario mínimo debe subir cada año, como mínimo, lo mismo que los precios.",
+   "info": "El salario mínimo (SMI) lo fija el Gobierno cada año. La ley no obliga a subirlo con los precios.",
+   "image": null
+  },
+  {
+   "id": "Q07",
+   "category": "social",
+   "text": "Debe crearse una ayuda universal por cada hijo o hija menor de edad.",
+   "info": "Sería un pago periódico a todas las familias con hijos, sin importar sus ingresos.",
+   "image": null
+  },
+  {
+   "id": "Q08",
+   "category": "health",
+   "text": "Las personas inmigrantes en situación irregular deben tener acceso a la sanidad pública.",
+   "info": "Se refiere a personas extranjeras que viven en España sin permiso de residencia.",
+   "image": null
+  },
+  {
+   "id": "Q09",
+   "category": "health",
+   "text": "La sanidad pública debe contratar más servicios con hospitales privados.",
+   "info": "La sanidad pública ya deriva parte de sus pruebas y operaciones a centros privados mediante conciertos.",
+   "image": null
+  },
+  {
+   "id": "Q10",
+   "category": "education",
+   "text": "Los colegios concertados deben seguir recibiendo financiación pública.",
+   "info": "Los colegios concertados son privados, pero reciben dinero público a cambio de cumplir ciertas condiciones.",
+   "image": null
+  },
+  {
+   "id": "Q11",
+   "category": "education",
+   "text": "El castellano debe ser lengua vehicular en las escuelas de toda España.",
+   "info": "Lengua vehicular es aquella en la que se dan las clases. Afecta sobre todo a las comunidades con lengua propia.",
+   "image": null
+  },
+  {
+   "id": "Q12",
+   "category": "climate",
+   "text": "Las centrales nucleares deben seguir funcionando después de las fechas de cierre previstas.",
+   "info": "El calendario pactado en 2019 prevé cerrar las centrales nucleares por fases entre 2027 y 2035.",
+   "image": null
+  },
+  {
+   "id": "Q13",
+   "category": "immigration",
+   "text": "Debe regularizarse a las personas inmigrantes que ya viven y trabajan en España sin papeles.",
+   "info": "Regularizar es dar permiso de residencia y trabajo a quienes ya viven aquí sin él.",
+   "image": null
+  },
+  {
+   "id": "Q14",
+   "category": "immigration",
+   "text": "Las personas con nacionalidad española deben tener prioridad en el acceso a las ayudas sociales.",
+   "info": "A esta idea se la llama a veces «prioridad nacional».",
+   "image": null
+  },
+  {
+   "id": "Q15",
+   "category": "defence",
+   "text": "España debe gastar en defensa más del 2 % del PIB.",
+   "info": "El 2 % del PIB es el mínimo de gasto militar que acordaron los países de la OTAN en 2014.",
+   "image": null
+  },
+  {
+   "id": "Q16",
+   "category": "rights",
+   "text": "Para cambiar el sexo en el Registro Civil debe exigirse un informe médico.",
+   "info": "Desde 2023 se puede cambiar el sexo registral a partir de los 16 años con una declaración, sin informes médicos.",
+   "image": null
+  },
+  {
+   "id": "Q17",
+   "category": "rights",
+   "text": "El derecho al aborto debe incluirse en la Constitución.",
+   "info": "Hoy el aborto está regulado por una ley ordinaria, que una mayoría parlamentaria puede cambiar.",
+   "image": null
+  },
+  {
+   "id": "Q18",
+   "category": "territory",
+   "text": "Las comunidades autónomas deben poder celebrar referéndums de autodeterminación.",
+   "info": "Sería una votación para decidir si un territorio sigue formando parte de España. La Constitución actual no lo permite.",
+   "image": null
+  },
+  {
+   "id": "Q19",
+   "category": "territory",
+   "text": "Las comunidades autónomas que lo pidan deben poder recaudar todos los impuestos en su territorio.",
+   "info": "Hoy solo el País Vasco y Navarra recaudan casi todos sus impuestos y pagan después una parte al Estado.",
+   "image": null
+  },
+  {
+   "id": "Q20",
+   "category": "eu",
+   "text": "España debe seguir enviando ayuda militar a Ucrania.",
+   "info": "España ha enviado armamento y munición a Ucrania desde la invasión rusa de 2022.",
+   "image": null
+  }
+ ]
 }

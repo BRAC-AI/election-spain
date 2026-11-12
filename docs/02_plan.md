@@ -1,20 +1,25 @@
-# Build plan to 29 November
+# Plan
 
-| When | Step | Owner | Done when |
+| Day | Step | Who | Status |
 |---|---|---|---|
-| 12 Nov | Verify election, scope, repo, app skeleton, scoring, tests | Claude | Done. 13 tests pass. Journey checked at 390x844 |
-| 13 Nov | Unblock: GitHub push access, approve programme PDFs, Netlify deploy | Finn | Push works. Preview URL live |
-| 13 Nov | Decide the six open points in spec section 7 | Finn | Written in the spec |
-| 13 to 15 Nov | Code positions from the published 2026 programmes (PP, ERC, BNG, PNV) | Claude | Evidence sheet filled, every cell has page and summary |
-| 14 to 16 Nov | Check BOE 3 Nov candidacies per province | Claude | parties.json marked verified |
-| 15 to 17 Nov | Review evidence sheet. Paste the exact quote per cell | Finn | reviewer and date on every cell |
-| 17 Nov | Wording test of the 20 statements with 5 people | Finn | Confusing statements rewritten |
-| 18 Nov | Soft launch to people you know | Finn | Feedback log |
-| 18 to 22 Nov | Re-code as PSOE, Frente Amplio, Vox and others publish | Claude + Finn | Change log entry per programme |
-| 20 Nov | Legal and privacy look | Finn | Sign-off noted |
-| 22 Nov | Public launch or call it off | Finn | Go or no-go written down |
-| 28 Nov | Freeze. Reflection day: no changes, no promotion | n/a | |
+| Thu 12 Nov | App v0.2, scoring, 15 tests, 20 statements with explainers, licence, feedback form, image brief | Claude | Done |
+| Thu 12 Nov | PP 29N programme read and coded (13 of 20 statements found) | Claude | Done, unreviewed |
+| Thu 12 Nov | Read the other programmes | Claude | Blocked: each PDF needs Finn's approval click, and nobody clicked |
+| Thu 12 Nov | Push to GitHub, deploy to Netlify | Claude | Blocked: GitHub app not installed on the repo; deploy needs approval |
+| Fri 13 Nov | Unblock (10 minutes at the screen, or drop the PDFs into the chat) | Finn | |
+| Fri 13 Nov | Code all parties, second AI review pass, deploy preview | Claude | |
+| Fri 13 Nov | Test on phone, review `data/evidence.xlsx`, make images | Finn | |
+| Sat 14 Nov | Fixes, soft launch to friends, feedback | Both | |
+| Mon 16 Nov | Go public if PP, PSOE, Vox and Frente Amplio have 12 or more coded statements each | Finn | |
+| until 27 Nov | Re-code when a party publishes its 29N programme | Claude | |
+| 28 to 29 Nov | No changes, no promotion | | |
 
-Kill rule: if by 20 Nov fewer than the four national candidacies have reviewed positions on at least 14 of 20 statements, do not launch publicly.
+## Programme reading queue
 
-Later, not v1: Catalan, Basque and Galician; 30 statements; illustrations; Senate; all proclaimed candidacies.
+| Party | Source to read | Size |
+|---|---|---|
+| ERC, PNV, CC, BNG | 29N programme | 23 to 91 pages |
+| EH Bildu | 2023 commitment | 16 pages |
+| PSOE, Vox, Junts | 2023 programme | 148 to 272 pages |
+| Frente Amplio, Podemos | Programme not found. Website, once the address is confirmed | |
+| Valencian joint list | Not identified yet | |

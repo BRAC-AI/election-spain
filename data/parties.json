@@ -1,22 +1,333 @@
 {
-  "version": "0.1.0-draft",
-  "inclusion_rule": "Candidaturas con escaño en el Congreso disuelto el 5-10-2026 (o su sucesora directa). Pendiente de contrastar con las candidaturas proclamadas en el BOE del 3-11-2026.",
-  "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
-  "provinces": {"01":"Álava","02":"Albacete","03":"Alicante","04":"Almería","05":"Ávila","06":"Badajoz","07":"Illes Balears","08":"Barcelona","09":"Burgos","10":"Cáceres","11":"Cádiz","12":"Castellón","13":"Ciudad Real","14":"Córdoba","15":"A Coruña","16":"Cuenca","17":"Girona","18":"Granada","19":"Guadalajara","20":"Gipuzkoa","21":"Huelva","22":"Huesca","23":"Jaén","24":"León","25":"Lleida","26":"La Rioja","27":"Lugo","28":"Madrid","29":"Málaga","30":"Murcia","31":"Navarra","32":"Ourense","33":"Asturias","34":"Palencia","35":"Las Palmas","36":"Pontevedra","37":"Salamanca","38":"Santa Cruz de Tenerife","39":"Cantabria","40":"Segovia","41":"Sevilla","42":"Soria","43":"Tarragona","44":"Teruel","45":"Toledo","46":"Valencia","47":"Valladolid","48":"Bizkaia","49":"Zamora","50":"Zaragoza","51":"Ceuta","52":"Melilla"},
-  "parties": [
-    {"id":"pp","name":"PP","scope":{"except":["31"]},"programme":{"status":"current_election_official","verified":false,"title":"La Reconstrucción Nacional","year":2026,"url":"https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf","note":"Publicado el 10-11-2026 según Politicheck. PDF no abierto aún."}},
-    {"id":"psoe","name":"PSOE","scope":{"except":[]},"programme":{"status":"fallback_older_programme","verified":false,"title":"Programa electoral generales 2023","year":2023,"url":"https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf","note":"Programa 29N sin publicar a 12-11-2026."}},
-    {"id":"vox","name":"Vox","scope":{"except":[]},"programme":{"status":"verification_pending","verified":false,"title":"Recuperar España (según una fuente)","year":2026,"url":"https://www.voxespana.es/programa/programa-electoral-Vox","note":"Fuentes en conflicto: una cita un documento de 6 páginas del 20-10-2026; otras lo dan por pendiente. La URL es la del programa de 2023."}},
-    {"id":"fa","name":"Frente Amplio","scope":{"except":["35","38","03","12","46","51","52","44"]},"programme":{"status":"fallback_older_programme","verified":false,"title":"Un programa para ti (Sumar)","year":2023,"url":"https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf","note":"Coalición nueva (IU, Movimiento Sumar, Más Madrid, Comuns). Decidir si el programa de Sumar 2023 es un antecedente comparable."}},
-    {"id":"podemos","name":"Podemos","scope":{"except":["07","35","38","08","17","25","43","03","12","46","52"]},"programme":{"status":"not_found","verified":false,"note":"Sin programa 29N. En 2023 concurrió dentro de Sumar: no hay programa propio comparable."}},
-    {"id":"erc","name":"ERC","scope":{"only":["08","17","25","43"]},"programme":{"status":"current_election_official","verified":false,"title":"Programa electoral 2026","year":2026,"url":"https://www.esquerrarepublicana.cat/documents/e2026-programa.pdf","note":"Publicado el 5-11-2026 según DatosClaros. Otra fuente lo da por pendiente."}},
-    {"id":"junts","name":"Junts","scope":{"only":["08","17","25","43"]},"programme":{"status":"fallback_older_programme","verified":false,"title":"Programa eleccions generals 2023","year":2023,"url":"https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf","note":"Solo localizada una copia de betevé, no la del partido."}},
-    {"id":"pnv","name":"EAJ-PNV","scope":{"only":["01","20","48"]},"programme":{"status":"verification_pending","verified":false,"title":"Programa 29N (43 páginas, según 29nov.es)","year":2026,"url":"https://www.eaj-pnv.eus/es/documentos/20945/con-voz-propia-programa-electoral-23-j","note":"Programa 2026 publicado hacia el 9-11-2026 según dos fuentes; URL oficial sin localizar. La URL es la del 23J."}},
-    {"id":"bildu","name":"EH Bildu","scope":{"only":["01","20","48","31"]},"programme":{"status":"fallback_older_programme","verified":false,"title":"Programa electoral 2023","year":2023,"url":"https://www.diariocritico.com/adjuntos/562496/Programa_electoral_EH_Bildu_2023.pdf","note":"Solo localizada una copia de Diario Crítico, no la del partido."}},
-    {"id":"bng","name":"BNG","scope":{"only":["15","27","32","36"]},"programme":{"status":"current_election_official","verified":false,"title":"Programa electoral 2026","year":2026,"url":"https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf","note":"Publicado el 3-11-2026 según DatosClaros."}},
-    {"id":"cc","name":"Coalición Canaria","scope":{"only":["35","38"]},"programme":{"status":"not_found","verified":false,"note":"Sin programa localizado."}},
-    {"id":"upn-pp","name":"UPN-PP","scope":{"only":["31"]},"programme":{"status":"not_found","verified":false,"note":"Lista conjunta en Navarra. Decidir si se usa el programa del PP, el de UPN o ambos."}},
-    {"id":"compromis","name":"Compromís","scope":{"only":["03","12","46"]},"programme":{"status":"not_found","verified":false,"note":"Confirmar que cumple la regla de inclusión y bajo qué nombre concurre."}}
-  ],
-  "known_exclusions": ["SALF (sin escaño en el Congreso disuelto; se presenta en casi toda España)", "Adelante Andalucía", "UPC", "Aliança Catalana", "resto de candidaturas proclamadas"]
+ "version": "0.2.0-draft",
+ "inclusion_rule": "Entran las candidaturas con escaño en el Congreso disuelto el 5-10-2026 (o su sucesora directa) y las que superan el 3 % en la media de encuestas nacional. El 3 % es la barrera legal por circunscripción (LOREG art. 163). Media usada: Demócrata, 7-11-2026, 11 institutos. SALF marca 2,2 % y queda fuera.",
+ "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
+ "provinces": {
+  "01": "Álava",
+  "02": "Albacete",
+  "03": "Alicante",
+  "04": "Almería",
+  "05": "Ávila",
+  "06": "Badajoz",
+  "07": "Illes Balears",
+  "08": "Barcelona",
+  "09": "Burgos",
+  "10": "Cáceres",
+  "11": "Cádiz",
+  "12": "Castellón",
+  "13": "Ciudad Real",
+  "14": "Córdoba",
+  "15": "A Coruña",
+  "16": "Cuenca",
+  "17": "Girona",
+  "18": "Granada",
+  "19": "Guadalajara",
+  "20": "Gipuzkoa",
+  "21": "Huelva",
+  "22": "Huesca",
+  "23": "Jaén",
+  "24": "León",
+  "25": "Lleida",
+  "26": "La Rioja",
+  "27": "Lugo",
+  "28": "Madrid",
+  "29": "Málaga",
+  "30": "Murcia",
+  "31": "Navarra",
+  "32": "Ourense",
+  "33": "Asturias",
+  "34": "Palencia",
+  "35": "Las Palmas",
+  "36": "Pontevedra",
+  "37": "Salamanca",
+  "38": "Santa Cruz de Tenerife",
+  "39": "Cantabria",
+  "40": "Segovia",
+  "41": "Sevilla",
+  "42": "Soria",
+  "43": "Tarragona",
+  "44": "Teruel",
+  "45": "Toledo",
+  "46": "Valencia",
+  "47": "Valladolid",
+  "48": "Bizkaia",
+  "49": "Zamora",
+  "50": "Zaragoza",
+  "51": "Ceuta",
+  "52": "Melilla"
+ },
+ "parties": [
+  {
+   "id": "pp",
+   "name": "PP",
+   "scope": {
+    "except": [
+     "31"
+    ]
+   },
+   "programme": {
+    "status": "current_election_official",
+    "type": "programa_29N",
+    "title": "Reconstrucción Nacional",
+    "year": 2026,
+    "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
+    "note": "Leído con IA el 12-11-2026. Sin revisión humana.",
+    "verified": false
+   }
+  },
+  {
+   "id": "psoe",
+   "name": "PSOE",
+   "scope": {
+    "except": []
+   },
+   "programme": {
+    "status": "fallback_older_programme",
+    "type": "programa_anterior",
+    "title": "Programa electoral generales 2023",
+    "year": 2023,
+    "url": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf",
+    "note": "Sin programa 29N a 12-11-2026. Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "vox",
+   "name": "Vox",
+   "scope": {
+    "except": []
+   },
+   "programme": {
+    "status": "fallback_older_programme",
+    "type": "programa_anterior",
+    "title": "Programa electoral 2023",
+    "year": 2023,
+    "url": "https://www.voxespana.es/wp-content/uploads/2023/07/Programa-VOX-2023-con-menos-peso.pdf",
+    "note": "Una fuente cita un documento 29N de 6 páginas («Recuperar España», 20-10-2026); sin localizar. Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "fa",
+   "name": "Frente Amplio",
+   "scope": {
+    "except": [
+     "35",
+     "38",
+     "03",
+     "12",
+     "46",
+     "51",
+     "52",
+     "44"
+    ]
+   },
+   "programme": {
+    "status": "not_found",
+    "type": "web",
+    "title": "Programa «100 medidas» (anunciado)",
+    "year": 2026,
+    "url": "",
+    "note": "Coalición nueva. No se usa el programa de Sumar 2023 por decisión editorial. El 12-11-2026 presentó en Galicia un programa «100+15»; documento oficial sin localizar. Si no aparece, se usará su web.",
+    "verified": false
+   }
+  },
+  {
+   "id": "podemos",
+   "name": "Podemos",
+   "scope": {
+    "except": [
+     "07",
+     "35",
+     "38",
+     "08",
+     "17",
+     "25",
+     "43",
+     "03",
+     "12",
+     "46",
+     "52"
+    ]
+   },
+   "programme": {
+    "status": "not_found",
+    "type": "web",
+    "title": "«Paz, casa y trabajo» (cinco prioridades)",
+    "year": 2026,
+    "url": "",
+    "note": "Sin programa 29N. En 2023 fue dentro de Sumar. Se usará su web oficial.",
+    "verified": false
+   }
+  },
+  {
+   "id": "erc",
+   "name": "ERC",
+   "scope": {
+    "only": [
+     "08",
+     "17",
+     "25",
+     "43"
+    ]
+   },
+   "programme": {
+    "status": "current_election_official",
+    "type": "programa_29N",
+    "title": "Programa electoral 2026",
+    "year": 2026,
+    "url": "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
+    "note": "Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "junts",
+   "name": "Junts",
+   "scope": {
+    "only": [
+     "08",
+     "17",
+     "25",
+     "43"
+    ]
+   },
+   "programme": {
+    "status": "fallback_older_programme",
+    "type": "programa_anterior",
+    "title": "Programa eleccions generals 2023",
+    "year": 2023,
+    "url": "https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf",
+    "note": "Copia alojada por betevé: el partido ya no ofrece el original. Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "pnv",
+   "name": "EAJ-PNV",
+   "scope": {
+    "only": [
+     "01",
+     "20",
+     "48"
+    ]
+   },
+   "programme": {
+    "status": "current_election_official",
+    "type": "programa_29N",
+    "title": "Programa electoral 29N",
+    "year": 2026,
+    "url": "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n",
+    "note": "Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "bildu",
+   "name": "EH Bildu",
+   "scope": {
+    "only": [
+     "01",
+     "20",
+     "48",
+     "31"
+    ]
+   },
+   "programme": {
+    "status": "fallback_older_programme",
+    "type": "programa_anterior",
+    "title": "Compromiso de EH Bildu 23J",
+    "year": 2023,
+    "url": "https://ehbildu.eus/dokumentuak/23J-COMPROMISO-DE-EUSKAL-HERRIA-BILDU.pdf",
+    "note": "16 páginas. Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "bng",
+   "name": "BNG",
+   "scope": {
+    "only": [
+     "15",
+     "27",
+     "32",
+     "36"
+    ]
+   },
+   "programme": {
+    "status": "current_election_official",
+    "type": "programa_29N",
+    "title": "Programa electoral 2026",
+    "year": 2026,
+    "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+    "note": "Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "cc",
+   "name": "Coalición Canaria",
+   "scope": {
+    "only": [
+     "35",
+     "38"
+    ]
+   },
+   "programme": {
+    "status": "current_election_official",
+    "type": "programa_29N",
+    "title": "Programa electoral 29N",
+    "year": 2026,
+    "url": "https://coalicioncanaria.org/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV.pdf",
+    "note": "Pendiente de leer.",
+    "verified": false
+   }
+  },
+  {
+   "id": "upn-pp",
+   "name": "UPN-PP",
+   "scope": {
+    "only": [
+     "31"
+    ]
+   },
+   "programme": {
+    "status": "current_election_official",
+    "type": "programa_29N",
+    "title": "Reconstrucción Nacional (programa del PP)",
+    "year": 2026,
+    "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
+    "note": "Lista conjunta en Navarra. Se usa el programa nacional del PP mientras la coalición no publique uno propio.",
+    "verified": false
+   },
+   "stancesFrom": "pp"
+  },
+  {
+   "id": "compromis",
+   "name": "Compromís",
+   "scope": {
+    "only": [
+     "03",
+     "12",
+     "46"
+    ]
+   },
+   "programme": {
+    "status": "not_found",
+    "type": "web",
+    "title": "",
+    "year": null,
+    "url": "",
+    "note": "En la Comunitat Valenciana hay una lista conjunta del espacio (Compromís-Front Valencià). Nombre y composición por confirmar en el BOE.",
+    "verified": false
+   }
+  }
+ ],
+ "known_exclusions": [
+  "SALF (sin escaño en el Congreso disuelto; se presenta en casi toda España)",
+  "Adelante Andalucía",
+  "UPC",
+  "Aliança Catalana",
+  "resto de candidaturas proclamadas"
+ ]
 }

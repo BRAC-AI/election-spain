@@ -1,6 +1,6 @@
-// Deterministic scoring. No network, no AI, no randomness. See docs/01_spec_v3.md §5.
+// Deterministic scoring. No network, no AI, no randomness. See docs/01_spec.md.
 export const ANSWERS = { sa: 2, a: 1, d: -1, sd: -2 }; // skip = not stored
-export const CONFIG = { minCompared: 5, minCoverage: 0.6, tieBand: 3 };
+export const CONFIG = { minCompared: 3, minCoverage: 0.5, tieBand: 3, step: 5 };
 
 // Agreement on one question, 0..1, or null when it cannot be compared.
 export function agreement(answer, stance) {
@@ -20,18 +20,26 @@ export function scoreParty(answers, partyStances = {}, cfg = CONFIG) {
     const a = agreement(answers[q], stance);
     if (a !== null) { sum += a; perQuestion.push({ q, stance, agreement: a }); }
   }
-  const answered = answeredIds.length;
-  const compared = perQuestion.length;
+  const answered = answeredIds.length, compared = perQuestion.length;
   const coverage = answered ? compared / answered : 0;
   const conclusive = compared >= cfg.minCompared && coverage >= cfg.minCoverage;
-  return {
-    answered, compared, coverage, conclusive, perQuestion,
-    alignment: conclusive ? Math.round((sum / compared) * 100) : null,
-  };
+  return { answered, compared, coverage, conclusive, perQuestion, alignment: conclusive ? Math.round((sum / compared) * 100) : null };
 }
 
-// Conclusive parties first by alignment, ties broken by name. Parties within
-// tieBand points of the group leader share a rank ("empate").
+// Confidence grows with answers: level 0..4 (one level per 5 answers).
+export function confidence(answered, cfg = CONFIG) {
+  return Math.max(0, Math.min(4, Math.floor(answered / cfg.step)));
+}
+
+// How precisely a score may be shown at a given confidence level.
+// 0: nothing. 1: three bands. 2: nearest 10. 3+: exact.
+export function display(alignment, level) {
+  if (alignment === null || level < 1) return { kind: 'none' };
+  if (level === 1) return { kind: 'band', band: alignment >= 65 ? 'near' : alignment >= 40 ? 'mid' : 'far' };
+  if (level === 2) return { kind: 'approx', value: Math.round(alignment / 10) * 10 };
+  return { kind: 'exact', value: alignment };
+}
+
 export function rankResults(rows, cfg = CONFIG) {
   const byName = (a, b) => a.name.localeCompare(b.name, 'es');
   const yes = rows.filter((r) => r.conclusive).sort((a, b) => b.alignment - a.alignment || byName(a, b));

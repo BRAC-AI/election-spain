@@ -1,6 +1,100 @@
 {
-  "version": "0.0.0-empty",
-  "status": "not_coded",
-  "note": "Vacío a propósito. Ninguna posición de partido se publica hasta que esté leída en el programa oficial y aprobada por un revisor humano. Formato por celda: {stance: support|oppose|conditional|insufficient_evidence, summary, page, quote, reviewer, verified_on}.",
-  "stances": {}
+ "version": "0.2.0-draft",
+ "status": "ai_coded_unreviewed",
+ "note": "Posiciones leídas por IA en el documento enlazado. Las páginas hay que comprobarlas contra el PDF. Falta revisión humana y la cita literal.",
+ "stances": {
+  "pp": {
+   "Q01": {
+    "stance": "oppose",
+    "page": "53",
+    "summary": "Propone derogar la ley de vivienda y eliminar las zonas tensionadas y el índice de precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q04": {
+    "stance": "conditional",
+    "page": "60",
+    "summary": "Promete bajar el IRPF a rentas medias y bajas y a familias. No habla de todos los tramos.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q07": {
+    "stance": "conditional",
+    "page": "56",
+    "summary": "Unifica las deducciones familiares en un pago mensual reembolsable. No es una ayuda universal por hijo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q10": {
+    "stance": "support",
+    "page": "67",
+    "summary": "Conciertos de seis años con financiación del coste completo; no se cierran aulas con demanda.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q11": {
+    "stance": "support",
+    "page": "39",
+    "summary": "Garantiza el derecho a estudiar en castellano en todas las etapas y en toda España, junto a las lenguas cooficiales.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q12": {
+    "stance": "support",
+    "page": "71",
+    "summary": "Elimina el calendario de cierre de las centrales y alarga su vida útil.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q13": {
+    "stance": "oppose",
+    "page": "22",
+    "summary": "Prohibiría por ley las regularizaciones masivas. El arraigo individual queda como excepción.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q14": {
+    "stance": "conditional",
+    "page": "40",
+    "summary": "Da prioridad en las ayudas a quien tenga arraigo duradero y verificable, no por nacionalidad.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q15": {
+    "stance": "conditional",
+    "page": "26",
+    "summary": "Se compromete a cumplir con la OTAN con financiación plurianual. No da una cifra del PIB.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q16": {
+    "stance": "support",
+    "page": "44",
+    "summary": "Pone fin a la libre autodeterminación del sexo registral y revisa la ley trans. No concreta el mecanismo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q18": {
+    "stance": "oppose",
+    "page": "16",
+    "summary": "Defiende la unidad constitucional y recupera el delito de convocar un referéndum ilegal.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q19": {
+    "stance": "oppose",
+    "page": "17, 41",
+    "summary": "Ninguna comunidad saldrá del régimen común ni habrá regímenes singulares bilaterales.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q20": {
+    "stance": "support",
+    "page": "74",
+    "summary": "Mantiene el apoyo político, económico, militar y humanitario a Ucrania.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   }
+  }
+ }
 }

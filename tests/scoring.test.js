@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { agreement, scoreParty, rankResults, orderQuestions, eligibleParties } from '../scoring.js';
+import { agreement, scoreParty, rankResults, orderQuestions, eligibleParties, confidence, display } from '../scoring.js';
 
 const J = (f) => JSON.parse(readFileSync(new URL(`../data/${f}`, import.meta.url)));
 const Q = J('questions.json'), P = J('parties.json'), S = J('stances.json');
@@ -86,8 +86,26 @@ test('data integrity', () => {
   assert.deepEqual([...bubbleCats].sort(), Object.keys(Q.categories).sort()); // every category has exactly one bubble
   assert.equal(Object.keys(P.provinces).length, 52);
   for (const p of P.parties) for (const c of [...(p.scope.only || []), ...(p.scope.except || [])]) assert.ok(P.provinces[c], p.id);
-  for (const [pid, cells] of Object.entries(S.stances)) { // no real-party stance without a named human reviewer
+  const allowed = ['support', 'oppose', 'conditional', 'insufficient_evidence'];
+  for (const [pid, cells] of Object.entries(S.stances)) { // every real-party cell is traceable
     assert.ok(P.parties.some((p) => p.id === pid));
-    for (const c of Object.values(cells)) assert.ok(c.reviewer && c.verified_on && c.page, pid);
+    for (const [qid, c] of Object.entries(cells)) {
+      assert.ok(Q.questions.some((q) => q.id === qid), qid);
+      assert.ok(allowed.includes(c.stance) && c.page && c.summary && c.coder && c.status, `${pid} ${qid}`);
+      if (c.status === 'reviewed') assert.ok(c.reviewer && c.verified_on, `${pid} ${qid}`);
+    }
   }
+  for (const p of P.parties) if (p.stancesFrom) assert.ok(P.parties.some((x) => x.id === p.stancesFrom));
+});
+test('confidence grows one level per five answers', () => {
+  assert.deepEqual([0, 4, 5, 9, 10, 15, 19, 20, 30].map((n) => confidence(n)), [0, 0, 1, 1, 2, 3, 3, 4, 4]);
+});
+test('precision follows confidence: bands, then tens, then exact', () => {
+  assert.deepEqual(display(85, 0), { kind: 'none' });
+  assert.deepEqual(display(85, 1), { kind: 'band', band: 'near' });
+  assert.deepEqual(display(50, 1), { kind: 'band', band: 'mid' });
+  assert.deepEqual(display(20, 1), { kind: 'band', band: 'far' });
+  assert.deepEqual(display(57, 2), { kind: 'approx', value: 60 });
+  assert.deepEqual(display(57, 3), { kind: 'exact', value: 57 });
+  assert.deepEqual(display(null, 4), { kind: 'none' });
 });

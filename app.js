@@ -1,141 +1,245 @@
-import { scoreParty, rankResults, orderQuestions, eligibleParties, ANSWERS } from './scoring.js';
+import { scoreParty, rankResults, orderQuestions, eligibleParties, confidence, display, ANSWERS, CONFIG } from './scoring.js';
 
 const app = document.querySelector('#app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const load = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p); return r.json(); });
 const DEMO = new URLSearchParams(location.search).get('demo') === '1';
-const BATCH = 5, MAX_BUBBLES = 3;
-const LABELS = { sa: 'Muy de acuerdo', a: 'De acuerdo', d: 'En desacuerdo', sd: 'Muy en desacuerdo' };
-const STANCE = { support: 'A favor', oppose: 'En contra', conditional: 'Con condiciones', insufficient_evidence: 'Sin datos suficientes' };
-const PROG = { current_election_official: 'programa del 29N', fallback_older_programme: 'programa anterior', verification_pending: 'fuente por verificar', not_found: 'programa no localizado' };
+const BATCH = CONFIG.step, MAX_BUBBLES = 3;
+const REPO = 'https://github.com/BRAC-AI/election-spain';
+const OPTS = [['sd', 'Muy en contra'], ['d', 'En contra'], ['a', 'A favor'], ['sa', 'Muy a favor']];
+const LABELS = Object.fromEntries(OPTS);
+const STANCE = { support: 'A favor', oppose: 'En contra', conditional: 'Con matices', insufficient_evidence: 'No lo dice' };
+const SRC = { programa_29N: 'programa del 29N', programa_anterior: 'programa anterior', web: 'web del partido' };
+const LEVELS = ['Sin datos', 'Primera pista', 'Va tomando forma', 'Bastante fiable', 'Máxima'];
+const BANDS = { near: 'Cerca de ti', mid: 'A media distancia', far: 'Lejos de ti' };
 
 let Q, P, S; // questions, parties, stances
-let st = { screen: 'start', bubbles: [], province: '', idx: 0, answers: {}, seen: [], party: null };
+let st = { screen: 'start', bubbles: [], province: '', idx: 0, answers: {}, party: null };
 
-// Answers stay on this device, for this tab only.
+// Answers stay on this device, in this tab only.
 const save = () => { try { sessionStorage.setItem('guia29n', JSON.stringify(st)); } catch { /* storage unavailable */ } };
 const restore = () => { try { const v = JSON.parse(sessionStorage.getItem('guia29n')); if (v && v.screen) st = v; } catch { /* ignore */ } };
 
-const order = () => {
-  const cats = Q.bubbles.filter((b) => st.bubbles.includes(b.id)).flatMap((b) => b.categories);
-  return orderQuestions(Q.questions, cats);
-};
-const go = (patch) => { Object.assign(st, patch); save(); render(); window.scrollTo(0, 0); app.querySelector('h1,h2,.statement')?.focus?.(); };
+const order = () => orderQuestions(Q.questions, Q.bubbles.filter((b) => st.bubbles.includes(b.id)).flatMap((b) => b.categories));
+const answered = () => Object.values(st.answers).filter((a) => a in ANSWERS).length;
+const parties = () => eligibleParties(P.parties, st.province);
+const stancesOf = (p) => S[p.stancesFrom || p.id] || {};
+const results = () => rankResults(parties().map((p) => ({ id: p.id, name: p.name, programme: p.programme, ...scoreParty(st.answers, stancesOf(p)) })));
+
+function go(patch, animate = false) {
+  const apply = () => { Object.assign(st, patch); save(); render(); window.scrollTo(0, 0); };
+  const cur = app.querySelector('.screen');
+  if (animate && cur && !matchMedia('(prefers-reduced-motion: reduce)').matches) { cur.classList.add('out'); setTimeout(apply, 150); } else apply();
+}
+
+// Confidence meter: four segments, one per block of five answers.
+function meter(popLevel = 0) {
+  const n = answered(), lvl = confidence(n);
+  const segs = [0, 1, 2, 3].map((i) => {
+    const fill = Math.max(0, Math.min(BATCH, n - i * BATCH));
+    return `<span class="seg${popLevel === i + 1 ? ' pop' : ''}"><i class="w${fill}"></i></span>`;
+  }).join('');
+  return `<div class="meter" role="img" aria-label="Fiabilidad del resultado: ${LEVELS[lvl]}. ${n} respuestas de ${Q.questions.length}.">
+    <div class="segs">${segs}</div>
+    <div class="cap"><span>Fiabilidad: <b>${LEVELS[lvl]}</b></span><span>${n}/${Q.questions.length}</span></div></div>`;
+}
 
 function start() {
   const provs = Object.entries(P.provinces).sort((a, b) => a[1].localeCompare(b[1], 'es'));
-  app.innerHTML = `
-    <p class="eyebrow">Elecciones generales · 29 de noviembre de 2026</p>
-    <h1 tabindex="-1">¿Qué te importa más?</h1>
-    <p>Elige hasta tres temas y los verás primero. No cambian la puntuación. También puedes empezar sin elegir.</p>
-    <div class="bubbles" role="group" aria-label="Temas">
-      ${Q.bubbles.map((b) => `<button type="button" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
+  return `
+    <p class="eyebrow">Elecciones generales · 29 de noviembre</p>
+    <h1 tabindex="-1">¿Qué partido piensa como tú?</h1>
+    <p>Toca hasta tres temas que te importen. Empezamos por ahí.</p>
+    <div class="bubbles${st.bubbles.length >= MAX_BUBBLES ? ' full' : ''}" role="group" aria-label="Temas">
+      ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
     </div>
-    <label for="prov">¿En qué provincia votas? (opcional)</label>
+    <p class="count" id="count">${countText()}</p>
+    <label for="prov">¿Dónde votas? Así ves solo tus partidos.</label>
     <select id="prov"><option value="">Toda España</option>${provs.map(([c, n]) => `<option value="${c}" ${st.province === c ? 'selected' : ''}>${esc(n)}</option>`).join('')}</select>
-    <div class="stack"><button type="button" class="primary" data-act="begin">${st.bubbles.length ? 'Empezar' : 'Empezar sin elegir'}</button></div>
-    <p class="muted">${Q.questions.length} afirmaciones en bloques de cinco. Puedes parar cuando quieras.</p>`;
+    <button type="button" class="cta" data-act="begin">Empezar</button>
+    <p class="muted">${Q.questions.length} afirmaciones, de cinco en cinco. Unos 3 minutos. Sin registro.</p>`;
 }
+const countText = () => (st.bubbles.length ? `${st.bubbles.length} de ${MAX_BUBBLES} elegidos` : 'O empieza sin elegir.');
 
 function question() {
   const qs = order(), q = qs[st.idx];
-  const inBatch = (st.idx % BATCH) + 1, batchSize = Math.min(BATCH, qs.length - (st.idx - (st.idx % BATCH)));
-  app.innerHTML = `
-    <div class="row"><p class="eyebrow">${esc(Q.categories[q.category])}</p><p class="muted">${inBatch} de ${batchSize} · ${st.idx + 1}/${qs.length}</p></div>
-    <progress max="${batchSize}" value="${inBatch}" aria-label="Progreso del bloque"></progress>
-    <p class="statement" tabindex="-1">${esc(q.text)}</p>
-    <div class="stack" role="group" aria-label="Tu respuesta">
-      ${Object.keys(LABELS).map((k) => `<button type="button" data-ans="${k}" aria-pressed="${st.answers[q.id] === k}">${LABELS[k]}</button>`).join('')}
+  return `
+    ${meter()}
+    <div class="card">
+      ${q.image ? `<img src="img/${esc(q.image)}" alt="" width="1200" height="900">` : ''}
+      <p class="eyebrow">${esc(Q.categories[q.category])} · ${st.idx + 1} de ${qs.length}</p>
+      <p class="statement" tabindex="-1">${esc(q.text)}</p>
+      <details><summary>¿Qué significa?</summary><p>${esc(q.info)}</p></details>
+    </div>
+    <div class="scale" role="group" aria-label="Tu respuesta">
+      ${OPTS.map(([k, l], i) => `<button type="button" class="opt" data-ans="${k}" aria-pressed="${st.answers[q.id] === k}" aria-keyshortcuts="${i + 1}"><span class="dot"></span>${l}</button>`).join('')}
     </div>
     <div class="row">
-      <button type="button" class="link" data-act="back">${st.idx === 0 ? 'Volver a los temas' : 'Atrás'}</button>
-      <button type="button" class="link" data-ans="skip">No lo sé / saltar</button>
+      <button type="button" class="link" data-act="back">${st.idx === 0 ? '← Temas' : '← Atrás'}</button>
+      <button type="button" class="link" data-ans="skip">No lo sé, saltar →</button>
     </div>`;
 }
 
-function parties() { return eligibleParties(P.parties, st.province); }
-function results() {
-  return rankResults(parties().map((p) => ({ id: p.id, name: p.name, programme: p.programme, ...scoreParty(st.answers, S[p.id]) })));
+function valueHtml(r, lvl) {
+  if (!r.conclusive) return '<span class="chip far">Sin datos aún</span>';
+  const d = display(r.alignment, lvl);
+  if (d.kind === 'band') return `<span class="chip ${d.band}">${BANDS[d.band]}</span>`;
+  if (d.kind === 'approx') return `<span class="val">≈ ${d.value} %</span>`;
+  if (d.kind === 'exact') return `<span class="val">${d.value} %${r.tied ? ' <span class="tag">empate</span>' : ''}</span>`;
+  return '';
+}
+function barHtml(r, lvl) {
+  if (!r.conclusive || lvl < 2) return '';
+  return `<div class="bar${lvl === 2 ? ' fuzzy' : ''}" aria-hidden="true"><i class="p${Math.round(r.alignment / 10) * 10}"></i></div>`;
 }
 
 function result() {
-  const qs = order(), left = qs.length - st.idx, rows = results();
-  const answered = Object.values(st.answers).filter((a) => a in ANSWERS).length;
-  const cats = [...new Set(qs.slice(0, st.idx).map((q) => Q.categories[q.category]))];
-  const missing = [...new Set(qs.slice(st.idx).map((q) => Q.categories[q.category]))].filter((c) => !cats.includes(c));
-  const anyCoded = rows.some((r) => r.compared > 0);
-  app.innerHTML = `
-    <p class="eyebrow">Resultado provisional · ${st.idx} de ${qs.length} afirmaciones</p>
-    <h1 tabindex="-1">${answered ? 'Así coinciden tus respuestas' : 'Aún no hay nada que comparar'}</h1>
-    ${DEMO ? '<p class="notice"><strong>Modo demo.</strong> Los partidos son ficticios. Sirve solo para probar la herramienta.</p>' : ''}
-    ${!anyCoded && !DEMO ? '<p class="notice"><strong>Las posiciones de los partidos aún no están revisadas.</strong> Por eso no mostramos coincidencias. <a href="?demo=1">Ver la herramienta con partidos ficticios</a>.</p>' : ''}
-    ${answered && answered < 10 ? '<p class="muted">Con pocas respuestas el resultado cambia mucho. Tómalo como una pista, no como un veredicto.</p>' : ''}
-    ${!answered ? '<p>Has saltado todas las afirmaciones. Responde alguna para ver una comparación.</p>' : ''}
+  const qs = order(), left = qs.length - st.idx, rows = results(), n = answered(), lvl = confidence(n);
+  const seen = [...new Set(qs.slice(0, st.idx).map((q) => Q.categories[q.category]))];
+  const missing = [...new Set(qs.slice(st.idx).map((q) => Q.categories[q.category]))].filter((c) => !seen.includes(c));
+  const coded = rows.filter((r) => r.compared > 0).length;
+  const title = !n ? 'Aún no hay nada que comparar' : ['Sigue un poco más', 'Tu primera pista', 'Esto va tomando forma', 'Ya se ve bastante claro', 'Tu resultado completo'][lvl];
+  const hint = !n ? 'Has saltado todas las afirmaciones. Responde alguna para ver a quién te acercas.'
+    : lvl <= 1 ? 'Con tan pocas respuestas solo podemos decirte quién queda cerca y quién lejos. Cada bloque afina el resultado.'
+    : lvl === 2 ? 'Ya hay cifras aproximadas. Con más respuestas serán exactas.'
+    : lvl === 3 ? 'Queda un último bloque para el resultado completo.' : 'Has respondido todo. Toca un partido para ver en qué coincidís.';
+  return `
+    ${meter(st.justLevel || 0)}
+    <h1 tabindex="-1">${title}</h1>
+    <p>${hint}</p>
+    ${DEMO ? '<p class="notice"><b>Modo demo.</b> Partidos ficticios, solo para probar la herramienta.</p>' : ''}
+    ${!DEMO && coded < rows.length ? `<p class="notice"><b>Beta.</b> De momento solo hemos leído el programa de ${coded} de ${rows.length} partidos. Los demás salen «sin datos». <a href="?demo=1">Probar con partidos ficticios</a>.</p>` : ''}
     <div>${rows.map((r) => `
-      <div class="party"><button type="button" data-party="${esc(r.id)}" aria-label="Ver por qué: ${esc(r.name)}">
-        <div class="row"><span class="name">${esc(r.name)}${r.tied ? ' <span class="tag">empate</span>' : ''}</span>
-        <span class="pct">${r.conclusive ? r.alignment + ' %' : 'No concluyente'}</span></div>
-        ${r.conclusive ? `<progress max="100" value="${r.alignment}" aria-hidden="true"></progress>` : ''}
-        <span class="muted">Comparado en ${r.compared} de ${r.answered} respuestas${r.programme ? ' · ' + esc(PROG[r.programme.status] || '') + (r.programme.year ? ' ' + r.programme.year : '') : ''}</span>
-      </button></div>`).join('')}</div>
-    <div class="stack">
-      ${left > 0 ? `<button type="button" class="primary" data-act="more">Responder ${Math.min(BATCH, left)} más</button>` : ''}
-      <button type="button" data-act="restart">Empezar de nuevo</button>
-    </div>
-    <h2>Qué cubre este resultado</h2>
-    <p class="muted">Temas vistos: ${esc(cats.join(', ') || 'ninguno')}.${missing.length ? ' Sin ver: ' + esc(missing.join(', ')) + '.' : ''} Esta guía no cubre todos los temas ni sustituye a leer los programas.</p>
-    <p class="muted">Cómo se calcula: cada respuesta se compara con la posición del partido en su programa. Lo que no está en el programa no cuenta, ni a favor ni en contra. Hace falta comparar al menos 5 respuestas y el 60 % de las tuyas para dar un porcentaje. Diferencias de 3 puntos o menos se muestran como empate.</p>`;
+      <button type="button" class="party" data-party="${esc(r.id)}">
+        <span class="row"><span class="name">${esc(r.name)}</span>${valueHtml(r, lvl)}</span>
+        ${barHtml(r, lvl)}
+        <span class="muted">${r.compared ? `Comparado en ${r.compared} de ${r.answered} respuestas` : 'Programa sin leer todavía'} · ver por qué →</span>
+      </button>`).join('')}</div>
+    ${left > 0 ? `<button type="button" class="cta" data-act="more">Afinar con ${Math.min(BATCH, left)} más</button>` : `<button type="button" class="cta" data-act="share">Compartir la guía</button>`}
+    <button type="button" class="cta alt" data-act="restart">Empezar de nuevo</button>
+    <p class="muted">Temas vistos: ${esc(seen.join(', ') || 'ninguno')}.${missing.length ? ' Faltan: ' + esc(missing.join(', ')) + '.' : ''}</p>
+    <p class="muted">Esto no es una recomendación de voto. Compara tus respuestas con lo que cada partido ha escrito. <button type="button" class="ghost" data-act="about">Cómo funciona</button></p>
+    ${left === 0 ? feedbackHtml() : ''}`;
 }
 
 function why() {
-  const p = [...parties()].find((x) => x.id === st.party);
-  if (!p) return go({ screen: 'result' });
-  const r = scoreParty(st.answers, S[p.id]);
+  const p = parties().find((x) => x.id === st.party);
+  if (!p) { st.screen = 'result'; return result(); }
+  const cells = stancesOf(p), r = scoreParty(st.answers, cells), lvl = confidence(answered());
   const qs = order().filter((q) => st.answers[q.id] in ANSWERS);
   const pr = p.programme || {};
-  app.innerHTML = `
-    <button type="button" class="link" data-act="toresult">← Volver al resultado</button>
+  return `
+    <button type="button" class="link" data-act="toresult">← Volver</button>
     <h1 tabindex="-1">${esc(p.name)}</h1>
-    <p class="muted" ${p.programme ? '' : 'hidden'}>Fuente: ${esc(pr.title || 'sin programa localizado')}${pr.year ? ' (' + pr.year + ')' : ''} · ${esc(PROG[pr.status] || '')}${pr.verified ? '' : ' · sin verificar'}
-      ${pr.url ? `· <a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">abrir documento</a>` : ''}</p>
-    ${pr.status === 'fallback_older_programme' ? '<p class="notice">Este partido aún no ha publicado programa para el 29N. Se usa el anterior. Puede no reflejar su posición actual.</p>' : ''}
-    <p>${r.conclusive ? `Coincidencia: <strong>${r.alignment} %</strong> en ${r.compared} respuestas comparadas.` : `No concluyente: solo ${r.compared} de ${r.answered} respuestas se pueden comparar.`}</p>
-    ${qs.map((q) => { const c = (S[p.id] || {})[q.id] || {}; const s = c.stance || 'insufficient_evidence'; return `
-      <div class="item"><p><strong>${esc(q.text)}</strong></p>
+    <p>${valueHtml({ ...r, tied: false }, lvl)} <span class="muted">${r.compared} de ${r.answered} respuestas comparadas</span></p>
+    ${p.programme ? `<p class="muted">Fuente: ${esc(pr.title || 'sin documento')}${pr.year ? ' (' + pr.year + ')' : ''} · ${esc(SRC[pr.type] || '')}${pr.url ? ` · <a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">abrir</a>` : ''}</p>` : ''}
+    ${pr.type === 'programa_anterior' ? '<p class="notice">Este partido aún no ha publicado programa para el 29N. Usamos el anterior, que puede no reflejar su posición de hoy.</p>' : ''}
+    ${p.stancesFrom ? `<p class="notice">${esc(pr.note)}</p>` : ''}
+    ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; return `
+      <div class="item"><p><b>${esc(q.text)}</b></p>
       <p><span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag">Partido: ${STANCE[s]}</span></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.page ? `<p class="muted">Página ${esc(c.page)}</p>` : ''}</div>`; }).join('') || '<p class="muted">No has respondido ninguna afirmación.</p>'}`;
+      ${c.page ? `<p class="muted">Página ${esc(c.page)}${c.status === 'reviewed' ? '' : ' · leído por IA, pendiente de revisión'}</p>` : ''}</div>`; }).join('') || '<p class="muted">No has respondido ninguna afirmación.</p>'}`;
 }
 
-function render() { ({ start, question, result, why })[st.screen](); }
+function feedbackHtml() {
+  return `<h2>¿Qué te ha parecido?</h2>
+    <form id="fb" novalidate>
+      <div class="stars" role="group" aria-label="Valoración de 1 a 5">${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-star="${n}" aria-pressed="false">${n}</button>`).join('')}</div>
+      <label for="fbm">¿Qué cambiarías? No cuentes a quién votas.</label>
+      <textarea id="fbm" rows="3" maxlength="1000"></textarea>
+      <button type="submit" class="cta alt">Enviar opinión</button>
+      <p class="muted" id="fbs" role="status"></p>
+    </form>`;
+}
 
-app.addEventListener('click', (e) => {
+function about() {
+  return `
+    <button type="button" class="link" data-act="closeabout">← Volver</button>
+    <h1 tabindex="-1">Cómo funciona</h1>
+    <p>Respondes a ${Q.questions.length} afirmaciones. Comparamos cada respuesta con lo que el partido ha escrito. Nada más.</p>
+    <h2>De dónde salen las posiciones</h2>
+    <p>Por este orden: el programa para el 29N; si no existe, el último programa de unas generales; si tampoco, la web oficial del partido. Siempre decimos cuál usamos y enlazamos el documento. Si un partido no dice nada sobre un tema, no cuenta ni a favor ni en contra.</p>
+    <p>Una IA lee los programas y otra revisa. Después lo comprueba una persona. Lo que aún no está revisado lo indicamos.</p>
+    <h2>Cómo se calcula</h2>
+    <p>Coincidir del todo vale 1 punto; casi, 0,75; poco, 0,25; nada, 0. Una posición con matices vale 0,5. El porcentaje es la media. Ningún tema pesa más que otro: elegir temas solo cambia el orden.</p>
+    <h2>Por qué la fiabilidad sube</h2>
+    <p>Con 5 respuestas solo decimos «cerca» o «lejos». Con 10, cifras redondeadas. Con 15 o más, cifras exactas. Menos respuestas, menos precisión.</p>
+    <h2>Qué partidos salen</h2>
+    <p>${esc(P.inclusion_rule)}</p>
+    <h2>Privacidad</h2>
+    <p>Sin registro, sin cookies, sin analítica. Tus respuestas se quedan en esta pestaña y se borran al cerrarla.</p>
+    <h2>Código abierto</h2>
+    <p>Hecho por BRACAI. Código con licencia MIT y datos con CC BY 4.0: puedes reutilizarlo citando la fuente. <a href="${REPO}" rel="noopener noreferrer" target="_blank">Ver en GitHub</a>. ¿Un error? Dínoslo aquí abajo.</p>
+    ${feedbackHtml()}`;
+}
+
+const SCREENS = { start, question, result, why, about };
+function render() {
+  app.innerHTML = `<div class="screen">${SCREENS[st.screen]()}</div>`;
+  st.justLevel = 0;
+  app.querySelector('h1,.statement')?.focus({ preventScroll: true });
+}
+
+function answer(val) {
+  const qs = order(), q = qs[st.idx], before = confidence(answered()), answers = { ...st.answers };
+  if (val === 'skip') delete answers[q.id]; else answers[q.id] = val;
+  const idx = st.idx + 1, done = idx % BATCH === 0 || idx >= qs.length;
+  st.answers = answers;
+  const after = confidence(answered());
+  go({ idx, screen: done ? 'result' : 'question', justLevel: done && after > before ? after : 0 }, true);
+}
+
+async function share() {
+  const data = { title: 'Guía de voto 29N', text: '¿Qué partido piensa como tú? 20 afirmaciones, 3 minutos.', url: location.origin + location.pathname };
+  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); app.querySelector('[data-act=share]').textContent = 'Enlace copiado'; } } catch { /* cancelled */ }
+}
+
+document.addEventListener('click', (e) => {
   const b = e.target.closest('button'); if (!b) return;
-  const qs = order();
   if (b.dataset.bubble) {
     const id = b.dataset.bubble, on = st.bubbles.includes(id);
     if (!on && st.bubbles.length >= MAX_BUBBLES) return;
     st.bubbles = on ? st.bubbles.filter((x) => x !== id) : [...st.bubbles, id];
     b.setAttribute('aria-pressed', String(!on)); // update in place: keep focus and scroll
-    app.querySelector('[data-act=begin]').textContent = st.bubbles.length ? 'Empezar' : 'Empezar sin elegir';
+    b.parentElement.classList.toggle('full', st.bubbles.length >= MAX_BUBBLES);
+    app.querySelector('#count').textContent = countText();
     return save();
   }
-  if (b.dataset.ans) {
-    const q = qs[st.idx], answers = { ...st.answers };
-    if (b.dataset.ans === 'skip') delete answers[q.id]; else answers[q.id] = b.dataset.ans;
-    const idx = st.idx + 1;
-    return go({ answers, idx, screen: idx % BATCH === 0 || idx >= qs.length ? 'result' : 'question' });
-  }
+  if (b.dataset.ans) { b.setAttribute('aria-pressed', 'true'); return answer(b.dataset.ans); }
   if (b.dataset.party) return go({ screen: 'why', party: b.dataset.party });
+  if (b.dataset.star) { b.parentElement.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); return; }
   switch (b.dataset.act) {
-    case 'begin': return go({ screen: 'question', idx: 0, answers: {} });
+    case 'begin': return go({ screen: 'question', idx: 0, answers: {} }, true);
     case 'back': return st.idx === 0 ? go({ screen: 'start' }) : go({ idx: st.idx - 1 });
-    case 'more': return go({ screen: 'question' });
+    case 'more': return go({ screen: 'question' }, true);
     case 'toresult': return go({ screen: 'result' });
+    case 'closeabout': return go({ screen: st.prev || 'start' });
+    case 'about': return st.screen === 'about' ? null : go({ prev: st.screen === 'why' ? 'result' : st.screen, screen: 'about' });
+    case 'home': return go({ screen: 'start' });
+    case 'share': return share();
     case 'restart': return go({ screen: 'start', bubbles: [], idx: 0, answers: {}, party: null });
   }
 });
-app.addEventListener('change', (e) => { if (e.target.id === 'prov') { st.province = e.target.value; save(); } });
+document.addEventListener('change', (e) => { if (e.target.id === 'prov') { st.province = e.target.value; save(); } });
+document.addEventListener('keydown', (e) => {
+  if (st.screen !== 'question' || e.target.closest('textarea,select,summary') || e.metaKey || e.ctrlKey || e.altKey) return;
+  const i = ['1', '2', '3', '4'].indexOf(e.key);
+  if (i >= 0) answer(OPTS[i][0]);
+});
+document.addEventListener('submit', async (e) => {
+  if (e.target.id !== 'fb') return;
+  e.preventDefault();
+  const f = e.target, status = f.querySelector('#fbs');
+  const rating = f.querySelector('[data-star][aria-pressed=true]')?.dataset.star || '', message = f.querySelector('#fbm').value.trim();
+  if (!rating && !message) { status.textContent = 'Elige una nota o escribe algo.'; return; }
+  status.textContent = 'Enviando…';
+  try {
+    const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'feedback', rating, message }).toString() });
+    if (!r.ok) throw new Error(String(r.status));
+    f.innerHTML = '<p class="notice">Gracias. Lo leemos todo.</p>';
+  } catch { status.textContent = 'No se ha podido enviar. Inténtalo más tarde.'; }
+});
 
 Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json'), DEMO ? load('data/demo.json') : null])
   .then(([q, p, s, d]) => {
@@ -146,6 +250,8 @@ Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/
       S = Object.fromEntries(d.parties.map((x) => [x.id, Object.fromEntries(q.questions.map((qq, i) => [qq.id, { stance: map[x.pattern[i]] || 'insufficient_evidence' }]))]));
     }
     document.querySelector('#versions').textContent = `Preguntas ${q.version} · Posiciones ${s.version}${DEMO ? ' · DEMO' : ''}`;
-    restore(); render();
+    restore();
+    if (!SCREENS[st.screen] || st.idx > q.questions.length) st = { screen: 'start', bubbles: [], province: '', idx: 0, answers: {}, party: null };
+    render();
   })
   .catch(() => { app.innerHTML = '<p>No se han podido cargar los datos. Recarga la página.</p>'; });
