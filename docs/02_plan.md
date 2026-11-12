@@ -3,7 +3,7 @@
 | Day | Step | Who | Status |
 |---|---|---|---|
 | Thu 12 Nov | App v0.2, scoring, 15 tests, 20 statements with explainers, licence, feedback form, image brief | Claude | Done |
-| Thu 12 Nov | PP 29N programme read and coded (13 of 20 statements found) | Claude | Done, unreviewed |
+| Thu 12 Nov | PP (13 of 20) and ERC (8 of 20) 29N programmes read and coded | Claude | Done, unreviewed |
 | Thu 12 Nov | Read the other programmes | Claude | Blocked: each PDF needs Finn's approval click, and nobody clicked |
 | Thu 12 Nov | Push to GitHub, deploy to Netlify | Claude | Blocked: GitHub app not installed on the repo; deploy needs approval |
 | Fri 13 Nov | Unblock (10 minutes at the screen, or drop the PDFs into the chat) | Finn | |
@@ -18,7 +18,7 @@
 
 | Party | Source to read | Size |
 |---|---|---|
-| ERC, PNV, CC, BNG | 29N programme | 23 to 91 pages |
+| PNV, CC, BNG | 29N programme | 23 to 91 pages |
 | EH Bildu | 2023 commitment | 16 pages |
 | PSOE, Vox, Junts | 2023 programme | 148 to 272 pages |
 | Frente Amplio, Podemos | Programme not found. Website, once the address is confirmed | |

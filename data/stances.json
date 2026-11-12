@@ -1,5 +1,5 @@
 {
- "version": "0.2.0-draft",
+ "version": "0.3.0-draft",
  "status": "ai_coded_unreviewed",
  "note": "Posiciones leídas por IA en el documento enlazado. Las páginas hay que comprobarlas contra el PDF. Falta revisión humana y la cita literal.",
  "stances": {
@@ -92,6 +92,64 @@
     "stance": "support",
     "page": "74",
     "summary": "Mantiene el apoyo político, económico, militar y humanitario a Ucrania.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   }
+  },
+  "erc": {
+   "Q03": {
+    "stance": "support",
+    "page": "22",
+    "summary": "Hacer permanente el impuesto temporal a las grandes fortunas y añadir tramos más altos.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q05": {
+    "stance": "support",
+    "page": "26",
+    "summary": "Reducir la jornada máxima a 37,5 horas semanales sin bajar salarios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q07": {
+    "stance": "support",
+    "page": "21",
+    "summary": "Prestación universal por crianza de al menos 200 euros, mayor donde la vida es más cara.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "41",
+    "summary": "Rechaza la privatización de la sanidad y defiende la gestión pública.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q11": {
+    "stance": "oppose",
+    "page": "10-11",
+    "summary": "El catalán debe seguir como lengua de enseñanza; rechaza porcentajes de lenguas impuestos por el Estado.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q18": {
+    "stance": "support",
+    "page": "8",
+    "summary": "Negociar un referéndum de autodeterminación en Cataluña con mediación europea.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q19": {
+    "stance": "support",
+    "page": "14",
+    "summary": "Que la Agencia Tributaria catalana recaude todos los impuestos generados en Cataluña.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed"
+   },
+   "Q20": {
+    "stance": "conditional",
+    "page": "16",
+    "summary": "Mantiene el apoyo a Ucrania con ayuda europea y diplomacia. No menciona la ayuda militar.",
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed"
    }

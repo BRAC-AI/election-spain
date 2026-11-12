@@ -49,17 +49,16 @@ function start() {
   return `
     <p class="eyebrow">Elecciones generales · 29 de noviembre</p>
     <h1 tabindex="-1">¿Qué partido piensa como tú?</h1>
-    <p>Toca hasta tres temas que te importen. Empezamos por ahí.</p>
     <div class="bubbles${st.bubbles.length >= MAX_BUBBLES ? ' full' : ''}" role="group" aria-label="Temas">
       ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
     </div>
     <p class="count" id="count">${countText()}</p>
-    <label for="prov">¿Dónde votas? Así ves solo tus partidos.</label>
+    <label for="prov">¿Dónde votas?</label>
     <select id="prov"><option value="">Toda España</option>${provs.map(([c, n]) => `<option value="${c}" ${st.province === c ? 'selected' : ''}>${esc(n)}</option>`).join('')}</select>
     <button type="button" class="cta" data-act="begin">Empezar</button>
-    <p class="muted">${Q.questions.length} afirmaciones, de cinco en cinco. Unos 3 minutos. Sin registro.</p>`;
+    <p class="muted">${Q.questions.length} preguntas · 3 minutos · anónimo</p>`;
 }
-const countText = () => (st.bubbles.length ? `${st.bubbles.length} de ${MAX_BUBBLES} elegidos` : 'O empieza sin elegir.');
+const countText = () => (st.bubbles.length ? `${st.bubbles.length} de ${MAX_BUBBLES}` : 'Elige hasta 3 temas, o ninguno.');
 
 function question() {
   const qs = order(), q = qs[st.idx];
@@ -95,30 +94,24 @@ function barHtml(r, lvl) {
 
 function result() {
   const qs = order(), left = qs.length - st.idx, rows = results(), n = answered(), lvl = confidence(n);
-  const seen = [...new Set(qs.slice(0, st.idx).map((q) => Q.categories[q.category]))];
-  const missing = [...new Set(qs.slice(st.idx).map((q) => Q.categories[q.category]))].filter((c) => !seen.includes(c));
-  const coded = rows.filter((r) => r.compared > 0).length;
+    const coded = rows.filter((r) => r.compared > 0).length;
   const title = !n ? 'Aún no hay nada que comparar' : ['Sigue un poco más', 'Tu primera pista', 'Esto va tomando forma', 'Ya se ve bastante claro', 'Tu resultado completo'][lvl];
-  const hint = !n ? 'Has saltado todas las afirmaciones. Responde alguna para ver a quién te acercas.'
-    : lvl <= 1 ? 'Con tan pocas respuestas solo podemos decirte quién queda cerca y quién lejos. Cada bloque afina el resultado.'
-    : lvl === 2 ? 'Ya hay cifras aproximadas. Con más respuestas serán exactas.'
-    : lvl === 3 ? 'Queda un último bloque para el resultado completo.' : 'Has respondido todo. Toca un partido para ver en qué coincidís.';
+  const hint = !n ? 'Responde alguna pregunta para ver a quién te acercas.' : lvl === 1 ? 'Aún es pronto: solo cerca o lejos.' : lvl === 2 ? 'Cifras aproximadas.' : '';
   return `
     ${meter(st.justLevel || 0)}
     <h1 tabindex="-1">${title}</h1>
-    <p>${hint}</p>
+    ${hint ? `<p class="muted">${hint}</p>` : ''}
     ${DEMO ? '<p class="notice"><b>Modo demo.</b> Partidos ficticios, solo para probar la herramienta.</p>' : ''}
-    ${!DEMO && coded < rows.length ? `<p class="notice"><b>Beta.</b> De momento solo hemos leído el programa de ${coded} de ${rows.length} partidos. Los demás salen «sin datos». <a href="?demo=1">Probar con partidos ficticios</a>.</p>` : ''}
+    ${!DEMO && coded < rows.length ? `<p class="notice"><b>Beta.</b> Leídos ${coded} de ${rows.length} programas. <a href="?demo=1">Ver demo</a></p>` : ''}
     <div>${rows.map((r) => `
       <button type="button" class="party" data-party="${esc(r.id)}">
         <span class="row"><span class="name">${esc(r.name)}</span>${valueHtml(r, lvl)}</span>
         ${barHtml(r, lvl)}
-        <span class="muted">${r.compared ? `Comparado en ${r.compared} de ${r.answered} respuestas` : 'Programa sin leer todavía'} · ver por qué →</span>
+        <span class="muted">${r.compared ? `${r.compared} de ${r.answered} comparadas · ver por qué →` : 'Programa sin leer'}</span>
       </button>`).join('')}</div>
     ${left > 0 ? `<button type="button" class="cta" data-act="more">Afinar con ${Math.min(BATCH, left)} más</button>` : `<button type="button" class="cta" data-act="share">Compartir la guía</button>`}
     <button type="button" class="cta alt" data-act="restart">Empezar de nuevo</button>
-    <p class="muted">Temas vistos: ${esc(seen.join(', ') || 'ninguno')}.${missing.length ? ' Faltan: ' + esc(missing.join(', ')) + '.' : ''}</p>
-    <p class="muted">Esto no es una recomendación de voto. Compara tus respuestas con lo que cada partido ha escrito. <button type="button" class="ghost" data-act="about">Cómo funciona</button></p>
+    <p class="muted">No es una recomendación de voto. <button type="button" class="ghost" data-act="about">Cómo funciona</button></p>
     ${left === 0 ? feedbackHtml() : ''}`;
 }
 
@@ -131,22 +124,22 @@ function why() {
   return `
     <button type="button" class="link" data-act="toresult">← Volver</button>
     <h1 tabindex="-1">${esc(p.name)}</h1>
-    <p>${valueHtml({ ...r, tied: false }, lvl)} <span class="muted">${r.compared} de ${r.answered} respuestas comparadas</span></p>
+    <p>${valueHtml({ ...r, tied: false }, lvl)} <span class="muted">${r.compared} de ${r.answered} comparadas</span></p>
     ${p.programme ? `<p class="muted">Fuente: ${esc(pr.title || 'sin documento')}${pr.year ? ' (' + pr.year + ')' : ''} · ${esc(SRC[pr.type] || '')}${pr.url ? ` · <a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">abrir</a>` : ''}</p>` : ''}
-    ${pr.type === 'programa_anterior' ? '<p class="notice">Este partido aún no ha publicado programa para el 29N. Usamos el anterior, que puede no reflejar su posición de hoy.</p>' : ''}
+    ${pr.type === 'programa_anterior' ? '<p class="notice">Aún sin programa para el 29N. Usamos el anterior.</p>' : ''}
     ${p.stancesFrom ? `<p class="notice">${esc(pr.note)}</p>` : ''}
     ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; return `
       <div class="item"><p><b>${esc(q.text)}</b></p>
       <p><span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag">Partido: ${STANCE[s]}</span></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.page ? `<p class="muted">Página ${esc(c.page)}${c.status === 'reviewed' ? '' : ' · leído por IA, pendiente de revisión'}</p>` : ''}</div>`; }).join('') || '<p class="muted">No has respondido ninguna afirmación.</p>'}`;
+      ${c.page ? `<p class="muted">Página ${esc(c.page)}${c.status === 'reviewed' ? '' : ' · sin revisar'}</p>` : ''}</div>`; }).join('') || '<p class="muted">No has respondido ninguna afirmación.</p>'}`;
 }
 
 function feedbackHtml() {
   return `<h2>¿Qué te ha parecido?</h2>
     <form id="fb" novalidate>
       <div class="stars" role="group" aria-label="Valoración de 1 a 5">${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-star="${n}" aria-pressed="false">${n}</button>`).join('')}</div>
-      <label for="fbm">¿Qué cambiarías? No cuentes a quién votas.</label>
+      <label for="fbm">¿Qué cambiarías?</label>
       <textarea id="fbm" rows="3" maxlength="1000"></textarea>
       <button type="submit" class="cta alt">Enviar opinión</button>
       <p class="muted" id="fbs" role="status"></p>
@@ -191,7 +184,7 @@ function answer(val) {
 }
 
 async function share() {
-  const data = { title: 'Guía de voto 29N', text: '¿Qué partido piensa como tú? 20 afirmaciones, 3 minutos.', url: location.origin + location.pathname };
+  const data = { title: 'Guía de voto 29N', text: '¿Qué partido piensa como tú? 20 preguntas, 3 minutos.', url: location.origin + location.pathname };
   try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); app.querySelector('[data-act=share]').textContent = 'Enlace copiado'; } } catch { /* cancelled */ }
 }
 
