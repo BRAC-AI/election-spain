@@ -1,9 +1,0 @@
-{
-  "note": "Partidos FICTICIOS para probar la interfaz. No representan a ningún partido real.",
-  "parties": [
-    {"id":"demo-a","name":"Partido Ficticio A","scope":{"except":[]},"pattern":"SSSOSSSSOOOOSOOOSCSO"},
-    {"id":"demo-b","name":"Partido Ficticio B","scope":{"except":[]},"pattern":"OOOSOCOOSSSSOSSSOOOS"},
-    {"id":"demo-c","name":"Partido Ficticio C","scope":{"except":[]},"pattern":"SCSOS-S-OC-OS-OOSSS-"},
-    {"id":"demo-d","name":"Partido Ficticio D","scope":{"except":[]},"pattern":"C---S----S------O---"}
-  ]
-}

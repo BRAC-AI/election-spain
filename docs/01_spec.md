@@ -58,3 +58,12 @@ Same as v3. Answers +2, +1, -1, -2. Stance support +2, oppose -2. Agreement = 1 
 3. Province lists come from a third-party site. Check against the BOE of 3 Nov.
 4. The Valencian joint list (Compromís and others): name and members not confirmed.
 5. Privacy and electoral-law look by a human before a public push.
+
+## Changes on 12 Nov, late (v0.5)
+
+- No demo mode. Real parties only.
+- Every screen fits one phone screen (tested at 390 x 664 and 360 x 600) and one desktop screen (1440 x 900). Long lists scroll inside their own box.
+- A percent shows for every party as soon as 3 answers can be compared and they cover a quarter of the voter's answers. The bar on top carries the uncertainty. The earlier "bands first" idea is gone.
+- Statements rewritten for a 12-year-old. Each has a one-line "what does it mean".
+- Party row: logo slot (initials until the files exist), name, bar, percent. Party page: link to the party site and to the source document.
+- Methodology page in plain words, with the source and the count of coded statements per party.

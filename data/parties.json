@@ -1,6 +1,6 @@
 {
- "version": "0.2.0-draft",
- "inclusion_rule": "Entran las candidaturas con escaño en el Congreso disuelto el 5-10-2026 (o su sucesora directa) y las que superan el 3 % en la media de encuestas nacional. El 3 % es la barrera legal por circunscripción (LOREG art. 163). Media usada: Demócrata, 7-11-2026, 11 institutos. SALF marca 2,2 % y queda fuera.",
+ "version": "0.5.0-draft",
+ "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso y los que pasan del 3 % en las encuestas. SALF tiene un 2,2 % (media de Demócrata, 7-11-2026) y se queda fuera.",
  "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
  "provinces": {
   "01": "Álava",
@@ -73,7 +73,10 @@
     "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
     "note": "Leído con IA el 12-11-2026. Sin revisión humana.",
     "verified": false
-   }
+   },
+   "abbr": "PP",
+   "site": "https://www.pp.es/",
+   "logo": null
   },
   {
    "id": "psoe",
@@ -89,7 +92,10 @@
     "url": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf",
     "note": "Sin programa 29N a 12-11-2026. Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "PSOE",
+   "site": "https://www.psoe.es/",
+   "logo": null
   },
   {
    "id": "vox",
@@ -105,7 +111,10 @@
     "url": "https://www.voxespana.es/wp-content/uploads/2023/07/Programa-VOX-2023-con-menos-peso.pdf",
     "note": "Una fuente cita un documento 29N de 6 páginas («Recuperar España», 20-10-2026); sin localizar. Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "VOX",
+   "site": "https://www.voxespana.es/",
+   "logo": null
   },
   {
    "id": "fa",
@@ -130,7 +139,10 @@
     "url": "",
     "note": "Coalición nueva. No se usa el programa de Sumar 2023 por decisión editorial. El 12-11-2026 presentó en Galicia un programa «100+15»; documento oficial sin localizar. Si no aparece, se usará su web.",
     "verified": false
-   }
+   },
+   "abbr": "FA",
+   "site": "",
+   "logo": null
   },
   {
    "id": "podemos",
@@ -158,7 +170,10 @@
     "url": "",
     "note": "Sin programa 29N. En 2023 fue dentro de Sumar. Se usará su web oficial.",
     "verified": false
-   }
+   },
+   "abbr": "POD",
+   "site": "https://podemos.info/",
+   "logo": null
   },
   {
    "id": "erc",
@@ -179,7 +194,10 @@
     "url": "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
     "note": "Leído con IA el 12-11-2026. Sin revisión humana. Q16: el texto apunta en contra pero no lo dice claro; sin codificar.",
     "verified": false
-   }
+   },
+   "abbr": "ERC",
+   "site": "https://www.esquerra.cat/",
+   "logo": null
   },
   {
    "id": "junts",
@@ -200,7 +218,10 @@
     "url": "https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf",
     "note": "Copia alojada por betevé: el partido ya no ofrece el original. Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "JxC",
+   "site": "https://junts.cat/",
+   "logo": null
   },
   {
    "id": "pnv",
@@ -220,7 +241,10 @@
     "url": "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n",
     "note": "Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "PNV",
+   "site": "https://www.eaj-pnv.eus/",
+   "logo": null
   },
   {
    "id": "bildu",
@@ -241,7 +265,10 @@
     "url": "https://ehbildu.eus/dokumentuak/23J-COMPROMISO-DE-EUSKAL-HERRIA-BILDU.pdf",
     "note": "16 páginas. Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "EHB",
+   "site": "https://ehbildu.eus/",
+   "logo": null
   },
   {
    "id": "bng",
@@ -262,7 +289,10 @@
     "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
     "note": "Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "BNG",
+   "site": "https://www.bng.gal/",
+   "logo": null
   },
   {
    "id": "cc",
@@ -281,7 +311,10 @@
     "url": "https://coalicioncanaria.org/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV.pdf",
     "note": "Pendiente de leer.",
     "verified": false
-   }
+   },
+   "abbr": "CC",
+   "site": "https://coalicioncanaria.org/",
+   "logo": null
   },
   {
    "id": "upn-pp",
@@ -300,7 +333,10 @@
     "note": "Lista conjunta en Navarra. Se usa el programa nacional del PP mientras la coalición no publique uno propio.",
     "verified": false
    },
-   "stancesFrom": "pp"
+   "stancesFrom": "pp",
+   "abbr": "UPN",
+   "site": "https://www.upn.org/",
+   "logo": null
   },
   {
    "id": "compromis",
@@ -320,7 +356,10 @@
     "url": "",
     "note": "En la Comunitat Valenciana hay una lista conjunta del espacio (Compromís-Front Valencià). Nombre y composición por confirmar en el BOE.",
     "verified": false
-   }
+   },
+   "abbr": "COM",
+   "site": "https://compromis.net/",
+   "logo": null
   }
  ],
  "known_exclusions": [
