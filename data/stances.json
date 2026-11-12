@@ -1,0 +1,6 @@
+{
+  "version": "0.0.0-empty",
+  "status": "not_coded",
+  "note": "Vacío a propósito. Ninguna posición de partido se publica hasta que esté leída en el programa oficial y aprobada por un revisor humano. Formato por celda: {stance: support|oppose|conditional|insufficient_evidence, summary, page, quote, reviewer, verified_on}.",
+  "stances": {}
+}
