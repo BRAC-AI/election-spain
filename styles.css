@@ -94,3 +94,32 @@ summary::before{content:"ⓘ  "}
 h1:focus,.statement:focus{outline:none}
 .bubbles{gap:8px;margin:14px 0 4px}
 .bubble{padding:10px 15px;min-height:44px;font-size:16px}
+
+/* v0.4: stacked answer rows */
+.scale{display:grid;grid-template-columns:1fr;gap:8px}
+.opt{flex-direction:row;justify-content:flex-start;align-items:center;gap:12px;min-height:56px;padding:0 16px;font-size:17px;text-align:left;border-radius:14px}
+.opt .dot,.opt[data-ans=sd] .dot,.opt[data-ans=sa] .dot{width:12px;height:12px;border:0;flex:none}
+.opt[data-ans=sa] .dot{background:var(--teal)}.opt[data-ans=a] .dot{background:#8fd0dc}
+.opt[data-ans=d] .dot{background:#a9b4bd}.opt[data-ans=sd] .dot{background:var(--ink)}
+.opt.skip{border-style:dashed;color:var(--muted);font-weight:400}.opt.skip .dot{background:none;border:2px solid var(--line)}
+.opt .go{margin-left:auto;color:var(--muted);transition:transform .15s}
+.opt:hover .go{transform:translateX(4px)}
+.opt:active{transform:scale(.98)}
+.opt[aria-pressed=true] .go{color:#fff}
+.card{padding:22px 20px 18px;text-align:center}
+.card details{text-align:left}
+/* v0.4: winner hero */
+.hero{display:flex;align-items:center;gap:16px;width:100%;text-align:left;border:0;background:var(--ink);color:#fff;border-radius:22px;padding:18px;margin:12px 0 4px;animation:in .4s ease both}
+.ringwrap{position:relative;width:112px;height:112px;flex:none}
+.ring{width:100%;height:100%}
+.ring circle{fill:none;stroke-width:12;stroke-linecap:round}
+.ring .track{stroke:rgba(255,255,255,.14)}
+.ring .arc{stroke:var(--teal);animation:draw 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes draw{from{stroke-dashoffset:100}}
+.fuzzy .ring .arc{filter:blur(2.5px);opacity:.8}
+.num{position:absolute;inset:0;display:grid;place-items:center;font-size:32px;font-weight:700;font-variant-numeric:tabular-nums}
+.num small{font-size:15px;margin-left:1px}
+.num{grid-auto-flow:column;justify-content:center;align-items:baseline;align-content:center}
+.herotext{display:flex;flex-direction:column;gap:4px;min-width:0}
+.hero .eyebrow{color:#7fd3e2}.heroname{font-size:26px;font-weight:700;line-height:1.1}
+.hero .muted{color:rgba(255,255,255,.7)}

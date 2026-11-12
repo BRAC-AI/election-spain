@@ -6,7 +6,7 @@ const load = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p); return
 const DEMO = new URLSearchParams(location.search).get('demo') === '1';
 const BATCH = CONFIG.step, MAX_BUBBLES = 3;
 const REPO = 'https://github.com/BRAC-AI/election-spain';
-const OPTS = [['sd', 'Muy en contra'], ['d', 'En contra'], ['a', 'A favor'], ['sa', 'Muy a favor']];
+const OPTS = [['sa', 'Muy a favor'], ['a', 'A favor'], ['d', 'En contra'], ['sd', 'Muy en contra']];
 const LABELS = Object.fromEntries(OPTS);
 const STANCE = { support: 'A favor', oppose: 'En contra', conditional: 'Con matices', insufficient_evidence: 'No lo dice' };
 const SRC = { programa_29N: 'programa del 29N', programa_anterior: 'programa anterior', web: 'web del partido' };
@@ -71,12 +71,28 @@ function question() {
       <details><summary>¿Qué significa?</summary><p>${esc(q.info)}</p></details>
     </div>
     <div class="scale" role="group" aria-label="Tu respuesta">
-      ${OPTS.map(([k, l], i) => `<button type="button" class="opt" data-ans="${k}" aria-pressed="${st.answers[q.id] === k}" aria-keyshortcuts="${i + 1}"><span class="dot"></span>${l}</button>`).join('')}
+      ${OPTS.map(([k, l], i) => `<button type="button" class="opt" data-ans="${k}" aria-pressed="${st.answers[q.id] === k}" aria-keyshortcuts="${i + 1}"><span class="dot"></span><span>${l}</span><span class="go" aria-hidden="true">→</span></button>`).join('')}
+      <button type="button" class="opt skip" data-ans="skip"><span class="dot"></span><span>No lo sé</span><span class="go" aria-hidden="true">→</span></button>
     </div>
-    <div class="row">
-      <button type="button" class="link" data-act="back">${st.idx === 0 ? '← Temas' : '← Atrás'}</button>
-      <button type="button" class="link" data-ans="skip">No lo sé, saltar →</button>
-    </div>`;
+    <button type="button" class="link" data-act="back">${st.idx === 0 ? '← Temas' : '← Atrás'}</button>`;
+}
+
+function heroHtml(rows, lvl) {
+  const lead = rows.find((r) => r.conclusive);
+  if (!lead || lvl < 1) return '';
+  // Never crown one party when the shown precision cannot tell them apart.
+  const key = (r) => JSON.stringify(display(r.alignment, lvl));
+  const top = rows.filter((r) => r.conclusive && (lvl < 3 ? key(r) === key(lead) : r.rank === 1));
+  const r = lead, d = display(r.alignment, lvl);
+  const v = d.kind === 'band' ? { near: 80, mid: 50, far: 25 }[d.band] : d.value;
+  const mid = d.kind === 'band' ? '?' : d.kind === 'approx' ? `≈${d.value}` : `${d.value}`;
+  return `<button type="button" class="hero" data-party="${esc(r.id)}">
+    <span class="ringwrap${lvl < 3 ? ' fuzzy' : ''}"><svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+      <circle class="track" cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="${v} 100" transform="rotate(-90 60 60)"/></svg>
+      <span class="num">${mid}${d.kind === 'band' ? '' : '<small>%</small>'}</span></span>
+    <span class="herotext"><span class="eyebrow">${lvl < 3 ? 'De momento, más cerca' : top.length > 1 ? 'Empate en cabeza' : 'Más cerca de ti'}</span>
+      <span class="heroname">${top.map((x) => esc(x.name)).join(' · ')}</span>
+      <span class="muted">ver por qué →</span></span></button>`;
 }
 
 function valueHtml(r, lvl) {
@@ -103,6 +119,7 @@ function result() {
     ${hint ? `<p class="muted">${hint}</p>` : ''}
     ${DEMO ? '<p class="notice"><b>Modo demo.</b> Partidos ficticios, solo para probar la herramienta.</p>' : ''}
     ${!DEMO && coded < rows.length ? `<p class="notice"><b>Beta.</b> Leídos ${coded} de ${rows.length} programas. <a href="?demo=1">Ver demo</a></p>` : ''}
+    ${heroHtml(rows, lvl)}
     <div>${rows.map((r) => `
       <button type="button" class="party" data-party="${esc(r.id)}">
         <span class="row"><span class="name">${esc(r.name)}</span>${valueHtml(r, lvl)}</span>
