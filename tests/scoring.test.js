@@ -25,9 +25,10 @@ test('normal case: 5 answered, 5 coded, full coverage', () => {
   const r = scoreParty(five, st({ Q01: 'support', Q02: 'support', Q03: 'oppose', Q04: 'oppose', Q05: 'support' }));
   assert.equal(r.coverage, 1); assert.equal(r.conclusive, true); assert.equal(r.alignment, 85);
 });
-test('2 of 5 comparable gives a percent marked thin; 1 of 5 gives none', () => {
+test('2 of 5 comparable gives a percent; 1 of 5 gives none', () => {
   const r = scoreParty(five, st({ Q01: 'support', Q02: 'support' }));
-  assert.equal(r.coverage, 0.4); assert.equal(r.conclusive, true); assert.equal(r.thin, true); assert.notEqual(r.alignment, null);
+  assert.equal(r.coverage, 0.4); assert.equal(r.conclusive, true); assert.equal(r.thin, false); assert.notEqual(r.alignment, null);
+  assert.equal(scoreParty(five, st({ Q01: 'support', Q02: 'support' }), { ...CONFIG, thinBelow: 4 }).thin, true); // the guard still works if switched on
   const one = scoreParty(five, st({ Q01: 'support' }));
   assert.equal(one.conclusive, false); assert.equal(one.alignment, null);
 });

@@ -71,7 +71,7 @@ Code: `scoring.js`. It is plain arithmetic, the same for everyone.
 ## 7. When a result is shown
 
 - A party gets a percent from 2 comparable answers.
-- All parties are in one list, best match first. With fewer than 4 comparable answers the row also shows how many answers were compared, and that party cannot be the winner yet. Every party has at least 8 known positions; Democracia 21 has the fewest (10, all from its own programme and its candidate).
+- All parties are in one list, best match first. Every party has at least 8 known positions; Democracia 21 has the fewest (10, all from its own programme and its candidate).
 - Parties within 3 points of each other are shown as a tie.
 - Until the voter has gone through all 30 statements the winner card says "Resultado provisional".
 

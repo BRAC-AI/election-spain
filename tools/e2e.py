@@ -56,7 +56,7 @@ with sync_playwright() as p:
         assert n == 30
         vals = [int(v.replace(' %', '')) for v in pg.locator('.party:not(.blank) .val').all_inner_texts()]   # one list, best match first
         assert vals == sorted(vals, reverse=True) and all(0 <= v <= 100 for v in vals), vals
-        assert pg.locator('.divider').count() <= 1
+        assert pg.locator('.divider').count() == 0
         assert 'Democracia' not in pg.locator('.hero').inner_text() and 'provisional' not in pg.locator('.hero').inner_text().lower()
         pg.locator('.party').first.click(); pg.wait_for_selector('.item'); fits(pg, f'{tag} why'); pg.screenshot(path=f'/tmp/shots/{tag}_why.png')
         links = pg.locator('.links a').evaluate_all('els => els.map(e => e.href)'); assert all(l.startswith('https://') for l in links) and links, links

@@ -4,6 +4,7 @@ Rule changes, newest first. The current method is in [METHODOLOGY.md](METHODOLOG
 
 ## 13 November 2026
 
+- The "x de y comparadas" note and the rule that a party with few compared answers cannot win were removed. Early results are marked provisional instead.
 - Democracia 21 is now judged only on its own material: its 29N programme documents and its candidate's interviews (10 positions). Ciudadanos's record was removed completely.
 - One result list for all parties. The separate "Con pocos datos" block is gone.
 - Statement order is random on every run (before: best-covered statements first).

@@ -1,6 +1,6 @@
 // Deterministic scoring. No network, no AI, no randomness. See docs/01_spec.md.
 export const ANSWERS = { sa: 2, a: 1, d: -1, sd: -2 }; // skip = not stored
-export const CONFIG = { minCompared: 2, minCoverage: 0, thinBelow: 4, tieBand: 3, step: 5, minPositions: 8, starWeight: 2 };
+export const CONFIG = { minCompared: 2, minCoverage: 0, thinBelow: 2, tieBand: 3, step: 5, minPositions: 8, starWeight: 2 };
 
 // Agreement on one question, 0..1, or null when it cannot be compared.
 export function agreement(answer, stance) {

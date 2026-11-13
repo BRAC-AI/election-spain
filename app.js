@@ -110,9 +110,9 @@ function hero(rows) {
 
 const oldTag = () => ''; // positions now mix programmes, votes and quotes, so one year tag would mislead
 const row = (r) => `
-      <button type="button" class="party${r.conclusive ? (r.thin ? ' thin' : '') : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
-        ${badge(r)}<span class="name">${esc(r.name)}${r.thin ? `<small>${r.compared} de ${r.answered} comparadas</small>` : ''}</span>
-        ${r.conclusive ? `<span class="bar" aria-hidden="true"><i class="p${Math.round(r.alignment / 5) * 5}"></i></span><span class="val">${r.alignment} %</span>` : ''}
+      <button type="button" class="party${r.conclusive ? (r.thin ? ' thin' : '') : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'aún sin porcentaje, sigue respondiendo'}">
+        ${badge(r)}<span class="name">${esc(r.name)}</span>
+        <span class="bar" aria-hidden="true"><i class="p${r.conclusive ? Math.round(r.alignment / 5) * 5 : 0}"></i></span><span class="val">${r.conclusive ? r.alignment + ' %' : '–'}</span>
       </button>`;
 
 function result() {
@@ -121,7 +121,7 @@ function result() {
     ${meter(st.justLevel || 0)}
     ${hero(rows)}
     <div class="list grow scroll">${rows.filter((r) => r.conclusive).sort((x, y) => y.alignment - x.alignment || x.name.localeCompare(y.name, 'es')).map(row).join('')}
-      ${rows.some((r) => !r.conclusive) ? `<p class="divider">Aún sin datos: sigue respondiendo</p>${rows.filter((r) => !r.conclusive).map(row).join('')}` : ''}</div>
+      ${rows.filter((r) => !r.conclusive).map(row).join('')}</div>
     <div class="btns">
       ${left > 0 ? `<button type="button" class="cta" data-act="more">${Math.min(BATCH, left)} preguntas más</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
