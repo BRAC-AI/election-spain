@@ -109,3 +109,8 @@ test('precision follows confidence: bands, then tens, then exact', () => {
   assert.deepEqual(display(57, 3), { kind: 'exact', value: 57 });
   assert.deepEqual(display(null, 4), { kind: 'none' });
 });
+test('newcomers show only where they run', () => {
+  const ids = (c) => eligibleParties(P.parties, c).map((p) => p.id);
+  assert.ok(ids('28').includes('d21') && ids('08').includes('d21') && !ids('46').includes('d21'));
+  assert.ok(ids('28').includes('salf') && !ids('17').includes('salf') && !ids('48').includes('salf'));
+});

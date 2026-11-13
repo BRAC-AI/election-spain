@@ -71,4 +71,4 @@ Same as v3. Answers +2, +1, -1, -2. Stance support +2, oppose -2. Agreement = 1 
 ## Changes on 13 Nov (v0.6)
 
 - Desktop: one centred card, two columns (statement left, answers right; winner left, all parties right). Phone layout unchanged.
-- Democracia 21 added at Finn's request, shown only in Madrid and Barcelona. It has no seats and no national poll figure above 3 %, so it is an editorial exception and the methodology page says so. Open point: SALF is bigger in the polls (2.2 %) and is still out. Either add it too or be ready to explain why not.
+- Democracia 21 added at Finn's request, shown only in Madrid and Barcelona. It has no seats and no national poll figure above 3 %, so it is an editorial exception and the methodology page says so. SALF added on the same day for balance: one hand-picked newcomer from the centre and none from the right would not look neutral. SALF shows in 46 provinces (all but Bizkaia, Gipuzkoa, Cantabria, Ciudad Real, Girona and Lleida; one source says 47, so check the BOE). The rule is now: seats in the dissolved Congress, plus two named additions chosen by us.

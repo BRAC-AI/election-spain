@@ -57,7 +57,7 @@ with sync_playwright() as p:
         pg.click('[data-star="4"]'); pg.fill('#fbm', 'prueba'); pg.click('#fb button[type=submit]'); pg.wait_for_selector('text=Gracias'); pg.unroute('**/*')
         pg.click('[data-act=closeabout]'); pg.wait_for_selector('.party')
         pg.reload(); pg.wait_for_selector('.party')  # state survives reload
-        if vp[0] == 390: assert any('Democracia 21' in x for x in pg.locator('.party').all_inner_texts())
+        if vp[0] == 390: names = pg.locator('.party').all_inner_texts(); assert any('Democracia 21' in x for x in names) and any('SALF' in x for x in names)
         pg.click('[data-act=restart]'); pg.wait_for_selector('.bubbles'); assert pg.locator('.bubble[aria-pressed=true]').count() == 0
         pg.close()
     b.close()

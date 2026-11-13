@@ -1,6 +1,6 @@
 {
- "version": "0.6.0-draft",
- "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso y los que pasan del 3 % en las encuestas. Hay una excepción elegida por nosotros: Democracia 21, un partido nuevo que solo se presenta en Madrid y Barcelona. SALF tiene un 2,2 % en las encuestas y por ahora no sale.",
+ "version": "0.7.0-draft",
+ "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso. Además hemos añadido dos partidos nuevos sin diputados: SALF (2,2 % en las encuestas, se presenta en 46 provincias) y Democracia 21 (solo en Madrid y Barcelona). Esos dos los hemos elegido nosotros.",
  "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
  "provinces": {
   "01": "Álava",
@@ -382,13 +382,40 @@
     "verified": false,
     "note": "Partido nuevo de Miriam González. Solo se presenta en Madrid y Barcelona, en coalición con Ciudadanos y UCIN. Documento oficial sin localizar."
    }
+  },
+  {
+   "id": "salf",
+   "name": "SALF",
+   "scope": {
+    "except": [
+     "48",
+     "20",
+     "39",
+     "13",
+     "17",
+     "25"
+    ]
+   },
+   "abbr": "SALF",
+   "site": "https://seacabolafiesta.com/",
+   "logo": null,
+   "programme": {
+    "status": "verification_pending",
+    "type": "programa_29N",
+    "title": "«La ilusión de un país. 119 medidas» (según una fuente)",
+    "year": 2026,
+    "url": "",
+    "verified": false,
+    "note": "Se Acabó La Fiesta. Sin diputados. Listas al Congreso en 46 de 52 provincias según queproponen.es (otra fuente dice 47). Una fuente cita un documento 29N en su web; otras dicen que no hay programa. Sin localizar."
+   }
   }
  ],
  "known_exclusions": [
-  "SALF (sin escaño en el Congreso disuelto; se presenta en casi toda España)",
   "Adelante Andalucía",
   "UPC",
   "Aliança Catalana",
+  "Frente Obrero",
+  "PACMA",
   "resto de candidaturas proclamadas"
  ]
 }
