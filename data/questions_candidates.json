@@ -1,0 +1,106 @@
+{
+ "status": "candidates_not_in_app",
+ "note": "Borrador de 13-11-2026. Se quedarán las que más partidos respondan y que más separen a los partidos.",
+ "questions": [
+  {
+   "id": "Q21",
+   "category": "social",
+   "text": "Las pensiones deben subir cada año tanto como los precios."
+  },
+  {
+   "id": "Q22",
+   "category": "social",
+   "text": "La edad de jubilación no debe pasar de los 65 años."
+  },
+  {
+   "id": "Q23",
+   "category": "economy",
+   "text": "Heredar de padres a hijos no debe pagar impuestos."
+  },
+  {
+   "id": "Q24",
+   "category": "economy",
+   "text": "Los bancos y las eléctricas deben pagar un impuesto extra."
+  },
+  {
+   "id": "Q25",
+   "category": "employment",
+   "text": "Despedir a un trabajador debe salir más caro a la empresa."
+  },
+  {
+   "id": "Q26",
+   "category": "housing",
+   "text": "Un okupa debe poder ser desalojado en 48 horas."
+  },
+  {
+   "id": "Q27",
+   "category": "housing",
+   "text": "Hay que limitar los pisos turísticos."
+  },
+  {
+   "id": "Q28",
+   "category": "climate",
+   "text": "Se deben poder seguir vendiendo coches de gasolina y diésel después de 2035."
+  },
+  {
+   "id": "Q29",
+   "category": "climate",
+   "text": "Hay que construir más embalses y trasvases de agua."
+  },
+  {
+   "id": "Q30",
+   "category": "immigration",
+   "text": "Los inmigrantes que cometan delitos deben ser expulsados."
+  },
+  {
+   "id": "Q31",
+   "category": "immigration",
+   "text": "Los menores inmigrantes que llegan solos deben repartirse entre todas las comunidades."
+  },
+  {
+   "id": "Q32",
+   "category": "territory",
+   "text": "Los jueces, y no los políticos, deben elegir al órgano que gobierna a los jueces."
+  },
+  {
+   "id": "Q33",
+   "category": "territory",
+   "text": "Los ciudadanos deben poder votar si quieren monarquía o república."
+  },
+  {
+   "id": "Q34",
+   "category": "territory",
+   "text": "Los políticos no deben tener aforamiento."
+  },
+  {
+   "id": "Q35",
+   "category": "territory",
+   "text": "El catalán, el euskera y el gallego deben poder usarse en todas las instituciones del Estado."
+  },
+  {
+   "id": "Q36",
+   "category": "rights",
+   "text": "La ley de violencia de género debe cambiarse por una de violencia en la familia."
+  },
+  {
+   "id": "Q37",
+   "category": "rights",
+   "text": "La eutanasia debe seguir siendo legal."
+  },
+  {
+   "id": "Q38",
+   "category": "rights",
+   "text": "La prostitución debe prohibirse."
+  },
+  {
+   "id": "Q39",
+   "category": "eu",
+   "text": "España no debe vender ni comprar armas a Israel."
+  },
+  {
+   "id": "Q40",
+   "category": "eu",
+   "text": "España debe recuperar poder de decisión frente a la Unión Europea."
+  }
+ ]
+}
