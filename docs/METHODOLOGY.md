@@ -24,8 +24,15 @@ Use the first level that says something. Write the level on every position.
 | 1 | The party's official programme for 29 November 2026 | Always first |
 | 2 | The party's own previous general-election programme | Only for what level 1 does not mention |
 | 3 | The party's official website or official 2026 documents | Only if the party has no programme of its own |
+| 4 | Said in public in 2026 by the candidate, leader or a named spokesperson, as a direct quote with a link | Only for what levels 1 to 3 do not mention |
 
-Never use: press, interviews, votes in Congress, other comparison sites, or "everyone knows they think this".
+Level 4 rules: the words must be the party's own (not the journalist's, not a rival's). Keep the quote, who said it, the date and the link. If two quotes clash, use the newest one from the most senior person. The app shows these as "Lo dijo ...", so the voter sees it is weaker than a programme.
+
+Level 4 was added on 13 November 2026 because programmes left too many gaps. The quotes were found by two AI research tools (ChatGPT and Gemini deep research) with the prompt in `docs/research/`. Their raw output is in `docs/research/2026-11-13_citas/`. Where the two tools disagreed, Claude chose and wrote why in the commit.
+
+Never use: other comparison sites, a journalist's summary, or "everyone knows they think this". Votes in Congress are not used yet (planned as level 5).
+
+Which provinces a party runs in comes from the BOE list of proclaimed candidacies (BOE-A-2026-23103, 3 November 2026), in `data/ballots_boe.csv`. An AI extracted it. It matches the app's province lists for all 15 parties. The 7 November correction is not included.
 
 If no source says anything, the position is "no lo dice". It is left out of the score. It is never counted as against or as neutral.
 

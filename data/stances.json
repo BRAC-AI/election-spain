@@ -1,5 +1,5 @@
 {
- "version": "0.10.0-draft",
+ "version": "0.12.0-draft",
  "status": "ai_coded_unreviewed",
  "note": "Posiciones leídas por IA (Claude) el 12 y 13-11-2026 sobre el texto de los documentos oficiales. Páginas = página del PDF. Falta segunda pasada y revisión humana con cita literal.",
  "stances": {
@@ -123,6 +123,33 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "pp23"
+   },
+   "Q02": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Dice «de entrada, no» a limitar la compra de casas a quien no vive aquí.",
+    "quote": "de entrada, no",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-pp-q02"
+   },
+   "Q08": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Quien no tiene papeles tendría atención básica y urgencias, no toda la sanidad.",
+    "quote": "quien esté de forma irregular debe tener unas prestaciones básicas",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-pp-q08"
+   },
+   "Q17": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Rechaza la reforma: la llama un brindis al sol.",
+    "quote": "un brindis al sol que no blinda nada",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-pp-q17"
    }
   },
   "erc": {
@@ -213,6 +240,24 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "erc23"
+   },
+   "Q14": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Llama racistas a quienes piden la «prioridad nacional».",
+    "quote": "ser racista no debería ser ni decente ni legal",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-erc-q14"
+   },
+   "Q17": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Quiere que el derecho al aborto quede escrito.",
+    "quote": "eso debe quedar negro sobre blanco de forma indeleble",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-erc-q17"
    }
   },
   "psoe": {
@@ -319,6 +364,24 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "psoe23"
+   },
+   "Q14": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Rechaza la «prioridad nacional» en las ayudas.",
+    "quote": "Los socialistas defendemos un modelo de sociedad inclusiva, igualitaria, no excluyente",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-psoe-q14"
+   },
+   "Q17": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Promete poner el aborto en la Constitución la próxima legislatura.",
+    "quote": "la próxima legislatura reformaremos y blindaremos el derecho al aborto de las mujeres en la Constitución Española",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-psoe-q17"
    }
   },
   "vox": {
@@ -499,6 +562,24 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "junts23"
+   },
+   "Q13": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Critica dar papeles sin pedir saber catalán.",
+    "quote": "aquellos ciudadanos que quieran que este sea su país y sus hijos deben conocer sí o sí el catalán",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-junts-q13"
+   },
+   "Q17": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "No se opone, pero no lo promete.",
+    "quote": "En la línea de blindar derechos y libertades fundamentales, nosotros no somos reticentes",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-junts-q17"
    }
   },
   "bildu": {
@@ -647,6 +728,24 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "podemos19"
+   },
+   "Q14": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Dice que la «prioridad nacional» va contra la Constitución.",
+    "quote": "abiertamente inconstitucional",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-podemos-q14"
+   },
+   "Q17": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Quiere el aborto en la Constitución, pero no como propone el PSOE.",
+    "quote": "Nosotros pensamos que el aborto debe estar garantizado en la Constitución",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-podemos-q17"
    }
   },
   "pnv": {
@@ -681,6 +780,15 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "pnv23"
+   },
+   "Q17": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Apoya que la Constitución lo recoja; critica cómo lo hace el Gobierno.",
+    "quote": "para que la Constitución consagre lo que legal y socialmente es ya una realidad",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-pnv-q17"
    }
   },
   "cc": {
@@ -881,6 +989,51 @@
     "coder": "Deep research (Finn, 13-11-2026)",
     "status": "ai_coded_unreviewed",
     "src": "fa-web"
+   },
+   "Q05": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Quiere menos horas de trabajo con el mismo sueldo.",
+    "quote": "reducir la jornada laboral sin reducir los salarios",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-fa-q05"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Quiere frenar la privatización de la sanidad.",
+    "quote": "atajar el modelo de privatización de la sanidad pública",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-fa-q09"
+   },
+   "Q12": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Quiere cerrar las nucleares en la fecha prevista.",
+    "quote": "Desde Frente Amplio defendemos cumplir con el calendario de cierre, incluido Almaraz.",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-fa-q12"
+   },
+   "Q13": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Quiere facilitar que se den papeles.",
+    "quote": "Hay que garantizar vías seguras en origen y facilitar la regularización",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-fa-q13"
+   },
+   "Q15": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "No acepta recortar servicios públicos para gastar más en armas.",
+    "quote": "Sería inadmisible que se recorte de los servicios públicos para entrar en la escalada armamentística",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-fa-q15"
    }
   },
   "d21": {
@@ -891,6 +1044,24 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "d21-web"
+   },
+   "Q13": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Pide una regularización.",
+    "quote": "se lleve a cabo una regularización para proteger a todos",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-d21-q13"
+   },
+   "Q14": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Rechaza la «prioridad nacional».",
+    "quote": "Si es una cuestión de narrativa, pues mal. Si es una cuestión de fondo, pues peor.",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-d21-q14"
    }
   },
   "compromis": {
@@ -917,6 +1088,24 @@
     "coder": "Deep research (Finn, 13-11-2026)",
     "status": "ai_coded_unreviewed",
     "src": "cfv-val"
+   },
+   "Q02": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Su candidata por Alicante pide prohibir la venta a quien no vive aquí.",
+    "quote": "prohibir la venta de vivienda a no residentes",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-compromis-q02"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Quiere que la sanidad de gestión privada vuelva a ser pública.",
+    "quote": "revertir la gestión privada",
+    "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-compromis-q09"
    }
   }
  }

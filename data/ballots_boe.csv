@@ -1,0 +1,781 @@
+﻿codigo_ine_provincia,provincia,partido,se_presenta,nombre_en_papeleta,url_del_BOE,página
+01,Álava,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147479
+01,Álava,PSOE,sí,PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) PSE-EE (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476
+01,Álava,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147477
+01,Álava,Frente Amplio,sí,FRENTE AMPLIO-FRONTE ZABALA (FRENTE AMPLIO-FRONTE ZABALA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147479
+01,Álava,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147478
+01,Álava,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,EAJ-PNV,sí,EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO (EAJ-PNV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147477
+01,Álava,EH Bildu,sí,EUSKAL HERRIA BILDU (EH BILDU),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147477
+01,Álava,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147476-147479
+01,Álava,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147478
+02,Albacete,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147465
+02,Albacete,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464
+02,Albacete,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147465
+02,Albacete,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147466
+02,Albacete,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147465
+02,Albacete,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464-147466
+02,Albacete,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147464
+03,Alicante,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147470
+03,Alicante,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467
+03,Alicante,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147469
+03,Alicante,Frente Amplio,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147469
+03,Alicante,Podemos,sí,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147469
+03,Alicante,ERC,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147469
+03,Alicante,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,Compromís,sí,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147469
+03,Alicante,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147467-147471
+03,Alicante,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147468
+04,Almería,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147473
+04,Almería,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472
+04,Almería,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147473
+04,Almería,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147474
+04,Almería,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147474
+04,Almería,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472-147475
+04,Almería,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147472
+05,Ávila,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147487
+05,Ávila,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485
+05,Ávila,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147486
+05,Ávila,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147487
+05,Ávila,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147486
+05,Ávila,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147485-147487
+05,Ávila,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147486
+06,Badajoz,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147490
+06,Badajoz,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489
+06,Badajoz,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489
+06,Badajoz,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147490
+06,Badajoz,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147491
+06,Badajoz,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489-147491
+06,Badajoz,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147489
+07,Illes Balears,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147494
+07,Illes Balears,PSOE,sí,PARTIDO SOCIALISTA DE LAS ISLAS BALEARES (PSIB-PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492
+07,Illes Balears,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147493
+07,Illes Balears,Frente Amplio,sí,ARAMÉS-FRONT AMPLI (ARAMÉS-EU-MS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147494
+07,Illes Balears,Podemos,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147492-147495
+07,Illes Balears,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147493
+08,Barcelona,PP,sí,PARTIT POPULAR / PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147502
+08,Barcelona,PSOE,sí,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496
+08,Barcelona,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147501
+08,Barcelona,Frente Amplio,sí,Comuns-Front Ampli (COMUNS-FRONT AMPLI),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147502
+08,Barcelona,Podemos,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,ERC,sí,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147498
+08,Barcelona,Junts,sí,JUNTS PER CATALUNYA (JxCat),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147497
+08,Barcelona,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147496-147505
+08,Barcelona,Democracia 21,sí,DEMOCRACIA para el siglo 21 (D21),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147503
+08,Barcelona,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147499
+09,Burgos,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147513
+09,Burgos,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512
+09,Burgos,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147513
+09,Burgos,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147513
+09,Burgos,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512
+09,Burgos,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512-147514
+09,Burgos,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147512
+10,Cáceres,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147516
+10,Cáceres,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515
+10,Cáceres,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147516
+10,Cáceres,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147516
+10,Cáceres,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147516
+10,Cáceres,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515-147517
+10,Cáceres,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147515
+11,Cádiz,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147521
+11,Cádiz,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518
+11,Cádiz,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147520
+11,Cádiz,Frente Amplio,sí,Frente Amplio Andaluz (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147520
+11,Cádiz,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147521
+11,Cádiz,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147518-147521
+11,Cádiz,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147519
+12,Castellón,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147528
+12,Castellón,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526
+12,Castellón,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147527
+12,Castellón,Frente Amplio,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147527
+12,Castellón,Podemos,sí,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147527
+12,Castellón,ERC,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147527
+12,Castellón,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,Compromís,sí,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147527
+12,Castellón,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526-147528
+12,Castellón,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147526
+13,Ciudad Real,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147530
+13,Ciudad Real,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529
+13,Ciudad Real,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529
+13,Ciudad Real,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147530
+13,Ciudad Real,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529
+13,Ciudad Real,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+13,Ciudad Real,SALF,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147529-147530
+14,Córdoba,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147533
+14,Córdoba,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531
+14,Córdoba,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147532
+14,Córdoba,Frente Amplio,sí,FRENTE AMPLIO ANDALUZ (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147533
+14,Córdoba,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147534
+14,Córdoba,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147531-147534
+14,Córdoba,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147532
+15,A Coruña,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147537
+15,A Coruña,PSOE,sí,Partido dos Socialistas de Galicia-PSOE (PSdeG-PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536
+15,A Coruña,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536
+15,A Coruña,Frente Amplio,sí,Frente Amplio-Fronte Ampla (FRENTE AMPLIO-FRONTE AMPLA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147538
+15,A Coruña,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147538
+15,A Coruña,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,BNG,sí,BLOQUE NACIONALISTA GALEGO (B.N.G.),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147537
+15,A Coruña,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147536-147539
+15,A Coruña,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147537
+16,Cuenca,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147541
+16,Cuenca,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540
+16,Cuenca,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147541
+16,Cuenca,Frente Amplio,sí,FRENTE AMPLIO (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147542
+16,Cuenca,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147541
+16,Cuenca,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147540-147542
+16,Cuenca,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147541
+17,Girona,PP,sí,PARTIT POPULAR / PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147550
+17,Girona,PSOE,sí,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548
+17,Girona,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147550
+17,Girona,Frente Amplio,sí,Comuns-Front Ampli (COMUNS-FRONT AMPLI),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147549
+17,Girona,Podemos,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,ERC,sí,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147549
+17,Girona,Junts,sí,JUNTS PER CATALUNYA (JxCat),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548
+17,Girona,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+17,Girona,SALF,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147548-147551
+18,Granada,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147554
+18,Granada,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552
+18,Granada,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147553
+18,Granada,Frente Amplio,sí,Frente Amplio Andaluz (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147555
+18,Granada,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147554
+18,Granada,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147552-147555
+18,Granada,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147553
+19,Guadalajara,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147558
+19,Guadalajara,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147557
+19,Guadalajara,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147557
+19,Guadalajara,Frente Amplio,sí,FRENTE AMPLIO (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147557
+19,Guadalajara,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147557
+19,Guadalajara,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147556-147558
+19,Guadalajara,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147557
+20,Gipuzkoa,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147545
+20,Gipuzkoa,PSOE,sí,PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) PSE-EE (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147544
+20,Gipuzkoa,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147545
+20,Gipuzkoa,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147546
+20,Gipuzkoa,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147545
+20,Gipuzkoa,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,EAJ-PNV,sí,EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO (EAJ-PNV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147544
+20,Gipuzkoa,EH Bildu,sí,EUSKAL HERRIA BILDU (EH BILDU),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543
+20,Gipuzkoa,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+20,Gipuzkoa,SALF,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147543-147546
+21,Huelva,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147561
+21,Huelva,PSOE,sí,PARTIDO SOCIALISTA DE HUELVA (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560
+21,Huelva,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560
+21,Huelva,Frente Amplio,sí,Frente Amplio Andaluz (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147561
+21,Huelva,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147562
+21,Huelva,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147560-147562
+21,Huelva,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147561
+22,Huesca,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147565
+22,Huesca,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563
+22,Huesca,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147564
+22,Huesca,Frente Amplio,sí,CHUNTA ARAGONESISTA-FRENTE AMPLIO ARAGÓN (CHA-IU-MS-FRENTE AMPLIO),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147565
+22,Huesca,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147565
+22,Huesca,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147563-147565
+22,Huesca,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147564
+23,Jaén,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147568
+23,Jaén,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567
+23,Jaén,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147568
+23,Jaén,Frente Amplio,sí,FRENTE AMPLIO (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147569
+23,Jaén,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147569
+23,Jaén,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147567-147569
+23,Jaén,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147568
+24,León,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147573
+24,León,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571
+24,León,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147572
+24,León,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147573
+24,León,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147573
+24,León,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571-147573
+24,León,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147571
+25,Lleida,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147577
+25,Lleida,PSOE,sí,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575
+25,Lleida,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147577
+25,Lleida,Frente Amplio,sí,Comuns-Front Ampli (COMUNS-FRONT AMPLI),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147576
+25,Lleida,Podemos,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,ERC,sí,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147576
+25,Lleida,Junts,sí,JUNTS PER CATALUNYA (JxCat),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575
+25,Lleida,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+25,Lleida,SALF,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147575-147578
+26,La Rioja,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147631
+26,La Rioja,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629
+26,La Rioja,Vox,sí,VOX,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147630
+26,La Rioja,Frente Amplio,sí,FRENTE AMPLIO (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147630
+26,La Rioja,Podemos,sí,PODEMOS,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147631
+26,La Rioja,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147629-147631
+26,La Rioja,SALF,sí,SE ACABO LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147630
+27,Lugo,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147580
+27,Lugo,PSOE,sí,PARTIDO DOS SOCIALISTAS DE GALICIA-PSOE (PSdeG-PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579
+27,Lugo,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147580
+27,Lugo,Frente Amplio,sí,FRENTE AMPLIO-FRONTE AMPLA (FRENTE AMPLIO-FRONTE AMPLA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147580
+27,Lugo,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579
+27,Lugo,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,BNG,sí,BLOQUE NACIONALISTA GALEGO (BNG),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147580
+27,Lugo,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147579-147581
+27,Lugo,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147581
+28,Madrid,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147590
+28,Madrid,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147583
+28,Madrid,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147584
+28,Madrid,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147592
+28,Madrid,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147593
+28,Madrid,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147582-147594
+28,Madrid,Democracia 21,sí,DEMOCRACIA PARA EL SIGLO 21 (D21),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147587
+28,Madrid,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147590
+29,Málaga,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147598
+29,Málaga,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596
+29,Málaga,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147597
+29,Málaga,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147599
+29,Málaga,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147599
+29,Málaga,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147596-147600
+29,Málaga,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147598
+30,Murcia,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147604
+30,Murcia,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602
+30,Murcia,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147603
+30,Murcia,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147604
+30,Murcia,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147604
+30,Murcia,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147602-147605
+30,Murcia,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147603
+31,Navarra,PP,sí,UNIÓN DEL PUEBLO NAVARRO EN COALICIÓN CON EL PARTIDO POPULAR (UPN-PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147608
+31,Navarra,PSOE,sí,PARTIDO SOCIALISTA DE NAVARRA-PSOE (PSN-PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607
+31,Navarra,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147608
+31,Navarra,Frente Amplio,sí,Frente Amplio-Fronte Zabala (FRENTE AMPLIO-FRONTE ZABALA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147609
+31,Navarra,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147609
+31,Navarra,ERC,sí,EUSKAL HERRIA BILDU-ESQUERRA REPUBLICANA DE CATALUNYA (EH BILDU-ERC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607
+31,Navarra,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607-147610
+31,Navarra,EAJ-PNV,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607
+31,Navarra,EH Bildu,sí,EUSKAL HERRIA BILDU-ESQUERRA REPUBLICANA DE CATALUNYA (EH BILDU-ERC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607
+31,Navarra,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607-147610
+31,Navarra,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607-147610
+31,Navarra,UPN,sí,UNIÓN DEL PUEBLO NAVARRO EN COALICIÓN CON EL PARTIDO POPULAR (UPN-PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147608
+31,Navarra,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607-147610
+31,Navarra,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147607-147610
+31,Navarra,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147608
+32,Ourense,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147613
+32,Ourense,PSOE,sí,Partido dos Socialistas de Galicia-PSOE (PSdeG-PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612
+32,Ourense,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612
+32,Ourense,Frente Amplio,sí,Frente Amplio-Fronte Ampla (FRENTE AMPLIO-FRONTE AMPLA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147613
+32,Ourense,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612
+32,Ourense,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,BNG,sí,BLOQUE NACIONALISTA GALEGO (BNG),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147613
+32,Ourense,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612-147614
+32,Ourense,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147612
+33,Asturias,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147483
+33,Asturias,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481
+33,Asturias,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147482
+33,Asturias,Frente Amplio,sí,FRENTE AMPLIU POR ASTURIES (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147484
+33,Asturias,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147483
+33,Asturias,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147481-147484
+33,Asturias,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147482
+34,Palencia,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147616
+34,Palencia,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615
+34,Palencia,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147616
+34,Palencia,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147617
+34,Palencia,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147616
+34,Palencia,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147615-147617
+34,Palencia,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147616
+35,Las Palmas,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619
+35,Las Palmas,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619
+35,Las Palmas,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147620
+35,Las Palmas,Frente Amplio,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147621
+35,Las Palmas,Podemos,sí,"UNIDAD DEL PUEBLO CANARIO UPC (NC-BC, PODEMOS, IU, SUMAR)",https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147621
+35,Las Palmas,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,Coalición Canaria,sí,MUNICIPALISTAS PRIMERO CANARIAS-COALICIÓN CANARIA (1.ºCAN-CCa),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147621
+35,Las Palmas,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147619-147623
+35,Las Palmas,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147621
+36,Pontevedra,PP,sí,Partido Popular (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147626
+36,Pontevedra,PSOE,sí,Partido dos Socialistas de Galicia-PSOE (PSdeG-PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147626
+36,Pontevedra,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625
+36,Pontevedra,Frente Amplio,sí,Frente Amplio - Fronte Ampla (FRENTE AMPLIO - FRONTE AMPLA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147627
+36,Pontevedra,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147628
+36,Pontevedra,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,BNG,sí,BLOQUE NACIONALISTA GALEGO (BNG),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147627
+36,Pontevedra,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147625-147628
+36,Pontevedra,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147628
+37,Salamanca,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147634
+37,Salamanca,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633
+37,Salamanca,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633
+37,Salamanca,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147634
+37,Salamanca,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633
+37,Salamanca,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633-147635
+37,Salamanca,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147633
+38,Santa Cruz de Tenerife,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147637
+38,Santa Cruz de Tenerife,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636
+38,Santa Cruz de Tenerife,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147638
+38,Santa Cruz de Tenerife,Frente Amplio,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147638
+38,Santa Cruz de Tenerife,Podemos,sí,"UNIDAD DEL PUEBLO CANARIO UPC (NC-BC, PODEMOS, IU, SUMAR)",https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147638
+38,Santa Cruz de Tenerife,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,Coalición Canaria,sí,Coalición Canaria-Municipalistas Primero Canarias (CCa-1.ºCAN),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636
+38,Santa Cruz de Tenerife,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147636-147640
+38,Santa Cruz de Tenerife,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147637
+39,Cantabria,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147524
+39,Cantabria,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523
+39,Cantabria,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523
+39,Cantabria,Frente Amplio,sí,FRENTE AMPLIO (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147524
+39,Cantabria,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523
+39,Cantabria,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+39,Cantabria,SALF,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147523-147524
+40,Segovia,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147644
+40,Segovia,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642
+40,Segovia,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147643
+40,Segovia,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147644
+40,Segovia,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147643
+40,Segovia,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147642-147644
+40,Segovia,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147643
+41,Sevilla,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147648
+41,Sevilla,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147646
+41,Sevilla,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147647
+41,Sevilla,Frente Amplio,sí,Frente Amplio Andaluz (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147648
+41,Sevilla,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147648
+41,Sevilla,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147645-147649
+41,Sevilla,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147646
+42,Soria,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147652
+42,Soria,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651
+42,Soria,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651
+42,Soria,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147652
+42,Soria,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147652
+42,Soria,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651-147652
+42,Soria,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147651
+43,Tarragona,PP,sí,PARTIT POPULAR / PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147657
+43,Tarragona,PSOE,sí,PARTIT DELS SOCIALISTES DE CATALUNYA (PSC-PSOE) (PSC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654
+43,Tarragona,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147656
+43,Tarragona,Frente Amplio,sí,Comuns-Front Ampli (COMUNS-FRONT AMPLI),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147656
+43,Tarragona,Podemos,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,ERC,sí,ESQUERRA REPUBLICANA DE CATALUNYA (ERC),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654
+43,Tarragona,Junts,sí,JUNTS PER CATALUNYA (JxCat),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147655
+43,Tarragona,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147654-147658
+43,Tarragona,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147656
+44,Teruel,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147661
+44,Teruel,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659
+44,Teruel,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147660
+44,Teruel,Frente Amplio,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147661
+44,Teruel,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147659-147661
+44,Teruel,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147660
+45,Toledo,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147664
+45,Toledo,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663
+45,Toledo,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663
+45,Toledo,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147664
+45,Toledo,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147664
+45,Toledo,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663-147665
+45,Toledo,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147663
+46,Valencia,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147670
+46,Valencia,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666
+46,Valencia,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147667
+46,Valencia,Frente Amplio,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147668
+46,Valencia,Podemos,sí,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147668
+46,Valencia,ERC,sin confirmar,sin confirmar,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147668
+46,Valencia,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,Compromís,sí,COMPROMÍS: FRONT VALENCIÀ (COMPROMIS-EUPV-PODEM-ERPV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147668
+46,Valencia,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147666-147672
+46,Valencia,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147668
+47,Valladolid,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147675
+47,Valladolid,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673
+47,Valladolid,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147674
+47,Valladolid,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147675
+47,Valladolid,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147674
+47,Valladolid,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673-147676
+47,Valladolid,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147673
+48,Bizkaia,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147509
+48,Bizkaia,PSOE,sí,PARTIDO SOCIALISTA DE EUSKADI-EUSKADIKO EZKERRA (PSOE) PSE-EE (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507
+48,Bizkaia,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147508
+48,Bizkaia,Frente Amplio,sí,FRENTE AMPLIO (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147508
+48,Bizkaia,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147509
+48,Bizkaia,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,EAJ-PNV,sí,EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO (EAJ-PNV),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507
+48,Bizkaia,EH Bildu,sí,EUSKAL HERRIA BILDU (EH Bildu),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507
+48,Bizkaia,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+48,Bizkaia,SALF,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147507-147510
+49,Zamora,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147679
+49,Zamora,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678
+49,Zamora,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678
+49,Zamora,Frente Amplio,sí,Frente Amplio (FA),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147679
+49,Zamora,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147679
+49,Zamora,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678-147679
+49,Zamora,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147678
+50,Zaragoza,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147682
+50,Zaragoza,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681
+50,Zaragoza,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147682
+50,Zaragoza,Frente Amplio,sí,Chunta Aragonesista-Frente Amplio Aragón (CHA-IU-MS-FRENTE AMPLIO),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147683
+50,Zaragoza,Podemos,sí,PODEMOS (PODEMOS),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147682
+50,Zaragoza,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147681-147683
+50,Zaragoza,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147683
+51,Ceuta,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685
+51,Ceuta,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685
+51,Ceuta,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685
+51,Ceuta,Frente Amplio,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,Podemos,sí,"PODEMOS (PAZ,CASA Y TRABAJO)",https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685
+51,Ceuta,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685-147686
+51,Ceuta,SALF,sí,SE ACABO LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147685
+52,Melilla,PP,sí,PARTIDO POPULAR (PP),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147688
+52,Melilla,PSOE,sí,PARTIDO SOCIALISTA OBRERO ESPAÑOL (PSOE),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687
+52,Melilla,Vox,sí,VOX (VOX),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687
+52,Melilla,Frente Amplio,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,Podemos,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,ERC,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,Junts,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,EAJ-PNV,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,EH Bildu,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,BNG,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,Coalición Canaria,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,UPN,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,Compromís,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,Democracia 21,no,,https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687-147688
+52,Melilla,SALF,sí,SE ACABÓ LA FIESTA (SALF),https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-A-2026-23103.pdf,147687
