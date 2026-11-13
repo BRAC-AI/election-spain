@@ -1,16 +1,17 @@
 {
  "status": "candidates_not_in_app",
- "note": "Borrador de 13-11-2026. Se quedarán las que más partidos respondan y que más separen a los partidos.",
+ "version": "2",
+ "note": "Segunda versión, 13-11-2026, tras revisión crítica. Se quedarán las que más partidos respondan y que más separen a los partidos.",
  "questions": [
   {
    "id": "Q21",
    "category": "social",
-   "text": "Las pensiones deben subir cada año tanto como los precios."
+   "text": "El Estado debe dar ventajas fiscales a los planes de pensiones privados."
   },
   {
    "id": "Q22",
    "category": "social",
-   "text": "La edad de jubilación no debe pasar de los 65 años."
+   "text": "Hay que poder jubilarse a los 65 años con la pensión completa."
   },
   {
    "id": "Q23",
@@ -20,22 +21,22 @@
   {
    "id": "Q24",
    "category": "economy",
-   "text": "Los bancos y las eléctricas deben pagar un impuesto extra."
+   "text": "Los bancos deben pagar un impuesto extra por sus beneficios."
   },
   {
    "id": "Q25",
    "category": "employment",
-   "text": "Despedir a un trabajador debe salir más caro a la empresa."
+   "text": "Despedir a un trabajador debe salir más caro."
   },
   {
    "id": "Q26",
    "category": "housing",
-   "text": "Un okupa debe poder ser desalojado en 48 horas."
+   "text": "Quien ocupa una casa ajena debe poder ser desalojado en 48 horas."
   },
   {
    "id": "Q27",
    "category": "housing",
-   "text": "Hay que limitar los pisos turísticos."
+   "text": "No se deben abrir más pisos turísticos donde falta vivienda."
   },
   {
    "id": "Q28",
@@ -45,22 +46,22 @@
   {
    "id": "Q29",
    "category": "climate",
-   "text": "Hay que construir más embalses y trasvases de agua."
+   "text": "Hay que llevar agua de unos ríos a otras zonas donde falta (trasvases)."
   },
   {
    "id": "Q30",
    "category": "immigration",
-   "text": "Los inmigrantes que cometan delitos deben ser expulsados."
+   "text": "Un inmigrante con papeles que comete un delito grave debe ser expulsado."
   },
   {
    "id": "Q31",
    "category": "immigration",
-   "text": "Los menores inmigrantes que llegan solos deben repartirse entre todas las comunidades."
+   "text": "Todas las comunidades deben estar obligadas a acoger a menores inmigrantes que llegan solos."
   },
   {
    "id": "Q32",
    "category": "territory",
-   "text": "Los jueces, y no los políticos, deben elegir al órgano que gobierna a los jueces."
+   "text": "El órgano que dirige a los jueces deben elegirlo los propios jueces, no el Congreso."
   },
   {
    "id": "Q33",
@@ -70,17 +71,17 @@
   {
    "id": "Q34",
    "category": "territory",
-   "text": "Los políticos no deben tener aforamiento."
+   "text": "Debe gobernar siempre el partido con más votos."
   },
   {
    "id": "Q35",
    "category": "territory",
-   "text": "El catalán, el euskera y el gallego deben poder usarse en todas las instituciones del Estado."
+   "text": "El catalán, el euskera y el gallego deben poder usarse en el Congreso y ante la Administración del Estado."
   },
   {
    "id": "Q36",
    "category": "rights",
-   "text": "La ley de violencia de género debe cambiarse por una de violencia en la familia."
+   "text": "La ley contra la violencia machista debe mantenerse como está."
   },
   {
    "id": "Q37",
@@ -90,17 +91,17 @@
   {
    "id": "Q38",
    "category": "rights",
-   "text": "La prostitución debe prohibirse."
+   "text": "Pagar por sexo debe estar castigado por la ley."
   },
   {
    "id": "Q39",
    "category": "eu",
-   "text": "España no debe vender ni comprar armas a Israel."
+   "text": "España no debe comerciar con armas con Israel."
   },
   {
    "id": "Q40",
    "category": "eu",
-   "text": "España debe recuperar poder de decisión frente a la Unión Europea."
+   "text": "Las leyes españolas deben estar por encima de las de la Unión Europea."
   }
  ]
 }
