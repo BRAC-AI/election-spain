@@ -87,7 +87,7 @@
   "level": 1,
   "title": "Contrato electoral simplificado. Generales 2026",
   "year": 2026,
-  "url": ""
+  "url": "https://www.seacabolafiesta.com/SALF_Contrato_Electoral_29N.pdf"
  },
  "fa-web": {
   "level": 3,
@@ -898,5 +898,35 @@
   "title": "elDiario.es, 2025",
   "year": 2025,
   "url": "https://www.eldiario.es/politica/acabo-fiesta-partido-alvise-rompe-tiempo-record-acusaciones-cruzadas-amenazas-demandas_1_12240748.html"
+ },
+ "prog-salf-q01": {
+  "level": 3,
+  "title": "Contrato electoral SALF Aragón",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/images/Contrato%20Electoral%20Aragon%20SALF%202026.pdf"
+ },
+ "prog-salf-q12": {
+  "level": 3,
+  "title": "Contrato electoral SALF Castilla y León",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/images/Contrato_Electoral_SALF_CyL_2026.pdf"
+ },
+ "voto-cc-q10": {
+  "level": 5,
+  "title": "Gobierno de Canarias, Decreto 198/2025, 23 dic 2025",
+  "year": 2025,
+  "url": "https://www.gobiernodecanarias.org/boc/2025/255/pda/4391.html"
+ },
+ "prog-compromis-q03": {
+  "level": 3,
+  "title": "Compromís, 50 propostes per un govern decent",
+  "year": 2025,
+  "url": "https://compromis.net/espai/uploads/groups/1/messages/2025/50_propostes_def.pdf"
+ },
+ "prog-podemos-q10": {
+  "level": 3,
+  "title": "Elkarrekin Podemos, programa vasco",
+  "year": 2024,
+  "url": "https://podemos.eus/images/programa/ProgramaAutonomico2024_es.pdf"
  }
 }

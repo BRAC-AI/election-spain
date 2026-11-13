@@ -1,5 +1,5 @@
 {
- "version": "0.13.0-draft",
+ "version": "0.14.0-draft",
  "status": "ai_coded_unreviewed",
  "note": "Posiciones leídas por IA (Claude) el 12 y 13-11-2026 sobre el texto de los documentos oficiales. Páginas = página del PDF. Falta segunda pasada y revisión humana con cita literal.",
  "stances": {
@@ -1060,6 +1060,15 @@
     "status": "ai_coded_unreviewed",
     "src": "cita-podemos-q20",
     "quote": "deriva militarista"
+   },
+   "Q10": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Su programa vasco de 2024 quiere quitar poco a poco los conciertos.",
+    "coder": "IA (deep research v3, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "prog-podemos-q10",
+    "quote": "Caminaremos hacia la supresión progresiva de los conciertos educativos"
    }
   },
   "pnv": {
@@ -1283,6 +1292,15 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-cc-q17",
     "vote": "Devolución de la reforma constitucional del aborto"
+   },
+   "Q10": {
+    "stance": "support",
+    "page": "web",
+    "summary": "El Gobierno canario de Clavijo aprobó un decreto para mantener las unidades concertadas.",
+    "coder": "IA (deep research v3, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "voto-cc-q10",
+    "quote": "teniendo como objetivo el mantenimiento, en lo posible, de las unidades concertadas existentes"
    }
   },
   "bng": {
@@ -1499,6 +1517,42 @@
     "coder": "IA (deep research v2, 13-11-2026)",
     "status": "ai_coded_unreviewed",
     "src": "prog-salf-q07"
+   },
+   "Q08": {
+    "stance": "conditional",
+    "page": "23",
+    "summary": "Tarjeta sanitaria solo para españoles y residentes legales. Urgencias para todos.",
+    "coder": "IA (deep research v3, 13-11-2026); cita comprobada en el PDF por IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26",
+    "quote": "Tarjeta para españoles y residentes legales con cotización o cobertura. Urgencias para todos, siempre."
+   },
+   "Q09": {
+    "stance": "support",
+    "page": "22",
+    "summary": "Si la espera pasa del plazo, eliges centro público o privado y lo paga la sanidad pública.",
+    "coder": "IA (deep research v3, 13-11-2026); cita comprobada en el PDF por IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26",
+    "quote": "Superado el plazo, eliges centro, público o privado, y lo paga la sanidad pública."
+   },
+   "Q01": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Su programa de Aragón llama fracaso a los topes de alquiler.",
+    "coder": "IA (deep research v3, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "prog-salf-q01",
+    "quote": "Frente a fracasos como los topes de alquiler"
+   },
+   "Q12": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Su programa de Castilla y León pide al Gobierno parar los cierres nucleares.",
+    "coder": "IA (deep research v3, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "prog-salf-q12",
+    "quote": "exigiremos al Gobierno de España que paralice el calendario de cierres nucleares."
    }
   },
   "fa": {
@@ -1707,6 +1761,15 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-compromis-q15",
     "vote": "S185 V26: gasto militar"
+   },
+   "Q03": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Pide que las grandes fortunas paguen más.",
+    "coder": "IA (deep research v3, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "prog-compromis-q03",
+    "quote": "que les grans fortunes i empreses amb beneficis multimilionaris paguen més"
    }
   }
  },
@@ -1788,16 +1851,6 @@
    }
   },
   "podemos": {
-   "Q10": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Califica de insulto aumentar los módulos de financiación de la concertada.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-podemos-q10",
-    "why_approx": "Rechaza aumentar los fondos; el pasaje no exige suprimir toda la financiación existente.",
-    "confidence": "media"
-   },
    "Q11": {
     "stance": "oppose",
     "page": "web",
@@ -2022,16 +2075,6 @@
    }
   },
   "compromis": {
-   "Q03": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Apoyó el decreto que prorrogaba el impuesto a las grandes fortunas.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-compromis-q03",
-    "why_approx": "La convalidación incluía numerosas medidas; no hubo voto aislado sobre ese impuesto.",
-    "confidence": "media"
-   },
    "Q04": {
     "stance": "oppose",
     "page": "web",
@@ -2096,46 +2139,6 @@
    }
   },
   "salf": {
-   "Q01": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Rechaza los topes de alquiler y propone incentivos fiscales.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-salf-q01",
-    "why_approx": "Programa autonómico, no voto ni medida estatal del 29N.",
-    "confidence": "media"
-   },
-   "Q08": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Limita la cobertura ordinaria a ciudadanos y residentes legales.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-salf-q08",
-    "why_approx": "Programa autonómico, no voto ni medida estatal del 29N.",
-    "confidence": "media"
-   },
-   "Q09": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Propone concertar atención privada cuando la pública no dé abasto.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-salf-q09",
-    "why_approx": "Programa autonómico, no voto ni medida estatal del 29N.",
-    "confidence": "media"
-   },
-   "Q12": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Pide al Gobierno paralizar los cierres nucleares.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-salf-q12",
-    "why_approx": "Programa autonómico, no voto ni medida estatal del 29N.",
-    "confidence": "media"
-   },
    "Q20": {
     "stance": "oppose",
     "page": "web",
