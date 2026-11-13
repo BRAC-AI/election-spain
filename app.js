@@ -150,7 +150,7 @@ function why() {
       <div class="item"><p><b>${esc(q.text)}</b></p>
       <p>${(st.stars || {})[q.id] ? '<span class="tag same">★ Vale el doble</span>' : ''}<span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.src ? `<p class="muted">${c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Pista, no cuenta: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
+      ${c.src ? `<p class="muted">${c.research_level === 7 ? 'De un socio o antecesor del partido: ' : c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Pista, no cuenta: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
     </div>`;
 }
 
@@ -180,7 +180,7 @@ function about() {
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
       <h2>Quién lo lee</h2>
-      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Si el programa no dice nada, usamos lo que un candidato o portavoz ha dicho en público en 2026, con enlace: lo verás como «Lo dijo…». Si tampoco, miramos qué votó en el Congreso o en su parlamento: «Votó…». A veces solo hay algo parecido, no exacto: lo verás como «Parecido» y sí cuenta. Si es muy dudoso, lo verás como «Pista» y no cuenta. Lo buscaron otras IA (ChatGPT y Gemini) el 13 de noviembre. Ninguna posición la ha revisado aún una persona. Si ves un error, dínoslo abajo.</p>
+      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Si el programa no dice nada, usamos lo que un candidato o portavoz ha dicho en público en 2026, con enlace: lo verás como «Lo dijo…». Si tampoco, miramos qué votó en el Congreso o en su parlamento: «Votó…». A veces solo hay algo parecido, no exacto: lo verás como «Parecido» y cuenta. Si un partido es nuevo, usamos lo que dijo o votó un socio o el grupo del que viene (Sumar para Frente Amplio, Ciudadanos para Democracia 21): lo verás como «De un socio o antecesor» y también cuenta. Solo queda fuera lo que no deja claro si está a favor o en contra. Lo buscaron otras IA (ChatGPT y Gemini) el 13 de noviembre. Ninguna posición la ha revisado aún una persona. Si ves un error, dínoslo abajo.</p>
       <h2>Qué partidos salen</h2>
       <p>${esc(P.inclusion_rule)} Según tu provincia ves solo los que puedes votar.</p>
       <h2>Fuentes, partido a partido</h2>

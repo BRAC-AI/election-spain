@@ -158,3 +158,14 @@ The fourth research run (`docs/research/2026-11-13_citas/r4_*.csv`) covered 25 s
 - The other 14 spare statements and their positions are kept in `data/questions_candidates.json` and `data/stances_candidates.json`.
 - Rows the research tool did not open are loaded as hints, except SALF programme lines, which were checked against the PDF text.
 - Compromís's own deputies and spokespeople count as the coalition's own evidence. Sumar's record does not count for Frente Amplio, and Ciudadanos's record does not count for Democracia 21; both are shown as hints.
+
+## Hints now count (13 November 2026, BRACAI decision)
+
+To give every party a result, evidence that was shown as "Pista" now counts in the score:
+
+- the record of a coalition member or predecessor group (Sumar, IU, Comuns for Frente Amplio; Ciudadanos for Democracia 21), shown as "De un socio o antecesor del partido";
+- low-confidence and approximate evidence with a clear direction (for or against), shown as "Parecido, no exacto".
+
+One kind stays out: evidence about a different measure that the research tool coded "a medias". There "a medias" means "we cannot tell", and counting it would give every voter 50 to 75 points for nothing.
+
+This is the weakest evidence in the tool. A party's page shows which positions rest on it.

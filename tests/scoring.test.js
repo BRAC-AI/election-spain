@@ -138,5 +138,5 @@ test('enoughData flags parties with fewer than 8 coded positions', () => {
   const few = st({ Q01: 'support', Q02: 'oppose', Q03: 'conditional' });
   const many = st(Object.fromEntries(Array.from({ length: 8 }, (_, i) => ['Q' + String(i + 1).padStart(2, '0'), 'support'])));
   assert.equal(enoughData(few), false); assert.equal(enoughData(many), true);
-  assert.equal(enoughData(S.stances.d21), false); assert.equal(enoughData(S.stances.pp), true);
+  for (const [pid, cells] of Object.entries(S.stances)) assert.equal(enoughData(cells), true, pid); // every party has enough data since hints count
 });
