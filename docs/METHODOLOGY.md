@@ -136,3 +136,15 @@ Code: MIT. Data and texts: CC BY 4.0. Credit "Guía de voto 29N, BRACAI (bracai.
 - **Minimum data (changed the same day, BRACAI decision: show every party).** A party gets a percent from 2 comparable answers. With fewer than 4, or when fewer than 8 of the party's positions are known in total (Democracia 21 today), it is listed apart as "Con pocos datos" with its percent, and cannot be the winner.
 - **Order.** Statements that most parties have a position on are asked first, inside the voter's chosen topics. This changes order only.
 - **Intro slide.** One screen before the first statement explains the three steps, including the star.
+
+## Relaxed research ladder (13 November 2026, BRACAI decision)
+
+To find at least some evidence for every pair, the research prompts (`docs/research/prompt_nuevas_A.md`, `_B.md`, `prompt_huecos_C.md`) accept eight kinds of evidence, as long as each has a link and its kind is written down.
+
+| Research level | Evidence | In the app |
+|---|---|---|
+| 1 to 4 | 29N programme, vote in Congress or Senate, direct quote, regional or European record | Counts, shown as programme, "Votó" or "Lo dijo" |
+| 5 and 6 | An earlier programme of the party, or a serious outlet describing its position without a quote | Counts, shown as "Parecido, no exacto" |
+| 7 and 8 | The position of a coalition member or predecessor group, or a nearby measure | Shown as "Pista", does not count |
+
+Rows whose link the tool did not open are checked before they are loaded.
