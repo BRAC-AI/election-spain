@@ -98,14 +98,14 @@ function hero(rows) {
   const top = rows.filter((r) => r.rank === 1), scored = rows.filter((r) => r.conclusive && !r.thin).length;
   if (top.length && scored * 2 < rows.length) return `<p class="empty">Solo podemos comparar con ${scored} de ${rows.length} partidos. Aún no hay ganador.</p>`;
   if (!top.length) return `<p class="empty">${answered() ? 'Aún no podemos comparar. Sigue un poco más.' : 'Responde alguna pregunta para ver tu resultado.'}</p>`;
-  const r = top[0];
+  const r = top[0], left = order().length - st.idx;
   return `<button type="button" class="hero" data-party="${esc(r.id)}">
     <span class="ringwrap"><svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
       <circle class="track" cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="${r.alignment} 100" transform="rotate(-90 60 60)"/></svg>
       <span class="num">${r.alignment}<small>%</small></span></span>
     <span class="herotext"><span class="eyebrow">${st.idx < Q.questions.length ? 'Resultado provisional · ' : ''}${top.length > 1 ? 'Empate' : 'Más cerca de ti'}</span>
       <span class="heroname">${top.map((x) => esc(x.name)).join(' · ')}</span>
-      <span class="muted">Toca para ver por qué</span></span></button>`;
+      <span class="muted">${left > 0 ? `Puede cambiar: te faltan ${left} preguntas` : 'Toca para ver por qué'}</span></span></button>`;
 }
 
 const oldTag = () => ''; // positions now mix programmes, votes and quotes, so one year tag would mislead
@@ -123,7 +123,7 @@ function result() {
     <div class="list grow scroll">${rows.filter((r) => r.conclusive).sort((x, y) => y.alignment - x.alignment || x.name.localeCompare(y.name, 'es')).map(row).join('')}
       ${rows.filter((r) => !r.conclusive).map(row).join('')}</div>
     <div class="btns">
-      ${left > 0 ? `<button type="button" class="cta" data-act="more">${Math.min(BATCH, left)} preguntas más</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
+      ${left > 0 ? `<button type="button" class="cta" data-act="more">Seguir: te faltan ${left}</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
     </div>
 `;
@@ -139,6 +139,7 @@ function why() {
   return `
     <button type="button" class="link" data-act="toresult">← Volver</button>
     <div class="head">${badge(p)}<h1 tabindex="-1">${esc(p.name)}</h1><span class="val">${r.conclusive ? r.alignment + ' %' : '–'}</span></div>
+    ${p.about ? `<p class="who">${esc(p.about)}</p>` : ''}
     <div class="links">
       ${p.site ? `<a href="${esc(p.site)}" rel="noopener noreferrer" target="_blank">Su web</a>` : ''}
       ${pr.url ? `<a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">${esc(SRC[pr.type] || 'Fuente')}${pr.year ? ' ' + pr.year : ''}</a>` : `<span class="muted">${pr.title ? esc(pr.title) + (pr.year ? ' (' + pr.year + ')' : '') : 'Sin programa todavía'}</span>`}
