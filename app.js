@@ -205,12 +205,15 @@ function how() {
     <button type="button" class="link" data-act="towhere">← Atrás</button>
     <h1 tabindex="-1">Así funciona</h1>
     <ol class="steps grow">
-      <li><b>1</b><span>Lee ${Q.questions.length} frases. Di si estás a favor o en contra.</span></li>
-      <li><b>2</b><span>¿Una te importa mucho? Toca <span class="starbtn demo" aria-hidden="true">★ Muy importante</span> y valdrá el doble.</span></li>
-      <li><b>3</b><span>Mira qué partido piensa más como tú. Cada 5 frases ves el resultado.</span></li>
+      <li><b>1</b><div><p>Lee ${Q.questions.length} frases y di qué piensas.</p>
+        <div class="mini" aria-hidden="true"><span class="pill on">A favor</span><span class="pill">En contra</span></div></div></li>
+      <li><b>2</b><div><p>¿Una te importa mucho? Márcala y <strong>vale el doble</strong>. Pruébalo:</p>
+        <div class="mini"><button type="button" class="starbtn" data-act="demostar" aria-pressed="false"><span aria-hidden="true">★</span> <span class="lbl">Muy importante</span></button><span class="x2" aria-hidden="true">×2</span></div></div></li>
+      <li><b>3</b><div><p>Mira qué partido piensa más como tú.</p>
+        <div class="mini bars" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div></div></li>
     </ol>
     <div class="btns"><button type="button" class="cta" data-act="go">Empezar</button></div>
-    <p class="note">3 minutos · anónimo</p>`;
+    <p class="note">3 minutos · anónimo · ves el resultado cada 5 frases</p>`;
 }
 const SCREENS = { start, where, how, question, result, why, about };
 function render() {
@@ -254,6 +257,7 @@ document.addEventListener('click', (e) => {
   switch (b.dataset.act) {
     case 'star': { const q = order()[st.idx]; st.stars = { ...(st.stars || {}) }; if (st.stars[q.id]) delete st.stars[q.id]; else st.stars[q.id] = true;
       b.setAttribute('aria-pressed', String(!!st.stars[q.id])); b.querySelector('.lbl').textContent = st.stars[q.id] ? 'Vale el doble' : 'Muy importante'; return save(); }
+    case 'demostar': { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); b.querySelector('.lbl').textContent = on ? 'Vale el doble' : 'Muy importante'; b.parentElement.classList.toggle('on', on); return; }
     case 'towhere': return go({ screen: 'where' }, true);
     case 'tostart': return go({ screen: 'start' });
     case 'begin': return go({ screen: 'how', idx: 0, answers: {}, stars: {}, info: false }, true);
