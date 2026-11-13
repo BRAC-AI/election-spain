@@ -1,6 +1,6 @@
 {
- "version": "0.5.0-draft",
- "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso y los que pasan del 3 % en las encuestas. SALF tiene un 2,2 % (media de Demócrata, 7-11-2026) y se queda fuera.",
+ "version": "0.6.0-draft",
+ "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso y los que pasan del 3 % en las encuestas. Hay una excepción elegida por nosotros: Democracia 21, un partido nuevo que solo se presenta en Madrid y Barcelona. SALF tiene un 2,2 % en las encuestas y por ahora no sale.",
  "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
  "provinces": {
   "01": "Álava",
@@ -360,6 +360,28 @@
    "abbr": "COM",
    "site": "https://compromis.net/",
    "logo": null
+  },
+  {
+   "id": "d21",
+   "name": "Democracia 21",
+   "scope": {
+    "only": [
+     "28",
+     "08"
+    ]
+   },
+   "abbr": "D21",
+   "site": "",
+   "logo": null,
+   "programme": {
+    "status": "not_found",
+    "type": "web",
+    "title": "«España Limpia» y presentación del 10-10-2026",
+    "year": 2026,
+    "url": "",
+    "verified": false,
+    "note": "Partido nuevo de Miriam González. Solo se presenta en Madrid y Barcelona, en coalición con Ciudadanos y UCIN. Documento oficial sin localizar."
+   }
   }
  ],
  "known_exclusions": [

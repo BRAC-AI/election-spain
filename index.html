@@ -10,11 +10,13 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="stage">
 <header class="top">
   <button type="button" class="brand" data-act="home">Guía de voto <b>29N</b> <span class="beta">beta</span></button>
   <button type="button" class="ghost" data-act="about">Cómo funciona</button>
 </header>
 <main id="app" aria-live="polite"></main>
+</div>
 <!-- Static copy so Netlify Forms detects the feedback form at deploy time. -->
 <form name="feedback" data-netlify="true" netlify-honeypot="web" hidden>
   <input name="rating"><textarea name="message"></textarea><input name="web">

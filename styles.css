@@ -112,3 +112,35 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 .note{flex:none;font-size:12px;color:var(--muted);text-align:center}
 @media (max-height:600px){.opt{min-height:42px}.ringwrap{width:64px;height:64px}.num{font-size:19px}.bubble{min-height:38px;padding:6px 12px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.stage{flex:1;min-height:0;display:flex;flex-direction:column;width:100%}
+/* desktop: one centred card, two columns */
+@media (min-width:900px) and (min-height:560px){
+  body{background:var(--soft);align-items:center;justify-content:center}
+  .stage{flex:none;width:min(920px,92vw);height:min(620px,calc(100vh - 56px));background:#fff;border-radius:28px;box-shadow:0 12px 40px rgba(45,57,69,.12);padding:10px 28px 20px}
+  .top,main{max-width:none;padding-left:0;padding-right:0}
+  main{padding-bottom:0}
+  .s-question,.s-result{display:grid;grid-template-columns:1fr 1fr;column-gap:28px;row-gap:12px}
+  .s-question{grid-template-rows:auto 1fr auto}
+  .s-question .meter{grid-column:1/-1}
+  .s-question .card{grid-column:1;grid-row:2/4}
+  .s-question .scale{grid-column:2;grid-row:2;align-content:center;gap:10px}
+  .s-question .link{grid-column:2;grid-row:3}
+  .statement{font-size:30px}
+  .opt{min-height:54px}
+  .s-result{grid-template-rows:auto 1fr auto auto}
+  .s-result .meter{grid-column:1/-1}
+  .s-result .hero,.s-result .empty{grid-column:1;grid-row:2;align-self:stretch;flex-direction:column;justify-content:center;text-align:center;gap:18px}
+  .s-result .herotext{align-items:center}
+  .s-result .ringwrap{width:170px;height:170px}
+  .s-result .num{font-size:46px}.s-result .num small{font-size:20px}
+  .s-result .heroname{font-size:30px}
+  .s-result .list{grid-column:2;grid-row:2/5;align-self:stretch}
+  .s-result .btns{grid-column:1;grid-row:3}
+  .s-result .note{grid-column:1;grid-row:4}
+  .party{min-height:50px;grid-template-columns:30px 140px 1fr 46px}
+  .s-start,.s-why,.s-about{width:100%;max-width:600px;margin:0 auto}
+  .s-start{justify-content:center}
+  .s-start .bubbles{flex:none;margin:14px 0}
+  h1{font-size:34px}
+}

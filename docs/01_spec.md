@@ -67,3 +67,8 @@ Same as v3. Answers +2, +1, -1, -2. Stance support +2, oppose -2. Agreement = 1 
 - Statements rewritten for a 12-year-old. Each has a one-line "what does it mean".
 - Party row: logo slot (initials until the files exist), name, bar, percent. Party page: link to the party site and to the source document.
 - Methodology page in plain words, with the source and the count of coded statements per party.
+
+## Changes on 13 Nov (v0.6)
+
+- Desktop: one centred card, two columns (statement left, answers right; winner left, all parties right). Phone layout unchanged.
+- Democracia 21 added at Finn's request, shown only in Madrid and Barcelona. It has no seats and no national poll figure above 3 %, so it is an editorial exception and the methodology page says so. Open point: SALF is bigger in the polls (2.2 %) and is still out. Either add it too or be ready to explain why not.

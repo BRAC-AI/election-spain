@@ -165,7 +165,8 @@ function about() {
 
 const SCREENS = { start, question, result, why, about };
 function render() {
-  app.innerHTML = `<div class="screen">${SCREENS[st.screen]()}</div>`;
+  const html = SCREENS[st.screen](); // may change st.screen
+  app.innerHTML = `<div class="screen s-${st.screen}">${html}</div>`;
   st.justLevel = 0;
   app.querySelector('h1,.statement')?.focus({ preventScroll: true });
 }
