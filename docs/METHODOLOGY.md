@@ -32,26 +32,26 @@ Every position has a link. The app shows which kind of evidence it is.
 
 | Evidence | Shown in the app as | Counts | Positions today |
 |---|---|---|---|
-| The party's programme for 29 November 2026 | Programme and page | Yes | 68 |
+| The party's programme for 29 November 2026 | Programme and page | Yes | 70 |
 | The party's own earlier programme | "(programa anterior)" | Yes | 58 |
 | The party's official website or documents | Link | Yes | 10 |
 | A vote in Congress, the Senate, a regional parliament or the European Parliament | "Votó: ..." | Yes. An abstention is "a medias" | 160 |
-| A direct quote from the candidate, leader or a named spokesperson, including video | "Lo dijo ..." | Yes | 40 |
-| Close but not exact: a nearby measure with a clear direction, or a serious outlet describing the position | "Parecido, no exacto" | Yes | 34 |
+| A direct quote from the candidate, leader or a named spokesperson, including video | "Lo dijo ..." | Yes | 41 |
+| Close but not exact: a nearby measure with a clear direction, or a serious outlet describing the position | "Parecido, no exacto" | Yes | 36 |
 | The record of a member or predecessor of a new coalition (Sumar, IU, Comuns for Frente Amplio) | "De un socio o antecesor del partido" | Yes | 16 |
-| The record of a different party (Ciudadanos for Democracia 21) | "Pista" | No | |
-| Evidence about a different measure that only allows "a medias" | "Pista" | No | |
+| The record of a different party (for example Ciudadanos for Democracia 21) | Not shown | No | |
+| Evidence from the party about a different measure, with no clear direction | "Lo más cercano que hemos encontrado" | No | |
 | Nothing found | "No hemos encontrado nada" | No | |
 
 Never used: other voting-advice sites, a rival's opinion, or guessing from ideology.
 
-386 of 420 party-statement pairs have a position that counts.
+391 of 420 party-statement pairs have a position that counts.
 
 ## 5. Who did the work
 
 - Claude (Anthropic) read the programme PDFs and coded positions, 12 and 13 November 2026.
 - ChatGPT and Gemini deep research searched votes, quotes and other evidence on 13 November 2026.
-- No person has reviewed every position. Links the research tools could not open are shown as "Pista" and do not count.
+- No person has reviewed every position. Links the research tools could not open do not count.
 
 Each position in `data/stances.json` records who coded it and from which source (`data/sources.json`).
 
@@ -66,12 +66,12 @@ Code: `scoring.js`. It is plain arithmetic, the same for everyone.
 - A statement marked with the star counts double.
 - A statement where the party has no position is left out. It never counts as disagreement.
 - Choosing topics at the start only changes the order of the statements. It does not change their weight.
-- Statements that most parties have a position on are asked first.
+- The order of the statements is random on every run. The voter's chosen topics come first.
 
 ## 7. When a result is shown
 
 - A party gets a percent from 2 comparable answers.
-- With fewer than 4 comparable answers, or when fewer than 8 of the party's 30 positions are known, the party is listed apart under "Con pocos datos" with how many answers were compared. It cannot be the winner. Today this applies to Democracia 21 (5 positions).
+- All parties are in one list, best match first. With fewer than 4 comparable answers the row also shows how many answers were compared, and that party cannot be the winner yet. Every party has at least 8 known positions; Democracia 21 has the fewest (10, all from its own programme and its candidate).
 - Parties within 3 points of each other are shown as a tie.
 - Until the voter has gone through all 30 statements the winner card says "Resultado provisional".
 

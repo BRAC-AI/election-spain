@@ -1,5 +1,5 @@
 {
- "version": "1.0.0",
+ "version": "1.1.0",
  "status": "draft_unreviewed",
  "bubbles": [
   {
@@ -227,28 +227,28 @@
    "id": "Q23",
    "category": "economy",
    "text": "Heredar de padres a hijos no debe pagar impuestos.",
-   "info": "Hoy, al heredar de tus padres se paga un impuesto que cambia mucho según la comunidad. En algunas casi no se paga. Unos quieren quitarlo en toda España; otros, que paguen las herencias grandes.",
+   "info": "Hoy se paga un impuesto que cambia según la comunidad; en algunas, casi nada. Unos quieren quitarlo; otros, que paguen las herencias grandes.",
    "image": null
   },
   {
    "id": "Q24",
    "category": "economy",
    "text": "Los bancos deben pagar un impuesto extra por sus beneficios.",
-   "info": "En 2022 se creó un impuesto especial para los bancos, porque ganaban mucho con la subida de los tipos de interés. Unos quieren mantenerlo; otros dicen que al final lo paga el cliente.",
+   "info": "En 2022 se creó un impuesto especial a los bancos, que ganaban mucho. Unos quieren mantenerlo; otros dicen que lo acaba pagando el cliente.",
    "image": null
   },
   {
    "id": "Q26",
    "category": "housing",
    "text": "Quien ocupa una casa ajena debe poder ser desalojado en 48 horas.",
-   "info": "Okupar es entrar a vivir en una casa sin permiso del dueño. Hoy echar a un okupa puede tardar meses. Unos piden hacerlo en 48 horas; otros avisan de que hay familias sin otro sitio adonde ir.",
+   "info": "Okupar es entrar a vivir en una casa sin permiso. Hoy echar a un okupa puede tardar meses. Otros avisan: hay familias sin otro sitio adonde ir.",
    "image": null
   },
   {
    "id": "Q35",
    "category": "territory",
-   "text": "El catalán, el euskera y el gallego deben poder usarse en el Congreso y ante la Administración del Estado.",
-   "info": "En España también son oficiales el catalán, el gallego y el euskera en sus comunidades. Desde 2023 se pueden usar en el Congreso. Unos quieren poder usarlas también ante cualquier oficina del Estado; otros, solo el castellano.",
+   "text": "El catalán, el euskera y el gallego deben poder usarse en el Congreso y en las oficinas del Estado.",
+   "info": "También son oficiales en sus comunidades. Desde 2023 se usan en el Congreso. Unos las quieren en cualquier oficina del Estado; otros, solo el castellano.",
    "image": null
   },
   {
@@ -269,35 +269,35 @@
    "id": "Q41",
    "category": "climate",
    "text": "España debe cumplir las normas europeas contra el cambio climático, aunque cuesten dinero.",
-   "info": "La Unión Europea tiene un plan, el Pacto Verde, para contaminar menos. Obliga a cambiar coches, fábricas y cultivos. Unos lo ven necesario y otros demasiado caro.",
+   "info": "La UE tiene un plan, el Pacto Verde, para contaminar menos. Obliga a cambiar coches, fábricas y cultivos. Unos lo ven necesario; otros, demasiado caro.",
    "image": null
   },
   {
    "id": "Q42",
    "category": "social",
    "text": "Las pensiones deben subir cada año tanto como los precios.",
-   "info": "Hoy la ley sube las pensiones con el IPC, que mide cuánto suben los precios. Unos quieren mantenerlo siempre. Otros dicen que cuesta demasiado.",
+   "info": "Hoy la ley sube las pensiones con el IPC, que mide cuánto suben los precios. Unos quieren mantenerlo; otros dicen que cuesta demasiado.",
    "image": null
   },
   {
    "id": "Q43",
    "category": "eu",
    "text": "El Sáhara Occidental debe decidir su futuro en un referéndum.",
-   "info": "El Sáhara fue colonia española. Marruecos lo controla y propone que sea una región suya con autonomía. El Gobierno español apoyó ese plan en 2022. Otros piden que voten los saharauis.",
+   "info": "Fue colonia española. Marruecos lo controla y ofrece que sea una región suya. España apoyó ese plan en 2022. Otros piden que voten los saharauis.",
    "image": null
   },
   {
    "id": "Q44",
    "category": "economy",
    "text": "Los autónomos que ganan poco no deben tener que cobrar IVA.",
-   "info": "Un autónomo trabaja por su cuenta. Hoy casi todos cobran IVA a sus clientes y hacen papeleo cada tres meses. La UE permite librar de eso a los pequeños.",
+   "info": "Hoy casi todos los autónomos cobran IVA y hacen papeleo cada tres meses. La UE permite librar de eso a los pequeños.",
    "image": null
   },
   {
    "id": "Q45",
    "category": "territory",
    "text": "Los trenes de cercanías los debe gestionar cada comunidad, no el Estado.",
-   "info": "Hoy casi todos los trenes de cercanías los lleva Renfe, que es del Estado. Cataluña ha pedido gestionar los suyos. Unos quieren lo mismo para todas; otros, una sola red.",
+   "info": "Hoy los lleva Renfe, que es del Estado. Cataluña ha pedido gestionar los suyos. Unos quieren lo mismo para todas; otros, una sola red.",
    "image": null
   }
  ]

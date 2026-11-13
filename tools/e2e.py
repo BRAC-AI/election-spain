@@ -34,7 +34,7 @@ with sync_playwright() as p:
         pg.click('.chip[data-prov="08"]'); fits(pg, f'{tag} where'); pg.screenshot(path=f'/tmp/shots/{tag}_where.png')
         pg.click('[data-act=begin]'); pg.wait_for_selector('.steps'); pg.click('[data-act=demostar]'); assert 'doble' in pg.locator('.steps .starbtn').inner_text(); fits(pg, f'{tag} how'); pg.screenshot(path=f'/tmp/shots/{tag}_how.png'); pg.click('[data-act=go]'); pg.wait_for_selector('.statement')
         pg.click('[data-act=star]'); assert pg.locator('.starbtn[aria-pressed=true]').count() == 1 and 'doble' in pg.locator('.starbtn').inner_text(); fits(pg, f'{tag} star'); pg.screenshot(path=f'/tmp/shots/{tag}_q1.png')
-        assert 'Vivienda' in pg.inner_text('.card .eyebrow')
+        assert pg.inner_text('.card .eyebrow') in ('Vivienda', 'Empleo', 'Pensiones y protección social', 'Sanidad')   # a chosen topic comes first; order inside is random
         n = 0
         while True:
             if pg.locator('.statement').count():
@@ -54,9 +54,9 @@ with sync_playwright() as p:
                 if not pg.locator('[data-act=more]').count(): break
                 pg.click('[data-act=more]'); pg.wait_for_selector('.statement')
         assert n == 30
-        vals = [int(v.replace(' %', '')) for v in pg.locator('.party:not(.thin) .val').all_inner_texts()]   # ranked parties
-        thin = [int(v.replace(' %', '')) for v in pg.locator('.party.thin .val').all_inner_texts()]         # shown apart, never ranked
-        assert vals == sorted(vals, reverse=True) and thin == sorted(thin, reverse=True) and all(0 <= v <= 100 for v in vals + thin), (vals, thin)
+        vals = [int(v.replace(' %', '')) for v in pg.locator('.party:not(.blank) .val').all_inner_texts()]   # one list, best match first
+        assert vals == sorted(vals, reverse=True) and all(0 <= v <= 100 for v in vals), vals
+        assert pg.locator('.divider').count() <= 1
         assert 'Democracia' not in pg.locator('.hero').inner_text() and 'provisional' not in pg.locator('.hero').inner_text().lower()
         pg.locator('.party').first.click(); pg.wait_for_selector('.item'); fits(pg, f'{tag} why'); pg.screenshot(path=f'/tmp/shots/{tag}_why.png')
         links = pg.locator('.links a').evaluate_all('els => els.map(e => e.href)'); assert all(l.startswith('https://') for l in links) and links, links

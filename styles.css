@@ -235,3 +235,10 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 
 /* v1.0 */
 .name small{display:block;font-size:11px;font-weight:400;color:var(--muted);line-height:1.2}
+
+/* v1.1 */
+.cap{gap:10px}.cap>span:first-child{min-width:0}.cap>span:last-child{flex:none}
+.party.thin{opacity:1}
+@media (max-height:620px){.s-question .info{font-size:13px;line-height:1.3}}
+.statement.long{font-size:clamp(18px,5vw,23px)}
+@media (min-width:900px) and (min-height:560px){.statement.long{font-size:26px}}

@@ -19,9 +19,9 @@ let st = { ...FRESH };
 const save = () => { try { sessionStorage.setItem('guia29n', JSON.stringify(st)); } catch { /* storage unavailable */ } };
 const restore = () => { try { const v = JSON.parse(sessionStorage.getItem('guia29n')); if (v && v.screen) st = { ...FRESH, ...v }; } catch { /* ignore */ } };
 
-// Statements most parties have a position on come first, so early results can compare everyone.
-const cover = (q) => parties().filter((p) => stancesOf(p)[q.id]).length;
-const order = () => orderQuestions([...Q.questions].sort((x, y) => cover(y) - cover(x)), Q.bubbles.filter((b) => st.bubbles.includes(b.id)).flatMap((b) => b.categories));
+// Order is random for every new run. The voter's chosen topics still come first.
+const shuffle = (ids) => { const a = [...ids]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const order = () => orderQuestions((st.seq && st.seq.length === Q.questions.length ? st.seq.map((id) => Q.questions.find((q) => q.id === id)).filter(Boolean) : Q.questions), Q.bubbles.filter((b) => st.bubbles.includes(b.id)).flatMap((b) => b.categories));
 const answered = () => Object.values(st.answers).filter((a) => a in ANSWERS).length;
 const parties = () => eligibleParties(P.parties, st.province);
 const stancesOf = (p) => S[p.stancesFrom || p.id] || {};
@@ -40,7 +40,7 @@ function meter(popLevel = 0) {
   const n = answered(), total = Q.questions.length, lvl = n === 0 ? 0 : Math.min(4, 1 + Math.floor((3 * n) / total)); // label follows the share answered
   const segs = Array.from({ length: Math.ceil(total / BATCH) }, (_, i) => i).map((i) => `<span class="seg${popLevel === i + 1 ? ' pop' : ''}"><i class="w${Math.max(0, Math.min(BATCH, n - i * BATCH))}"></i></span>`).join('');
   return `<div class="meter" role="img" aria-label="${LEVELS[lvl]}. ${n} de ${Q.questions.length} respuestas.">
-    <div class="segs">${segs}</div><div class="cap"><b>${LEVELS[lvl]}</b><span>${n}/${Q.questions.length}</span></div></div>`;
+    <div class="segs">${segs}</div><div class="cap"><span><b>${LEVELS[lvl]}</b>${lvl === 1 ? ` (solo ${n} preguntas. Haz más para estar más seguro)` : lvl === 2 ? ` (${n} preguntas. Sigue para afinar)` : ''}</span><span>${n}/${Q.questions.length}</span></div></div>`;
 }
 
 const countText = () => `Elige hasta 3 temas${st.bubbles.length ? ` · ${st.bubbles.length}/3` : ''}`;
@@ -84,7 +84,7 @@ function question() {
     <div class="card grow">
       ${q.image ? `<img src="img/${esc(q.image)}" alt="">` : ''}
       <div class="cardtop"><p class="eyebrow">${esc(Q.categories[q.category])}</p><button type="button" class="starbtn" data-act="star" aria-pressed="${!!(st.stars || {})[q.id]}" aria-label="Muy importante para mí: vale el doble"><span aria-hidden="true">★</span> <span class="lbl">${(st.stars || {})[q.id] ? 'Vale el doble' : 'Muy importante'}</span></button></div>
-      <p class="statement" tabindex="-1">${esc(q.text)}</p>
+      <p class="statement${q.text.length > 80 ? ' long' : ''}" tabindex="-1">${esc(q.text)}</p>
       ${st.info ? `<p class="info">${esc(q.info)}</p>` : `<button type="button" class="infobtn" data-act="info">¿Qué significa?</button>`}
     </div>
     <div class="scale" role="group" aria-label="Tu respuesta">
@@ -120,14 +120,13 @@ function result() {
   return `
     ${meter(st.justLevel || 0)}
     ${hero(rows)}
-    <div class="list grow scroll">${rows.filter((r) => r.conclusive && !r.thin).map(row).join('')}
-      ${rows.some((r) => r.thin) ? `<p class="divider">Con pocos datos</p>${rows.filter((r) => r.thin).map(row).join('')}` : ''}
+    <div class="list grow scroll">${rows.filter((r) => r.conclusive).sort((x, y) => y.alignment - x.alignment || x.name.localeCompare(y.name, 'es')).map(row).join('')}
       ${rows.some((r) => !r.conclusive) ? `<p class="divider">Aún sin datos: sigue respondiendo</p>${rows.filter((r) => !r.conclusive).map(row).join('')}` : ''}</div>
     <div class="btns">
       ${left > 0 ? `<button type="button" class="cta" data-act="more">${Math.min(BATCH, left)} preguntas más</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
     </div>
-    <p class="note">No es un consejo de voto</p>`;
+`;
 }
 
 function why() {
@@ -152,7 +151,7 @@ function why() {
       <p>${verdict(agr[q.id])}${(st.stars || {})[q.id] ? '<span class="tag star">★ Vale el doble</span>' : ''}</p>
       <p class="pair">Tú: <b>${LABELS[st.answers[q.id]]}</b> · Partido: <b>${STANCE[s]}</b></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.src ? `<p class="muted">${c.research_level === 7 ? 'De un socio o antecesor del partido: ' : c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Pista, no cuenta: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
+      ${c.src ? `<p class="muted">${c.research_level === 7 ? 'De un socio o antecesor del partido: ' : c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Lo más cercano que hemos encontrado: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
     </div>`;
 }
 
@@ -169,7 +168,10 @@ function srcLink(c) {
 }
 
 function about() {
-  const rows = P.parties.map((p) => `<div class="item">${esc(p.name)} · ${p.programme.url ? `<a href="${esc(p.programme.url)}" rel="noopener noreferrer" target="_blank">${esc(SRC[p.programme.type] || 'Fuente')}${p.programme.year ? ' ' + p.programme.year : ''}</a>` : 'sin documento todavía'} · ${Object.keys(stancesOf(p)).length} de ${Q.questions.length} leídas</div>`).join('');
+  const KIND = (c) => { const d = SO[c.src] || {}; return c.research_level === 7 ? 'de un socio o antecesor' : c.approx || d.level === 6 ? 'parecidas' : { 1: 'de su programa 29N', 2: 'de un programa anterior', 3: 'de su web', 4: 'dichas en público', 5: 'votadas' }[d.level] || 'otras'; };
+  const rows = P.parties.map((p) => { const cells = Object.entries(stancesOf(p)).filter(([q]) => Q.questions.some((x) => x.id === q)).map(([, c]) => c), by = {};
+    cells.forEach((c) => { const k = KIND(c); by[k] = (by[k] || 0) + 1; });
+    return `<div class="item"><b>${esc(p.name)}</b> · ${cells.length} de ${Q.questions.length} posiciones<br><span class="muted">${Object.entries(by).sort((x, y) => y[1] - x[1]).map(([k, n]) => `${n} ${k}`).join(' · ')}${p.stancesFrom ? ' (las del PP)' : ''}</span></div>`; }).join('');
   return `
     <button type="button" class="link" data-act="closeabout">← Volver</button>
     <h1 tabindex="-1">Cómo funciona</h1>
@@ -186,9 +188,9 @@ function about() {
       <p>No guarda nada: sin registro, sin cookies, sin rastreo.</p>
       <h2>Puede haber errores</h2>
       <p>Hemos buscado las mejores fuentes que hemos podido. Pero la búsqueda la hizo una IA y una persona no lo ha revisado todo.</p>
-      <p>A veces no hay una fuente exacta. Entonces usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido». Si la fuente es de otro partido distinto, la enseñamos como «Pista» y no cuenta.</p>
+      <p>A veces no hay una fuente exacta. Entonces usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».</p>
       <h2>Quién lo hace</h2>
-      <p>Es un proyecto personal, hecho gratis y sin ganar dinero con él. Lo hizo el fundador de <a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a> para Núria, su pareja, que quería orientarse en estas elecciones. No trabaja para ningún partido.</p>
+      <p>Lo hicimos en <a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a> para Núria, que quería saber a quién votar. Es gratis y no hay ningún partido detrás.</p>
       <p>Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">el código y los datos</a> y <a href="${REPO}/blob/main/docs/METHODOLOGY.md" rel="noopener noreferrer" target="_blank">el método completo</a>.</p>
       <h2>¿Ves algo mal?</h2>
       <p>Si no estás de acuerdo con algo, o crees que una fuente está mal o es antigua, dínoslo. Tu opinión es muy bienvenida.</p>
@@ -200,9 +202,9 @@ function about() {
       </form>
       <details class="more"><summary>Fuentes de cada partido</summary>
         <p class="muted">${esc(P.inclusion_rule)} Según donde votes ves solo los que puedes votar.</p>
+        <p class="muted">Aquí ves cuántas posiciones tenemos de cada partido y de dónde salen. El enlace de cada una está en la página del partido, tras responder.</p>
         ${rows}
       </details>
-      <p class="muted">Preguntas ${esc(Q.version)} · Posiciones ${esc(SV)}</p>
     </div>`;
 }
 
@@ -266,7 +268,7 @@ document.addEventListener('click', (e) => {
     case 'demostar': { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); b.querySelector('.lbl').textContent = on ? 'Vale el doble' : 'Muy importante'; b.parentElement.classList.toggle('on', on); return; }
     case 'towhere': return go({ screen: 'where' }, true);
     case 'tostart': return go({ screen: 'start' });
-    case 'begin': return go({ screen: 'how', idx: 0, answers: {}, stars: {}, info: false }, true);
+    case 'begin': return go({ screen: 'how', idx: 0, answers: {}, stars: {}, info: false, seq: shuffle(Q.questions.map((q) => q.id)) }, true);
     case 'go': return go({ screen: 'question' }, true);
     case 'info': return go({ info: true });
     case 'back': return st.idx === 0 ? go({ screen: 'start' }) : go({ idx: st.idx - 1, info: false });

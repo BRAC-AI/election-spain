@@ -4,6 +4,10 @@ Rule changes, newest first. The current method is in [METHODOLOGY.md](METHODOLOG
 
 ## 13 November 2026
 
+- Democracia 21 is now judged only on its own material: its 29N programme documents and its candidate's interviews (10 positions). Ciudadanos's record was removed completely.
+- One result list for all parties. The separate "Con pocos datos" block is gone.
+- Statement order is random on every run (before: best-covered statements first).
+- "Pista, no cuenta" label replaced by "Lo más cercano que hemos encontrado".
 - Ciudadanos's record no longer counts for Democracia 21. It is shown as "Pista". An external review pointed out that another party's old positions do not establish this party's.
 - Results list shows how many answers were compared for parties with little data. Winner card says "Resultado provisional" until all statements are answered.
 - "Pistas" started to count: partner and predecessor records, and approximate evidence with a clear direction.
