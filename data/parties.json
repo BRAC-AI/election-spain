@@ -1,5 +1,5 @@
 {
- "version": "0.8.0-draft",
+ "version": "0.9.0-draft",
  "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso. Además hemos añadido dos partidos nuevos sin diputados: SALF (2,2 % en las encuestas, se presenta en 46 provincias) y Democracia 21 (solo en Madrid y Barcelona). Esos dos los hemos elegido nosotros.",
  "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
  "provinces": {
@@ -71,7 +71,7 @@
     "title": "Reconstrucción Nacional",
     "year": 2026,
     "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
-    "note": "Leído con IA el 12-11-2026. Sin revisión humana.",
+    "note": "Leído el programa 29N; el de 2023 solo para huecos.",
     "verified": false
    },
    "abbr": "PP",
@@ -90,7 +90,7 @@
     "title": "Programa electoral generales 2023",
     "year": 2023,
     "url": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf",
-    "note": "Sin programa 29N a 12-11-2026. Pendiente de leer.",
+    "note": "Programa 29N sin publicar a 13-11-2026. Leído el de 2023.",
     "verified": false
    },
    "abbr": "PSOE",
@@ -109,7 +109,7 @@
     "title": "Programa electoral 2023",
     "year": 2023,
     "url": "https://www.voxespana.es/wp-content/uploads/2023/07/Programa-VOX-2023-con-menos-peso.pdf",
-    "note": "Una fuente cita un documento 29N de 6 páginas («Recuperar España», 20-10-2026); sin localizar. Pendiente de leer.",
+    "note": "Programa 29N sin localizar. Leído el de 2023.",
     "verified": false
    },
    "abbr": "VOX",
@@ -134,14 +134,14 @@
    "programme": {
     "status": "not_found",
     "type": "web",
-    "title": "Programa «100 medidas» (anunciado)",
+    "title": "Web oficial frenteamplio.info",
     "year": 2026,
-    "url": "",
-    "note": "Coalición nueva. No se usa el programa de Sumar 2023 por decisión editorial. El 12-11-2026 presentó en Galicia un programa «100+15»; documento oficial sin localizar. Si no aparece, se usará su web.",
+    "url": "https://frenteamplio.info",
+    "note": "Sin programa en PDF. La web solo tiene noticias con propuestas sueltas.",
     "verified": false
    },
    "abbr": "FA",
-   "site": "",
+   "site": "https://frenteamplio.info",
    "logo": "fa.png"
   },
   {
@@ -163,12 +163,12 @@
     ]
    },
    "programme": {
-    "status": "not_found",
-    "type": "web",
-    "title": "«Paz, casa y trabajo» (cinco prioridades)",
-    "year": 2026,
+    "status": "fallback_older_programme",
+    "type": "programa_anterior",
+    "title": "Programa de Podemos 10N",
+    "year": 2019,
     "url": "",
-    "note": "Sin programa 29N. En 2023 fue dentro de Sumar. Se usará su web oficial.",
+    "note": "Sin programa 29N ni de 2023 propio. Se usa el de noviembre de 2019: tiene siete años.",
     "verified": false
    },
    "abbr": "POD",
@@ -192,7 +192,7 @@
     "title": "Programa electoral 2026",
     "year": 2026,
     "url": "https://esquerrarepublicana.cat/documents/e2026-programa.pdf",
-    "note": "Leído con IA el 12-11-2026. Sin revisión humana. Q16: el texto apunta en contra pero no lo dice claro; sin codificar.",
+    "note": "Leído el programa 29N; el de 2023 solo para huecos.",
     "verified": false
    },
    "abbr": "ERC",
@@ -216,7 +216,7 @@
     "title": "Programa eleccions generals 2023",
     "year": 2023,
     "url": "https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf",
-    "note": "Copia alojada por betevé: el partido ya no ofrece el original. Pendiente de leer.",
+    "note": "Programa 29N sin publicar. Leído el de 2023 (copia de betevé).",
     "verified": false
    },
    "abbr": "JxC",
@@ -239,7 +239,7 @@
     "title": "Programa electoral 29N",
     "year": 2026,
     "url": "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n",
-    "note": "Pendiente de leer.",
+    "note": "Leído el programa 29N; el de 2023 solo para huecos (su texto se extrae mal del PDF).",
     "verified": false
    },
    "abbr": "PNV",
@@ -263,7 +263,7 @@
     "title": "Compromiso de EH Bildu 23J",
     "year": 2023,
     "url": "https://ehbildu.eus/dokumentuak/23J-COMPROMISO-DE-EUSKAL-HERRIA-BILDU.pdf",
-    "note": "16 páginas. Pendiente de leer.",
+    "note": "Programa 29N sin publicar. Leído el compromiso de 2023 (16 páginas).",
     "verified": false
    },
    "abbr": "EHB",
@@ -287,7 +287,7 @@
     "title": "Programa electoral 2026",
     "year": 2026,
     "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
-    "note": "Pendiente de leer.",
+    "note": "Leído el programa 29N; el de 2023 solo para huecos.",
     "verified": false
    },
    "abbr": "BNG",
@@ -309,7 +309,7 @@
     "title": "Programa electoral 29N",
     "year": 2026,
     "url": "https://coalicioncanaria.org/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV.pdf",
-    "note": "Pendiente de leer.",
+    "note": "Leído el programa 29N (23 páginas).",
     "verified": false
    },
    "abbr": "CC",
@@ -330,7 +330,7 @@
     "title": "Reconstrucción Nacional (programa del PP)",
     "year": 2026,
     "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
-    "note": "Lista conjunta en Navarra. Se usa el programa nacional del PP mientras la coalición no publique uno propio.",
+    "note": "Lista conjunta en Navarra. Se usa el programa del PP. El de UPN de 2023 (6 páginas) coincide en vivienda, IRPF y concertada.",
     "verified": false
    },
    "stancesFrom": "pp",
@@ -340,7 +340,7 @@
   },
   {
    "id": "compromis",
-   "name": "Compromís",
+   "name": "Compromís-Front Valencià",
    "scope": {
     "only": [
      "03",
@@ -351,14 +351,14 @@
    "programme": {
     "status": "not_found",
     "type": "web",
-    "title": "",
-    "year": null,
-    "url": "",
-    "note": "En la Comunitat Valenciana hay una lista conjunta del espacio (Compromís-Front Valencià). Nombre y composición por confirmar en el BOE.",
+    "title": "Web oficial frontvalencia.org",
+    "year": 2026,
+    "url": "https://frontvalencia.org",
+    "note": "Programa resumido en la web. Sin PDF.",
     "verified": false
    },
    "abbr": "COM",
-   "site": "https://compromis.net/",
+   "site": "https://frontvalencia.org",
    "logo": "compromis.png"
   },
   {
@@ -371,16 +371,16 @@
     ]
    },
    "abbr": "D21",
-   "site": "",
+   "site": "https://democracia21.es",
    "logo": "d21.png",
    "programme": {
     "status": "not_found",
     "type": "web",
-    "title": "«España Limpia» y presentación del 10-10-2026",
+    "title": "Web oficial democracia21.es",
     "year": 2026,
-    "url": "",
+    "url": "https://democracia21.es",
     "verified": false,
-    "note": "Partido nuevo de Miriam González. Solo se presenta en Madrid y Barcelona, en coalición con Ciudadanos y UCIN. Documento oficial sin localizar."
+    "note": "Sin programa en PDF. Cinco páginas de «soluciones» en la web."
    }
   },
   {
@@ -400,13 +400,13 @@
    "site": "https://seacabolafiesta.com/",
    "logo": "salf.png",
    "programme": {
-    "status": "verification_pending",
+    "status": "current_election_official",
     "type": "programa_29N",
-    "title": "«La ilusión de un país. 119 medidas» (según una fuente)",
+    "title": "Contrato electoral simplificado. Generales 2026",
     "year": 2026,
     "url": "",
     "verified": false,
-    "note": "Se Acabó La Fiesta. Sin diputados. Listas al Congreso en 46 de 52 provincias según queproponen.es (otra fuente dice 47). Una fuente cita un documento 29N en su web; otras dicen que no hay programa. Sin localizar."
+    "note": "PDF aportado por Finn el 13-11-2026. Enlace oficial sin localizar."
    }
   }
  ],

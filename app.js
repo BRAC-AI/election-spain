@@ -12,7 +12,7 @@ const SRC = { programa_29N: 'Programa 29N', programa_anterior: 'Programa anterio
 const LEVELS = ['Aún nada', 'Poco fiable', 'Algo fiable', 'Bastante fiable', 'Muy fiable'];
 const FRESH = { screen: 'start', bubbles: [], province: '', idx: 0, answers: {}, party: null, info: false };
 
-let Q, P, S, SV; // questions, parties, stances, stances version
+let Q, P, S, SV, SO; // questions, parties, stances, stances version, sources
 let st = { ...FRESH };
 
 // Answers stay on this device, in this tab only.
@@ -121,8 +121,14 @@ function why() {
       <div class="item"><p><b>${esc(q.text)}</b></p>
       <p><span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.page ? `<p class="muted">Pág. ${esc(c.page)}${c.status === 'reviewed' ? '' : ' · sin revisar'}</p>` : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
+      ${c.src ? `<p class="muted">${srcLink(c)}${c.status === 'reviewed' ? '' : ' · sin revisar'}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No está en lo que hemos leído. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
     </div>`;
+}
+
+function srcLink(c) {
+  const d = SO[c.src] || {}, where = c.page === 'web' ? '' : `, pág. ${esc(c.page)}`;
+  const label = `${esc(d.title || 'Fuente')}${d.level === 2 ? ' (programa anterior)' : d.level === 3 ? '' : ''}${where}`;
+  return d.url ? `<a href="${esc(d.url)}" rel="noopener noreferrer" target="_blank">${label}</a>` : label;
 }
 
 function about() {
@@ -134,7 +140,8 @@ function about() {
       <h2>La idea</h2>
       <p>Tú dices qué piensas. Nosotros miramos qué ha escrito cada partido. Te enseñamos cuánto os parecéis.</p>
       <h2>De dónde sale lo que piensa cada partido</h2>
-      <p>De su programa para estas elecciones. Si no lo tiene, de su último programa. Si tampoco, de su web. Nunca de la prensa ni de lo que «se supone».</p>
+      <p>Primero, su programa para estas elecciones. Lo que ahí no sale, lo buscamos en su último programa propio. Si no tiene ninguno, en su web oficial. Nunca en la prensa ni en lo que «se supone».</p>
+      <p>En cada respuesta ves de qué documento sale y en qué página.</p>
       <p>Si un partido no dice nada sobre un tema, ese tema no cuenta para él.</p>
       <h2>Cómo sale el porcentaje</h2>
       <p>Por cada pregunta: pensáis igual, 100 puntos. Casi igual, 75. Casi al revés, 25. Al revés, 0. Si el partido dice «depende», 50. El porcentaje es la media.</p>
@@ -143,7 +150,7 @@ function about() {
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
       <h2>Quién lo lee</h2>
-      <p>Una IA lee los programas y apunta la página. Después lo revisa una persona. Lo que pone «sin revisar» aún no ha pasado ese control.</p>
+      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Después lo revisa una persona. Lo que pone «sin revisar» aún no ha pasado ese control.</p>
       <h2>Qué partidos salen</h2>
       <p>${esc(P.inclusion_rule)} Según tu provincia ves solo los que puedes votar.</p>
       <h2>Fuentes, partido a partido</h2>
@@ -232,9 +239,9 @@ document.addEventListener('submit', async (e) => {
   } catch { status.textContent = 'No se ha podido enviar. Prueba más tarde.'; }
 });
 
-Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json')])
-  .then(([q, p, s]) => {
-    Q = q; P = p; S = s.stances; SV = s.version;
+Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json'), load('data/sources.json')])
+  .then(([q, p, s, so]) => {
+    Q = q; P = p; S = s.stances; SV = s.version; SO = so;
     restore();
     if (!SCREENS[st.screen] || st.idx > q.questions.length || (st.screen === 'question' && st.idx >= q.questions.length)) st = { ...FRESH };
     render();

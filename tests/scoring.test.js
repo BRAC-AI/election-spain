@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { agreement, scoreParty, rankResults, orderQuestions, eligibleParties, confidence, display } from '../scoring.js';
 
 const J = (f) => JSON.parse(readFileSync(new URL(`../data/${f}`, import.meta.url)));
-const Q = J('questions.json'), P = J('parties.json'), S = J('stances.json');
+const Q = J('questions.json'), P = J('parties.json'), S = J('stances.json'), SO = J('sources.json');
 const st = (o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, { stance: v }]));
 const five = { Q01: 'sa', Q02: 'a', Q03: 'd', Q04: 'sd', Q05: 'a' };
 
@@ -92,6 +92,7 @@ test('data integrity', () => {
     for (const [qid, c] of Object.entries(cells)) {
       assert.ok(Q.questions.some((q) => q.id === qid), qid);
       assert.ok(allowed.includes(c.stance) && c.page && c.summary && c.coder && c.status, `${pid} ${qid}`);
+      assert.ok(SO[c.src] && [1, 2, 3].includes(SO[c.src].level), `${pid} ${qid} source`);
       if (c.status === 'reviewed') assert.ok(c.reviewer && c.verified_on, `${pid} ${qid}`);
     }
   }

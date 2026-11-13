@@ -45,3 +45,25 @@ It works for Carlos by luck: his party is the one we have read. It fails Marta. 
 - Real phones. This was Chrome emulation.
 - Real people. These are two scripted personas written by the same AI that built the tool, so treat the verdict as a floor, not a ceiling.
 - UPN-PP logo: the file is two logos put together, not an official joint mark (see `img/logos/SOURCES.txt`).
+
+# Test round 2: same two voters, 12 parties coded
+
+Date: 13 November 2026. Build v0.9. 125 of 300 party-statement cells coded from 15 official PDFs and 3 official websites.
+
+| Voter | After 5 | After 20 |
+|---|---|---|
+| Carlos, votes PP | Vox 90, SALF 81, PP 75, PSOE 50, Podemos 25 | Vox 85, SALF 84, PP 75, PSOE 46, Podemos 27 |
+| Marta, votes PSOE | Podemos 88, PSOE 88, Vox 13 | Podemos 68, PSOE 63, PP 43, SALF 36, Vox 25 |
+
+The order of blocs is right for both. The winner inside each bloc is not what the voter expects.
+
+## New findings
+
+11. **Parties with blunt programmes beat parties with careful ones.** PP has 5 "a medias" answers worth half; Vox has none. So a PP voter scores higher with Vox. This is the scoring, not the data. Options: score "a medias" by how close the voter is to the middle (a mild "a favor" matches a hedged party better than "muy a favor"), or show it as its own colour and leave it out of the percent.
+12. **Carlos's answers were written by me as "typical PP".** Several are harder than PP's own programme (against regularisation, for national priority). Real PP voters need to test this before we change the formula.
+13. **Podemos is scored on a 2019 programme.** It tops Marta's list on seven-year-old text. Needs a visible "programa de 2019" tag in the result row, not only inside the party page.
+14. **Coverage is uneven: 15 statements for PP and Vox, 2 for Coalición Canaria, 4 for PNV.** Short regional programmes say little about national topics. With under 3 comparable answers the party shows "–". That is honest but will look broken in Canarias and Euskadi.
+15. **Frente Amplio, Democracia 21 and Compromís-Front Valencià have 1 or 2 coded statements.** Their websites carry few concrete positions. They show "–" for everyone.
+16. **PNV 2023 PDF extracts badly** (keyword search finds almost nothing in 52 pages). Needs OCR or a manual read.
+
+Fixes 1, 3, 8, 9 and 10 from round 1 are still open. Fix 2 is mostly done. Fix 5 is done (the party page now says "No está en lo que hemos leído. No cuenta.").

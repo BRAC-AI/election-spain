@@ -1,7 +1,7 @@
 {
- "version": "0.3.0-draft",
+ "version": "0.9.0-draft",
  "status": "ai_coded_unreviewed",
- "note": "Posiciones leídas por IA en el documento enlazado. Las páginas hay que comprobarlas contra el PDF. Falta revisión humana y la cita literal.",
+ "note": "Posiciones leídas por IA (Claude) el 12 y 13-11-2026 sobre el texto de los documentos oficiales. Páginas = página del PDF. Falta segunda pasada y revisión humana con cita literal.",
  "stances": {
   "pp": {
    "Q01": {
@@ -9,91 +9,120 @@
     "page": "53",
     "summary": "Propone derogar la ley de vivienda y eliminar las zonas tensionadas y el índice de precios.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q04": {
     "stance": "conditional",
     "page": "60",
     "summary": "Promete bajar el IRPF a rentas medias y bajas y a familias. No habla de todos los tramos.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q07": {
     "stance": "conditional",
     "page": "56",
     "summary": "Unifica las deducciones familiares en un pago mensual reembolsable. No es una ayuda universal por hijo.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q10": {
     "stance": "support",
     "page": "67",
     "summary": "Conciertos de seis años con financiación del coste completo; no se cierran aulas con demanda.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q11": {
     "stance": "support",
     "page": "39",
     "summary": "Garantiza el derecho a estudiar en castellano en todas las etapas y en toda España, junto a las lenguas cooficiales.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q12": {
     "stance": "support",
     "page": "71",
     "summary": "Elimina el calendario de cierre de las centrales y alarga su vida útil.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q13": {
     "stance": "oppose",
     "page": "22",
     "summary": "Prohibiría por ley las regularizaciones masivas. El arraigo individual queda como excepción.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q14": {
     "stance": "conditional",
     "page": "40",
     "summary": "Da prioridad en las ayudas a quien tenga arraigo duradero y verificable, no por nacionalidad.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q15": {
     "stance": "conditional",
     "page": "26",
     "summary": "Se compromete a cumplir con la OTAN con financiación plurianual. No da una cifra del PIB.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q16": {
     "stance": "support",
     "page": "44",
     "summary": "Pone fin a la libre autodeterminación del sexo registral y revisa la ley trans. No concreta el mecanismo.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q18": {
     "stance": "oppose",
     "page": "16",
     "summary": "Defiende la unidad constitucional y recupera el delito de convocar un referéndum ilegal.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q19": {
     "stance": "oppose",
     "page": "17, 41",
     "summary": "Ninguna comunidad saldrá del régimen común ni habrá regímenes singulares bilaterales.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
    },
    "Q20": {
     "stance": "support",
     "page": "74",
     "summary": "Mantiene el apoyo político, económico, militar y humanitario a Ucrania.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "pp26"
+   },
+   "Q03": {
+    "stance": "oppose",
+    "page": "23",
+    "summary": "Eliminar el impuesto a las grandes fortunas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "pp23"
+   },
+   "Q06": {
+    "stance": "conditional",
+    "page": "19",
+    "summary": "Actualizar el salario mínimo hablando con sindicatos y empresarios. No lo liga a los precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "pp23"
    }
   },
   "erc": {
@@ -102,56 +131,784 @@
     "page": "22",
     "summary": "Hacer permanente el impuesto temporal a las grandes fortunas y añadir tramos más altos.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q05": {
     "stance": "support",
     "page": "26",
     "summary": "Reducir la jornada máxima a 37,5 horas semanales sin bajar salarios.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q07": {
     "stance": "support",
     "page": "21",
     "summary": "Prestación universal por crianza de al menos 200 euros, mayor donde la vida es más cara.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q09": {
     "stance": "oppose",
     "page": "41",
     "summary": "Rechaza la privatización de la sanidad y defiende la gestión pública.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q11": {
     "stance": "oppose",
     "page": "10-11",
     "summary": "El catalán debe seguir como lengua de enseñanza; rechaza porcentajes de lenguas impuestos por el Estado.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q18": {
     "stance": "support",
     "page": "8",
     "summary": "Negociar un referéndum de autodeterminación en Cataluña con mediación europea.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q19": {
     "stance": "support",
     "page": "14",
     "summary": "Que la Agencia Tributaria catalana recaude todos los impuestos generados en Cataluña.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
    },
    "Q20": {
     "stance": "conditional",
     "page": "16",
     "summary": "Mantiene el apoyo a Ucrania con ayuda europea y diplomacia. No menciona la ayuda militar.",
     "coder": "IA (Claude)",
-    "status": "ai_coded_unreviewed"
+    "status": "ai_coded_unreviewed",
+    "src": "erc26"
+   },
+   "Q01": {
+    "stance": "support",
+    "page": "114",
+    "summary": "Que las comunidades puedan regular los precios del alquiler.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "erc23"
+   },
+   "Q13": {
+    "stance": "support",
+    "page": "41",
+    "summary": "Nuevas vías de regularización para personas migrantes.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "erc23"
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "7",
+    "summary": "Apoyó la ley trans y la defiende.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "erc23"
+   }
+  },
+  "psoe": {
+   "Q01": {
+    "stance": "support",
+    "page": "93",
+    "summary": "Promete desplegar la Ley de Vivienda, que permite limitar alquileres en zonas tensionadas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q03": {
+    "stance": "conditional",
+    "page": "39",
+    "summary": "Evaluará el impuesto temporal a las grandes fortunas y abrirá el debate. No promete hacerlo fijo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q04": {
+    "stance": "conditional",
+    "page": "33",
+    "summary": "Ayudas fiscales a familias y clase media, como subir el mínimo por hijos. No una bajada general.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q05": {
+    "stance": "conditional",
+    "page": "50",
+    "summary": "Seguirá con un proyecto piloto de reducción de jornada sin bajar el sueldo en empresas industriales.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q06": {
+    "stance": "conditional",
+    "page": "26",
+    "summary": "Fijar por ley que el salario mínimo sea el 60 % del salario medio. No lo liga a los precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q07": {
+    "stance": "support",
+    "page": "173",
+    "summary": "Crear una prestación por crianza para familias con menores a cargo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q08": {
+    "stance": "support",
+    "page": "200",
+    "summary": "Ley para ampliar el acceso universal a la sanidad pública, sin depender del lugar de nacimiento.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "196",
+    "summary": "Se opone a privatizar la sanidad y promete reforzar el sistema público.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q10": {
+    "stance": "support",
+    "page": "107",
+    "summary": "Actualizar el dinero que reciben los concertados para que no cobren cuotas ocultas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q12": {
+    "stance": "oppose",
+    "page": "75",
+    "summary": "Cierre ordenado y progresivo de las centrales nucleares.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q13": {
+    "stance": "conditional",
+    "page": "256",
+    "summary": "Actualizar el arraigo y crear nuevas vías. No habla de una regularización general.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "214",
+    "summary": "Defiende la ley trans y promete impulsar sus medidas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   },
+   "Q20": {
+    "stance": "conditional",
+    "page": "259",
+    "summary": "Seguirá apoyando a Ucrania en su defensa. No concreta si con armas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "psoe23"
+   }
+  },
+  "vox": {
+   "Q01": {
+    "stance": "oppose",
+    "page": "44",
+    "summary": "Rechaza el control de precios del alquiler y critica la Ley de Vivienda.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q03": {
+    "stance": "oppose",
+    "page": "77",
+    "summary": "Suprimir el Impuesto sobre el Patrimonio en toda España.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q04": {
+    "stance": "support",
+    "page": "75",
+    "summary": "Bajar el IRPF a dos tipos: 15 % hasta 70.000 euros y 25 % por encima.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q08": {
+    "stance": "oppose",
+    "page": "60",
+    "summary": "Para inmigrantes en situación ilegal, solo urgencias vitales y enfermedades contagiosas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q09": {
+    "stance": "support",
+    "page": "57",
+    "summary": "Reforzar los conciertos con la sanidad privada para bajar las listas de espera.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q10": {
+    "stance": "support",
+    "page": "33",
+    "summary": "Cheque escolar para que cada familia elija libremente cualquier centro.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q11": {
+    "stance": "support",
+    "page": "36",
+    "summary": "Derecho a la educación en español en toda España; español como lengua vehicular.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q12": {
+    "stance": "support",
+    "page": "117",
+    "summary": "Alargar la vida de las centrales nucleares e invertir en nuevos reactores.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q13": {
+    "stance": "oppose",
+    "page": "103",
+    "summary": "Suprimir el arraigo como vía para regularizar la inmigración ilegal.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q14": {
+    "stance": "support",
+    "page": "64",
+    "summary": "Establecer la prioridad nacional en las ayudas sociales y el acceso a la vivienda.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q15": {
+    "stance": "support",
+    "page": "93",
+    "summary": "Aumentar la inversión en Defensa.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q16": {
+    "stance": "support",
+    "page": "173",
+    "summary": "Derogar la ley trans.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q17": {
+    "stance": "oppose",
+    "page": "58",
+    "summary": "Derogar la ley del aborto.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q18": {
+    "stance": "oppose",
+    "page": "16",
+    "summary": "Recuperar el delito de referéndum ilegal.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   },
+   "Q19": {
+    "stance": "oppose",
+    "page": "78",
+    "summary": "Que la Agencia Tributaria estatal recaude todos los tributos; fin de las agencias autonómicas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "vox23"
+   }
+  },
+  "junts": {
+   "Q04": {
+    "stance": "support",
+    "page": "58",
+    "summary": "Ajustar todos los impuestos a la inflación; ve excesivos los tipos sobre las rentas del trabajo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   },
+   "Q07": {
+    "stance": "conditional",
+    "page": "92",
+    "summary": "Pide más ayudas a la crianza. No concreta una ayuda universal por hijo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   },
+   "Q10": {
+    "stance": "support",
+    "page": "114",
+    "summary": "Defiende la red concertada y que la regule el Parlament.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   },
+   "Q11": {
+    "stance": "oppose",
+    "page": "113",
+    "summary": "Defiende la inmersión lingüística en catalán.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   },
+   "Q18": {
+    "stance": "support",
+    "page": "29",
+    "summary": "Apoya el derecho de autodeterminación.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   },
+   "Q19": {
+    "stance": "support",
+    "page": "57",
+    "summary": "Que la Agencia Tributaria de Cataluña recaude todos los tributos generados en Cataluña.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   },
+   "Q20": {
+    "stance": "support",
+    "page": "30",
+    "summary": "Apoya a Ucrania y exige a España cumplir con la OTAN en la ayuda.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "junts23"
+   }
+  },
+  "bildu": {
+   "Q01": {
+    "stance": "support",
+    "page": "2",
+    "summary": "Presenta como logro la Ley de Vivienda, que limita los alquileres.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   },
+   "Q03": {
+    "stance": "support",
+    "page": "2",
+    "summary": "Presenta como logro el impuesto a las grandes fortunas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   },
+   "Q05": {
+    "stance": "support",
+    "page": "3",
+    "summary": "Reducir la jornada a 32 horas semanales sin bajar el sueldo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   },
+   "Q06": {
+    "stance": "conditional",
+    "page": "3",
+    "summary": "Subir el salario mínimo a 1.200 euros y tener uno propio. No lo liga a los precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "6",
+    "summary": "Derogar la ley que permite privatizar y externalizar servicios sanitarios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   },
+   "Q18": {
+    "stance": "support",
+    "page": "14",
+    "summary": "Defiende el derecho a decidir y el carácter plurinacional del Estado.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   },
+   "Q19": {
+    "stance": "support",
+    "page": "16",
+    "summary": "Defiende el Concierto vasco y el Convenio navarro.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bildu23"
+   }
+  },
+  "podemos": {
+   "Q01": {
+    "stance": "support",
+    "page": "90",
+    "summary": "Intervenir el mercado del alquiler con control de precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q03": {
+    "stance": "support",
+    "page": "115",
+    "summary": "Crear un impuesto a las grandes fortunas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q04": {
+    "stance": "conditional",
+    "page": "115",
+    "summary": "Hacer el IRPF más progresivo. No propone una bajada para todos.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q05": {
+    "stance": "support",
+    "page": "29",
+    "summary": "Jornada laboral de 34 horas semanales.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q06": {
+    "stance": "conditional",
+    "page": "78",
+    "summary": "Llegar a un salario mínimo de 1.200 euros. No lo liga a los precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q08": {
+    "stance": "support",
+    "page": "94",
+    "summary": "Garantizar el acceso universal a la sanidad.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "94",
+    "summary": "Frenar la privatización de la sanidad.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q12": {
+    "stance": "oppose",
+    "page": "10",
+    "summary": "Cerrar las centrales nucleares antes del final de 2024.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q13": {
+    "stance": "conditional",
+    "page": "63",
+    "summary": "Flexibilizar el arraigo y crear nuevos visados. No habla de una regularización general.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "28",
+    "summary": "Ley trans con libre determinación de la identidad de género.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   },
+   "Q18": {
+    "stance": "support",
+    "page": "118",
+    "summary": "Apuesta por un referéndum pactado en Cataluña.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "podemos19"
+   }
+  },
+  "pnv": {
+   "Q01": {
+    "stance": "conditional",
+    "page": "8",
+    "summary": "Regular los alquileres de temporada y turísticos y frenar abusos. No habla de un tope de precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "pnv26"
+   },
+   "Q13": {
+    "stance": "support",
+    "page": "25",
+    "summary": "Avanzar en los procesos de regularización que ya prevé la ley.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "pnv26"
+   },
+   "Q19": {
+    "stance": "conditional",
+    "page": "39",
+    "summary": "Defiende y quiere ampliar el Concierto vasco. No habla de otras comunidades.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "pnv26"
+   },
+   "Q18": {
+    "stance": "support",
+    "page": "3",
+    "summary": "Plantea el derecho a decidir el futuro de Euskadi.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "pnv23"
+   }
+  },
+  "cc": {
+   "Q02": {
+    "stance": "support",
+    "page": "11",
+    "summary": "Limitar la compra de vivienda en Canarias por extranjeros.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cc26"
+   },
+   "Q07": {
+    "stance": "conditional",
+    "page": "10",
+    "summary": "Pide ayudas a la crianza dentro de un plan estatal de infancia. No concreta.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cc26"
+   }
+  },
+  "bng": {
+   "Q01": {
+    "stance": "support",
+    "page": "12",
+    "summary": "Topar por ley los precios de los alquileres.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q03": {
+    "stance": "support",
+    "page": "44",
+    "summary": "Hacer permanentes los impuestos a la banca, las energéticas y las grandes fortunas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q04": {
+    "stance": "conditional",
+    "page": "43",
+    "summary": "Hacer el IRPF más progresivo: que pague más quien más gana.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q05": {
+    "stance": "support",
+    "page": "15",
+    "summary": "Jornada de 35 horas sin bajar el sueldo, con el horizonte de 32.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q06": {
+    "stance": "conditional",
+    "page": "15",
+    "summary": "Subir el salario mínimo hasta el 60 % del salario medio. No lo liga a los precios.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q08": {
+    "stance": "support",
+    "page": "23",
+    "summary": "Garantizar los derechos de la población inmigrante, incluida la atención sanitaria.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q09": {
+    "stance": "oppose",
+    "page": "37",
+    "summary": "Garantizar el carácter público de la sanidad y reducir la privatización.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q10": {
+    "stance": "oppose",
+    "page": "35",
+    "summary": "Suprimir los conciertos educativos.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q13": {
+    "stance": "support",
+    "page": "22",
+    "summary": "Promover la regularización administrativa.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q15": {
+    "stance": "oppose",
+    "page": "6",
+    "summary": "Rechaza el aumento del gasto militar.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q19": {
+    "stance": "support",
+    "page": "8",
+    "summary": "Concierto económico: que Galicia recaude todos los impuestos.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q20": {
+    "stance": "oppose",
+    "page": "89",
+    "summary": "Cesar de inmediato el envío de armas españolas a Ucrania.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng26"
+   },
+   "Q18": {
+    "stance": "support",
+    "page": "10",
+    "summary": "Galicia debe tener reconocido el derecho de autodeterminación y poder ejercerlo.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "bng23"
+   }
+  },
+  "salf": {
+   "Q03": {
+    "stance": "oppose",
+    "page": "13",
+    "summary": "Eliminar el impuesto a las grandes fortunas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q04": {
+    "stance": "support",
+    "page": "14",
+    "summary": "Nadie paga IRPF por los primeros 35.000 euros.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q10": {
+    "stance": "support",
+    "page": "34",
+    "summary": "Cheque escolar válido en pública, concertada y privada.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q11": {
+    "stance": "support",
+    "page": "33",
+    "summary": "Derecho a la enseñanza en castellano en toda España.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q13": {
+    "stance": "oppose",
+    "page": "17",
+    "summary": "Fin de las regularizaciones y derogar la de 2026.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q14": {
+    "stance": "conditional",
+    "page": "19",
+    "summary": "Sin ayudas hasta tener cinco años de residencia legal y cotización. No lo liga a la nacionalidad.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q15": {
+    "stance": "conditional",
+    "page": "37",
+    "summary": "Subir sueldos militares dentro del 2 % del PIB. No pide superar esa cifra.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   },
+   "Q19": {
+    "stance": "oppose",
+    "page": "14",
+    "summary": "Financiación común para todas; rechaza modelos a medida para algunas comunidades.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "salf26"
+   }
+  },
+  "fa": {
+   "Q03": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Propone un impuesto del 1 al 3 % a la riqueza de las 50 mayores fortunas.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "fa-web"
+   }
+  },
+  "d21": {
+   "Q01": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Un límite temporal y excepcional a los alquileres, a cambio de garantías para el propietario.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "d21-web"
+   }
+  },
+  "compromis": {
+   "Q05": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Reducir la jornada laboral.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cfv-web"
+   },
+   "Q17": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Blindar el aborto en la Constitución.",
+    "coder": "IA (Claude)",
+    "status": "ai_coded_unreviewed",
+    "src": "cfv-web"
    }
   }
  }

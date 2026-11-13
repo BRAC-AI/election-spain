@@ -1,0 +1,110 @@
+{
+ "pp26": {
+  "level": 1,
+  "title": "Reconstrucción Nacional",
+  "year": 2026,
+  "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+ },
+ "pp23": {
+  "level": 2,
+  "title": "Programa electoral PP 23J",
+  "year": 2023,
+  "url": "https://www.pp.es/storage/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
+ },
+ "erc26": {
+  "level": 1,
+  "title": "Programa electoral ERC 2026",
+  "year": 2026,
+  "url": "https://esquerrarepublicana.cat/documents/e2026-programa.pdf"
+ },
+ "erc23": {
+  "level": 2,
+  "title": "Programa electoral ERC 2023",
+  "year": 2023,
+  "url": ""
+ },
+ "psoe23": {
+  "level": 2,
+  "title": "Programa electoral PSOE 23J",
+  "year": 2023,
+  "url": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+ },
+ "vox23": {
+  "level": 2,
+  "title": "Programa electoral Vox 23J",
+  "year": 2023,
+  "url": "https://www.voxespana.es/wp-content/uploads/2023/07/Programa-VOX-2023-con-menos-peso.pdf"
+ },
+ "junts23": {
+  "level": 2,
+  "title": "Programa electoral Junts 2023",
+  "year": 2023,
+  "url": "https://img.beteve.cat/wp-content/uploads/2023/07/programa-junts-per-catalunya-eleccions-generals-2023.pdf"
+ },
+ "bildu23": {
+  "level": 2,
+  "title": "Compromiso de EH Bildu 23J",
+  "year": 2023,
+  "url": "https://ehbildu.eus/dokumentuak/23J-COMPROMISO-DE-EUSKAL-HERRIA-BILDU.pdf"
+ },
+ "podemos19": {
+  "level": 2,
+  "title": "Programa de Podemos 10N",
+  "year": 2019,
+  "url": ""
+ },
+ "pnv26": {
+  "level": 1,
+  "title": "Programa elecciones generales 2026 EAJ-PNV",
+  "year": 2026,
+  "url": "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n"
+ },
+ "pnv23": {
+  "level": 2,
+  "title": "Con voz propia. Programa 23J EAJ-PNV",
+  "year": 2023,
+  "url": "https://www.eaj-pnv.eus/es/documentos/20945/con-voz-propia-programa-electoral-23-j"
+ },
+ "cc26": {
+  "level": 1,
+  "title": "Defiende Canarias. Bases del programa 29N",
+  "year": 2026,
+  "url": "https://coalicioncanaria.org/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV.pdf"
+ },
+ "bng26": {
+  "level": 1,
+  "title": "Programa electoral 29N. Xerais 2026",
+  "year": 2026,
+  "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf"
+ },
+ "bng23": {
+  "level": 2,
+  "title": "Programa electoral Xerais 2023",
+  "year": 2023,
+  "url": ""
+ },
+ "salf26": {
+  "level": 1,
+  "title": "Contrato electoral simplificado. Generales 2026",
+  "year": 2026,
+  "url": ""
+ },
+ "fa-web": {
+  "level": 3,
+  "title": "Web oficial frenteamplio.info",
+  "year": 2026,
+  "url": "https://frenteamplio.info"
+ },
+ "d21-web": {
+  "level": 3,
+  "title": "Web oficial democracia21.es",
+  "year": 2026,
+  "url": "https://democracia21.es/vivienda-prioridad-1"
+ },
+ "cfv-web": {
+  "level": 3,
+  "title": "Web oficial frontvalencia.org",
+  "year": 2026,
+  "url": "https://frontvalencia.org"
+ }
+}
