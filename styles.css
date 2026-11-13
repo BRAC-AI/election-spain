@@ -228,3 +228,7 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 .verdict.none{border:1px dashed var(--line);color:var(--muted);font-weight:600}
 .tag.star{border-color:var(--teal);color:var(--teal);font-weight:700}
 .pair{font-size:14px;color:var(--muted);margin:2px 0 4px}.pair b{color:var(--ink)}
+
+/* v0.22: simpler about page */
+.more{margin:14px 0 6px;border-top:1px solid var(--line);padding-top:10px}
+.more summary{cursor:pointer;font-weight:700;color:var(--teal);min-height:36px}

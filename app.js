@@ -174,36 +174,34 @@ function about() {
     <button type="button" class="link" data-act="closeabout">← Volver</button>
     <h1 tabindex="-1">Cómo funciona</h1>
     <div class="grow scroll about">
-      <h2>La idea</h2>
-      <p>Tú dices qué piensas. Nosotros miramos qué ha escrito cada partido. Te enseñamos cuánto os parecéis.</p>
-      <h2>De dónde sale lo que piensa cada partido</h2>
-      <p>Primero, su programa para estas elecciones. Lo que ahí no sale, lo buscamos en su último programa propio. Si no tiene ninguno, en su web oficial. Nunca en la prensa ni en lo que «se supone».</p>
-      <p>En cada respuesta ves de qué documento sale y en qué página.</p>
-      <p>Si un partido no dice nada sobre un tema, ese tema no cuenta para él.</p>
-      <h2>Cómo sale el porcentaje</h2>
-      <p>Por cada pregunta: pensáis igual, 100 puntos. Casi igual, 75. Casi al revés, 25. Al revés, 0. Si el partido dice «a medias», 75 si tu respuesta es suave y 50 si es rotunda. El porcentaje es la media.</p>
-      <p>Todas las preguntas valen lo mismo, salvo las que marques con ★: esas valen el doble. Elegir temas solo cambia el orden.</p>
-      <p>Un partido tiene porcentaje desde 2 respuestas comparables. Con menos de 4, o si conocemos menos de 8 posiciones del partido, sale aparte como «con pocos datos» y no puede ganar.</p>
-      <h2>La barra de arriba</h2>
-      <p>Con 5 respuestas el resultado es una pista. Con las 30 es mucho más fiable. La barra tiene un tramo por cada 5 frases y te lo recuerda.</p>
-      <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
-      <h2>Quién lo lee</h2>
-      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Si el programa no dice nada, usamos lo que un candidato o portavoz ha dicho en público en 2026, con enlace: lo verás como «Lo dijo…». Si tampoco, miramos qué votó en el Congreso o en su parlamento: «Votó…». A veces solo hay algo parecido, no exacto: lo verás como «Parecido» y cuenta. Si un partido es nuevo, usamos lo que dijo o votó un socio o el grupo del que viene (Sumar para Frente Amplio, Ciudadanos para Democracia 21): lo verás como «De un socio o antecesor» y también cuenta. Solo queda fuera lo que no deja claro si está a favor o en contra. Lo buscaron otras IA (ChatGPT y Gemini) el 13 de noviembre. Ninguna posición la ha revisado aún una persona. Si ves un error, dínoslo abajo.</p>
-      <h2>Qué partidos salen</h2>
-      <p>${esc(P.inclusion_rule)} Según tu provincia ves solo los que puedes votar.</p>
-      <h2>Fuentes, partido a partido</h2>
-      ${rows}
-      <h2>Lo que no hace</h2>
-      <p>No te dice a quién votar. No cubre todos los temas. No guarda nada: sin registro, sin cookies, sin rastreo. Tus respuestas se borran al cerrar la pestaña.</p>
+      <h2>Para qué sirve</h2>
+      <p>Para ayudarte a ver qué partido piensa más como tú en estas elecciones.</p>
+      <h2>Cómo funciona</h2>
+      <p><b>1.</b> Tú respondes a ${Q.questions.length} frases.</p>
+      <p><b>2.</b> Antes, con ayuda de inteligencia artificial, hemos buscado qué piensa cada partido sobre cada frase: en su programa, en lo que ha votado y en lo que han dicho sus líderes.</p>
+      <p><b>3.</b> Comparamos tus respuestas con las de cada partido y te decimos cuánto os parecéis. Si marcas una frase con ★, vale el doble.</p>
+      <p>Toca cualquier partido y verás, frase a frase, qué piensa y de dónde lo hemos sacado, con su enlace.</p>
+      <h2>Lo que no es</h2>
+      <p>No quiere cambiar lo que piensas. No te dice a quién votar. Solo te ayuda a orientarte.</p>
+      <p>No guarda nada: sin registro, sin cookies, sin rastreo.</p>
+      <h2>Puede haber errores</h2>
+      <p>Hemos buscado las mejores fuentes que hemos podido. Pero la búsqueda la hizo una IA y una persona no lo ha revisado todo.</p>
+      <p>A veces no hay una fuente exacta. Entonces usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».</p>
       <h2>Quién lo hace</h2>
-      <p>BRACAI, una empresa de Barcelona. No trabaja para ningún partido. Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">código y datos</a>, y <a href="${REPO}/blob/main/docs/METHODOLOGY.md" rel="noopener noreferrer" target="_blank">el método completo</a>. Puedes copiarlo si dices de dónde viene.</p>
-      <h2>¿Qué te parece?</h2>
+      <p>Es un proyecto personal, hecho gratis y sin ganar dinero con él. Lo hizo el fundador de <a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a> para Núria, su pareja, que quería orientarse en estas elecciones. No trabaja para ningún partido.</p>
+      <p>Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">el código y los datos</a> y <a href="${REPO}/blob/main/docs/METHODOLOGY.md" rel="noopener noreferrer" target="_blank">el método completo</a>.</p>
+      <h2>¿Ves algo mal?</h2>
+      <p>Si no estás de acuerdo con algo, o crees que una fuente está mal o es antigua, dínoslo. Tu opinión es muy bienvenida.</p>
       <form id="fb" novalidate>
         <div class="stars" role="group" aria-label="Nota de 1 a 5">${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-star="${n}" aria-pressed="false">${n}</button>`).join('')}</div>
-        <textarea id="fbm" rows="3" maxlength="1000" aria-label="Tu opinión" placeholder="¿Algo que cambiar o un error?"></textarea>
+        <textarea id="fbm" rows="3" maxlength="1000" aria-label="Tu opinión" placeholder="¿Qué partido, qué frase y qué cambiarías?"></textarea>
         <div class="btns"><button type="submit" class="cta">Enviar</button></div>
         <p class="muted" id="fbs" role="status"></p>
       </form>
+      <details class="more"><summary>Fuentes de cada partido</summary>
+        <p class="muted">${esc(P.inclusion_rule)} Según donde votes ves solo los que puedes votar.</p>
+        ${rows}
+      </details>
       <p class="muted">Preguntas ${esc(Q.version)} · Posiciones ${esc(SV)}</p>
     </div>`;
 }
