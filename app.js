@@ -1,4 +1,4 @@
-import { scoreParty, rankResults, orderQuestions, eligibleParties, confidence, ANSWERS, CONFIG } from './scoring.js';
+import { scoreParty, enoughData, rankResults, orderQuestions, eligibleParties, confidence, ANSWERS, CONFIG } from './scoring.js';
 
 const app = document.querySelector('#app');
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -10,7 +10,7 @@ const LABELS = Object.fromEntries(OPTS);
 const STANCE = { support: 'A favor', oppose: 'En contra', conditional: 'A medias', insufficient_evidence: 'No lo dice' };
 const SRC = { programa_29N: 'Programa 29N', programa_anterior: 'Programa anterior', web: 'Web' };
 const LEVELS = ['Aún nada', 'Poco fiable', 'Algo fiable', 'Bastante fiable', 'Muy fiable'];
-const FRESH = { screen: 'start', bubbles: [], region: '', province: '', idx: 0, answers: {}, party: null, info: false };
+const FRESH = { screen: 'start', bubbles: [], region: '', province: '', idx: 0, answers: {}, stars: {}, party: null, info: false };
 
 let Q, P, S, SV, SO, M, HI = {}; // questions, parties, stances, stances version, sources, map
 let st = { ...FRESH };
@@ -23,7 +23,8 @@ const order = () => orderQuestions(Q.questions, Q.bubbles.filter((b) => st.bubbl
 const answered = () => Object.values(st.answers).filter((a) => a in ANSWERS).length;
 const parties = () => eligibleParties(P.parties, st.province);
 const stancesOf = (p) => S[p.stancesFrom || p.id] || {};
-const results = () => rankResults(parties().map((p) => ({ ...p, ...scoreParty(st.answers, stancesOf(p)) })));
+const scoreOf = (p) => { const c = stancesOf(p), r = scoreParty(st.answers, c, undefined, st.stars || {}), ok = enoughData(c); return { ...r, enough: ok, conclusive: r.conclusive && ok, alignment: ok ? r.alignment : null }; };
+const results = () => rankResults(parties().map((p) => ({ ...p, ...scoreOf(p) })));
 const badge = (p) => `<span class="badge">${p.logo ? `<img src="img/logos/${esc(p.logo)}" alt="" width="256" height="256" loading="lazy">` : esc(p.abbr)}</span>`;
 
 function go(patch, animate = false) {
@@ -80,7 +81,7 @@ function question() {
     ${meter()}
     <div class="card grow">
       ${q.image ? `<img src="img/${esc(q.image)}" alt="">` : ''}
-      <p class="eyebrow">${esc(Q.categories[q.category])}</p>
+      <div class="cardtop"><p class="eyebrow">${esc(Q.categories[q.category])}</p><button type="button" class="starbtn" data-act="star" aria-pressed="${!!(st.stars || {})[q.id]}" aria-label="Muy importante para mí: vale el doble"><span aria-hidden="true">★</span> <span class="lbl">${(st.stars || {})[q.id] ? 'Vale el doble' : 'Muy importante'}</span></button></div>
       <p class="statement" tabindex="-1">${esc(q.text)}</p>
       ${st.info ? `<p class="info">${esc(q.info)}</p>` : `<button type="button" class="infobtn" data-act="info">¿Qué significa?</button>`}
     </div>
@@ -105,7 +106,7 @@ function hero(rows) {
       <span class="muted">Toca para ver por qué</span></span></button>`;
 }
 
-const oldTag = (p) => (p.programme && p.programme.type === 'programa_anterior' ? ` <span class="yr">${p.programme.year}</span>` : '');
+const oldTag = () => ''; // positions now mix programmes, votes and quotes, so one year tag would mislead
 const row = (r) => `
       <button type="button" class="party${r.conclusive ? '' : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
         ${badge(r)}<span class="name">${esc(r.name)}${oldTag(r)}</span>
@@ -123,13 +124,13 @@ function result() {
       ${left > 0 ? `<button type="button" class="cta" data-act="more">${Math.min(BATCH, left)} preguntas más</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
     </div>
-    <p class="note">No es un consejo de voto · el año indica un programa antiguo</p>`;
+    <p class="note">No es un consejo de voto</p>`;
 }
 
 function why() {
   const p = parties().find((x) => x.id === st.party);
   if (!p) { st.screen = 'result'; return result(); }
-  const cells = stancesOf(p), r = scoreParty(st.answers, cells), pr = p.programme || {};
+  const cells = stancesOf(p), r = scoreOf(p), pr = p.programme || {};
   const qs = order().filter((q) => st.answers[q.id] in ANSWERS);
   const same = (q, s) => (s === 'support' && ANSWERS[st.answers[q.id]] > 0) || (s === 'oppose' && ANSWERS[st.answers[q.id]] < 0);
   return `
@@ -141,9 +142,10 @@ function why() {
       <span class="muted">${r.compared} de ${r.answered} comparadas</span>
     </div>
     <div class="grow scroll">
+    ${r.enough ? '' : `<div class="item"><p><b>Aún no sabemos lo suficiente de este partido.</b></p><p>Solo hemos encontrado ${Object.keys(cells).length} posiciones de ${Q.questions.length}. Por eso no le damos un porcentaje.</p>${p.priorities ? `<p>Sus prioridades, en su web: ${p.priorities.map(([t, u]) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(t)}</a>`).join(' · ')}</p>` : ''}</div>`}
     ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; const h = (HI[p.stancesFrom || p.id] || {})[q.id]; return `
       <div class="item"><p><b>${esc(q.text)}</b></p>
-      <p><span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
+      <p>${(st.stars || {})[q.id] ? '<span class="tag same">★ Vale el doble</span>' : ''}<span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
       ${c.src ? `<p class="muted">${c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Pista, no cuenta: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
     </div>`;
@@ -169,7 +171,8 @@ function about() {
       <p>Si un partido no dice nada sobre un tema, ese tema no cuenta para él.</p>
       <h2>Cómo sale el porcentaje</h2>
       <p>Por cada pregunta: pensáis igual, 100 puntos. Casi igual, 75. Casi al revés, 25. Al revés, 0. Si el partido dice «a medias», 75 si tu respuesta es suave y 50 si es rotunda. El porcentaje es la media.</p>
-      <p>Todas las preguntas valen lo mismo. Elegir temas solo cambia el orden.</p>
+      <p>Todas las preguntas valen lo mismo, salvo las que marques con ★: esas valen el doble. Elegir temas solo cambia el orden.</p>
+      <p>Un partido solo recibe porcentaje si conocemos al menos 8 de sus posiciones.</p>
       <h2>La barra de arriba</h2>
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
@@ -234,6 +237,8 @@ document.addEventListener('click', (e) => {
   if (b.dataset.party) return go({ screen: 'why', party: b.dataset.party });
   if (b.dataset.star) { b.parentElement.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); return; }
   switch (b.dataset.act) {
+    case 'star': { const q = order()[st.idx]; st.stars = { ...(st.stars || {}) }; if (st.stars[q.id]) delete st.stars[q.id]; else st.stars[q.id] = true;
+      b.setAttribute('aria-pressed', String(!!st.stars[q.id])); b.querySelector('.lbl').textContent = st.stars[q.id] ? 'Vale el doble' : 'Muy importante'; return save(); }
     case 'towhere': return go({ screen: 'where' }, true);
     case 'tostart': return go({ screen: 'start' });
     case 'begin': return go({ screen: 'question', idx: 0, answers: {}, info: false }, true);

@@ -187,3 +187,8 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 .cta:disabled{background:var(--soft);color:var(--muted);cursor:default}
 @media (min-width:900px) and (min-height:560px){.s-where{width:100%;max-width:600px;margin:0 auto}}
 .inset{fill:transparent;pointer-events:all;cursor:pointer}
+
+/* v0.16: star = counts double */
+.cardtop{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.starbtn{flex:none;border:2px solid var(--line);background:#fff;color:var(--muted);border-radius:99px;padding:2px 12px;min-height:34px;font-size:13px;font-weight:700}
+.starbtn[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}

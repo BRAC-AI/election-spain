@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { agreement, scoreParty, rankResults, orderQuestions, eligibleParties, confidence, display } from '../scoring.js';
+import { agreement, scoreParty, enoughData, CONFIG, rankResults, orderQuestions, eligibleParties, confidence, display } from '../scoring.js';
 
 const J = (f) => JSON.parse(readFileSync(new URL(`../data/${f}`, import.meta.url)));
 const Q = J('questions.json'), P = J('parties.json'), S = J('stances.json'), SO = J('sources.json');
@@ -118,4 +118,19 @@ test('newcomers show only where they run', () => {
   const ids = (c) => eligibleParties(P.parties, c).map((p) => p.id);
   assert.ok(ids('28').includes('d21') && ids('08').includes('d21') && !ids('46').includes('d21'));
   assert.ok(ids('28').includes('salf') && !ids('17').includes('salf') && !ids('48').includes('salf'));
+});
+
+test('a starred question counts double', () => {
+  const party = st({ Q01: 'support', Q02: 'support', Q03: 'support' });
+  const ans = { Q01: 'sa', Q02: 'sd', Q03: 'sd' };            // agree, disagree, disagree
+  assert.equal(scoreParty(ans, party).alignment, 33);
+  assert.equal(scoreParty(ans, party, CONFIG, { Q01: true }).alignment, 50); // (2*1 + 0 + 0) / 4
+  assert.equal(scoreParty(ans, party, CONFIG, { Q09: true }).alignment, 33); // star on an unanswered question changes nothing
+});
+
+test('a party with fewer than 8 coded positions gets no percent', () => {
+  const few = st({ Q01: 'support', Q02: 'oppose', Q03: 'conditional' });
+  const many = st(Object.fromEntries(Array.from({ length: 8 }, (_, i) => ['Q' + String(i + 1).padStart(2, '0'), 'support'])));
+  assert.equal(enoughData(few), false); assert.equal(enoughData(many), true);
+  assert.equal(enoughData(S.stances.d21), false); assert.equal(enoughData(S.stances.pp), true);
 });

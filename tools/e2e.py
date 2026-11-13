@@ -32,6 +32,7 @@ with sync_playwright() as p:
         pg.click('[data-region="09"]'); assert pg.locator('.chip').count() == 4 and pg.locator('[data-act=begin]').is_disabled()  # Cataluña: pick a province
         pg.click('.chip[data-prov="08"]'); fits(pg, f'{tag} where'); pg.screenshot(path=f'/tmp/shots/{tag}_where.png')
         pg.click('[data-act=begin]'); pg.wait_for_selector('.statement')
+        pg.click('[data-act=star]'); assert pg.locator('.starbtn[aria-pressed=true]').count() == 1 and 'doble' in pg.locator('.starbtn').inner_text(); fits(pg, f'{tag} star'); pg.screenshot(path=f'/tmp/shots/{tag}_q1.png')
         assert 'Vivienda' in pg.inner_text('.card .eyebrow')
         n = 0
         while True:

@@ -129,3 +129,8 @@ Then run `python3 tools/build_evidence.py` to rebuild the review sheet, and `pyt
 
 No sign-up, no cookies, no tracking. Answers stay in the browser tab and vanish when it closes.
 Code: MIT. Data and texts: CC BY 4.0. Credit "Guía de voto 29N, BRACAI (bracai.eu)".
+
+## Added 13 November 2026: star and minimum data
+
+- **Star.** On each statement the voter can tap "Muy importante". That statement then counts double in the average. Nothing else changes. Same idea as the double weight in Germany's Wahl-O-Mat.
+- **Minimum data.** A party gets a percent only if at least 8 of its 20 positions are known (`minPositions` in `scoring.js`). Below that the app says "Aún no sabemos lo suficiente" and links to the party's own priorities. Today this applies to Democracia 21.

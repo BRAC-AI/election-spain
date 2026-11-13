@@ -1,5 +1,5 @@
 {
- "version": "0.12.0-draft",
+ "version": "0.16.0-draft",
  "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso. Además hemos añadido dos partidos nuevos sin diputados: SALF (2,2 % en las encuestas, se presenta en 46 provincias) y Democracia 21 (solo en Madrid y Barcelona). Esos dos los hemos elegido nosotros.",
  "territory_source": "BOE núm. 273, 3-11-2026, BOE-A-2026-23103 (candidaturas proclamadas). Extraído por una IA el 13-11-2026 (data/ballots_boe.csv) y cruzado con una segunda extracción parcial. No incluye la corrección de errores del 7-11-2026 (BOE-A-2026-23383). Sin revisión humana.",
  "provinces": {
@@ -381,7 +381,29 @@
     "url": "https://democracia21.es",
     "verified": false,
     "note": "Sin programa en PDF. Cinco páginas de «soluciones» en la web."
-   }
+   },
+   "priorities": [
+    [
+     "Limpieza política radical",
+     "https://democracia21.es/limpieza-politica-radical"
+    ],
+    [
+     "Vivienda, prioridad nº 1",
+     "https://democracia21.es/vivienda-prioridad-1"
+    ],
+    [
+     "La educación en el centro",
+     "https://democracia21.es/educacion-en-el-centro"
+    ],
+    [
+     "Sanidad pública",
+     "https://democracia21.es/sanidad-publica"
+    ],
+    [
+     "Derechos sociales",
+     "https://democracia21.es/derechos-sociales"
+    ]
+   ]
   },
   {
    "id": "salf",

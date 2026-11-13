@@ -1,6 +1,6 @@
 // Deterministic scoring. No network, no AI, no randomness. See docs/01_spec.md.
 export const ANSWERS = { sa: 2, a: 1, d: -1, sd: -2 }; // skip = not stored
-export const CONFIG = { minCompared: 3, minCoverage: 0.25, tieBand: 3, step: 5 };
+export const CONFIG = { minCompared: 3, minCoverage: 0.25, tieBand: 3, step: 5, minPositions: 8, starWeight: 2 };
 
 // Agreement on one question, 0..1, or null when it cannot be compared.
 export function agreement(answer, stance) {
@@ -12,19 +12,25 @@ export function agreement(answer, stance) {
   return 1 - Math.abs(ANSWERS[answer] - p) / 4;
 }
 
-export function scoreParty(answers, partyStances = {}, cfg = CONFIG) {
+// A party needs enough coded positions in the whole bank before it gets a percent at all.
+export function enoughData(partyStances = {}, cfg = CONFIG) {
+  return Object.values(partyStances).filter((c) => ['support', 'conditional', 'oppose'].includes(c?.stance)).length >= cfg.minPositions;
+}
+
+// stars: { Q01: true } marks questions the voter called very important. They count double.
+export function scoreParty(answers, partyStances = {}, cfg = CONFIG, stars = {}) {
   const answeredIds = Object.keys(answers).filter((q) => answers[q] in ANSWERS).sort();
   const perQuestion = [];
-  let sum = 0;
+  let sum = 0, wsum = 0;
   for (const q of answeredIds) {
     const stance = partyStances[q]?.stance ?? 'insufficient_evidence';
     const a = agreement(answers[q], stance);
-    if (a !== null) { sum += a; perQuestion.push({ q, stance, agreement: a }); }
+    if (a !== null) { const w = stars[q] ? cfg.starWeight : 1; sum += a * w; wsum += w; perQuestion.push({ q, stance, agreement: a, weight: w }); }
   }
   const answered = answeredIds.length, compared = perQuestion.length;
   const coverage = answered ? compared / answered : 0;
   const conclusive = compared >= cfg.minCompared && coverage >= cfg.minCoverage;
-  return { answered, compared, coverage, conclusive, perQuestion, alignment: conclusive ? Math.round((sum / compared) * 100) : null };
+  return { answered, compared, coverage, conclusive, perQuestion, alignment: conclusive ? Math.round((sum / wsum) * 100) : null };
 }
 
 // Confidence grows with answers: level 0..4 (one level per 5 answers).
