@@ -27,3 +27,7 @@ Code: MIT. Data and texts: CC BY 4.0. Credit "Guía de voto 29N, BRACAI (bracai.
 ## Found an error?
 
 Open an issue with the party, the statement and the page of the programme.
+
+## Map
+
+`data/map.json` is built by `tools/build_map.py` from es-atlas 0.6.0 (MIT, IGN data). Canarias sits in an inset box. Ceuta and Melilla are in the list under the map.

@@ -10,9 +10,9 @@ const LABELS = Object.fromEntries(OPTS);
 const STANCE = { support: 'A favor', oppose: 'En contra', conditional: 'A medias', insufficient_evidence: 'No lo dice' };
 const SRC = { programa_29N: 'Programa 29N', programa_anterior: 'Programa anterior', web: 'Web' };
 const LEVELS = ['Aún nada', 'Poco fiable', 'Algo fiable', 'Bastante fiable', 'Muy fiable'];
-const FRESH = { screen: 'start', bubbles: [], province: '', idx: 0, answers: {}, party: null, info: false };
+const FRESH = { screen: 'start', bubbles: [], region: '', province: '', idx: 0, answers: {}, party: null, info: false };
 
-let Q, P, S, SV, SO; // questions, parties, stances, stances version, sources
+let Q, P, S, SV, SO, M; // questions, parties, stances, stances version, sources, map
 let st = { ...FRESH };
 
 // Answers stay on this device, in this tab only.
@@ -42,17 +42,37 @@ function meter(popLevel = 0) {
 
 const countText = () => `Elige hasta 3 temas${st.bubbles.length ? ` · ${st.bubbles.length}/3` : ''}`;
 function start() {
-  const provs = Object.entries(P.provinces).sort((a, b) => a[1].localeCompare(b[1], 'es'));
   return `
     <h1 tabindex="-1">¿Qué temas son los más importantes para ti?</h1>
     <p class="muted" id="count">${countText()}</p>
     <div class="bubbles grow${st.bubbles.length >= MAX_BUBBLES ? ' full' : ''}" role="group" aria-label="Temas">
       ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
     </div>
-    <select id="prov" aria-label="¿Dónde votas?"><option value="">¿Dónde votas?</option>${provs.map(([c, n]) => `<option value="${c}" ${st.province === c ? 'selected' : ''}>${esc(n)}</option>`).join('')}</select>
-    <div class="btns"><button type="button" class="cta" data-act="begin">Empezar</button></div>
+    <div class="btns"><button type="button" class="cta" data-act="towhere">Siguiente</button></div>
     <p class="note">${Q.questions.length} preguntas · 3 minutos · anónimo</p>`;
 }
+
+// A region needs a second tap only when its provinces have different ballots.
+const regionById = (id) => [...M.regions, ...M.extra].find((r) => r.id === id);
+const ballot = (prov) => eligibleParties(P.parties, prov).map((p) => p.id).join();
+const needsProvince = (r) => new Set(r.provinces.map(ballot)).size > 1;
+function where() {
+  const all = [...M.regions, ...M.extra].sort((a, b) => a.name.localeCompare(b.name, 'es'));
+  const r = st.region ? regionById(st.region) : null, need = r && needsProvince(r), ready = !r || !need || st.province;
+  const [ix, iy, iw, ih] = M.inset;
+  return `
+    <button type="button" class="link" data-act="tostart">← Temas</button>
+    <h1 tabindex="-1">¿Dónde votas?</h1>
+    <svg class="map grow" viewBox="${M.viewBox}" role="group" aria-label="Mapa de España. Toca tu comunidad.">
+      <rect class="inset" x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="4" data-region="05"/>
+      ${M.regions.map((g) => `<path class="reg${g.id === st.region ? ' sel' : ''}" d="${g.d}" data-region="${g.id}" tabindex="0" role="button" aria-pressed="${g.id === st.region}" aria-label="${esc(g.name)}"><title>${esc(g.name)}</title></path>`).join('')}
+    </svg>
+    <select id="reg" aria-label="O elige tu comunidad en la lista"><option value="">…o elige en la lista</option>${all.map((g) => `<option value="${g.id}" ${g.id === st.region ? 'selected' : ''}>${esc(g.name)}</option>`).join('')}</select>
+    ${need ? `<div class="chips" role="group" aria-label="Provincia">${r.provinces.map((c) => `<button type="button" class="chip" data-prov="${c}" aria-pressed="${st.province === c}">${esc(P.provinces[c])}</button>`).join('')}</div>` : ''}
+    <div class="btns"><button type="button" class="cta" data-act="begin" ${ready ? '' : 'disabled'}>${r ? (ready ? 'Empezar' : 'Elige tu provincia') : 'Empezar sin elegir'}</button></div>
+    <p class="note">${r ? esc(r.name) + (st.province && need ? ' · ' + esc(P.provinces[st.province]) : '') : 'Así ves solo los partidos que puedes votar'}</p>`;
+}
+const pickRegion = (id) => { const r = regionById(id); go({ region: r ? id : '', province: r && !needsProvince(r) ? r.provinces[0] : '' }); };
 
 function question() {
   const qs = order(), q = qs[st.idx];
@@ -174,12 +194,12 @@ function about() {
     </div>`;
 }
 
-const SCREENS = { start, question, result, why, about };
+const SCREENS = { start, where, question, result, why, about };
 function render() {
   const html = SCREENS[st.screen](); // may change st.screen
   app.innerHTML = `<div class="screen s-${st.screen}">${html}</div>`;
   st.justLevel = 0;
-  app.querySelector('h1,.statement')?.focus({ preventScroll: true });
+  (st.screen === 'where' && st.region && app.querySelector('.reg.sel') || app.querySelector('h1,.statement'))?.focus({ preventScroll: true });
 }
 
 function answer(val) {
@@ -197,7 +217,10 @@ async function share() {
 }
 
 document.addEventListener('click', (e) => {
-  const b = e.target.closest('button'); if (!b || !Q) return;
+  if (!Q) return;
+  const reg = e.target.closest('[data-region]'); if (reg) return pickRegion(reg.dataset.region);
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.dataset.prov) return go({ province: b.dataset.prov });
   if (b.dataset.bubble) {
     const id = b.dataset.bubble, on = st.bubbles.includes(id);
     if (!on && st.bubbles.length >= MAX_BUBBLES) return;
@@ -211,6 +234,8 @@ document.addEventListener('click', (e) => {
   if (b.dataset.party) return go({ screen: 'why', party: b.dataset.party });
   if (b.dataset.star) { b.parentElement.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); return; }
   switch (b.dataset.act) {
+    case 'towhere': return go({ screen: 'where' }, true);
+    case 'tostart': return go({ screen: 'start' });
     case 'begin': return go({ screen: 'question', idx: 0, answers: {}, info: false }, true);
     case 'info': return go({ info: true });
     case 'back': return st.idx === 0 ? go({ screen: 'start' }) : go({ idx: st.idx - 1, info: false });
@@ -223,8 +248,10 @@ document.addEventListener('click', (e) => {
     case 'restart': return go({ ...FRESH });
   }
 });
-document.addEventListener('change', (e) => { if (e.target.id === 'prov') { st.province = e.target.value; save(); } });
+document.addEventListener('change', (e) => { if (e.target.id === 'reg') pickRegion(e.target.value); });
 document.addEventListener('keydown', (e) => {
+  const reg = e.target.closest?.('[data-region]');
+  if (reg && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); return pickRegion(reg.dataset.region); }
   if (!Q || st.screen !== 'question' || e.target.closest('textarea,select') || e.metaKey || e.ctrlKey || e.altKey) return;
   const i = ['1', '2', '3', '4'].indexOf(e.key);
   if (i >= 0) answer(OPTS[i][0]);
@@ -243,9 +270,9 @@ document.addEventListener('submit', async (e) => {
   } catch { status.textContent = 'No se ha podido enviar. Prueba más tarde.'; }
 });
 
-Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json'), load('data/sources.json')])
-  .then(([q, p, s, so]) => {
-    Q = q; P = p; S = s.stances; SV = s.version; SO = so;
+Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json'), load('data/sources.json'), load('data/map.json')])
+  .then(([q, p, s, so, m]) => {
+    Q = q; P = p; S = s.stances; SV = s.version; SO = so; M = m;
     restore();
     if (!SCREENS[st.screen] || st.idx > q.questions.length || (st.screen === 'question' && st.idx >= q.questions.length)) st = { ...FRESH };
     render();

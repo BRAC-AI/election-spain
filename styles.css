@@ -172,3 +172,18 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 .head .badge{width:52px;height:52px}
 @media (min-width:900px) and (min-height:560px){.party{grid-template-columns:44px 150px 1fr 46px}.party.blank{grid-template-columns:44px 1fr}.badge{width:44px;height:44px}}
 @media (max-height:600px){.badge{width:32px;height:32px}.party{grid-template-columns:32px minmax(64px,auto) 1fr 46px}}
+
+/* v0.12: map */
+.map{width:100%;min-height:120px;display:block}
+.reg{fill:var(--soft);stroke:#fff;stroke-width:1.2;stroke-linejoin:round;cursor:pointer;transition:fill .15s}
+.reg:hover{fill:#c9dde3}
+.reg.sel{fill:var(--teal)}
+.reg:focus-visible{outline:none;stroke:var(--ink);stroke-width:2}
+.inset{fill:none;stroke:var(--line);stroke-dasharray:3 3}
+#reg{flex:none;min-height:42px;font-size:15px}
+.chips{flex:none;display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:2px solid var(--soft);background:var(--soft);border-radius:99px;padding:6px 12px;min-height:38px;font-weight:600;font-size:14px}
+.chip[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+.cta:disabled{background:var(--soft);color:var(--muted);cursor:default}
+@media (min-width:900px) and (min-height:560px){.s-where{width:100%;max-width:600px;margin:0 auto}}
+.inset{fill:transparent;pointer-events:all;cursor:pointer}

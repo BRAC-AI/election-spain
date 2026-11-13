@@ -30,3 +30,5 @@ Credit as: "Guía de voto 29N, BRACAI (bracai.eu)" with a link to the repository
 Illustrations in /img are (c) BRACAI Consulting SL, all rights reserved, unless stated otherwise.
 
 Party logos in /img/logos are trademarks of their parties. They are used only to identify each party and are not covered by the licences above.
+
+Map shapes: es-atlas 0.6.0 (MIT), built from Instituto Geográfico Nacional data (CC BY 4.0, ign.es). See tools/build_map.py.

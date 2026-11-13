@@ -18,7 +18,7 @@ with sync_playwright() as p:
         pg = b.new_page(viewport={'width': 390, 'height': 664}, reduced_motion='reduce')
         pg.goto(BASE); pg.wait_for_selector('.bubbles'); pg.evaluate('sessionStorage.clear()'); pg.reload(); pg.wait_for_selector('.bubbles')
         for t in per['bubbles']: pg.click(f'.bubble:has-text("{t}")')
-        pg.select_option('#prov', per['prov']); pg.click('[data-act=begin]'); pg.wait_for_selector('.statement')
+        pg.click('[data-act=towhere]'); pg.wait_for_selector('.map'); pg.select_option('#reg', '13'); pg.click('[data-act=begin]'); pg.wait_for_selector('.statement')
         ans = dict(zip(K, per['ans'])); n = 0; steps = []
         while True:
             if pg.locator('.statement').count():

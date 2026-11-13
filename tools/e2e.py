@@ -25,7 +25,12 @@ with sync_playwright() as p:
         pg.goto(BASE); pg.wait_for_selector('.bubbles'); pg.evaluate('sessionStorage.clear()'); pg.reload(); pg.wait_for_selector('.bubbles')
         for t in ['Vivienda', 'Trabajo y ayudas', 'Sanidad', 'Defensa']: pg.click(f'.bubble:has-text("{t}")')
         assert pg.locator('.bubble[aria-pressed=true]').count() == 3
-        pg.select_option('#prov', '08'); fits(pg, f'{tag} start'); pg.screenshot(path=f'/tmp/shots/{tag}_start.png')
+        fits(pg, f'{tag} start'); pg.screenshot(path=f'/tmp/shots/{tag}_start.png'); pg.click('[data-act=towhere]'); pg.wait_for_selector('.map')
+        assert pg.locator('[data-act=begin]').inner_text() == 'Empezar sin elegir'
+        pg.click('rect.inset'); assert pg.locator('#reg').input_value() == '05'  # tapping the Canarias box works
+        pg.click('[data-region="13"]'); assert pg.locator('.chip').count() == 0 and pg.locator('[data-act=begin]').is_enabled()  # Madrid: one tap
+        pg.click('[data-region="09"]'); assert pg.locator('.chip').count() == 4 and pg.locator('[data-act=begin]').is_disabled()  # Cataluña: pick a province
+        pg.click('.chip[data-prov="08"]'); fits(pg, f'{tag} where'); pg.screenshot(path=f'/tmp/shots/{tag}_where.png')
         pg.click('[data-act=begin]'); pg.wait_for_selector('.statement')
         assert 'Vivienda' in pg.inner_text('.card .eyebrow')
         n = 0
