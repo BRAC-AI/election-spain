@@ -1,6 +1,6 @@
-# Prompt: posiciones para las 21 frases nuevas (Q21 a Q41, 13-11-2026)
+# Prompt B: frases nuevas Q34 a Q45 (13-11-2026)
 
-21 frases x 14 partidos = 294 pares. Pega todo lo que hay debajo de la línea. Si la herramienta corta la respuesta, pídele «continúa con los partidos que faltan».
+12 frases x 14 partidos = 168 pares. Pega todo lo que hay debajo de la línea. Si la herramienta corta la respuesta, pídele «continúa con los partidos que faltan».
 
 ---
 
@@ -28,19 +28,6 @@ Partidos:
 PP, PSOE, Vox, Frente Amplio, Podemos, ERC, Junts, EAJ-PNV, EH Bildu, BNG, Coalición Canaria, Compromís-Front Valencià, Democracia 21, SALF
 
 Afirmaciones:
-- Q21: El Estado debe dar ventajas fiscales a los planes de pensiones privados.
-- Q22: Hay que poder jubilarse a los 65 años con la pensión completa.
-- Q23: Heredar de padres a hijos no debe pagar impuestos.
-- Q24: Los bancos deben pagar un impuesto extra por sus beneficios.
-- Q25: Despedir a un trabajador debe salir más caro.
-- Q26: Quien ocupa una casa ajena debe poder ser desalojado en 48 horas.
-- Q27: No se deben abrir más pisos turísticos donde falta vivienda.
-- Q28: Se deben poder seguir vendiendo coches de gasolina y diésel después de 2035.
-- Q29: Hay que llevar agua de unos ríos a otras zonas donde falta (trasvases).
-- Q30: Un inmigrante con papeles que comete un delito grave debe ser expulsado.
-- Q31: Todas las comunidades deben estar obligadas a acoger a menores inmigrantes que llegan solos.
-- Q32: El órgano que dirige a los jueces deben elegirlo los propios jueces, no el Congreso.
-- Q33: Los ciudadanos deben poder votar si quieren monarquía o república.
 - Q34: Debe gobernar siempre el partido con más votos.
 - Q35: El catalán, el euskera y el gallego deben poder usarse en el Congreso y ante la Administración del Estado.
 - Q36: La ley contra la violencia machista debe mantenerse como está.
@@ -49,3 +36,7 @@ Afirmaciones:
 - Q39: España no debe comerciar con armas con Israel.
 - Q40: Las leyes españolas deben estar por encima de las de la Unión Europea.
 - Q41: España debe cumplir las normas europeas contra el cambio climático, aunque cuesten dinero.
+- Q42: Las pensiones deben subir cada año tanto como los precios.
+- Q43: El Sáhara Occidental debe decidir su futuro en un referéndum.
+- Q44: Los autónomos que ganan poco no deben tener que cobrar IVA.
+- Q45: Los trenes de cercanías los debe gestionar cada comunidad, no el Estado.

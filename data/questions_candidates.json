@@ -109,6 +109,34 @@
    "text": "España debe cumplir las normas europeas contra el cambio climático, aunque cuesten dinero.",
    "info": "La Unión Europea tiene un plan, el Pacto Verde, para contaminar menos. Obliga a cambiar coches, fábricas y cultivos. Unos lo ven necesario y otros demasiado caro.",
    "image": null
+  },
+  {
+   "id": "Q42",
+   "category": null,
+   "text": "Las pensiones deben subir cada año tanto como los precios.",
+   "info": "Hoy la ley sube las pensiones con el IPC, que mide cuánto suben los precios. Unos quieren mantenerlo siempre. Otros dicen que cuesta demasiado.",
+   "image": null
+  },
+  {
+   "id": "Q43",
+   "category": null,
+   "text": "El Sáhara Occidental debe decidir su futuro en un referéndum.",
+   "info": "El Sáhara fue colonia española. Marruecos lo controla y propone que sea una región suya con autonomía. El Gobierno español apoyó ese plan en 2022. Otros piden que voten los saharauis.",
+   "image": null
+  },
+  {
+   "id": "Q44",
+   "category": null,
+   "text": "Los autónomos que ganan poco no deben tener que cobrar IVA.",
+   "info": "Un autónomo trabaja por su cuenta. Hoy casi todos cobran IVA a sus clientes y hacen papeleo cada tres meses. La UE permite librar de eso a los pequeños.",
+   "image": null
+  },
+  {
+   "id": "Q45",
+   "category": null,
+   "text": "Los trenes de cercanías los debe gestionar cada comunidad, no el Estado.",
+   "info": "Hoy casi todos los trenes de cercanías los lleva Renfe, que es del Estado. Cataluña ha pedido gestionar los suyos. Unos quieren lo mismo para todas; otros, una sola red.",
+   "image": null
   }
  ]
 }
