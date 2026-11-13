@@ -2,7 +2,9 @@
 
 Independent, open-source voter guide for the Spanish general election of 29 November 2026. Built by BRACAI. No party affiliation. It does not tell anyone how to vote.
 
-**Status: beta. Two programmes are coded so far (PP, ERC), both unreviewed.**
+**Status: beta. 126 of 300 party positions are coded from official sources. None has had a human review yet.**
+
+Start with `docs/METHODOLOGY.md`.
 
 ## What is here
 

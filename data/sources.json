@@ -91,9 +91,9 @@
  },
  "fa-web": {
   "level": 3,
-  "title": "Web oficial frenteamplio.info",
+  "title": "Nota oficial de Frente Amplio, 5-11-2026",
   "year": 2026,
-  "url": "https://frenteamplio.info"
+  "url": "https://frenteamplio.info/noticias/frente-amplio-propone-subir-impuestos-grandes-fortunas-empresas-mejorar-servicios/"
  },
  "d21-web": {
   "level": 3,
@@ -106,5 +106,23 @@
   "title": "Web oficial frontvalencia.org",
   "year": 2026,
   "url": "https://frontvalencia.org"
+ },
+ "fa-pens": {
+  "level": 3,
+  "title": "Nota oficial de Frente Amplio, 24-10-2026",
+  "year": 2026,
+  "url": "https://frenteamplio.info/noticias/frente-amplio-propone-ninguna-pension-este-debajo-salario-minimo-recuperar/"
+ },
+ "cfv-val": {
+  "level": 3,
+  "title": "Nota de Compromís per València, 21-10-2026 (ámbito municipal)",
+  "year": 2026,
+  "url": "https://valencia.compromis.net/2026/10/21/compromis-acusa-pp-i-vox-de-bloquejar-les-iniciatives-per-a-frenar-limpacte-dels-pisos-turistics-sobre-la-vivenda-a-valencia-2/"
+ },
+ "d21-pdf": {
+  "level": 3,
+  "title": "España Limpia (documento de Democracia 21)",
+  "year": 2026,
+  "url": "https://democracia21.es/docs/espana-limpia-democracia21.pdf"
  }
 }

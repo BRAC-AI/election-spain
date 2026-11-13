@@ -150,7 +150,7 @@ function about() {
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
       <h2>Quién lo lee</h2>
-      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Después lo revisa una persona. Lo que pone «sin revisar» aún no ha pasado ese control.</p>
+      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Después lo revisa una persona. Lo que pone «sin revisar» aún no ha pasado ese control.</p>
       <h2>Qué partidos salen</h2>
       <p>${esc(P.inclusion_rule)} Según tu provincia ves solo los que puedes votar.</p>
       <h2>Fuentes, partido a partido</h2>
@@ -158,7 +158,7 @@ function about() {
       <h2>Lo que no hace</h2>
       <p>No te dice a quién votar. No cubre todos los temas. No guarda nada: sin registro, sin cookies, sin rastreo. Tus respuestas se borran al cerrar la pestaña.</p>
       <h2>Quién lo hace</h2>
-      <p>BRACAI, una empresa de Barcelona. No trabaja para ningún partido. Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">código y datos</a>. Puedes copiarlo si dices de dónde viene.</p>
+      <p>BRACAI, una empresa de Barcelona. No trabaja para ningún partido. Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">código y datos</a>, y <a href="${REPO}/blob/main/docs/METHODOLOGY.md" rel="noopener noreferrer" target="_blank">el método completo</a>. Puedes copiarlo si dices de dónde viene.</p>
       <h2>¿Qué te parece?</h2>
       <form id="fb" novalidate>
         <div class="stars" role="group" aria-label="Nota de 1 a 5">${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-star="${n}" aria-pressed="false">${n}</button>`).join('')}</div>

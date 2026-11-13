@@ -1,5 +1,5 @@
 {
- "version": "0.9.0-draft",
+ "version": "0.10.0-draft",
  "status": "ai_coded_unreviewed",
  "note": "Posiciones leídas por IA (Claude) el 12 y 13-11-2026 sobre el texto de los documentos oficiales. Páginas = página del PDF. Falta segunda pasada y revisión humana con cita literal.",
  "stances": {
@@ -877,8 +877,8 @@
    "Q03": {
     "stance": "support",
     "page": "web",
-    "summary": "Propone un impuesto del 1 al 3 % a la riqueza de las 50 mayores fortunas.",
-    "coder": "IA (Claude)",
+    "summary": "Impuesto anual al patrimonio: 2 % por encima de un millón de euros y 3 % desde 50 millones.",
+    "coder": "Deep research (Finn, 13-11-2026)",
     "status": "ai_coded_unreviewed",
     "src": "fa-web"
    }
@@ -909,6 +909,14 @@
     "coder": "IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "cfv-web"
+   },
+   "Q01": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Pide aplicar el control de precios del alquiler que prevé la Ley de Vivienda. Es una nota municipal, no el programa del 29N.",
+    "coder": "Deep research (Finn, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "cfv-val"
    }
   }
  }

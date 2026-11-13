@@ -1,0 +1,34 @@
+{
+ "status": "candidates_not_in_app",
+ "note": "Posiciones sobre Q21-Q40. Solo lo que salió del deep research del 13-11-2026. Los programas en PDF aún no se han leído para estas afirmaciones.",
+ "stances": {
+  "fa": {
+   "Q22": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Fijar de forma efectiva la jubilación en los 65 años.",
+    "coder": "Deep research (Finn, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "fa-pens"
+   },
+   "Q24": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Subir el tipo efectivo sobre los beneficios de la gran empresa y la banca.",
+    "coder": "Deep research (Finn, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "fa-web"
+   }
+  },
+  "d21": {
+   "Q32": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Los vocales judiciales los eligen los jueces; los no judiciales pasan por audiencias en el Congreso.",
+    "coder": "Deep research (Finn, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "d21-pdf"
+   }
+  }
+ }
+}
