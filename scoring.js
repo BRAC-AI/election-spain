@@ -1,6 +1,6 @@
 // Deterministic scoring. No network, no AI, no randomness. See docs/01_spec.md.
 export const ANSWERS = { sa: 2, a: 1, d: -1, sd: -2 }; // skip = not stored
-export const CONFIG = { minCompared: 3, minCoverage: 0.25, tieBand: 3, step: 5, minPositions: 8, starWeight: 2 };
+export const CONFIG = { minCompared: 2, minCoverage: 0, thinBelow: 4, tieBand: 3, step: 5, minPositions: 8, starWeight: 2 };
 
 // Agreement on one question, 0..1, or null when it cannot be compared.
 export function agreement(answer, stance) {
@@ -12,7 +12,7 @@ export function agreement(answer, stance) {
   return 1 - Math.abs(ANSWERS[answer] - p) / 4;
 }
 
-// A party needs enough coded positions in the whole bank before it gets a percent at all.
+// True when a party has enough coded positions in the whole bank. Below this the app warns that its percent is weak.
 export function enoughData(partyStances = {}, cfg = CONFIG) {
   return Object.values(partyStances).filter((c) => ['support', 'conditional', 'oppose'].includes(c?.stance)).length >= cfg.minPositions;
 }
@@ -30,7 +30,7 @@ export function scoreParty(answers, partyStances = {}, cfg = CONFIG, stars = {})
   const answered = answeredIds.length, compared = perQuestion.length;
   const coverage = answered ? compared / answered : 0;
   const conclusive = compared >= cfg.minCompared && coverage >= cfg.minCoverage;
-  return { answered, compared, coverage, conclusive, perQuestion, alignment: conclusive ? Math.round((sum / wsum) * 100) : null };
+  return { answered, compared, coverage, conclusive, thin: conclusive && compared < cfg.thinBelow, perQuestion, alignment: conclusive ? Math.round((sum / wsum) * 100) : null };
 }
 
 // Confidence grows with answers: level 0..4 (one level per 5 answers).
@@ -49,7 +49,9 @@ export function display(alignment, level) {
 
 export function rankResults(rows, cfg = CONFIG) {
   const byName = (a, b) => a.name.localeCompare(b.name, 'es');
-  const yes = rows.filter((r) => r.conclusive).sort((a, b) => b.alignment - a.alignment || byName(a, b));
+  const byScore = (a, b) => b.alignment - a.alignment || byName(a, b);
+  const yes = rows.filter((r) => r.conclusive && !r.thin).sort(byScore);
+  const thin = rows.filter((r) => r.conclusive && r.thin).sort(byScore); // a percent on very few answers: shown, never ranked
   const no = rows.filter((r) => !r.conclusive).sort(byName);
   let rank = 0, lead = null;
   for (const r of yes) {
@@ -57,7 +59,7 @@ export function rankResults(rows, cfg = CONFIG) {
     r.rank = rank;
   }
   for (const r of yes) r.tied = yes.filter((x) => x.rank === r.rank).length > 1;
-  return [...yes, ...no.map((r) => ({ ...r, rank: null, tied: false }))];
+  return [...yes, ...[...thin, ...no].map((r) => ({ ...r, rank: null, tied: false }))];
 }
 
 // Topic choice changes ORDER only. Same bank for everyone.

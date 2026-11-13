@@ -25,9 +25,15 @@ test('normal case: 5 answered, 5 coded, full coverage', () => {
   const r = scoreParty(five, st({ Q01: 'support', Q02: 'support', Q03: 'oppose', Q04: 'oppose', Q05: 'support' }));
   assert.equal(r.coverage, 1); assert.equal(r.conclusive, true); assert.equal(r.alignment, 85);
 });
-test('sparse evidence 2/5 is inconclusive, never a percentage', () => {
+test('2 of 5 comparable gives a percent marked thin; 1 of 5 gives none', () => {
   const r = scoreParty(five, st({ Q01: 'support', Q02: 'support' }));
-  assert.equal(r.coverage, 0.4); assert.equal(r.conclusive, false); assert.equal(r.alignment, null);
+  assert.equal(r.coverage, 0.4); assert.equal(r.conclusive, true); assert.equal(r.thin, true); assert.notEqual(r.alignment, null);
+  const one = scoreParty(five, st({ Q01: 'support' }));
+  assert.equal(one.conclusive, false); assert.equal(one.alignment, null);
+});
+test('a thin party is shown but never ranked first', () => {
+  const rows = rankResults([{ name: 'A', conclusive: true, thin: false, alignment: 60 }, { name: 'B', conclusive: true, thin: true, alignment: 100 }, { name: 'C', conclusive: false, thin: false, alignment: null }]);
+  assert.deepEqual(rows.map((r) => r.name), ['A', 'B', 'C']); assert.equal(rows[0].rank, 1); assert.equal(rows[1].rank, null);
 });
 test('all skipped gives no score', () => {
   const r = scoreParty({}, st({ Q01: 'support' }));
@@ -128,7 +134,7 @@ test('a starred question counts double', () => {
   assert.equal(scoreParty(ans, party, CONFIG, { Q09: true }).alignment, 33); // star on an unanswered question changes nothing
 });
 
-test('a party with fewer than 8 coded positions gets no percent', () => {
+test('enoughData flags parties with fewer than 8 coded positions', () => {
   const few = st({ Q01: 'support', Q02: 'oppose', Q03: 'conditional' });
   const many = st(Object.fromEntries(Array.from({ length: 8 }, (_, i) => ['Q' + String(i + 1).padStart(2, '0'), 'support'])));
   assert.equal(enoughData(few), false); assert.equal(enoughData(many), true);

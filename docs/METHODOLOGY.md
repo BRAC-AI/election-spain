@@ -133,4 +133,6 @@ Code: MIT. Data and texts: CC BY 4.0. Credit "Guía de voto 29N, BRACAI (bracai.
 ## Added 13 November 2026: star and minimum data
 
 - **Star.** On each statement the voter can tap "Muy importante". That statement then counts double in the average. Nothing else changes. Same idea as the double weight in Germany's Wahl-O-Mat.
-- **Minimum data.** A party gets a percent only if at least 8 of its 20 positions are known (`minPositions` in `scoring.js`). Below that the app says "Aún no sabemos lo suficiente" and links to the party's own priorities. Today this applies to Democracia 21.
+- **Minimum data (changed the same day, BRACAI decision: show every party).** A party gets a percent from 2 comparable answers. With fewer than 4, or when fewer than 8 of the party's positions are known in total (Democracia 21 today), it is listed apart as "Con pocos datos" with its percent, and cannot be the winner.
+- **Order.** Statements that most parties have a position on are asked first, inside the voter's chosen topics. This changes order only.
+- **Intro slide.** One screen before the first statement explains the three steps, including the star.

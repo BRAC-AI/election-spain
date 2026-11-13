@@ -19,11 +19,13 @@ let st = { ...FRESH };
 const save = () => { try { sessionStorage.setItem('guia29n', JSON.stringify(st)); } catch { /* storage unavailable */ } };
 const restore = () => { try { const v = JSON.parse(sessionStorage.getItem('guia29n')); if (v && v.screen) st = { ...FRESH, ...v }; } catch { /* ignore */ } };
 
-const order = () => orderQuestions(Q.questions, Q.bubbles.filter((b) => st.bubbles.includes(b.id)).flatMap((b) => b.categories));
+// Statements most parties have a position on come first, so early results can compare everyone.
+const cover = (q) => parties().filter((p) => stancesOf(p)[q.id]).length;
+const order = () => orderQuestions([...Q.questions].sort((x, y) => cover(y) - cover(x)), Q.bubbles.filter((b) => st.bubbles.includes(b.id)).flatMap((b) => b.categories));
 const answered = () => Object.values(st.answers).filter((a) => a in ANSWERS).length;
 const parties = () => eligibleParties(P.parties, st.province);
 const stancesOf = (p) => S[p.stancesFrom || p.id] || {};
-const scoreOf = (p) => { const c = stancesOf(p), r = scoreParty(st.answers, c, undefined, st.stars || {}), ok = enoughData(c); return { ...r, enough: ok, conclusive: r.conclusive && ok, alignment: ok ? r.alignment : null }; };
+const scoreOf = (p) => { const c = stancesOf(p), r = scoreParty(st.answers, c, undefined, st.stars || {}), ok = enoughData(c); return { ...r, enough: ok, thin: r.thin || (r.conclusive && !ok) }; }; // a party we know little about is shown, never crowned
 const results = () => rankResults(parties().map((p) => ({ ...p, ...scoreOf(p) })));
 const badge = (p) => `<span class="badge">${p.logo ? `<img src="img/logos/${esc(p.logo)}" alt="" width="256" height="256" loading="lazy">` : esc(p.abbr)}</span>`;
 
@@ -93,7 +95,7 @@ function question() {
 }
 
 function hero(rows) {
-  const top = rows.filter((r) => r.rank === 1), scored = rows.filter((r) => r.conclusive).length;
+  const top = rows.filter((r) => r.rank === 1), scored = rows.filter((r) => r.conclusive && !r.thin).length;
   if (top.length && scored * 2 < rows.length) return `<p class="empty">Solo podemos comparar con ${scored} de ${rows.length} partidos. Aún no hay ganador.</p>`;
   if (!top.length) return `<p class="empty">${answered() ? 'Aún no podemos comparar. Sigue un poco más.' : 'Responde alguna pregunta para ver tu resultado.'}</p>`;
   const r = top[0];
@@ -108,7 +110,7 @@ function hero(rows) {
 
 const oldTag = () => ''; // positions now mix programmes, votes and quotes, so one year tag would mislead
 const row = (r) => `
-      <button type="button" class="party${r.conclusive ? '' : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
+      <button type="button" class="party${r.conclusive ? (r.thin ? ' thin' : '') : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
         ${badge(r)}<span class="name">${esc(r.name)}${oldTag(r)}</span>
         ${r.conclusive ? `<span class="bar" aria-hidden="true"><i class="p${Math.round(r.alignment / 5) * 5}"></i></span><span class="val">${r.alignment} %</span>` : ''}
       </button>`;
@@ -118,8 +120,9 @@ function result() {
   return `
     ${meter(st.justLevel || 0)}
     ${hero(rows)}
-    <div class="list grow scroll">${rows.filter((r) => r.conclusive).map(row).join('')}
-      ${rows.some((r) => !r.conclusive) ? `<p class="divider">Sin datos suficientes</p>${rows.filter((r) => !r.conclusive).map(row).join('')}` : ''}</div>
+    <div class="list grow scroll">${rows.filter((r) => r.conclusive && !r.thin).map(row).join('')}
+      ${rows.some((r) => r.thin) ? `<p class="divider">Con pocos datos</p>${rows.filter((r) => r.thin).map(row).join('')}` : ''}
+      ${rows.some((r) => !r.conclusive) ? `<p class="divider">Aún sin datos: sigue respondiendo</p>${rows.filter((r) => !r.conclusive).map(row).join('')}` : ''}</div>
     <div class="btns">
       ${left > 0 ? `<button type="button" class="cta" data-act="more">${Math.min(BATCH, left)} preguntas más</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
@@ -142,7 +145,7 @@ function why() {
       <span class="muted">${r.compared} de ${r.answered} comparadas</span>
     </div>
     <div class="grow scroll">
-    ${r.enough ? '' : `<div class="item"><p><b>Aún no sabemos lo suficiente de este partido.</b></p><p>Solo hemos encontrado ${Object.keys(cells).length} posiciones de ${Q.questions.length}. Por eso no le damos un porcentaje.</p>${p.priorities ? `<p>Sus prioridades, en su web: ${p.priorities.map(([t, u]) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(t)}</a>`).join(' · ')}</p>` : ''}</div>`}
+    ${r.enough ? '' : `<div class="item"><p><b>Aún no sabemos lo suficiente de este partido.</b></p><p>Solo hemos encontrado ${Object.keys(cells).length} posiciones de ${Q.questions.length}. Por eso su porcentaje es poco fiable.</p>${p.priorities ? `<p>Sus prioridades, en su web: ${p.priorities.map(([t, u]) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(t)}</a>`).join(' · ')}</p>` : ''}</div>`}
     ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; const h = (HI[p.stancesFrom || p.id] || {})[q.id]; return `
       <div class="item"><p><b>${esc(q.text)}</b></p>
       <p>${(st.stars || {})[q.id] ? '<span class="tag same">★ Vale el doble</span>' : ''}<span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
@@ -172,7 +175,7 @@ function about() {
       <h2>Cómo sale el porcentaje</h2>
       <p>Por cada pregunta: pensáis igual, 100 puntos. Casi igual, 75. Casi al revés, 25. Al revés, 0. Si el partido dice «a medias», 75 si tu respuesta es suave y 50 si es rotunda. El porcentaje es la media.</p>
       <p>Todas las preguntas valen lo mismo, salvo las que marques con ★: esas valen el doble. Elegir temas solo cambia el orden.</p>
-      <p>Un partido solo recibe porcentaje si conocemos al menos 8 de sus posiciones.</p>
+      <p>Un partido tiene porcentaje desde 2 respuestas comparables. Con menos de 4, o si conocemos menos de 8 posiciones del partido, sale aparte como «con pocos datos» y no puede ganar.</p>
       <h2>La barra de arriba</h2>
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
@@ -197,7 +200,19 @@ function about() {
     </div>`;
 }
 
-const SCREENS = { start, where, question, result, why, about };
+function how() {
+  return `
+    <button type="button" class="link" data-act="towhere">← Atrás</button>
+    <h1 tabindex="-1">Así funciona</h1>
+    <ol class="steps grow">
+      <li><b>1</b><span>Lee ${Q.questions.length} frases. Di si estás a favor o en contra.</span></li>
+      <li><b>2</b><span>¿Una te importa mucho? Toca <span class="starbtn demo" aria-hidden="true">★ Muy importante</span> y valdrá el doble.</span></li>
+      <li><b>3</b><span>Mira qué partido piensa más como tú. Cada 5 frases ves el resultado.</span></li>
+    </ol>
+    <div class="btns"><button type="button" class="cta" data-act="go">Empezar</button></div>
+    <p class="note">3 minutos · anónimo</p>`;
+}
+const SCREENS = { start, where, how, question, result, why, about };
 function render() {
   const html = SCREENS[st.screen](); // may change st.screen
   app.innerHTML = `<div class="screen s-${st.screen}">${html}</div>`;
@@ -241,7 +256,8 @@ document.addEventListener('click', (e) => {
       b.setAttribute('aria-pressed', String(!!st.stars[q.id])); b.querySelector('.lbl').textContent = st.stars[q.id] ? 'Vale el doble' : 'Muy importante'; return save(); }
     case 'towhere': return go({ screen: 'where' }, true);
     case 'tostart': return go({ screen: 'start' });
-    case 'begin': return go({ screen: 'question', idx: 0, answers: {}, info: false }, true);
+    case 'begin': return go({ screen: 'how', idx: 0, answers: {}, stars: {}, info: false }, true);
+    case 'go': return go({ screen: 'question' }, true);
     case 'info': return go({ info: true });
     case 'back': return st.idx === 0 ? go({ screen: 'start' }) : go({ idx: st.idx - 1, info: false });
     case 'more': return go({ screen: 'question', info: false }, true);
