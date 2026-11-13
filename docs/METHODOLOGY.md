@@ -37,7 +37,11 @@ Never use: other comparison sites, a journalist's summary, or "everyone knows th
 | 5 | How the party voted in Congress, the Senate or its regional parliament (2023 to 2026), on a text about exactly that | Yes. An abstention is "a medias" |
 | 6 | "Pista": the closest evidence found, when nothing is exact (a joint vote, a regional programme, a nearby topic) | No. It is shown on the party page with its link, in `stances.json` under `hints` |
 
-Hints do not count because the research tool itself marked them as not exact. Counting them would mean guessing.
+Changed later on 13 November 2026 (BRACAI decision, to fill gaps): approximate evidence with medium confidence now counts. It is marked `approx: true` in `stances.json` and shown as "Parecido, no exacto" with its link. Approximate evidence with low confidence stays a hint and does not count.
+
+Any material published by the party itself is a valid source, including videos. A video is cited with the minute. Transcripts used are in `docs/research/transcripts/`.
+
+All programme PDFs were searched a second time on 13 November for every open pair. That found two missed lines (SALF) and one approximate one (Coalición Canaria).
 
 Which provinces a party runs in comes from the BOE list of proclaimed candidacies (BOE-A-2026-23103, 3 November 2026), in `data/ballots_boe.csv`. An AI extracted it. It matches the app's province lists for all 15 parties. The 7 November correction is not included.
 

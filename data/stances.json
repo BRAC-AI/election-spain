@@ -1,5 +1,5 @@
 {
- "version": "0.14.0-draft",
+ "version": "0.15.0-draft",
  "status": "ai_coded_unreviewed",
  "note": "Posiciones leídas por IA (Claude) el 12 y 13-11-2026 sobre el texto de los documentos oficiales. Páginas = página del PDF. Falta segunda pasada y revisión humana con cita literal.",
  "stances": {
@@ -329,6 +329,17 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-erc-q15",
     "vote": "S185 V26: gasto militar"
+   },
+   "Q06": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Votó sí a actualizar el SMI según los precios de cada territorio.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-erc-q06",
+    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "psoe": {
@@ -480,6 +491,17 @@
     "status": "ai_coded_unreviewed",
     "src": "cita-psoe-q18",
     "quote": "es imposible porque no cabe en la Constitución"
+   },
+   "Q19": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Avaló el pacto para que Cataluña recaude sus impuestos, con aportación solidaria.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-psoe-q19",
+    "why_approx": "El aval se refiere a Cataluña, no a un derecho de todas las comunidades.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "vox": {
@@ -638,6 +660,17 @@
     "status": "ai_coded_unreviewed",
     "src": "cita-vox-q20",
     "quote": "incrementar su ayuda militar a Ucrania"
+   },
+   "Q06": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Votó no a actualizar el SMI según los precios de cada territorio.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-vox-q06",
+    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "junts": {
@@ -768,6 +801,39 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-junts-q15",
     "vote": "S185 V26: gasto militar"
+   },
+   "Q01": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Votó No al decreto que limitaba al 2 % las subidas de rentas.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-junts-q01",
+    "why_approx": "Limita las subidas de contratos vigentes; no fija un precio máximo para todos los nuevos alquileres.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q03": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Propone mantener el impuesto de grandes fortunas suspendiendo simultáneamente Patrimonio.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-junts-q03",
+    "why_approx": "Es una enmienda registrada, no votación; acepta ese gravamen sustituyendo otro impuesto patrimonial.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q06": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Votó sí a actualizar el SMI según los precios de cada territorio.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-junts-q06",
+    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "bildu": {
@@ -916,6 +982,28 @@
     "status": "ai_coded_unreviewed",
     "src": "cita-bildu-q20",
     "quote": "el envío de armas nos conduciría inexorablemente a una escalada bélica"
+   },
+   "Q04": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Votó No a ajustar el IRPF a la inflación.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-bildu-q04",
+    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Apoyó la reforma vasca de reconocimiento de la identidad trans sin diagnóstico psiquiátrico.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-bildu-q16",
+    "why_approx": "Se refiere al reconocimiento y la documentación autonómicos, no al requisito estatal para el DNI.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "podemos": {
@@ -1202,6 +1290,39 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-pnv-q15",
     "vote": "S185 V26: gasto militar"
+   },
+   "Q04": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Votó Abstención a ajustar el IRPF a la inflación.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-pnv-q04",
+    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q06": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Votó abstención a actualizar el SMI según los precios de cada territorio.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-pnv-q06",
+    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Apoyó la reforma vasca de reconocimiento de la identidad trans sin diagnóstico psiquiátrico.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-pnv-q16",
+    "why_approx": "Se refiere al reconocimiento y la documentación autonómicos, no al requisito estatal para el DNI.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "cc": {
@@ -1301,6 +1422,62 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-cc-q10",
     "quote": "teniendo como objetivo el mantenimiento, en lo posible, de las unidades concertadas existentes"
+   },
+   "Q01": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Votó Sí al decreto que limitaba al 2 % las subidas de rentas.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-cc-q01",
+    "why_approx": "Limita las subidas de contratos vigentes; no fija un precio máximo para todos los nuevos alquileres.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q03": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Apoyó el decreto que prorrogaba el impuesto a las grandes fortunas.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-cc-q03",
+    "why_approx": "La convalidación incluía numerosas medidas; no hubo voto aislado sobre ese impuesto.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q04": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Votó Sí a ajustar el IRPF a la inflación.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-cc-q04",
+    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q06": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Apoyó actualizar el SMI conforme al coste de vida territorial.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-cc-q06",
+    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q18": {
+    "stance": "conditional",
+    "page": "3",
+    "summary": "Pide que Canarias decida su rumbo, pero dentro de España. No habla de separarse.",
+    "quote": "derecho a decidir su rumbo dentro del Estado español y del marco europeo",
+    "coder": "IA (Claude), segunda lectura del PDF",
+    "status": "ai_coded_unreviewed",
+    "src": "cc26",
+    "approx": true,
+    "why_approx": "Habla de decidir dentro del Estado, no de votar una separación.",
+    "confidence": "media"
    }
   },
   "bng": {
@@ -1443,6 +1620,17 @@
     "status": "ai_coded_unreviewed",
     "src": "voto-bng-q17",
     "vote": "Devolución de la reforma constitucional del aborto"
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Defiende la autodeterminación de género de menores y el reconocimiento documental de migrantes trans.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-bng-q16",
+    "why_approx": "No menciona expresamente el informe médico para rectificar el DNI de personas adultas.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "salf": {
@@ -1644,6 +1832,50 @@
     "status": "ai_coded_unreviewed",
     "src": "cita-fa-q18",
     "quote": "Ya la discutiríamos"
+   },
+   "Q06": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Defiende subir el SMI un 5,3 % en 2027 y continuar elevándolo.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-fa-q06",
+    "why_approx": "Una subida concreta no establece una garantía automática anual vinculada al IPC.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q07": {
+    "stance": "support",
+    "page": "web",
+    "summary": "Defiende 200 euros universales por hijo hasta los 18 años, con aplicación gradual.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-fa-q07",
+    "why_approx": "La crónica atribuye la propuesta a Frente Amplio, pero no reproduce una cita literal.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q10": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Critica el modelo concertado y reserva el dinero público para la gestión pública.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-fa-q10",
+    "why_approx": "El pasaje no propone expresamente eliminar todos los conciertos educativos.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q14": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Rechaza la prioridad nacional al defender atención sanitaria por humanidad.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-fa-q14",
+    "why_approx": "La declaración se refiere a sanidad, no al reparto general de ayudas económicas.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "d21": {
@@ -1681,6 +1913,17 @@
     "coder": "IA (Claude), transcripción aportada por BRACAI",
     "status": "ai_coded_unreviewed",
     "src": "cita-d21-q04"
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Rechaza patologizar las identidades trans y recortar sus derechos.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-d21-q16",
+    "why_approx": "Rechaza la patologización, pero no menciona expresamente el informe médico para cambiar el DNI.",
+    "confidence": "media",
+    "approx": true
    }
   },
   "compromis": {
@@ -1779,6 +2022,39 @@
     "status": "ai_coded_unreviewed",
     "src": "prog-compromis-q03",
     "quote": "que les grans fortunes i empreses amb beneficis multimilionaris paguen més"
+   },
+   "Q04": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Votó No a ajustar el IRPF a la inflación.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-compromis-q04",
+    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q10": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Exige retirar conciertos a centros que segregan por sexo.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-compromis-q10",
+    "why_approx": "Se refiere a centros concretos y no resuelve la continuidad general de la concertada.",
+    "confidence": "media",
+    "approx": true
+   },
+   "Q16": {
+    "stance": "oppose",
+    "page": "web",
+    "summary": "Critica recortar la autodeterminación de género en la legislación valenciana.",
+    "coder": "IA (deep research v2, 13-11-2026)",
+    "status": "ai_coded_unreviewed",
+    "src": "pista-compromis-q16",
+    "why_approx": "Critica una reforma autonómica; no especifica el informe médico para rectificar el DNI.",
+    "confidence": "media",
+    "approx": true
    }
   }
  },
@@ -1793,72 +2069,10 @@
     "src": "pista-psoe-q11",
     "why_approx": "Votación conjunta: incluía recentralización y otras medidas, además del castellano.",
     "confidence": "baja"
-   },
-   "Q19": {
-    "stance": "conditional",
-    "page": "web",
-    "summary": "Avaló el pacto para que Cataluña recaude sus impuestos, con aportación solidaria.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-psoe-q19",
-    "why_approx": "El aval se refiere a Cataluña, no a un derecho de todas las comunidades.",
-    "confidence": "media"
    }
   },
-  "vox": {
-   "Q06": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Votó no a actualizar el SMI según los precios de cada territorio.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-vox-q06",
-    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
-    "confidence": "media"
-   }
-  },
-  "fa": {
-   "Q06": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Defiende subir el SMI un 5,3 % en 2027 y continuar elevándolo.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-fa-q06",
-    "why_approx": "Una subida concreta no establece una garantía automática anual vinculada al IPC.",
-    "confidence": "media"
-   },
-   "Q07": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Defiende 200 euros universales por hijo hasta los 18 años, con aplicación gradual.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-fa-q07",
-    "why_approx": "La crónica atribuye la propuesta a Frente Amplio, pero no reproduce una cita literal.",
-    "confidence": "media"
-   },
-   "Q10": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Critica el modelo concertado y reserva el dinero público para la gestión pública.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-fa-q10",
-    "why_approx": "El pasaje no propone expresamente eliminar todos los conciertos educativos.",
-    "confidence": "media"
-   },
-   "Q14": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Rechaza la prioridad nacional al defender atención sanitaria por humanidad.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-fa-q14",
-    "why_approx": "La declaración se refiere a sanidad, no al reparto general de ayudas económicas.",
-    "confidence": "media"
-   }
-  },
+  "vox": {},
+  "fa": {},
   "podemos": {
    "Q11": {
     "stance": "oppose",
@@ -1881,49 +2095,8 @@
     "confidence": "baja"
    }
   },
-  "erc": {
-   "Q06": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Votó sí a actualizar el SMI según los precios de cada territorio.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-erc-q06",
-    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
-    "confidence": "media"
-   }
-  },
+  "erc": {},
   "junts": {
-   "Q01": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Votó No al decreto que limitaba al 2 % las subidas de rentas.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-junts-q01",
-    "why_approx": "Limita las subidas de contratos vigentes; no fija un precio máximo para todos los nuevos alquileres.",
-    "confidence": "media"
-   },
-   "Q03": {
-    "stance": "conditional",
-    "page": "web",
-    "summary": "Propone mantener el impuesto de grandes fortunas suspendiendo simultáneamente Patrimonio.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-junts-q03",
-    "why_approx": "Es una enmienda registrada, no votación; acepta ese gravamen sustituyendo otro impuesto patrimonial.",
-    "confidence": "media"
-   },
-   "Q06": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Votó sí a actualizar el SMI según los precios de cada territorio.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-junts-q06",
-    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
-    "confidence": "media"
-   },
    "Q09": {
     "stance": "support",
     "page": "web",
@@ -1936,26 +2109,6 @@
    }
   },
   "pnv": {
-   "Q04": {
-    "stance": "conditional",
-    "page": "web",
-    "summary": "Votó Abstención a ajustar el IRPF a la inflación.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-pnv-q04",
-    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
-    "confidence": "media"
-   },
-   "Q06": {
-    "stance": "conditional",
-    "page": "web",
-    "summary": "Votó abstención a actualizar el SMI según los precios de cada territorio.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-pnv-q06",
-    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
-    "confidence": "media"
-   },
    "Q11": {
     "stance": "oppose",
     "page": "web",
@@ -1965,29 +2118,9 @@
     "src": "pista-pnv-q11",
     "why_approx": "Votación conjunta: incluía recentralización y otras medidas, además del castellano.",
     "confidence": "baja"
-   },
-   "Q16": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Apoyó la reforma vasca de reconocimiento de la identidad trans sin diagnóstico psiquiátrico.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-pnv-q16",
-    "why_approx": "Se refiere al reconocimiento y la documentación autonómicos, no al requisito estatal para el DNI.",
-    "confidence": "media"
    }
   },
   "bildu": {
-   "Q04": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Votó No a ajustar el IRPF a la inflación.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-bildu-q04",
-    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
-    "confidence": "media"
-   },
    "Q11": {
     "stance": "oppose",
     "page": "web",
@@ -1997,16 +2130,6 @@
     "src": "pista-bildu-q11",
     "why_approx": "Votación conjunta: incluía recentralización y otras medidas, además del castellano.",
     "confidence": "baja"
-   },
-   "Q16": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Apoyó la reforma vasca de reconocimiento de la identidad trans sin diagnóstico psiquiátrico.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-bildu-q16",
-    "why_approx": "Se refiere al reconocimiento y la documentación autonómicos, no al requisito estatal para el DNI.",
-    "confidence": "media"
    }
   },
   "bng": {
@@ -2019,59 +2142,9 @@
     "src": "pista-bng-q11",
     "why_approx": "Votación conjunta: incluía recentralización y otras medidas, además del castellano.",
     "confidence": "baja"
-   },
-   "Q16": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Defiende la autodeterminación de género de menores y el reconocimiento documental de migrantes trans.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-bng-q16",
-    "why_approx": "No menciona expresamente el informe médico para rectificar el DNI de personas adultas.",
-    "confidence": "media"
    }
   },
   "cc": {
-   "Q01": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Votó Sí al decreto que limitaba al 2 % las subidas de rentas.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-cc-q01",
-    "why_approx": "Limita las subidas de contratos vigentes; no fija un precio máximo para todos los nuevos alquileres.",
-    "confidence": "media"
-   },
-   "Q03": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Apoyó el decreto que prorrogaba el impuesto a las grandes fortunas.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-cc-q03",
-    "why_approx": "La convalidación incluía numerosas medidas; no hubo voto aislado sobre ese impuesto.",
-    "confidence": "media"
-   },
-   "Q04": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Votó Sí a ajustar el IRPF a la inflación.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-cc-q04",
-    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
-    "confidence": "media"
-   },
-   "Q06": {
-    "stance": "support",
-    "page": "web",
-    "summary": "Apoyó actualizar el SMI conforme al coste de vida territorial.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-cc-q06",
-    "why_approx": "Incluía pensiones y diferencias territoriales; actualización periódica, no expresamente anual.",
-    "confidence": "media"
-   },
    "Q11": {
     "stance": "oppose",
     "page": "web",
@@ -2084,26 +2157,6 @@
    }
   },
   "compromis": {
-   "Q04": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Votó No a ajustar el IRPF a la inflación.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-compromis-q04",
-    "why_approx": "Actualizar por inflación no equivale a reducir el IRPF de todo el mundo en cualquier circunstancia.",
-    "confidence": "media"
-   },
-   "Q10": {
-    "stance": "conditional",
-    "page": "web",
-    "summary": "Exige retirar conciertos a centros que segregan por sexo.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-compromis-q10",
-    "why_approx": "Se refiere a centros concretos y no resuelve la continuidad general de la concertada.",
-    "confidence": "media"
-   },
    "Q11": {
     "stance": "oppose",
     "page": "web",
@@ -2113,30 +2166,9 @@
     "src": "pista-compromis-q11",
     "why_approx": "Votación conjunta: incluía recentralización y otras medidas, además del castellano.",
     "confidence": "baja"
-   },
-   "Q16": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Critica recortar la autodeterminación de género en la legislación valenciana.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-compromis-q16",
-    "why_approx": "Critica una reforma autonómica; no especifica el informe médico para rectificar el DNI.",
-    "confidence": "media"
    }
   },
-  "d21": {
-   "Q16": {
-    "stance": "oppose",
-    "page": "web",
-    "summary": "Rechaza patologizar las identidades trans y recortar sus derechos.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-d21-q16",
-    "why_approx": "Rechaza la patologización, pero no menciona expresamente el informe médico para cambiar el DNI.",
-    "confidence": "media"
-   }
-  },
+  "d21": {},
   "salf": {
    "Q20": {
     "stance": "oppose",

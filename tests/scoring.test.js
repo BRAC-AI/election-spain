@@ -96,7 +96,7 @@ test('data integrity', () => {
     for (const [qid, c] of Object.entries(cells)) {
       assert.ok(Q.questions.some((q) => q.id === qid), qid);
       assert.ok(allowed.includes(c.stance) && c.page && c.summary && c.coder && c.status, `${pid} ${qid}`);
-      assert.ok(SO[c.src] && [1, 2, 3, 4, 5].includes(SO[c.src].level), `${pid} ${qid} source`);
+      assert.ok(SO[c.src] && [1, 2, 3, 4, 5, 6].includes(SO[c.src].level), `${pid} ${qid} source`);
       if (c.status === 'reviewed') assert.ok(c.reviewer && c.verified_on, `${pid} ${qid}`);
     }
   }
