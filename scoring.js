@@ -5,9 +5,10 @@ export const CONFIG = { minCompared: 3, minCoverage: 0.25, tieBand: 3, step: 5 }
 // Agreement on one question, 0..1, or null when it cannot be compared.
 export function agreement(answer, stance) {
   if (!(answer in ANSWERS)) return null;
-  if (stance === 'conditional') return 0.5;
-  if (stance !== 'support' && stance !== 'oppose') return null; // missing is never zero
-  const p = stance === 'support' ? 2 : -2;
+  // One formula for all three stances: distance on a -2..+2 line. "A medias" sits in the middle,
+  // so a mild answer is closer to it (0.75) than a strong one (0.5).
+  const p = { support: 2, conditional: 0, oppose: -2 }[stance];
+  if (p === undefined) return null; // missing is never zero
   return 1 - Math.abs(ANSWERS[answer] - p) / 4;
 }
 

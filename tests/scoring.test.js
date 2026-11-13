@@ -15,6 +15,9 @@ test('agreement table', () => {
   assert.equal(agreement('sd', 'support'), 0);
   assert.equal(agreement('sd', 'oppose'), 1);
   assert.equal(agreement('sa', 'conditional'), 0.5);
+  assert.equal(agreement('a', 'conditional'), 0.75);
+  assert.equal(agreement('d', 'conditional'), 0.75);
+  assert.equal(agreement('sd', 'conditional'), 0.5);
   assert.equal(agreement('sa', 'insufficient_evidence'), null);
   assert.equal(agreement('skip', 'support'), null);
 });
@@ -36,9 +39,10 @@ test('missing stance is not zero: adding insufficient rows leaves the score unch
   const a = scoreParty(ans, base), b = scoreParty(ans, { ...base, ...st({ Q06: 'insufficient_evidence' }) });
   assert.equal(a.alignment, b.alignment); assert.equal(a.compared, 5);
 });
-test('conditional is its own state, worth 0.5', () => {
-  const r = scoreParty(five, st({ Q01: 'conditional', Q02: 'conditional', Q03: 'conditional', Q04: 'conditional', Q05: 'conditional' }));
-  assert.equal(r.alignment, 50);
+test('conditional sits in the middle: mild answers match it better than strong ones', () => {
+  const all = st({ Q01: 'conditional', Q02: 'conditional', Q03: 'conditional', Q04: 'conditional', Q05: 'conditional' });
+  assert.equal(scoreParty({ Q01: 'sa', Q02: 'sa', Q03: 'sd', Q04: 'sd', Q05: 'sa' }, all).alignment, 50);
+  assert.equal(scoreParty({ Q01: 'a', Q02: 'd', Q03: 'a', Q04: 'd', Q05: 'a' }, all).alignment, 75);
 });
 test('symmetry: flipping every answer mirrors the score', () => {
   const flip = { sa: 'sd', a: 'd', d: 'a', sd: 'sa' };

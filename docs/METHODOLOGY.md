@@ -74,17 +74,20 @@ For each statement both the voter and the party have answered:
 | Same side, voter less sure | 75 |
 | Opposite side, voter less sure | 25 |
 | Opposite side, voter sure | 0 |
-| Party is "a medias" | 50 |
+| Party is "a medias", voter mild (a favor / en contra) | 75 |
+| Party is "a medias", voter strong (muy a favor / muy en contra) | 50 |
 
 The percent is the average. All statements weigh the same. Picking topics at the start only changes the order.
 
-A party gets a percent only with at least 3 comparable answers that cover at least a quarter of the voter's answers. Otherwise it shows "–".
+A party gets a percent only with at least 3 comparable answers that cover at least a quarter of the voter's answers. Otherwise it goes under "Sin datos suficientes".
+
+The winner card shows only when at least half of the voter's parties have a percent. A small year tag next to a party means it is scored on an old programme.
 
 The bar at the top fills as the voter answers: 5, 10, 15, 20. It tells the voter how much to trust the result.
 
 ## 7. Known weak points
 
-- Parties with blunt programmes score higher than parties that hedge, because "a medias" is worth half.
+- Parties with blunt programmes can still score higher than parties that hedge. Since 13 Nov a mild answer matches a hedged party better (75) than a strong one (50), which reduces this but does not remove it.
 - Some parties are scored on old text: PSOE, Vox, Junts and EH Bildu on 2023, Podemos on 2019.
 - Small and regional parties say little on national topics, so they often show "–".
 - Frente Amplio, Democracia 21 and Compromís-Front Valencià have published very little. They have 1 to 3 positions each.

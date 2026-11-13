@@ -72,7 +72,8 @@ function question() {
 }
 
 function hero(rows) {
-  const top = rows.filter((r) => r.rank === 1);
+  const top = rows.filter((r) => r.rank === 1), scored = rows.filter((r) => r.conclusive).length;
+  if (top.length && scored * 2 < rows.length) return `<p class="empty">Solo podemos comparar con ${scored} de ${rows.length} partidos. Aún no hay ganador.</p>`;
   if (!top.length) return `<p class="empty">${answered() ? 'Aún no podemos comparar. Sigue un poco más.' : 'Responde alguna pregunta para ver tu resultado.'}</p>`;
   const r = top[0];
   return `<button type="button" class="hero" data-party="${esc(r.id)}">
@@ -84,22 +85,25 @@ function hero(rows) {
       <span class="muted">Toca para ver por qué</span></span></button>`;
 }
 
+const oldTag = (p) => (p.programme && p.programme.type === 'programa_anterior' ? ` <span class="yr">${p.programme.year}</span>` : '');
+const row = (r) => `
+      <button type="button" class="party${r.conclusive ? '' : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
+        ${badge(r)}<span class="name">${esc(r.name)}${oldTag(r)}</span>
+        ${r.conclusive ? `<span class="bar" aria-hidden="true"><i class="p${Math.round(r.alignment / 5) * 5}"></i></span><span class="val">${r.alignment} %</span>` : ''}
+      </button>`;
+
 function result() {
   const left = order().length - st.idx, rows = results();
   return `
     ${meter(st.justLevel || 0)}
     ${hero(rows)}
-    <div class="list grow scroll">${rows.map((r) => `
-      <button type="button" class="party" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
-        ${badge(r)}<span class="name">${esc(r.name)}</span>
-        <span class="bar" aria-hidden="true"><i class="p${r.conclusive ? Math.round(r.alignment / 5) * 5 : 0}"></i></span>
-        <span class="val${r.conclusive ? '' : ' none'}">${r.conclusive ? r.alignment + ' %' : '–'}</span>
-      </button>`).join('')}</div>
+    <div class="list grow scroll">${rows.filter((r) => r.conclusive).map(row).join('')}
+      ${rows.some((r) => !r.conclusive) ? `<p class="divider">Sin datos suficientes</p>${rows.filter((r) => !r.conclusive).map(row).join('')}` : ''}</div>
     <div class="btns">
       ${left > 0 ? `<button type="button" class="cta" data-act="more">${Math.min(BATCH, left)} preguntas más</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
     </div>
-    <p class="note">No es un consejo de voto · – = sin datos todavía</p>`;
+    <p class="note">No es un consejo de voto · el año indica un programa antiguo</p>`;
 }
 
 function why() {
@@ -113,7 +117,7 @@ function why() {
     <div class="head">${badge(p)}<h1 tabindex="-1">${esc(p.name)}</h1><span class="val">${r.conclusive ? r.alignment + ' %' : '–'}</span></div>
     <div class="links">
       ${p.site ? `<a href="${esc(p.site)}" rel="noopener noreferrer" target="_blank">Su web</a>` : ''}
-      ${pr.url ? `<a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">${esc(SRC[pr.type] || 'Fuente')}${pr.year ? ' ' + pr.year : ''}</a>` : '<span class="muted">Sin programa todavía</span>'}
+      ${pr.url ? `<a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">${esc(SRC[pr.type] || 'Fuente')}${pr.year ? ' ' + pr.year : ''}</a>` : `<span class="muted">${pr.title ? esc(pr.title) + (pr.year ? ' (' + pr.year + ')' : '') : 'Sin programa todavía'}</span>`}
       <span class="muted">${r.compared} de ${r.answered} comparadas</span>
     </div>
     <div class="grow scroll">
@@ -144,7 +148,7 @@ function about() {
       <p>En cada respuesta ves de qué documento sale y en qué página.</p>
       <p>Si un partido no dice nada sobre un tema, ese tema no cuenta para él.</p>
       <h2>Cómo sale el porcentaje</h2>
-      <p>Por cada pregunta: pensáis igual, 100 puntos. Casi igual, 75. Casi al revés, 25. Al revés, 0. Si el partido dice «depende», 50. El porcentaje es la media.</p>
+      <p>Por cada pregunta: pensáis igual, 100 puntos. Casi igual, 75. Casi al revés, 25. Al revés, 0. Si el partido dice «a medias», 75 si tu respuesta es suave y 50 si es rotunda. El porcentaje es la media.</p>
       <p>Todas las preguntas valen lo mismo. Elegir temas solo cambia el orden.</p>
       <h2>La barra de arriba</h2>
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>

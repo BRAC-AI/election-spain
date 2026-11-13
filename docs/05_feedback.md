@@ -67,3 +67,29 @@ The order of blocs is right for both. The winner inside each bloc is not what th
 16. **PNV 2023 PDF extracts badly** (keyword search finds almost nothing in 52 pages). Needs OCR or a manual read.
 
 Fixes 1, 3, 8, 9 and 10 from round 1 are still open. Fix 2 is mostly done. Fix 5 is done (the party page now says "No está en lo que hemos leído. No cuenta.").
+
+
+# Round 3: fixes applied (v0.11, 13 Nov)
+
+| # | Finding | Status |
+|---|---|---|
+| 1 | Winner with no rivals | Fixed. No winner card unless half of the voter's parties have a percent |
+| 2 | Missing programmes | Mostly done. 126 of 300 positions coded |
+| 3 | Bar says "Muy fiable" with blank parties | Open. Less visible now that most parties have data |
+| 4 | Loyal PP voter tops out at 75 | Improved to 82 by the new "a medias" rule |
+| 5 | "No lo dice" reads like a dodge | Fixed. The party page says it does not count |
+| 7 | Wide logos unreadable | Open. Needs cropped logo files |
+| 8, 9 | Blank rows look ranked | Fixed. They sit greyed under "Sin datos suficientes" |
+| 10 | "A medias" not explained on the result | Open |
+| 11 | Blunt programmes beat careful ones | Reduced. "A medias" now gives 75 to a mild answer and 50 to a strong one |
+| 13 | Podemos scored on 2019 text | Fixed. Year tag next to the name |
+| 14, 15, 16 | Thin coverage for regional and new parties, PNV 2023 PDF | Open. Needs published programmes or a manual read |
+
+Same two voters after the fixes:
+
+| Voter | After 20 |
+|---|---|
+| Carlos, votes PP | SALF 91, Vox 85, PP 82, PSOE 54, Podemos 32 |
+| Marta, votes PSOE | Podemos 73, PSOE 73 (tie), PP 46, SALF 36, Vox 25 |
+
+PP is still third for the scripted PP voter. His answers are harder than PP's programme on immigration and benefits, so this may be the persona and not the tool. It needs real PP voters before any further change to the formula.

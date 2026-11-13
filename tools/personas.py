@@ -25,7 +25,7 @@ with sync_playwright() as p:
                 text = pg.inner_text('.statement'); pg.click(f".opt[data-ans={ans[next(k for k in K if k in text)]}]"); n += 1; pg.wait_for_timeout(40)
             else:
                 pg.wait_for_selector('.party')
-                rows = [(r.locator('.name').inner_text(), r.locator('.val').inner_text()) for r in pg.locator('.party').all()]
+                rows = [(r.locator('.name').inner_text().replace('\n', ' '), r.locator('.val').inner_text() if r.locator('.val').count() else '–') for r in pg.locator('.party').all()]
                 steps.append({'after': n, 'meter': pg.inner_text('.cap b'), 'hero': pg.inner_text('.heroname') if pg.locator('.heroname').count() else None, 'rows': rows})
                 pg.screenshot(path=f'/tmp/shots/{name}_r{n}.png')
                 if not pg.locator('[data-act=more]').count(): break

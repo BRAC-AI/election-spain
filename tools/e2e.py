@@ -47,7 +47,7 @@ with sync_playwright() as p:
                 if not pg.locator('[data-act=more]').count(): break
                 pg.click('[data-act=more]'); pg.wait_for_selector('.statement')
         assert n == 20
-        vals = [int(v.replace(' %', '')) for v in pg.locator('.party .val:not(.none)').all_inner_texts()]
+        vals = [int(v.replace(' %', '')) for v in pg.locator('.party .val').all_inner_texts()]
         assert vals == sorted(vals, reverse=True) and all(0 <= v <= 100 for v in vals), vals
         pg.locator('.party').first.click(); pg.wait_for_selector('.item'); fits(pg, f'{tag} why'); pg.screenshot(path=f'/tmp/shots/{tag}_why.png')
         links = pg.locator('.links a').evaluate_all('els => els.map(e => e.href)'); assert all(l.startswith('https://') for l in links) and links, links
