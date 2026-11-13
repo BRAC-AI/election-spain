@@ -135,6 +135,7 @@ function why() {
   if (!p) { st.screen = 'result'; return result(); }
   const cells = stancesOf(p), r = scoreOf(p), pr = p.programme || {};
   const qs = order().filter((q) => st.answers[q.id] in ANSWERS);
+  const agr = Object.fromEntries(r.perQuestion.map((x) => [x.q, x.agreement]));
   const same = (q, s) => (s === 'support' && ANSWERS[st.answers[q.id]] > 0) || (s === 'oppose' && ANSWERS[st.answers[q.id]] < 0);
   return `
     <button type="button" class="link" data-act="toresult">← Volver</button>
@@ -148,10 +149,17 @@ function why() {
     ${r.enough ? '' : `<div class="item"><p><b>Aún no sabemos lo suficiente de este partido.</b></p><p>Solo hemos encontrado ${Object.keys(cells).length} posiciones de ${Q.questions.length}. Por eso su porcentaje es poco fiable.</p>${p.priorities ? `<p>Sus prioridades, en su web: ${p.priorities.map(([t, u]) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(t)}</a>`).join(' · ')}</p>` : ''}</div>`}
     ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; const h = (HI[p.stancesFrom || p.id] || {})[q.id]; return `
       <div class="item"><p><b>${esc(q.text)}</b></p>
-      <p>${(st.stars || {})[q.id] ? '<span class="tag same">★ Vale el doble</span>' : ''}<span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
+      <p>${verdict(agr[q.id])}${(st.stars || {})[q.id] ? '<span class="tag star">★ Vale el doble</span>' : ''}</p>
+      <p class="pair">Tú: <b>${LABELS[st.answers[q.id]]}</b> · Partido: <b>${STANCE[s]}</b></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
       ${c.src ? `<p class="muted">${c.research_level === 7 ? 'De un socio o antecesor del partido: ' : c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Pista, no cuenta: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
     </div>`;
+}
+
+// One plain verdict per statement, so nobody has to compare two labels in their head.
+function verdict(a) {
+  const [cls, txt] = a === undefined ? ['none', 'No lo sabemos'] : a >= 1 ? ['yes', '✓ Pensáis igual'] : a >= 0.75 ? ['yes', '✓ Casi igual'] : a >= 0.5 ? ['mid', '≈ A medias'] : a > 0 ? ['no', '✗ Casi al revés'] : ['no', '✗ Al revés'];
+  return `<span class="verdict ${cls}">${txt}</span>`;
 }
 
 function srcLink(c) {

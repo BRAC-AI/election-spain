@@ -202,7 +202,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "La muerte digna es un concepto con el que estoy de acuerdo",
     "note": "Historial discordante: No a legalizar en 2021; No a derogar en 2025. Ahora propone limitar o reforzar garantías: https://www.europapress.es/nacional/noticia-pp-une-psoe-aliados-congreso-tumbar-texto-vox-contra-leyes-aborto-eutanasia-20251007152012.html",
     "src": "r4-pp-q37"
    },
@@ -2284,7 +2283,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "El PNV avala el envío de armas a Ucrania porque con vendas y chalecos no se repele la agresión",
     "note": "Apoyo explícito al envío directo por España; fuente histórica, no programa de 2026.",
     "src": "r4-pnv-q20"
    },
@@ -2583,7 +2581,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "No vamos a permitir comunidades de primera ni de segunda",
     "note": "Rechazo del pacto singular concreto, no rechazo demostrado de que todas las comunidades pudieran recaudar todos sus impuestos con igual regla. No equiparar el REF canario con un concierto económico.",
     "src": "r4-cc-q19"
    },
@@ -3047,7 +3044,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "baja",
-    "quote": "Asesinato de ancianos y depresivos",
     "note": "Anterior a SALF. Fecha diaria sin verificar; el canal archivado lleva ahora la descripción No Alvise. Se conserva como prueba débil de atribución y actualidad, no como programa vigente.",
     "why_approx": "Anterior a SALF. Fecha diaria sin verificar; el canal archivado lleva ahora la descripción No Alvise. Se conserva como prueba débil de atribución y actualidad, no como programa vigente.",
     "src": "r4-salf-q37",
@@ -3449,7 +3445,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Colau apoya a Yolanda Díez y cree que el envío de armas no es comparable con entrar en una guerra",
     "note": "Enlace no abierto por la herramienta. Declaración personal anterior a la coalición. Expresa dudas, por eso a medias. En 2026 Sumar se abstuvo en una resolución que pedía más apoyo militar: https://efe.com/euro-efe/2026-02-24/ue-acuerdos-paz-ucrania/ . Matiz posterior del antecesor, no prueba de un giro personal de Colau. Apertura 403.",
     "why_approx": "Declaración personal anterior a la coalición. Expresa dudas, por eso a medias. En 2026 Sumar se abstuvo en una resolución que pedía más apoyo militar: https://efe.com/euro-efe/2026-02-24/ue-acuerdos-paz-ucrania/ . Matiz posterior del antecesor, no prueba de un giro personal de Colau. Apertura 403.",
     "src": "r4-fa-q20",
@@ -3987,7 +3982,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "No nos importa que se lleguen a acuerdos con otras comunidades",
     "note": "Sí condicionado a un beneficio valenciano. No declara que cada comunidad deba recaudar el 100% de los impuestos ni obliga a aceptar el modelo concreto catalán.",
     "src": "r4-compromis-q19"
    },

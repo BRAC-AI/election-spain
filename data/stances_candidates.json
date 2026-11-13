@@ -11,7 +11,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Deducción a planes",
+    "quote": "Nuestra propuesta sería incrementar parcialmente esa cuantía",
     "note": "«Nuestra propuesta sería incrementar parcialmente esa cuantía».",
     "src": "r4-pp-q21"
    },
@@ -45,7 +45,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Retirar prohibición 2035",
+    "quote": "no ganaremos si apostamos por la electrificación absoluta en el año 2035",
     "note": "«no ganaremos si apostamos por la electrificación absoluta en el año 2035».",
     "src": "r4-pp-q28"
    },
@@ -69,7 +69,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Expulsión de residentes",
+    "quote": "Cuando el inmigrante es regular, depende del delito que cometa, puede ser expulsado de forma inmediata",
     "note": "«Cuando el inmigrante es regular, depende del delito que cometa, puede ser expulsado de forma inmediata».",
     "src": "r4-pp-q30"
    },
@@ -92,7 +92,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Mi primer objetivo es que Sánchez se vaya del Gobierno",
     "note": "Cambio respecto a su propuesta de 2023 de facilitar el gobierno a la lista más votada: https://www.rtve.es/noticias/20230123/rechazo-unanime-psoe-vox-podemos-cs-plan-feijoo-incoherencia-recorte-democratico/2416963.shtml",
     "src": "r4-pp-q34"
    },
@@ -126,7 +125,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Diario de sesiones: Comisión Mixta para la UE, número 94",
     "note": "Apoyo explícito a la Comisión frente a Estados que cuestionan esa primacía.",
     "src": "r4-pp-q40"
    },
@@ -203,7 +201,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Referéndum monárquico",
+    "quote": "La Jefatura del Estado no está en cuestión",
     "note": "«La Jefatura del Estado no está en cuestión».",
     "src": "r4-psoe-q33"
    },
@@ -215,7 +213,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Rechazo de la lista más votada",
     "note": "La propuesta discutida era principalmente municipal; se rechaza restringir las mayorías pactadas.",
     "src": "r4-psoe-q34"
    },
@@ -238,7 +235,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Acta literal del debate europeo sobre Polonia",
     "note": "La cabecera de EUR-Lex fecha el debate en octubre de 2021; la publicación del Diario Oficial es de 2024.",
     "src": "r4-psoe-q40"
    }
@@ -339,7 +335,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Buxadé rechaza la regla automática",
     "src": "r4-vox-q34"
    },
    "Q36": {
@@ -393,7 +388,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Pensiones a los 65",
+    "quote": "la edad máxima para poder jubilarse no supere los 65 años",
     "note": "«la edad máxima para poder jubilarse no supere los 65 años».",
     "src": "r4-fa-q22"
    },
@@ -405,7 +400,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Referéndum monárquico",
     "note": "Declaración anterior a la creación de Frente Amplio.",
     "src": "r4-fa-q33"
    }
@@ -485,7 +479,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Rechazo de la lista más votada",
     "note": "La propuesta discutida era principalmente municipal; se rechaza restringir las mayorías pactadas.",
     "src": "r4-podemos-q34"
    },
@@ -697,7 +690,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Prioridad del referéndum",
     "note": "No equivale a rechazar la consulta sobre monarquía.",
     "src": "r4-junts-q33"
    },
@@ -899,7 +891,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Referéndum monárquico",
+    "quote": "qué más tiene que pasar",
     "note": "«qué más tiene que pasar» para plantear un referéndum.",
     "src": "r4-bildu-q33"
    },
@@ -924,7 +916,7 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Pacto de Toledo",
+    "quote": "eliminar las deducciones fiscales de planes privados",
     "note": "«eliminar las deducciones fiscales de planes privados».",
     "src": "r4-bng-q21"
    },
@@ -1092,7 +1084,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "La prórroga a las OPE sanitarias se queda fuera del Congreso",
     "note": "Lo expresa en una propuesta de empleo público y pide adaptar la legislación estatal.",
     "src": "r4-cc-q40"
    }
@@ -1106,7 +1097,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "Planes de empleo",
     "note": "Prueba del integrante Compromís.",
     "src": "r4-compromis-q21"
    },
@@ -1141,7 +1131,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "alta",
-    "quote": "Reparto de menores",
     "note": "Prueba del integrante Compromís.",
     "src": "r4-compromis-q31"
    },
@@ -1153,7 +1142,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "CGPJ",
     "note": "12/20 judiciales; ocho, Cortes.",
     "src": "r4-compromis-q32"
    },
@@ -1268,7 +1256,6 @@
     "status": "ai_coded_unreviewed",
     "research_level": 3,
     "confidence": "media",
-    "quote": "La LIVG debía acabar ya",
     "note": "Declaración previa a crear SALF, reproducida por el medio; en enero de 2020 hablaba de reformarla, después pidió acabar con ella.",
     "src": "r4-salf-q36"
    },

@@ -219,3 +219,12 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 .party.thin{opacity:.7}
 @media (max-height:600px){.steps{gap:8px}.steps li{padding:9px 14px}.steps p{font-size:14px}.mini{margin-top:6px;min-height:30px}.steps .starbtn{min-height:32px}}
 @media (min-width:900px) and (min-height:560px){.s-how{width:100%;max-width:600px;margin:0 auto}}
+
+/* v0.21: one clear verdict per statement on the party page */
+.verdict{display:inline-block;font-size:13px;font-weight:800;border-radius:99px;padding:2px 12px;margin:0 6px 2px 0}
+.verdict.yes{background:var(--teal);color:#fff}
+.verdict.mid{background:var(--soft);color:var(--ink)}
+.verdict.no{background:var(--ink);color:#fff}
+.verdict.none{border:1px dashed var(--line);color:var(--muted);font-weight:600}
+.tag.star{border-color:var(--teal);color:var(--teal);font-weight:700}
+.pair{font-size:14px;color:var(--muted);margin:2px 0 4px}.pair b{color:var(--ink)}
