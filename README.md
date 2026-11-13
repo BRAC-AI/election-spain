@@ -1,33 +1,51 @@
 # Guía de voto 29N
 
-Independent, open-source voter guide for the Spanish general election of 29 November 2026. Built by BRACAI. No party affiliation. It does not tell anyone how to vote.
+A simple voting guide for the Spanish general election of 29 November 2026. You answer 30 statements and see which party thinks most like you, with a source for every party position.
 
-**Status: beta. 126 of 300 party positions are coded from official sources. None has had a human review yet.**
+**Live:** https://guia-voto-29n.netlify.app
 
-Start with `docs/METHODOLOGY.md`.
+## Who made it
 
-## What is here
+[BRACAI](https://bracai.eu), an AI consultancy in Barcelona. It is a personal, pro bono project by BRACAI's founder, made for his partner Núria, who wanted help finding her way in this election. It has no commercial aim and works for no party.
 
-- `index.html`, `styles.css`, `app.js`: static app. No build step, no tracking, no AI at runtime.
-- `scoring.js`: deterministic scoring. `npm test` runs 15 tests.
-- `data/questions.json`: 20 statements with plain explainers.
-- `data/parties.json`: 13 candidacies, province scope, source per party.
-- `data/stances.json`: party positions with page, summary, coder and review status.
-- `data/evidence.xlsx` and `data/evidence.csv`: the same positions as a review sheet. Built by `tools/build_evidence.py`.
-- `tools/e2e.py`: a full voter journey at three screen sizes, with no-scroll checks.
-- `img/logos/`: drop official party logos here and set `logo` in `data/parties.json`. Until then the app shows initials.
-- `docs/`: spec, plan, competitor review, image brief.
+## How it works
 
-Run: `npm start`, open http://localhost:8080.
+1. The voter answers 30 statements.
+2. We used AI to find what each party thinks about each one: programmes, votes and public statements. Every position has a link.
+3. The tool compares both and shows a match in percent.
 
-## Licence
+The full method, in plain words: [docs/METHODOLOGY.md](docs/METHODOLOGY.md). Rule changes: [docs/CHANGELOG.md](docs/CHANGELOG.md).
 
-Code: MIT. Data and texts: CC BY 4.0. Credit "Guía de voto 29N, BRACAI (bracai.eu)" and link this repository. See `LICENSE`.
+It can contain errors. The positions were coded by AI and not all were reviewed by a person. Corrections are welcome: open an issue with the party, the statement and a link.
 
-## Found an error?
+## What is in this repository
 
-Open an issue with the party, the statement and the page of the programme.
+| Path | What it is |
+|---|---|
+| `index.html`, `styles.css`, `app.js` | The app. Static files, no build step, no tracking |
+| `scoring.js` | How the percent is calculated |
+| `data/questions.json` | The 30 statements |
+| `data/parties.json` | Parties and where each one runs |
+| `data/stances.json` | Each party's position on each statement |
+| `data/sources.json` | The source behind every position |
+| `data/ballots_boe.csv` | Official candidacies by province (BOE) |
+| `data/questions_candidates.json`, `data/stances_candidates.json` | 15 reserve statements and their positions |
+| `data/map.json` | Map of Spain used to choose where you vote |
+| `tests/` | Tests for the scoring and the data |
+| `tools/` | Browser tests and the map builder |
 
-## Map
+## Run it
 
-`data/map.json` is built by `tools/build_map.py` from es-atlas 0.6.0 (MIT, IGN data). Canarias sits in an inset box. Ceuta and Melilla are in the list under the map.
+```
+python3 -m http.server 8080      # then open http://localhost:8080
+npm test                         # scoring and data tests
+python3 tools/e2e.py             # full journey in a browser, needs Playwright and a local server
+```
+
+## Use and credit
+
+Code: MIT. Data and texts: CC BY 4.0. Party logos belong to the parties. Map shapes: es-atlas (MIT), from Instituto Geográfico Nacional data. See [LICENSE](LICENSE).
+
+If you use it, please credit:
+
+> Guía de voto 29N. BRACAI, 2026. https://github.com/BRAC-AI/election-spain

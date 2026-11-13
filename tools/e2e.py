@@ -57,7 +57,7 @@ with sync_playwright() as p:
         vals = [int(v.replace(' %', '')) for v in pg.locator('.party:not(.thin) .val').all_inner_texts()]   # ranked parties
         thin = [int(v.replace(' %', '')) for v in pg.locator('.party.thin .val').all_inner_texts()]         # shown apart, never ranked
         assert vals == sorted(vals, reverse=True) and thin == sorted(thin, reverse=True) and all(0 <= v <= 100 for v in vals + thin), (vals, thin)
-        assert pg.locator('.party.blank').count() == 0, 'every party should have a percent after all answers'
+        assert 'Democracia' not in pg.locator('.hero').inner_text() and 'provisional' not in pg.locator('.hero').inner_text().lower()
         pg.locator('.party').first.click(); pg.wait_for_selector('.item'); fits(pg, f'{tag} why'); pg.screenshot(path=f'/tmp/shots/{tag}_why.png')
         links = pg.locator('.links a').evaluate_all('els => els.map(e => e.href)'); assert all(l.startswith('https://') for l in links) and links, links
         pg.click('[data-act=toresult]'); pg.wait_for_selector('.party')

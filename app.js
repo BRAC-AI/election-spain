@@ -52,7 +52,7 @@ function start() {
       ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
     </div>
     <div class="btns"><button type="button" class="cta" data-act="towhere">Siguiente</button></div>
-    <p class="note">${Q.questions.length} preguntas · 5 minutos · anónimo</p>`;
+    <p class="note">Los temas que elijas salen primero. No valen más: para eso está la ★.</p>`;
 }
 
 // A region needs a second tap only when its provinces have different ballots.
@@ -103,7 +103,7 @@ function hero(rows) {
     <span class="ringwrap"><svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
       <circle class="track" cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="${r.alignment} 100" transform="rotate(-90 60 60)"/></svg>
       <span class="num">${r.alignment}<small>%</small></span></span>
-    <span class="herotext"><span class="eyebrow">${top.length > 1 ? 'Empate' : 'Más cerca de ti'}</span>
+    <span class="herotext"><span class="eyebrow">${st.idx < Q.questions.length ? 'Resultado provisional · ' : ''}${top.length > 1 ? 'Empate' : 'Más cerca de ti'}</span>
       <span class="heroname">${top.map((x) => esc(x.name)).join(' · ')}</span>
       <span class="muted">Toca para ver por qué</span></span></button>`;
 }
@@ -111,7 +111,7 @@ function hero(rows) {
 const oldTag = () => ''; // positions now mix programmes, votes and quotes, so one year tag would mislead
 const row = (r) => `
       <button type="button" class="party${r.conclusive ? (r.thin ? ' thin' : '') : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'sin datos'}">
-        ${badge(r)}<span class="name">${esc(r.name)}${oldTag(r)}</span>
+        ${badge(r)}<span class="name">${esc(r.name)}${r.thin ? `<small>${r.compared} de ${r.answered} comparadas</small>` : ''}</span>
         ${r.conclusive ? `<span class="bar" aria-hidden="true"><i class="p${Math.round(r.alignment / 5) * 5}"></i></span><span class="val">${r.alignment} %</span>` : ''}
       </button>`;
 
@@ -186,7 +186,7 @@ function about() {
       <p>No guarda nada: sin registro, sin cookies, sin rastreo.</p>
       <h2>Puede haber errores</h2>
       <p>Hemos buscado las mejores fuentes que hemos podido. Pero la búsqueda la hizo una IA y una persona no lo ha revisado todo.</p>
-      <p>A veces no hay una fuente exacta. Entonces usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».</p>
+      <p>A veces no hay una fuente exacta. Entonces usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido». Si la fuente es de otro partido distinto, la enseñamos como «Pista» y no cuenta.</p>
       <h2>Quién lo hace</h2>
       <p>Es un proyecto personal, hecho gratis y sin ganar dinero con él. Lo hizo el fundador de <a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a> para Núria, su pareja, que quería orientarse en estas elecciones. No trabaja para ningún partido.</p>
       <p>Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">el código y los datos</a> y <a href="${REPO}/blob/main/docs/METHODOLOGY.md" rel="noopener noreferrer" target="_blank">el método completo</a>.</p>
