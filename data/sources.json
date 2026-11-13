@@ -250,5 +250,653 @@
   "title": "Miriam González, El HuffPost, 13 nov 2026",
   "year": 2026,
   "url": "https://www.huffingtonpost.es/politica/miriam-gonzalez-democracia-entrevista-elecciones-generales-f202611.html"
+ },
+ "voto-pp-q05": {
+  "level": 5,
+  "title": "Congreso, 10 sep 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213533.pdf"
+ },
+ "voto-pp-q09": {
+  "level": 5,
+  "title": "Congreso, 11 sep 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion058/20240911/Votacion004/VOT_20240911151645.pdf"
+ },
+ "voto-psoe-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "pista-psoe-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-psoe-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "cita-psoe-q18": {
+  "level": 4,
+  "title": "Diana Morant, Servimedia, 27 mar 2024",
+  "year": 2024,
+  "url": "https://www.servimedia.es/noticias/morant-asegura-referendum-independencia-cataluna-es-imposible/1410123655"
+ },
+ "pista-psoe-q19": {
+  "level": 6,
+  "title": "Ara, 2024",
+  "year": 2024,
+  "url": "https://es.ara.cat/politica/montero-vs-junqueras-viabilidad-financiacion-singular-juego_1_5503105.html"
+ },
+ "voto-vox-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "voto-vox-q05": {
+  "level": 5,
+  "title": "Congreso, 10 sep 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213533.pdf"
+ },
+ "pista-vox-q06": {
+  "level": 6,
+  "title": "Europa Press, 7 may 2025",
+  "year": 2025,
+  "url": "https://www.europapress.es/nacional/noticia-pp-psoe-tumban-senado-pretension-junts-dividir-smi-ccaa-ricas-pobres-20250507144152.html"
+ },
+ "cita-vox-q07": {
+  "level": 4,
+  "title": "Carlos Hernández Quero, Congreso, 26 feb 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-280.PDF"
+ },
+ "cita-vox-q20": {
+  "level": 4,
+  "title": "José María Figaredo, Congreso, 13 mar 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-114.PDF"
+ },
+ "cita-fa-q01": {
+  "level": 4,
+  "title": "Ada Colau, Verificat, nov 2026",
+  "year": 2026,
+  "url": "https://www.verificat.cat/es/tope-alquiler-precios-oferta-catalunya/"
+ },
+ "pista-fa-q06": {
+  "level": 6,
+  "title": "El Periódico de Ceuta, 5 nov 2026",
+  "year": 2026,
+  "url": "https://www.elperiodicodeceuta.es/frente-amplio-destaca-subida-del-smi-en-2027/"
+ },
+ "pista-fa-q07": {
+  "level": 6,
+  "title": "Diario Siglo XXI, 12 nov 2026",
+  "year": 2026,
+  "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20261112145607/inquietudes-infancia-ante-elecciones-vivienda-prestacion-crianza-salud-mental-rrss"
+ },
+ "cita-fa-q08": {
+  "level": 4,
+  "title": "Tesh Sidi, 20minutos, 12 nov 2026",
+  "year": 2026,
+  "url": "https://www.20minutos.es/nacional/tesh-sidi-frente-amplio-hay-que-atajar-privatizacion-hemos-visto-que-una-mala-gestion-sanidad-publica-mata_7059266_0.html"
+ },
+ "pista-fa-q10": {
+  "level": 6,
+  "title": "20minutos, 12 nov 2026",
+  "year": 2026,
+  "url": "https://www.20minutos.es/nacional/tesh-sidi-frente-amplio-hay-que-atajar-privatizacion-hemos-visto-que-una-mala-gestion-sanidad-publica-mata_7059266_0.html"
+ },
+ "pista-fa-q14": {
+  "level": 6,
+  "title": "20minutos, 12 nov 2026",
+  "year": 2026,
+  "url": "https://www.20minutos.es/nacional/tesh-sidi-frente-amplio-hay-que-atajar-privatizacion-hemos-visto-que-una-mala-gestion-sanidad-publica-mata_7059266_0.html"
+ },
+ "cita-fa-q17": {
+  "level": 4,
+  "title": "Frente Amplio, campaña de Frente Amplio, 2026",
+  "year": 2026,
+  "url": "https://actionnetwork.org/forms/el-derecho-al-aborto-y-a-la-eutanasia-no-se-tocan?nowrapper=true&referrer=&source="
+ },
+ "cita-fa-q18": {
+  "level": 4,
+  "title": "Ada Colau, Europa Press, 14 oct 2026",
+  "year": 2026,
+  "url": "https://www.europapress.es/catalunya/noticia-colau-asegura-erc-no-situo-referendum-catalunya-prioridad-negociar-20261014111112.html"
+ },
+ "voto-podemos-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "cita-podemos-q07": {
+  "level": 4,
+  "title": "Javier Sánchez Serna, Congreso, 23 jul 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/PL/DSCD-15-PL-58.PDF"
+ },
+ "pista-podemos-q10": {
+  "level": 6,
+  "title": "El País, 23 oct 2024",
+  "year": 2024,
+  "url": "https://elpais.com/educacion/2024-10-23/las-familias-y-el-profesorado-de-la-publica-sumar-y-podemos-critican-la-mejora-de-los-conciertos-educativos-anunciada-por-el-gobierno.html"
+ },
+ "pista-podemos-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-podemos-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "pista-podemos-q19": {
+  "level": 6,
+  "title": "Europa Press, 18 jul 2025",
+  "year": 2025,
+  "url": "https://www.europapress.es/nacional/noticia-podemos-muestra-precavido-financiacion-cataluna-cree-reforma-condenada-fracaso-20250718134855.html"
+ },
+ "cita-podemos-q20": {
+  "level": 4,
+  "title": "Ione Belarra, El País, 18 nov 2025",
+  "year": 2025,
+  "url": "https://elpais.com/espana/2025-11-18/zelenski-visita-el-congreso-en-su-viaje-a-espana-para-recabar-ayuda-militar.html"
+ },
+ "voto-erc-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "prog-erc-q04": {
+  "level": 1,
+  "title": "Programa ERC 2026",
+  "year": 2026,
+  "url": "https://esquerrarepublicana.cat/documents/e2026-programa.pdf"
+ },
+ "pista-erc-q06": {
+  "level": 6,
+  "title": "Europa Press, 7 may 2025",
+  "year": 2025,
+  "url": "https://www.europapress.es/nacional/noticia-pp-psoe-tumban-senado-pretension-junts-dividir-smi-ccaa-ricas-pobres-20250507144152.html"
+ },
+ "voto-erc-q08": {
+  "level": 5,
+  "title": "Congreso, 26 mar 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion169/20260326/Votacion051/VOT_20260326165033.pdf"
+ },
+ "voto-erc-q10": {
+  "level": 5,
+  "title": "ERC en Parlament de Catalunya (La Razón), 13 mar 2025",
+  "year": 2025,
+  "url": "https://www.larazon.es/cataluna/barcelona/parlament-pide-avanzar-equiparacion-profesores-concertada-publica_2025031367d2d77ade9a6f0001a97540.html?outputType=amp"
+ },
+ "voto-erc-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-erc-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "pista-junts-q01": {
+  "level": 6,
+  "title": "Congreso, 28 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion175/20260428/Votacion003/VOT_20260428200327.pdf"
+ },
+ "voto-junts-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "pista-junts-q03": {
+  "level": 6,
+  "title": "Congreso, 18 mar 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/A/BOCG-15-A-3-2.PDF"
+ },
+ "voto-junts-q05": {
+  "level": 5,
+  "title": "Congreso, 10 sep 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213533.pdf"
+ },
+ "pista-junts-q06": {
+  "level": 6,
+  "title": "Europa Press, 7 may 2025",
+  "year": 2025,
+  "url": "https://www.europapress.es/nacional/noticia-pp-psoe-tumban-senado-pretension-junts-dividir-smi-ccaa-ricas-pobres-20250507144152.html"
+ },
+ "voto-junts-q08": {
+  "level": 5,
+  "title": "Congreso, 26 mar 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion169/20260326/Votacion051/VOT_20260326165033.pdf"
+ },
+ "pista-junts-q09": {
+  "level": 6,
+  "title": "Servimedia, 18 feb 2026",
+  "year": 2026,
+  "url": "https://www.servimedia.es/noticias/monica-garcia-asegura-modelo-sanitario-catalan-es-uno-grandes-activos-sns/1412761170"
+ },
+ "voto-junts-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-junts-q14": {
+  "level": 5,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion013/VOT_20260422151946.pdf"
+ },
+ "voto-junts-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "voto-pnv-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "voto-pnv-q03": {
+  "level": 5,
+  "title": "PNV en Juntas Generales (Naiz), 15 dic 2023",
+  "year": 2023,
+  "url": "https://www.naiz.eus/es/hemeroteca/gara/editions/2023-12-16/hemeroteca_articles/araba-y-bizkaia-aprueban-el-impuesto-a-las-grandes-fortunas"
+ },
+ "pista-pnv-q04": {
+  "level": 6,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422151947.pdf"
+ },
+ "voto-pnv-q05": {
+  "level": 5,
+  "title": "Congreso, 10 sep 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213533.pdf"
+ },
+ "pista-pnv-q06": {
+  "level": 6,
+  "title": "Europa Press, 7 may 2025",
+  "year": 2025,
+  "url": "https://www.europapress.es/nacional/noticia-pp-psoe-tumban-senado-pretension-junts-dividir-smi-ccaa-ricas-pobres-20250507144152.html"
+ },
+ "cita-pnv-q07": {
+  "level": 4,
+  "title": "Maribel Vaquero, Congreso, 13 mar 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/public_oficiales/L15/CONG/DS/CO/DSCD-15-CO-81.PDF"
+ },
+ "voto-pnv-q08": {
+  "level": 5,
+  "title": "Congreso, 26 mar 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion169/20260326/Votacion051/VOT_20260326165033.pdf"
+ },
+ "voto-pnv-q09": {
+  "level": 5,
+  "title": "Congreso, 11 sep 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion058/20240911/Votacion004/VOT_20240911151645.pdf"
+ },
+ "voto-pnv-q10": {
+  "level": 5,
+  "title": "PNV en Parlamento Vasco (elDiario.es), 21 nov 2024",
+  "year": 2024,
+  "url": "https://www.eldiario.es/euskadi/aprobada-primera-ley-pradales-67-millones-concertada-apoyo-pp-vox-oposicion-eh-bildu_1_11838589.amp.html"
+ },
+ "pista-pnv-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-pnv-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-pnv-q14": {
+  "level": 5,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion013/VOT_20260422151946.pdf"
+ },
+ "voto-pnv-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "pista-pnv-q16": {
+  "level": 6,
+  "title": "EFE, 15 feb 2024",
+  "year": 2024,
+  "url": "https://efe.com/pais-vasco/2024-02-15/el-parlamento-vasco-aprueba-la-ley-trans-ultima-de-la-legislatura/"
+ },
+ "voto-bildu-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "pista-bildu-q04": {
+  "level": 6,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422151947.pdf"
+ },
+ "voto-bildu-q07": {
+  "level": 5,
+  "title": "Edurne Benito del Valle (EH Bildu), 12 jun 2025",
+  "year": 2025,
+  "url": "https://ehbildu.eus/herriak/legebiltzarra/es/noticias/eh-bildu-propone-prolongar-hasta-los-18-anos-la-ayuda-de-200-euros-mensuales-por-hija-o-hijo"
+ },
+ "voto-bildu-q08": {
+  "level": 5,
+  "title": "Congreso, 26 mar 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion169/20260326/Votacion051/VOT_20260326165033.pdf"
+ },
+ "voto-bildu-q10": {
+  "level": 5,
+  "title": "EH Bildu en Parlamento Vasco (elDiario.es), 21 nov 2024",
+  "year": 2024,
+  "url": "https://www.eldiario.es/euskadi/aprobada-primera-ley-pradales-67-millones-concertada-apoyo-pp-vox-oposicion-eh-bildu_1_11838589.amp.html"
+ },
+ "pista-bildu-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-bildu-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-bildu-q13": {
+  "level": 5,
+  "title": "Congreso, 9 abr 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion001/VOT_20240409210629.pdf"
+ },
+ "voto-bildu-q14": {
+  "level": 5,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion013/VOT_20260422151946.pdf"
+ },
+ "voto-bildu-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "pista-bildu-q16": {
+  "level": 6,
+  "title": "EFE, 15 feb 2024",
+  "year": 2024,
+  "url": "https://efe.com/pais-vasco/2024-02-15/el-parlamento-vasco-aprueba-la-ley-trans-ultima-de-la-legislatura/"
+ },
+ "voto-bildu-q17": {
+  "level": 5,
+  "title": "Congreso, 30 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion177/20260430/Votacion012/VOT_20260430125141.pdf"
+ },
+ "cita-bildu-q20": {
+  "level": 4,
+  "title": "Mesa Política de EH Bildu, EH Bildu, 28 feb 2025",
+  "year": 2025,
+  "url": "https://ehbildu.eus/es/noticias/declaracion-de-la-mesa-politica-de-eh-bidu-en-el-3o-aniversario-de-la-invasion-de-ucrania"
+ },
+ "voto-bng-q02": {
+  "level": 5,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion095/VOT_20251008195234.pdf"
+ },
+ "pista-bng-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-bng-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-bng-q14": {
+  "level": 5,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion013/VOT_20260422151946.pdf"
+ },
+ "pista-bng-q16": {
+  "level": 6,
+  "title": "Programa BNG 2026, 3 nov 2026",
+  "year": 2026,
+  "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf"
+ },
+ "voto-bng-q17": {
+  "level": 5,
+  "title": "Congreso, 30 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion177/20260430/Votacion012/VOT_20260430125141.pdf"
+ },
+ "pista-cc-q01": {
+  "level": 6,
+  "title": "Congreso, 28 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion175/20260428/Votacion003/VOT_20260428200327.pdf"
+ },
+ "pista-cc-q03": {
+  "level": 6,
+  "title": "Congreso, 10 ene 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion015/20240110/Votacion004/VOT_20240111114809.pdf"
+ },
+ "pista-cc-q04": {
+  "level": 6,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422151947.pdf"
+ },
+ "voto-cc-q05": {
+  "level": 5,
+  "title": "Congreso, 10 sep 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213533.pdf"
+ },
+ "pista-cc-q06": {
+  "level": 6,
+  "title": "El Nacional, 7 may 2025",
+  "year": 2025,
+  "url": "https://www.elnacional.cat/es/politica/psoe-pp-rechazan-senado-demanda-junts-adaptar-catalunya-pensiones-smi_1411228_102.html"
+ },
+ "voto-cc-q08": {
+  "level": 5,
+  "title": "Congreso, 26 mar 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion169/20260326/Votacion051/VOT_20260326165033.pdf"
+ },
+ "voto-cc-q09": {
+  "level": 5,
+  "title": "Congreso, 11 sep 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion058/20240911/Votacion004/VOT_20240911151645.pdf"
+ },
+ "pista-cc-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-cc-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-cc-q13": {
+  "level": 5,
+  "title": "Congreso, 9 abr 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion001/VOT_20240409210629.pdf"
+ },
+ "voto-cc-q14": {
+  "level": 5,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion013/VOT_20260422151946.pdf"
+ },
+ "voto-cc-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "voto-cc-q17": {
+  "level": 5,
+  "title": "Congreso, 30 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion177/20260430/Votacion012/VOT_20260430125141.pdf"
+ },
+ "pista-compromis-q03": {
+  "level": 6,
+  "title": "Congreso, 10 ene 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion015/20240110/Votacion004/VOT_20240111114809.pdf"
+ },
+ "pista-compromis-q04": {
+  "level": 6,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422151947.pdf"
+ },
+ "voto-compromis-q08": {
+  "level": 5,
+  "title": "Congreso, 26 mar 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion169/20260326/Votacion051/VOT_20260326165033.pdf"
+ },
+ "pista-compromis-q10": {
+  "level": 6,
+  "title": "elDiario.es, 4 may 2026",
+  "year": 2026,
+  "url": "https://www.eldiario.es/comunitat-valenciana/compromis-denuncia-generalitat-sostiene-dinero-publico-colegios-opus-segregan-sexo_1_13193962.amp.html"
+ },
+ "pista-compromis-q11": {
+  "level": 6,
+  "title": "Congreso, 8 oct 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion136/20251008/Votacion099/VOT_20251008195236.pdf"
+ },
+ "voto-compromis-q12": {
+  "level": 5,
+  "title": "Congreso, 13 nov 2025",
+  "year": 2025,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion146/20251113/Votacion113/VOT_20251113131250.pdf"
+ },
+ "voto-compromis-q13": {
+  "level": 5,
+  "title": "Congreso, 9 abr 2024",
+  "year": 2024,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion001/VOT_20240409210629.pdf"
+ },
+ "voto-compromis-q14": {
+  "level": 5,
+  "title": "Congreso, 22 abr 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion013/VOT_20260422151946.pdf"
+ },
+ "voto-compromis-q15": {
+  "level": 5,
+  "title": "Congreso, 11 jun 2026",
+  "year": 2026,
+  "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion185/20260611/Votacion026/VOT_20260611145706.pdf"
+ },
+ "pista-compromis-q16": {
+  "level": 6,
+  "title": "El País, 13 mar 2026",
+  "year": 2026,
+  "url": "https://elpais.com/sociedad/lgtb/2026-03-13/castilla-y-leon-es-la-unica-comunidad-de-toda-espana-sin-normativa-lgtbi.html"
+ },
+ "pista-d21-q04": {
+  "level": 6,
+  "title": "Democracia 21, 2026",
+  "year": 2026,
+  "url": "https://democracia21.es/docs/sanidad-publica-democracia21.pdf"
+ },
+ "pista-d21-q16": {
+  "level": 6,
+  "title": "Democracia 21, 2026",
+  "year": 2026,
+  "url": "https://democracia21.es/docs/derechos-sociales-democracia21.pdf"
+ },
+ "pista-salf-q01": {
+  "level": 6,
+  "title": "web de SALF, 2026",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/images/Contrato%20Electoral%20Aragon%20SALF%202026.pdf"
+ },
+ "prog-salf-q07": {
+  "level": 3,
+  "title": "web de SALF",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/"
+ },
+ "pista-salf-q08": {
+  "level": 6,
+  "title": "web de SALF, 2026",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/images/Contrato%20Electoral%20Aragon%20SALF%202026.pdf"
+ },
+ "pista-salf-q09": {
+  "level": 6,
+  "title": "web de SALF, 2026",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/images/Contrato%20Electoral%20Aragon%20SALF%202026.pdf"
+ },
+ "pista-salf-q12": {
+  "level": 6,
+  "title": "web de SALF, 2026",
+  "year": 2026,
+  "url": "https://www.seacabolafiesta.com/images/Contrato%20Electoral%20Aragon%20SALF%202026.pdf"
+ },
+ "pista-salf-q20": {
+  "level": 6,
+  "title": "elDiario.es, 2025",
+  "year": 2025,
+  "url": "https://www.eldiario.es/politica/acabo-fiesta-partido-alvise-rompe-tiempo-record-acusaciones-cruzadas-amenazas-demandas_1_12240748.html"
  }
 }

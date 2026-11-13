@@ -30,7 +30,14 @@ Level 4 rules: the words must be the party's own (not the journalist's, not a ri
 
 Level 4 was added on 13 November 2026 because programmes left too many gaps. The quotes were found by two AI research tools (ChatGPT and Gemini deep research) with the prompt in `docs/research/`. Their raw output is in `docs/research/2026-11-13_citas/`. Where the two tools disagreed, Claude chose and wrote why in the commit.
 
-Never use: other comparison sites, a journalist's summary, or "everyone knows they think this". Votes in Congress are not used yet (planned as level 5).
+Never use: other comparison sites, a journalist's summary, or "everyone knows they think this". Since the second research run (13 November 2026, `docs/research/prompt_huecos_v2.md`, raw output in `docs/research/2026-11-13_citas/pruebas_v2.csv`):
+
+| Level | Source | Counts in the score |
+|---|---|---|
+| 5 | How the party voted in Congress, the Senate or its regional parliament (2023 to 2026), on a text about exactly that | Yes. An abstention is "a medias" |
+| 6 | "Pista": the closest evidence found, when nothing is exact (a joint vote, a regional programme, a nearby topic) | No. It is shown on the party page with its link, in `stances.json` under `hints` |
+
+Hints do not count because the research tool itself marked them as not exact. Counting them would mean guessing.
 
 Which provinces a party runs in comes from the BOE list of proclaimed candidacies (BOE-A-2026-23103, 3 November 2026), in `data/ballots_boe.csv`. An AI extracted it. It matches the app's province lists for all 15 parties. The 7 November correction is not included.
 

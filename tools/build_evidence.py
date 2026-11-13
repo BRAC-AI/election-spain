@@ -9,7 +9,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 Q = json.load(open('data/questions.json')); P = json.load(open('data/parties.json')); S = json.load(open('data/stances.json')); SO = json.load(open('data/sources.json'))
 N = len(Q['questions'])
 LEVEL = {'programa_29N': '1 Programa 29N', 'programa_anterior': '2 Programa anterior', 'web': '3 Web oficial'}
-LV = {1: '1 Programa 29N', 2: '2 Programa anterior', 3: '3 Web oficial', 4: '4 Dicho en público'}
+LV = {1: '1 Programa 29N', 2: '2 Programa anterior', 3: '3 Web oficial', 4: '4 Dicho en público', 5: '5 Voto', 6: '6 Pista (no cuenta)'}
 # Fallback (level 2) per party: the last general-election programme of its own, if one exists.
 PREV = {'pp': 'Programa PP 2023', 'upn-pp': 'Programa PP 2023', 'psoe': 'Programa PSOE 2023', 'vox': 'Programa Vox 2023', 'erc': 'Programa ERC 2023',
         'junts': 'Programa Junts 2023', 'pnv': 'Programa PNV 2023', 'bildu': 'Compromiso EH Bildu 2023', 'bng': 'Programa BNG 2023', 'cc': 'Programa CC 2023',

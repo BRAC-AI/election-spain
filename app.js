@@ -12,7 +12,7 @@ const SRC = { programa_29N: 'Programa 29N', programa_anterior: 'Programa anterio
 const LEVELS = ['Aún nada', 'Poco fiable', 'Algo fiable', 'Bastante fiable', 'Muy fiable'];
 const FRESH = { screen: 'start', bubbles: [], region: '', province: '', idx: 0, answers: {}, party: null, info: false };
 
-let Q, P, S, SV, SO, M; // questions, parties, stances, stances version, sources, map
+let Q, P, S, SV, SO, M, HI = {}; // questions, parties, stances, stances version, sources, map
 let st = { ...FRESH };
 
 // Answers stay on this device, in this tab only.
@@ -141,17 +141,17 @@ function why() {
       <span class="muted">${r.compared} de ${r.answered} comparadas</span>
     </div>
     <div class="grow scroll">
-    ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; return `
+    ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; const h = (HI[p.stancesFrom || p.id] || {})[q.id]; return `
       <div class="item"><p><b>${esc(q.text)}</b></p>
       <p><span class="tag">Tú: ${LABELS[st.answers[q.id]]}</span><span class="tag${same(q, s) ? ' same' : ''}">Partido: ${STANCE[s]}</span></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.src ? `<p class="muted">${srcLink(c)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No está en lo que hemos leído. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
+      ${c.src ? `<p class="muted">${srcLink(c)}</p>` : h ? `<p class="muted">Pista, no cuenta: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
     </div>`;
 }
 
 function srcLink(c) {
   const d = SO[c.src] || {}, where = c.page === 'web' ? '' : `, pág. ${esc(c.page)}`;
-  const label = `${d.level === 4 ? 'Lo dijo ' : ''}${esc(d.title || 'Fuente')}${d.level === 2 ? ' (programa anterior)' : ''}${where}`;
+  const label = `${d.level === 4 ? 'Lo dijo ' : d.level === 5 ? 'Votó: ' : ''}${esc(d.title || 'Fuente')}${d.level === 2 ? ' (programa anterior)' : ''}${where}`;
   return d.url ? `<a href="${esc(d.url)}" rel="noopener noreferrer" target="_blank">${label}</a>` : label;
 }
 
@@ -174,7 +174,7 @@ function about() {
       <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
       <h2>Quién lo lee</h2>
-      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Si el programa no dice nada, usamos lo que un candidato o portavoz ha dicho en público en 2026, con enlace: lo verás como «Lo dijo…». Lo buscaron otras IA (ChatGPT y Gemini) el 13 de noviembre. Ninguna posición la ha revisado aún una persona. Si ves un error, dínoslo abajo.</p>
+      <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Si el programa no dice nada, usamos lo que un candidato o portavoz ha dicho en público en 2026, con enlace: lo verás como «Lo dijo…». Si tampoco, miramos qué votó en el Congreso o en su parlamento: «Votó…». A veces solo hay algo parecido: lo verás como «Pista» y no cuenta para el porcentaje. Lo buscaron otras IA (ChatGPT y Gemini) el 13 de noviembre. Ninguna posición la ha revisado aún una persona. Si ves un error, dínoslo abajo.</p>
       <h2>Qué partidos salen</h2>
       <p>${esc(P.inclusion_rule)} Según tu provincia ves solo los que puedes votar.</p>
       <h2>Fuentes, partido a partido</h2>
@@ -272,7 +272,7 @@ document.addEventListener('submit', async (e) => {
 
 Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json'), load('data/sources.json'), load('data/map.json')])
   .then(([q, p, s, so, m]) => {
-    Q = q; P = p; S = s.stances; SV = s.version; SO = so; M = m;
+    Q = q; P = p; S = s.stances; HI = s.hints || {}; SV = s.version; SO = so; M = m;
     restore();
     if (!SCREENS[st.screen] || st.idx > q.questions.length || (st.screen === 'question' && st.idx >= q.questions.length)) st = { ...FRESH };
     render();
