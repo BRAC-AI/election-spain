@@ -37,8 +37,8 @@ function go(patch, animate = false) {
 
 // Confidence meter: four segments, one per block of five answers.
 function meter(popLevel = 0) {
-  const n = answered(), lvl = confidence(n);
-  const segs = [0, 1, 2, 3].map((i) => `<span class="seg${popLevel === i + 1 ? ' pop' : ''}"><i class="w${Math.max(0, Math.min(BATCH, n - i * BATCH))}"></i></span>`).join('');
+  const n = answered(), total = Q.questions.length, lvl = n === 0 ? 0 : Math.min(4, 1 + Math.floor((3 * n) / total)); // label follows the share answered
+  const segs = Array.from({ length: Math.ceil(total / BATCH) }, (_, i) => i).map((i) => `<span class="seg${popLevel === i + 1 ? ' pop' : ''}"><i class="w${Math.max(0, Math.min(BATCH, n - i * BATCH))}"></i></span>`).join('');
   return `<div class="meter" role="img" aria-label="${LEVELS[lvl]}. ${n} de ${Q.questions.length} respuestas.">
     <div class="segs">${segs}</div><div class="cap"><b>${LEVELS[lvl]}</b><span>${n}/${Q.questions.length}</span></div></div>`;
 }
@@ -177,7 +177,7 @@ function about() {
       <p>Todas las preguntas valen lo mismo, salvo las que marques con ★: esas valen el doble. Elegir temas solo cambia el orden.</p>
       <p>Un partido tiene porcentaje desde 2 respuestas comparables. Con menos de 4, o si conocemos menos de 8 posiciones del partido, sale aparte como «con pocos datos» y no puede ganar.</p>
       <h2>La barra de arriba</h2>
-      <p>Con 5 respuestas el resultado es una pista. Con 20 es mucho más fiable. La barra te lo recuerda.</p>
+      <p>Con 5 respuestas el resultado es una pista. Con las 30 es mucho más fiable. La barra tiene un tramo por cada 5 frases y te lo recuerda.</p>
       <p>Para dar un porcentaje hacen falta al menos 3 respuestas que se puedan comparar, y al menos una de cada cuatro de las tuyas.</p>
       <h2>Quién lo lee</h2>
       <p>Una IA (Claude, de Anthropic) buscó cada tema en el texto de los programas y apuntó la página, el 12 y 13 de noviembre de 2026. Tres partidos no tienen programa en PDF (Frente Amplio, Democracia 21 y Compromís-Front Valencià): para ellos se buscó en sus webs oficiales el 13 de noviembre. Si el programa no dice nada, usamos lo que un candidato o portavoz ha dicho en público en 2026, con enlace: lo verás como «Lo dijo…». Si tampoco, miramos qué votó en el Congreso o en su parlamento: «Votó…». A veces solo hay algo parecido, no exacto: lo verás como «Parecido» y cuenta. Si un partido es nuevo, usamos lo que dijo o votó un socio o el grupo del que viene (Sumar para Frente Amplio, Ciudadanos para Democracia 21): lo verás como «De un socio o antecesor» y también cuenta. Solo queda fuera lo que no deja claro si está a favor o en contra. Lo buscaron otras IA (ChatGPT y Gemini) el 13 de noviembre. Ninguna posición la ha revisado aún una persona. Si ves un error, dínoslo abajo.</p>
@@ -229,7 +229,7 @@ function answer(val) {
   const idx = st.idx + 1, done = idx % BATCH === 0 || idx >= qs.length;
   st.answers = answers;
   const after = confidence(answered());
-  go({ idx, info: false, screen: done ? 'result' : 'question', justLevel: done && after > before ? after : 0 }, true);
+  go({ idx, info: false, screen: done ? 'result' : 'question', justLevel: done ? Math.ceil(answered() / BATCH) : 0 }, true);
 }
 
 async function share() {

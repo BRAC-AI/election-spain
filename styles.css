@@ -43,7 +43,7 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
 
 /* confidence meter */
 .meter{flex:none}
-.segs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.segs{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:5px}
 .seg{height:8px;border-radius:4px;background:var(--soft);overflow:hidden}
 .seg i{display:block;height:100%;background:var(--teal);border-radius:4px;transition:width .45s cubic-bezier(.2,.8,.2,1)}
 .w0{width:0}.w1{width:20%}.w2{width:40%}.w3{width:60%}.w4{width:80%}.w5{width:100%}
