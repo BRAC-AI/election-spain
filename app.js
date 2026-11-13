@@ -24,7 +24,7 @@ const answered = () => Object.values(st.answers).filter((a) => a in ANSWERS).len
 const parties = () => eligibleParties(P.parties, st.province);
 const stancesOf = (p) => S[p.stancesFrom || p.id] || {};
 const results = () => rankResults(parties().map((p) => ({ ...p, ...scoreParty(st.answers, stancesOf(p)) })));
-const badge = (p) => `<span class="badge">${p.logo ? `<img src="img/logos/${esc(p.logo)}" alt="">` : esc(p.abbr)}</span>`;
+const badge = (p) => `<span class="badge">${p.logo ? `<img src="img/logos/${esc(p.logo)}" alt="" width="256" height="256" loading="lazy">` : esc(p.abbr)}</span>`;
 
 function go(patch, animate = false) {
   const apply = () => { Object.assign(st, patch); save(); render(); };

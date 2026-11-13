@@ -1,0 +1,25 @@
+15 square PNG logos, 256 × 256 pixels. Prepared 13 November 2026.
+
+UPN-PP is an assembled image showing the two separate party logos. It is not a verified official coalition lockup.
+BNG and EH Bildu use white website logos on colored backgrounds for visibility.
+Coalición Canaria was extracted from its website header, omitting the adjacent European Democrats mark.
+
+Sources: official party website assets, except PSOE, Frente Amplio, Podemos and Democracia 21, sourced from ATME’s party-logo collection. EAJ-PNV uses the copy from UC3M’s EU Political Barometer: https://eupoliticalbarometer.uc3m.es/parties/26830001203.webp
+
+{
+  "PP": "https://www.pp.es/wp-content/uploads/2022/08/logo-short.svg",
+  "PSOE": "https://www.atme.es/wp-content/uploads/PSOE-1.jpg",
+  "Vox": "https://www.voxespana.es/wp-content/uploads/2019/02/logo-vox-espana.png",
+  "Frente-Amplio": "https://www.atme.es/wp-content/uploads/Frente-amplio.jpg",
+  "Podemos": "https://www.atme.es/wp-content/uploads/PODEMOS-1.png",
+  "Junts": "https://junts.cat/wp-content/uploads/2026/03/logo-junts.svg",
+  "EAJ-PNV": "https://www.eaj-pnv.eus/img/ho26/claim-eaj-pnv-v0-eu.png",
+  "EH-Bildu": "https://ehbildu.eus/img/logoa1.png",
+  "BNG": "https://www.bng.gal/media/bnggaliza/images/2022/07/21/2022072109392330061.png",
+  "Coalicion-Canaria": "https://coalicioncanaria.org/wp-content/uploads/2025/10/logo_500px-2.png",
+  "UPN": "https://www.upn.org/wp-content/uploads/2023/04/logo-200.png",
+  "SALF": "https://seacabolafiesta.com/images/salf-logo.png",
+  "Democracia-21": "https://www.atme.es/wp-content/uploads/Democracia-21.png"
+}
+ERC: https://staticen.esquerra.cat/uploads/20200511/esquerra_erc_republicana_logotip.png
+Compromís: inline SVG from https://compromis.net/

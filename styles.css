@@ -144,3 +144,10 @@ select,textarea{width:100%;min-height:48px;border:2px solid var(--soft);border-r
   .s-start .bubbles{flex:none;margin:14px 0}
   h1{font-size:34px}
 }
+
+/* v0.8: real logos */
+.badge{width:38px;height:38px;border-radius:8px;background:#fff;border:1px solid var(--line)}
+.party{grid-template-columns:38px minmax(64px,auto) 1fr 46px;min-height:46px}
+.head .badge{width:52px;height:52px}
+@media (min-width:900px) and (min-height:560px){.party{grid-template-columns:44px 140px 1fr 46px}.badge{width:44px;height:44px}}
+@media (max-height:600px){.party{min-height:40px}.badge{width:32px;height:32px}}

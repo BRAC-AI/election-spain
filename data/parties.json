@@ -1,5 +1,5 @@
 {
- "version": "0.7.0-draft",
+ "version": "0.8.0-draft",
  "inclusion_rule": "Salen los partidos que tenían diputados en el último Congreso. Además hemos añadido dos partidos nuevos sin diputados: SALF (2,2 % en las encuestas, se presenta en 46 provincias) y Democracia 21 (solo en Madrid y Barcelona). Esos dos los hemos elegido nosotros.",
  "territory_source": "afinidadpolitica.es (tercero, consultado 12-11-2026). NO verificado contra el BOE.",
  "provinces": {
@@ -76,7 +76,7 @@
    },
    "abbr": "PP",
    "site": "https://www.pp.es/",
-   "logo": null
+   "logo": "pp.png"
   },
   {
    "id": "psoe",
@@ -95,7 +95,7 @@
    },
    "abbr": "PSOE",
    "site": "https://www.psoe.es/",
-   "logo": null
+   "logo": "psoe.png"
   },
   {
    "id": "vox",
@@ -114,7 +114,7 @@
    },
    "abbr": "VOX",
    "site": "https://www.voxespana.es/",
-   "logo": null
+   "logo": "vox.png"
   },
   {
    "id": "fa",
@@ -142,7 +142,7 @@
    },
    "abbr": "FA",
    "site": "",
-   "logo": null
+   "logo": "fa.png"
   },
   {
    "id": "podemos",
@@ -173,7 +173,7 @@
    },
    "abbr": "POD",
    "site": "https://podemos.info/",
-   "logo": null
+   "logo": "podemos.png"
   },
   {
    "id": "erc",
@@ -197,7 +197,7 @@
    },
    "abbr": "ERC",
    "site": "https://www.esquerra.cat/",
-   "logo": null
+   "logo": "erc.png"
   },
   {
    "id": "junts",
@@ -221,7 +221,7 @@
    },
    "abbr": "JxC",
    "site": "https://junts.cat/",
-   "logo": null
+   "logo": "junts.png"
   },
   {
    "id": "pnv",
@@ -244,7 +244,7 @@
    },
    "abbr": "PNV",
    "site": "https://www.eaj-pnv.eus/",
-   "logo": null
+   "logo": "pnv.png"
   },
   {
    "id": "bildu",
@@ -268,7 +268,7 @@
    },
    "abbr": "EHB",
    "site": "https://ehbildu.eus/",
-   "logo": null
+   "logo": "bildu.png"
   },
   {
    "id": "bng",
@@ -292,7 +292,7 @@
    },
    "abbr": "BNG",
    "site": "https://www.bng.gal/",
-   "logo": null
+   "logo": "bng.png"
   },
   {
    "id": "cc",
@@ -314,7 +314,7 @@
    },
    "abbr": "CC",
    "site": "https://coalicioncanaria.org/",
-   "logo": null
+   "logo": "cc.png"
   },
   {
    "id": "upn-pp",
@@ -336,7 +336,7 @@
    "stancesFrom": "pp",
    "abbr": "UPN",
    "site": "https://www.upn.org/",
-   "logo": null
+   "logo": "upn-pp.png"
   },
   {
    "id": "compromis",
@@ -359,7 +359,7 @@
    },
    "abbr": "COM",
    "site": "https://compromis.net/",
-   "logo": null
+   "logo": "compromis.png"
   },
   {
    "id": "d21",
@@ -372,7 +372,7 @@
    },
    "abbr": "D21",
    "site": "",
-   "logo": null,
+   "logo": "d21.png",
    "programme": {
     "status": "not_found",
     "type": "web",
@@ -398,7 +398,7 @@
    },
    "abbr": "SALF",
    "site": "https://seacabolafiesta.com/",
-   "logo": null,
+   "logo": "salf.png",
    "programme": {
     "status": "verification_pending",
     "type": "programa_29N",
