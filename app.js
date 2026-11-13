@@ -44,7 +44,7 @@ const countText = () => `Elige hasta 3 temas${st.bubbles.length ? ` · ${st.bubb
 function start() {
   const provs = Object.entries(P.provinces).sort((a, b) => a[1].localeCompare(b[1], 'es'));
   return `
-    <h1 tabindex="-1">¿Qué partido piensa como tú?</h1>
+    <h1 tabindex="-1">¿Qué temas son los más importantes para ti?</h1>
     <p class="muted" id="count">${countText()}</p>
     <div class="bubbles grow${st.bubbles.length >= MAX_BUBBLES ? ' full' : ''}" role="group" aria-label="Temas">
       ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
