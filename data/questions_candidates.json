@@ -102,6 +102,13 @@
    "id": "Q40",
    "category": "eu",
    "text": "Las leyes españolas deben estar por encima de las de la Unión Europea."
+  },
+  {
+   "id": "Q41",
+   "category": "climate",
+   "text": "España debe cumplir las normas europeas contra el cambio climático, aunque cuesten dinero.",
+   "info": "La Unión Europea tiene un plan, el Pacto Verde, para contaminar menos. Obliga a cambiar coches, fábricas y cultivos. Unos lo ven necesario y otros demasiado caro.",
+   "image": null
   }
  ]
 }
