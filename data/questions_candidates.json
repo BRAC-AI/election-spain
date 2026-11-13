@@ -137,6 +137,14 @@
    "text": "Los trenes de cercanías los debe gestionar cada comunidad, no el Estado.",
    "info": "Hoy casi todos los trenes de cercanías los lleva Renfe, que es del Estado. Cataluña ha pedido gestionar los suyos. Unos quieren lo mismo para todas; otros, una sola red.",
    "image": null
+  },
+  {
+   "id": "Q11",
+   "category": "education",
+   "text": "En todos los colegios de España se debe dar clase en castellano.",
+   "info": "Importa sobre todo donde hay otra lengua, como el catalán, el euskera o el gallego.",
+   "image": null,
+   "retired": "2026-11-13: 9 de 14 partidos sin posición propia. Sustituida por Q35."
   }
  ]
 }

@@ -89,8 +89,8 @@ test('province filter', () => {
   assert.equal(eligibleParties(P.parties, '').length, P.parties.length);
 });
 test('data integrity', () => {
-  assert.equal(Q.questions.length, 20);
-  assert.equal(new Set(Q.questions.map((q) => q.id)).size, 20);
+  assert.equal(Q.questions.length, 30);
+  assert.equal(new Set(Q.questions.map((q) => q.id)).size, 30);
   for (const q of Q.questions) assert.ok(Q.categories[q.category], q.id);
   const bubbleCats = Q.bubbles.flatMap((b) => b.categories);
   assert.deepEqual([...bubbleCats].sort(), Object.keys(Q.categories).sort()); // every category has exactly one bubble

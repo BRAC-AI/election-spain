@@ -148,3 +148,13 @@ To find at least some evidence for every pair, the research prompts (`docs/resea
 | 7 and 8 | The position of a coalition member or predecessor group, or a nearby measure | Shown as "Pista", does not count |
 
 Rows whose link the tool did not open are checked before they are loaded.
+
+## 30 statements (13 November 2026, evening)
+
+The fourth research run (`docs/research/2026-11-13_citas/r4_*.csv`) covered 25 spare statements and the 48 open pairs. Result:
+
+- The app now asks 30 statements. Ten spare ones with the best coverage were added (Q23, Q24, Q26, Q37, Q39, Q41, Q42, Q43, Q44, Q45).
+- Q11 (Spanish in all schools) was retired: 9 of 14 parties had no position of their own. Q35 (co-official languages in Congress and the State administration) replaces it, because nearly every party voted on it.
+- The other 14 spare statements and their positions are kept in `data/questions_candidates.json` and `data/stances_candidates.json`.
+- Rows the research tool did not open are loaded as hints, except SALF programme lines, which were checked against the PDF text.
+- Compromís's own deputies and spokespeople count as the coalition's own evidence. Sumar's record does not count for Frente Amplio, and Ciudadanos's record does not count for Democracia 21; both are shown as hints.

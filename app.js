@@ -52,7 +52,7 @@ function start() {
       ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
     </div>
     <div class="btns"><button type="button" class="cta" data-act="towhere">Siguiente</button></div>
-    <p class="note">${Q.questions.length} preguntas · 3 minutos · anónimo</p>`;
+    <p class="note">${Q.questions.length} preguntas · 5 minutos · anónimo</p>`;
 }
 
 // A region needs a second tap only when its provinces have different ballots.
@@ -213,7 +213,7 @@ function how() {
         <div class="mini bars" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div></div></li>
     </ol>
     <div class="btns"><button type="button" class="cta" data-act="go">Empezar</button></div>
-    <p class="note">3 minutos · anónimo · ves el resultado cada 5 frases</p>`;
+    <p class="note">5 minutos · anónimo · ves el resultado cada 5 frases</p>`;
 }
 const SCREENS = { start, where, how, question, result, why, about };
 function render() {
@@ -233,7 +233,7 @@ function answer(val) {
 }
 
 async function share() {
-  const data = { title: 'Guía de voto 29N', text: '¿Qué partido piensa como tú? 20 preguntas, 3 minutos.', url: location.origin + location.pathname };
+  const data = { title: 'Guía de voto 29N', text: '¿Qué partido piensa como tú? 20 preguntas, 5 minutos.', url: location.origin + location.pathname };
   try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); app.querySelector('[data-act=share]').textContent = 'Enlace copiado'; } } catch { /* cancelled */ }
 }
 

@@ -4,9 +4,10 @@ from playwright.sync_api import sync_playwright
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8080/'
 # Persona: Laia, 31, rents a flat in Barcelona, works in a shop. Cares about housing and work.
 ANS = {'tope al precio': 'sa', 'comprar casa': 'a', 'muy ricas': 'a', 'menos impuestos': 'a', 'menos horas': 'sa', 'sueldo mínimo': 'sa',
-       'ayuda por cada hijo': 'a', 'sin papeles deben poder usar': 'a', 'hospitales privados': 'd', 'concertados': 'skip', 'castellano': 'd',
+       'ayuda por cada hijo': 'a', 'sin papeles deben poder usar': 'a', 'hospitales privados': 'd', 'concertados': 'skip',
        'nucleares': 'skip', 'dar papeles': 'a', 'españoles deben ir primero': 'd', 'ejército': 'd', 'informe médico': 'd', 'aborto': 'sa',
-       'separarse': 'a', 'cobrar todos sus impuestos': 'a', 'armas a Ucrania': 'skip'}
+       'separarse': 'a', 'cobrar todos sus impuestos': 'a', 'armas a Ucrania': 'skip',
+       'Heredar': 'd', 'bancos': 'sa', 'desalojado': 'd', 'catalán': 'sa', 'eutanasia': 'sa', 'Israel': 'sa', 'cambio climático': 'sa', 'pensiones': 'sa', 'Sáhara': 'sa', 'autónomos': 'a', 'cercanías': 'sa'}
 errs, log = [], []
 def fits(pg, name):
     m = pg.evaluate("""() => { const d=document.documentElement, c=document.querySelector('.card'), s=document.querySelector('.screen');
@@ -52,7 +53,7 @@ with sync_playwright() as p:
                 pg.screenshot(path=f'/tmp/shots/{tag}_r{n}.png')
                 if not pg.locator('[data-act=more]').count(): break
                 pg.click('[data-act=more]'); pg.wait_for_selector('.statement')
-        assert n == 20
+        assert n == 30
         vals = [int(v.replace(' %', '')) for v in pg.locator('.party:not(.thin) .val').all_inner_texts()]   # ranked parties
         thin = [int(v.replace(' %', '')) for v in pg.locator('.party.thin .val').all_inner_texts()]         # shown apart, never ranked
         assert vals == sorted(vals, reverse=True) and thin == sorted(thin, reverse=True) and all(0 <= v <= 100 for v in vals + thin), (vals, thin)
