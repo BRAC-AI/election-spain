@@ -1,88 +1,66 @@
 # Method
 
-This is the method the tool uses today. Earlier rules are in [CHANGELOG.md](CHANGELOG.md).
+**In one sentence:** you answer 30 statements, and the tool shows which party thinks most like you, with a link behind every party position.
 
-## 1. What it is
+## In short
 
-A voter answers 30 statements. The tool compares the answers with what each party thinks and shows a match in percent. It is for the Spanish general election of 29 November 2026.
+- It is for the Spanish general election of 29 November 2026.
+- AI found what each party thinks. A person has not reviewed every position, so it can contain errors.
+- It does not tell you how to vote.
+- Your answers stay on your device. We only keep what you write in the feedback form.
 
-It does not tell anyone how to vote. It does not try to change anyone's view. It stores nothing: no account, no cookies, no tracking.
+## Key points
 
-## 2. Parties
+### 1. The percent
 
-- Every party that had seats in the Congress dissolved in October 2026.
-- Two new parties chosen by us: SALF and Democracia 21. Both are new and in the news; adding only one would look biased.
-- UPN-PP (Navarra) uses PP's positions.
+Code: `scoring.js`.
 
-A voter only sees the parties on the ballot where they vote. The province lists come from the official list of proclaimed candidacies (BOE-A-2026-23103, 3 November 2026), in `data/ballots_boe.csv`. An AI extracted it. The correction of 7 November is not included.
+- You answer: muy a favor (+2), a favor (+1), en contra (-1), muy en contra (-2). "No lo sé" is skipped.
+- A party is: a favor (+2), a medias (0), en contra (-2). An abstention in a vote is "a medias".
+- Agreement on one statement = 1 minus the distance divided by 4. Same side and strength gives 100 %. Opposite ends give 0 %.
+- The percent is the average over the statements where both you and the party have a position.
+- A statement you mark with the star counts double.
+- If a party has no position on a statement, that statement is left out. It never counts against the party.
+- A party gets a percent once 2 statements can be compared. Parties within 3 points are a tie.
+- The result is marked provisional until you have seen all 30 statements.
 
-## 3. Statements
+### 2. Where a position comes from
 
-30 statements in `data/questions.json`. Each one:
+Every position has a link. 391 of 420 party-statement pairs have one.
 
-- is one idea, in words a 12-year-old understands;
-- splits the parties (if all agree, it is useless);
-- can be answered for or against.
+| Evidence | Shown as | Positions |
+|---|---|---|
+| Vote in Congress, the Senate, a regional parliament or the European Parliament | "Votó: ..." | 160 |
+| The party's programme for 29 November 2026 | Programme and page | 70 |
+| The party's own earlier programme | "(programa anterior)" | 58 |
+| Direct quote from its candidate, leader or spokesperson | "Lo dijo ..." | 41 |
+| Close but not exact, with a clear direction | "Parecido, no exacto" | 36 |
+| Record of a member or predecessor of a new coalition (Sumar, IU, Comuns for Frente Amplio) | "De un socio o antecesor del partido" | 16 |
+| The party's website or official documents | Link | 10 |
 
-15 more are kept in reserve in `data/questions_candidates.json`, with their positions in `data/stances_candidates.json`.
+Not used: another party's record (for example Ciudadanos for Democracia 21), other voting guides, a rival's opinion, or guesses from ideology.
 
-## 4. Where a party's position comes from
+### 3. Who did the work
 
-Every position has a link. The app shows which kind of evidence it is.
+- Claude (Anthropic) read the programme PDFs, 12 and 13 November 2026.
+- ChatGPT and Gemini deep research searched votes and quotes, 13 November 2026.
+- Each position in `data/stances.json` says who coded it. Its source is in `data/sources.json`.
 
-| Evidence | Shown in the app as | Counts | Positions today |
-|---|---|---|---|
-| The party's programme for 29 November 2026 | Programme and page | Yes | 70 |
-| The party's own earlier programme | "(programa anterior)" | Yes | 58 |
-| The party's official website or documents | Link | Yes | 10 |
-| A vote in Congress, the Senate, a regional parliament or the European Parliament | "Votó: ..." | Yes. An abstention is "a medias" | 160 |
-| A direct quote from the candidate, leader or a named spokesperson, including video | "Lo dijo ..." | Yes | 41 |
-| Close but not exact: a nearby measure with a clear direction, or a serious outlet describing the position | "Parecido, no exacto" | Yes | 36 |
-| The record of a member or predecessor of a new coalition (Sumar, IU, Comuns for Frente Amplio) | "De un socio o antecesor del partido" | Yes | 16 |
-| The record of a different party (for example Ciudadanos for Democracia 21) | Not shown | No | |
-| Evidence from the party about a different measure, with no clear direction | "Lo más cercano que hemos encontrado" | No | |
-| Nothing found | "No hemos encontrado nada" | No | |
+### 4. Parties and statements
 
-Never used: other voting-advice sites, a rival's opinion, or guessing from ideology.
+- Parties: all with seats in the Congress dissolved in October 2026, plus two new ones we chose, SALF and Democracia 21. UPN-PP (Navarra) uses PP's positions.
+- You only see the parties on the ballot where you vote. Source: BOE-A-2026-23103 (3 November 2026), in `data/ballots_boe.csv`. The correction of 7 November is not included.
+- Statements: one idea each, in words a 12-year-old understands, and chosen because the parties disagree.
+- Order: random on every run. The topics you pick come first. Topics change the order, not the weight.
 
-391 of 420 party-statement pairs have a position that counts.
+### 5. Limits
 
-## 5. Who did the work
+- AI-coded and not fully reviewed by a person.
+- We did not open the vote records one by one. They come from one research run.
+- Frente Amplio is a new coalition: 15 of its 30 positions come from Sumar's record.
+- Democracia 21 has 10 positions and SALF has 22. The other parties have 29 or 30.
+- Some positions come from older programmes.
 
-- Claude (Anthropic) read the programme PDFs and coded positions, 12 and 13 November 2026.
-- ChatGPT and Gemini deep research searched votes, quotes and other evidence on 13 November 2026.
-- No person has reviewed every position. Links the research tools could not open do not count.
+### 6. Correct something
 
-Each position in `data/stances.json` records who coded it and from which source (`data/sources.json`).
-
-## 6. How the percent is calculated
-
-Code: `scoring.js`. It is plain arithmetic, the same for everyone.
-
-- Answers: muy a favor (+2), a favor (+1), en contra (-1), muy en contra (-2). "No lo sé" is skipped.
-- Party positions: a favor (+2), a medias (0), en contra (-2).
-- Agreement on one statement = 1 minus the distance divided by 4. Same side and same strength is 100 %. Opposite ends is 0 %.
-- The percent is the average over the statements where both the voter and the party have a position.
-- A statement marked with the star counts double.
-- A statement where the party has no position is left out. It never counts as disagreement.
-- Choosing topics at the start only changes the order of the statements. It does not change their weight.
-- The order of the statements is random on every run. The voter's chosen topics come first.
-
-## 7. When a result is shown
-
-- A party gets a percent from 2 comparable answers.
-- All parties are in one list, best match first. Every party has at least 8 known positions; Democracia 21 has the fewest (10, all from its own programme and its candidate).
-- Parties within 3 points of each other are shown as a tie.
-- Until the voter has gone through all 30 statements the winner card says "Resultado provisional".
-
-## 8. Known limits
-
-- AI-coded, not fully human-reviewed.
-- Votes are read from one research run. The vote records were not opened one by one by us.
-- Some parties are judged partly on older material because their 29N programme was not available or did not cover a topic.
-- Frente Amplio is a new coalition: 16 of its 30 positions come from Sumar's record.
-- 30 statements cannot cover everything a party stands for.
-
-## 9. How to correct something
-
-Use the form on the "Cómo funciona" page, or open an issue or pull request. Say which party, which statement, and give a link to the source.
+Use the form on the "Cómo funciona" page or open an issue. Say which party and statement, and give a link.

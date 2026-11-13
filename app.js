@@ -185,13 +185,13 @@ function about() {
       <p>Toca cualquier partido y verás, frase a frase, qué piensa y de dónde lo hemos sacado, con su enlace.</p>
       <h2>Lo que no es</h2>
       <p>No quiere cambiar lo que piensas. No te dice a quién votar. Solo te ayuda a orientarte.</p>
-      <p>No guarda nada: sin registro, sin cookies, sin rastreo.</p>
+      <p>Tus respuestas no salen de tu móvil. Solo guardamos lo que nos escribas en el formulario de abajo.</p>
       <h2>Puede haber errores</h2>
-      <p>Hemos buscado las mejores fuentes que hemos podido. Pero la búsqueda la hizo una IA y una persona no lo ha revisado todo.</p>
-      <p>A veces no hay una fuente exacta. Entonces usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».</p>
+      <p>Una IA buscó las fuentes y una persona no lo ha revisado todo. Hemos usado las mejores que encontramos.</p>
+      <p>Si no hay una fuente exacta, usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».</p>
       <h2>Quién lo hace</h2>
       <p>Lo hicimos en <a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a> para Núria, que quería saber a quién votar. Es gratis y no hay ningún partido detrás.</p>
-      <p>Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">el código y los datos</a> y <a href="${REPO}/blob/main/docs/METHODOLOGY.md" rel="noopener noreferrer" target="_blank">el método completo</a>.</p>
+      <p>Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">el código, los datos y el método</a>.</p>
       <h2>¿Ves algo mal?</h2>
       <p>Si no estás de acuerdo con algo, o crees que una fuente está mal o es antigua, dínoslo. Tu opinión es muy bienvenida.</p>
       <form id="fb" novalidate>
