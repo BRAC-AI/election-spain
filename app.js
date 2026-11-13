@@ -241,7 +241,7 @@ function answer(val) {
 }
 
 async function share() {
-  const data = { title: 'Guía de voto 29N', text: '¿Qué partido piensa como tú? 20 preguntas, 5 minutos.', url: location.origin + location.pathname };
+  const data = { title: 'Guía de voto 29N', text: `¿Qué partido piensa como tú? ${Q.questions.length} preguntas, 5 minutos.`, url: location.origin + location.pathname };
   try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); app.querySelector('[data-act=share]').textContent = 'Enlace copiado'; } } catch { /* cancelled */ }
 }
 

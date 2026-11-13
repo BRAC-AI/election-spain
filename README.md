@@ -2,7 +2,7 @@
 
 Answer 30 statements and see which party thinks most like you, with a source for every party position. For the Spanish general election of 29 November 2026.
 
-**Live:** https://guia-voto-29n.netlify.app
+**Live:** https://voto.bracai.eu
 
 Made by [BRACAI](https://bracai.eu) for Núria, who wanted to know who to vote for. It is free and no party is behind it.
 
