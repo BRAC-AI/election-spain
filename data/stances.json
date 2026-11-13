@@ -1672,6 +1672,15 @@
     "coder": "IA (deep research, 13-11-2026) + IA (Claude)",
     "status": "ai_coded_unreviewed",
     "src": "cita-d21-q14"
+   },
+   "Q04": {
+    "stance": "conditional",
+    "page": "web",
+    "summary": "Quiere aliviar los impuestos de la clase media, no los de todo el mundo.",
+    "quote": "aliviar la presión fiscal sobre una clase media que es que está asfixiada",
+    "coder": "IA (Claude), transcripción aportada por BRACAI",
+    "status": "ai_coded_unreviewed",
+    "src": "cita-d21-q04"
    }
   },
   "compromis": {
@@ -2117,16 +2126,6 @@
    }
   },
   "d21": {
-   "Q04": {
-    "stance": "conditional",
-    "page": "web",
-    "summary": "Ofrece deducciones temporales de IRPF a sanitarios que regresen a España.",
-    "coder": "IA (deep research v2, 13-11-2026)",
-    "status": "ai_coded_unreviewed",
-    "src": "pista-d21-q04",
-    "why_approx": "Es una rebaja para un colectivo concreto; no reduce el IRPF de todo el mundo.",
-    "confidence": "media"
-   },
    "Q16": {
     "stance": "oppose",
     "page": "web",
