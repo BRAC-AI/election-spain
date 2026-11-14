@@ -1,9 +1,9 @@
 from playwright.sync_api import sync_playwright
-import json
+import json, sys
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path='/usr/bin/google-chrome',args=['--no-sandbox']); bad=[]
     for vp in ({'width':360,'height':600},{'width':390,'height':664}):
-        pg=b.new_page(viewport=vp); pg.emulate_media(reduced_motion='reduce'); pg.goto('http://localhost:8080/'); pg.click('[data-act=towhere]'); pg.click('[data-act=begin]'); pg.click('[data-act=go]')
+        pg=b.new_page(viewport=vp); pg.emulate_media(reduced_motion='reduce'); pg.goto('http://localhost:8080/' + (sys.argv[1] if len(sys.argv) > 1 else '')); pg.click('[data-act=towhere]'); pg.click('[data-act=begin]'); pg.click('[data-act=go]')
         for i in range(30):
             pg.wait_for_selector('.statement'); pg.click('[data-act=info]')
             m=pg.evaluate("()=>{const c=document.querySelector('.card');return [c.scrollHeight-c.clientHeight, document.documentElement.scrollHeight-innerHeight, document.querySelector('.statement').innerText.slice(0,50)]}")

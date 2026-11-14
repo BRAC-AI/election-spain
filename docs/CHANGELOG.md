@@ -12,3 +12,5 @@
 ## 12 November 2026
 
 - First version: 20 statements, positions from programmes only.
+
+- 14 Nov: Catalan version. Interface and the 30 statements; position summaries stay in Spanish. Switch in the header, or `?lang=ca`.

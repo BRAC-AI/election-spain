@@ -1,15 +1,20 @@
+import CA from './ca.js';
 import { scoreParty, enoughData, rankResults, orderQuestions, eligibleParties, confidence, ANSWERS, CONFIG } from './scoring.js';
 
 const app = document.querySelector('#app');
+// Language: ?lang=ca wins, then the saved choice, then the browser. Spanish text is the key; ca.js holds the Catalan.
+const LANG = (() => { let v = new URLSearchParams(location.search).get('lang'); try { if (v) localStorage.setItem('guia29n-lang', v); else v = localStorage.getItem('guia29n-lang'); } catch { /* storage unavailable */ } return (v || navigator.language || '').toLowerCase().startsWith('ca') ? 'ca' : 'es'; })();
+const t = (s) => (LANG === 'ca' && CA[s]) || s;
+const tx = (o, k) => (LANG === 'ca' && o[k + '_ca']) || o[k];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const load = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p); return r.json(); });
 const BATCH = CONFIG.step, MAX_BUBBLES = 3;
 const REPO = 'https://github.com/BRAC-AI/election-spain';
-const OPTS = [['sa', 'Muy a favor'], ['a', 'A favor'], ['d', 'En contra'], ['sd', 'Muy en contra']];
+const OPTS = [['sa', t('Muy a favor')], ['a', t('A favor')], ['d', t('En contra')], ['sd', t('Muy en contra')]];
 const LABELS = Object.fromEntries(OPTS);
-const STANCE = { support: 'A favor', oppose: 'En contra', conditional: 'A medias', insufficient_evidence: 'No lo dice' };
-const SRC = { programa_29N: 'Programa 29N', programa_anterior: 'Programa anterior', web: 'Web' };
-const LEVELS = ['Aún nada', 'Poco fiable', 'Algo fiable', 'Bastante fiable', 'Muy fiable'];
+const STANCE = { support: t('A favor'), oppose: t('En contra'), conditional: t('A medias'), insufficient_evidence: t('No lo dice') };
+const SRC = { programa_29N: t('Programa 29N'), programa_anterior: t('Programa anterior'), web: t('Web') };
+const LEVELS = [t('Aún nada'), t('Poco fiable'), t('Algo fiable'), t('Bastante fiable'), t('Muy fiable')];
 const FRESH = { screen: 'start', bubbles: [], region: '', province: '', idx: 0, answers: {}, stars: {}, party: null, info: false };
 
 let Q, P, S, SV, SO, M, HI = {}; // questions, parties, stances, stances version, sources, map
@@ -39,20 +44,20 @@ function go(patch, animate = false) {
 function meter(popLevel = 0) {
   const n = answered(), total = Q.questions.length, lvl = n === 0 ? 0 : Math.min(4, 1 + Math.floor((3 * n) / total)); // label follows the share answered
   const segs = Array.from({ length: Math.ceil(total / BATCH) }, (_, i) => i).map((i) => `<span class="seg${popLevel === i + 1 ? ' pop' : ''}"><i class="w${Math.max(0, Math.min(BATCH, n - i * BATCH))}"></i></span>`).join('');
-  return `<div class="meter" role="img" aria-label="${LEVELS[lvl]}. ${n} de ${Q.questions.length} respuestas.">
-    <div class="segs">${segs}</div><div class="cap"><span><b>${LEVELS[lvl]}</b>${lvl === 1 ? ` (solo ${n} preguntas. Haz más para estar más seguro)` : lvl === 2 ? ` (${n} preguntas. Sigue para afinar)` : ''}</span><span>${n}/${Q.questions.length}</span></div></div>`;
+  return `<div class="meter" role="img" aria-label="${LEVELS[lvl]}. ${n} de ${Q.questions.length}${t(' respuestas.')}">
+    <div class="segs">${segs}</div><div class="cap"><span><b>${LEVELS[lvl]}</b>${lvl === 1 ? `${t(' (solo ')}${n}${t(' preguntas. Haz más para estar más seguro)')}` : lvl === 2 ? ` (${n}${t(' preguntas. Sigue para afinar)')}` : ''}</span><span>${n}/${Q.questions.length}</span></div></div>`;
 }
 
-const countText = () => `Elige hasta 3 temas${st.bubbles.length ? ` · ${st.bubbles.length}/3` : ''}`;
+const countText = () => `${t('Elige hasta 3 temas')}${st.bubbles.length ? ` · ${st.bubbles.length}/3` : ''}`;
 function start() {
   return `
-    <h1 tabindex="-1">¿Qué temas son los más importantes para ti?</h1>
+    <h1 tabindex="-1">${t('¿Qué temas son los más importantes para ti?')}</h1>
     <p class="muted" id="count">${countText()}</p>
-    <div class="bubbles grow${st.bubbles.length >= MAX_BUBBLES ? ' full' : ''}" role="group" aria-label="Temas">
-      ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(b.label)}</button>`).join('')}
+    <div class="bubbles grow${st.bubbles.length >= MAX_BUBBLES ? ' full' : ''}" role="group" aria-label="${t('Temas')}">
+      ${Q.bubbles.map((b) => `<button type="button" class="bubble" data-bubble="${esc(b.id)}" aria-pressed="${st.bubbles.includes(b.id)}">${esc(tx(b, 'label'))}</button>`).join('')}
     </div>
-    <div class="btns"><button type="button" class="cta" data-act="towhere">Siguiente</button></div>
-    <p class="note">Los temas que elijas salen primero. No valen más: para eso está la ★.</p>`;
+    <div class="btns"><button type="button" class="cta" data-act="towhere">${t('Siguiente')}</button></div>
+    <p class="note">${t('Los temas que elijas salen primero. No valen más: para eso está la ★.')}</p>`;
 }
 
 // A region needs a second tap only when its provinces have different ballots.
@@ -64,16 +69,16 @@ function where() {
   const r = st.region ? regionById(st.region) : null, need = r && needsProvince(r), ready = !r || !need || st.province;
   const [ix, iy, iw, ih] = M.inset;
   return `
-    <button type="button" class="link" data-act="tostart">← Temas</button>
-    <h1 tabindex="-1">¿Dónde votas?</h1>
-    <svg class="map grow" viewBox="${M.viewBox}" role="group" aria-label="Mapa de España. Toca tu comunidad.">
+    <button type="button" class="link" data-act="tostart">← ${t('Temas')}</button>
+    <h1 tabindex="-1">${t('¿Dónde votas?')}</h1>
+    <svg class="map grow" viewBox="${M.viewBox}" role="group" aria-label="${t('Mapa de España. Toca tu comunidad.')}">
       <rect class="inset" x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="4" data-region="05"/>
-      ${M.regions.map((g) => `<path class="reg${g.id === st.region ? ' sel' : ''}" d="${g.d}" data-region="${g.id}" tabindex="0" role="button" aria-pressed="${g.id === st.region}" aria-label="${esc(g.name)}"><title>${esc(g.name)}</title></path>`).join('')}
+      ${M.regions.map((g) => `<path class="reg${g.id === st.region ? ' sel' : ''}" d="${g.d}" data-region="${g.id}" tabindex="0" role="button" aria-pressed="${g.id === st.region}" aria-label="${esc(t(g.name))}"><title>${esc(t(g.name))}</title></path>`).join('')}
     </svg>
-    <select id="reg" aria-label="O elige tu comunidad en la lista"><option value="">…o elige en la lista</option>${all.map((g) => `<option value="${g.id}" ${g.id === st.region ? 'selected' : ''}>${esc(g.name)}</option>`).join('')}</select>
-    ${need ? `<div class="chips" role="group" aria-label="Provincia">${r.provinces.map((c) => `<button type="button" class="chip" data-prov="${c}" aria-pressed="${st.province === c}">${esc(P.provinces[c])}</button>`).join('')}</div>` : ''}
-    <div class="btns"><button type="button" class="cta" data-act="begin" ${ready ? '' : 'disabled'}>${r ? (ready ? 'Empezar' : 'Elige tu provincia') : 'Empezar sin elegir'}</button></div>
-    <p class="note">${r ? esc(r.name) + (st.province && need ? ' · ' + esc(P.provinces[st.province]) : '') : 'Así ves solo los partidos que puedes votar'}</p>`;
+    <select id="reg" aria-label="${t('O elige tu comunidad en la lista')}"><option value="">${t('…o elige en la lista')}</option>${all.map((g) => `<option value="${g.id}" ${g.id === st.region ? 'selected' : ''}>${esc(t(g.name))}</option>`).join('')}</select>
+    ${need ? `<div class="chips" role="group" aria-label="${t('Provincia')}">${r.provinces.map((c) => `<button type="button" class="chip" data-prov="${c}" aria-pressed="${st.province === c}">${esc(P.provinces[c])}</button>`).join('')}</div>` : ''}
+    <div class="btns"><button type="button" class="cta" data-act="begin" ${ready ? '' : 'disabled'}>${r ? (ready ? t('Empezar') : t('Elige tu provincia')) : t('Empezar sin elegir')}</button></div>
+    <p class="note">${r ? esc(t(r.name)) + (st.province && need ? ' · ' + esc(P.provinces[st.province]) : '') : t('Así ves solo los partidos que puedes votar')}</p>`;
 }
 const pickRegion = (id) => { const r = regionById(id); go({ region: r ? id : '', province: r && !needsProvince(r) ? r.provinces[0] : '' }); };
 
@@ -83,34 +88,34 @@ function question() {
     ${meter()}
     <div class="card grow">
       ${q.image ? `<img src="img/${esc(q.image)}" alt="">` : ''}
-      <div class="cardtop"><p class="eyebrow">${esc(Q.categories[q.category])}</p><button type="button" class="starbtn" data-act="star" aria-pressed="${!!(st.stars || {})[q.id]}" aria-label="Muy importante para mí: vale el doble"><span aria-hidden="true">★</span> <span class="lbl">${(st.stars || {})[q.id] ? 'Vale el doble' : 'Muy importante'}</span></button></div>
-      <p class="statement${q.text.length > 80 ? ' long' : ''}" tabindex="-1">${esc(q.text)}</p>
-      ${st.info ? `<p class="info">${esc(q.info)}</p>` : `<button type="button" class="infobtn" data-act="info">¿Qué significa?</button>`}
+      <div class="cardtop"><p class="eyebrow">${esc(tx(Q, 'categories')[q.category])}</p><button type="button" class="starbtn" data-act="star" aria-pressed="${!!(st.stars || {})[q.id]}" aria-label="${t('Muy importante para mí: vale el doble')}"><span aria-hidden="true">★</span> <span class="lbl">${(st.stars || {})[q.id] ? t('Vale el doble') : t('Muy importante')}</span></button></div>
+      <p class="statement${tx(q, 'text').length > 80 ? ' long' : ''}" tabindex="-1">${esc(tx(q, 'text'))}</p>
+      ${st.info ? `<p class="info">${esc(tx(q, 'info'))}</p>` : `<button type="button" class="infobtn" data-act="info">${t('¿Qué significa?')}</button>`}
     </div>
-    <div class="scale" role="group" aria-label="Tu respuesta">
+    <div class="scale" role="group" aria-label="${t('Tu respuesta')}">
       ${OPTS.map(([k, l], i) => `<button type="button" class="opt" data-ans="${k}" aria-pressed="${st.answers[q.id] === k}" aria-keyshortcuts="${i + 1}"><span class="dot"></span><span>${l}</span><span class="go" aria-hidden="true">→</span></button>`).join('')}
-      <button type="button" class="opt skip" data-ans="skip"><span class="dot"></span><span>No lo sé</span><span class="go" aria-hidden="true">→</span></button>
+      <button type="button" class="opt skip" data-ans="skip"><span class="dot"></span><span>${t('No lo sé')}</span><span class="go" aria-hidden="true">→</span></button>
     </div>
-    <button type="button" class="link" data-act="back">← ${st.idx === 0 ? 'Temas' : 'Atrás'}</button>`;
+    <button type="button" class="link" data-act="back">← ${st.idx === 0 ? t('Temas') : t('Atrás')}</button>`;
 }
 
 function hero(rows) {
   const top = rows.filter((r) => r.rank === 1), scored = rows.filter((r) => r.conclusive && !r.thin).length;
-  if (top.length && scored * 2 < rows.length) return `<p class="empty">Solo podemos comparar con ${scored} de ${rows.length} partidos. Aún no hay ganador.</p>`;
-  if (!top.length) return `<p class="empty">${answered() ? 'Aún no podemos comparar. Sigue un poco más.' : 'Responde alguna pregunta para ver tu resultado.'}</p>`;
+  if (top.length && scored * 2 < rows.length) return `<p class="empty">${t('Solo podemos comparar con ')}${scored} de ${rows.length}${t(' partidos. Aún no hay ganador.')}</p>`;
+  if (!top.length) return `<p class="empty">${answered() ? t('Aún no podemos comparar. Sigue un poco más.') : t('Responde alguna pregunta para ver tu resultado.')}</p>`;
   const r = top[0], left = order().length - st.idx;
   return `<button type="button" class="hero" data-party="${esc(r.id)}">
     <span class="ringwrap"><svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
       <circle class="track" cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52" pathLength="100" stroke-dasharray="${r.alignment} 100" transform="rotate(-90 60 60)"/></svg>
       <span class="num">${r.alignment}<small>%</small></span></span>
-    <span class="herotext"><span class="eyebrow">${st.idx < Q.questions.length ? 'Resultado provisional · ' : ''}${top.length > 1 ? 'Empate' : 'Más cerca de ti'}</span>
+    <span class="herotext"><span class="eyebrow">${st.idx < Q.questions.length ? t('Resultado provisional · ') : ''}${top.length > 1 ? t('Empate') : t('Más cerca de ti')}</span>
       <span class="heroname">${top.map((x) => esc(x.name)).join(' · ')}</span>
-      <span class="muted">${left > 0 ? `Puede cambiar: te faltan ${left} preguntas` : 'Toca para ver por qué'}</span></span></button>`;
+      <span class="muted">${left > 0 ? `${t('Puede cambiar: te faltan ')}${left}${t(' preguntas')}` : t('Toca para ver por qué')}</span></span></button>`;
 }
 
 const oldTag = () => ''; // positions now mix programmes, votes and quotes, so one year tag would mislead
 const row = (r) => `
-      <button type="button" class="party${r.conclusive ? (r.thin ? ' thin' : '') : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + ' por ciento' : 'aún sin porcentaje, sigue respondiendo'}">
+      <button type="button" class="party${r.conclusive ? (r.thin ? ' thin' : '') : ' blank'}" data-party="${esc(r.id)}" aria-label="${esc(r.name)}: ${r.conclusive ? r.alignment + t(' por ciento') : t('aún sin porcentaje, sigue respondiendo')}">
         ${badge(r)}<span class="name">${esc(r.name)}</span>
         <span class="bar" aria-hidden="true"><i class="p${r.conclusive ? Math.round(r.alignment / 5) * 5 : 0}"></i></span><span class="val">${r.conclusive ? r.alignment + ' %' : '–'}</span>
       </button>`;
@@ -122,10 +127,10 @@ function result() {
     ${hero(rows)}
     <div class="list grow scroll">${rows.filter((r) => r.conclusive).sort((x, y) => y.alignment - x.alignment || x.name.localeCompare(y.name, 'es')).map(row).join('')}
       ${rows.filter((r) => !r.conclusive).map(row).join('')}
-      <p class="note">Hay más listas. Estas tenían escaño, más dos nuevas.</p></div>
+      <p class="note">${t('Hay más listas. Estas tenían escaño, más dos nuevas.')}</p></div>
     <div class="btns">
-      ${left > 0 ? `<button type="button" class="cta" data-act="more">Seguir: te faltan ${left}</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
-      <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
+      ${left > 0 ? `<button type="button" class="cta" data-act="more">${t('Seguir: te faltan ')}${left}</button>` : `<button type="button" class="cta" data-act="share">${t('Compartir')}</button>`}
+      <button type="button" class="cta alt" data-act="restart" aria-label="${t('Empezar de nuevo')}">↺</button>
     </div>
 `;
 }
@@ -138,73 +143,73 @@ function why() {
   const agr = Object.fromEntries(r.perQuestion.map((x) => [x.q, x.agreement]));
   const same = (q, s) => (s === 'support' && ANSWERS[st.answers[q.id]] > 0) || (s === 'oppose' && ANSWERS[st.answers[q.id]] < 0);
   return `
-    <button type="button" class="link" data-act="toresult">← Volver</button>
+    <button type="button" class="link" data-act="toresult">← ${t('Volver')}</button>
     <div class="head">${badge(p)}<h1 tabindex="-1">${esc(p.name)}</h1><span class="val">${r.conclusive ? r.alignment + ' %' : '–'}</span></div>
-    ${p.about ? `<p class="who">${esc(p.about)}</p>` : ''}
+    ${p.about ? `<p class="who">${esc(tx(p, 'about'))}</p>` : ''}
     <div class="links">
-      ${p.site ? `<a href="${esc(p.site)}" rel="noopener noreferrer" target="_blank">Su web</a>` : ''}
-      ${pr.url ? `<a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">${esc(SRC[pr.type] || 'Fuente')}${pr.year ? ' ' + pr.year : ''}</a>` : `<span class="muted">${pr.title ? esc(pr.title) + (pr.year ? ' (' + pr.year + ')' : '') : 'Sin programa todavía'}</span>`}
-      <span class="muted">${r.compared} de ${r.answered} comparadas</span>
+      ${p.site ? `<a href="${esc(p.site)}" rel="noopener noreferrer" target="_blank">${t('Su web')}</a>` : ''}
+      ${pr.url ? `<a href="${esc(pr.url)}" rel="noopener noreferrer" target="_blank">${esc(SRC[pr.type] || t('Fuente'))}${pr.year ? ' ' + pr.year : ''}</a>` : `<span class="muted">${pr.title ? esc(pr.title) + (pr.year ? ' (' + pr.year + ')' : '') : t('Sin programa todavía')}</span>`}
+      <span class="muted">${r.compared} de ${r.answered}${t(' comparadas')}</span>
     </div>
     <div class="grow scroll">
-    ${r.enough ? '' : `<div class="item"><p><b>Aún no sabemos lo suficiente de este partido.</b></p><p>Solo hemos encontrado ${Object.keys(cells).length} posiciones de ${Q.questions.length}. Por eso su porcentaje es poco fiable.</p>${p.priorities ? `<p>Sus prioridades, en su web: ${p.priorities.map(([t, u]) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(t)}</a>`).join(' · ')}</p>` : ''}</div>`}
+    ${r.enough ? '' : `<div class="item"><p><b>${t('Aún no sabemos lo suficiente de este partido.')}</b></p><p>${t('Solo hemos encontrado ')}${Object.keys(cells).length}${t(' posiciones')} de ${Q.questions.length}${t('. Por eso su porcentaje es poco fiable.')}</p>${p.priorities ? `<p>${t('Sus prioridades, en su web: ')}${p.priorities.map(([t, u]) => `<a href="${esc(u)}" rel="noopener noreferrer" target="_blank">${esc(t)}</a>`).join(' · ')}</p>` : ''}</div>`}
     ${qs.map((q) => { const c = cells[q.id] || {}; const s = c.stance || 'insufficient_evidence'; const h = (HI[p.stancesFrom || p.id] || {})[q.id]; return `
-      <div class="item"><p><b>${esc(q.text)}</b></p>
-      <p>${verdict(agr[q.id])}${(st.stars || {})[q.id] ? '<span class="tag star">★ Vale el doble</span>' : ''}</p>
-      <p class="pair">Tú: <b>${LABELS[st.answers[q.id]]}</b> · Partido: <b>${STANCE[s]}</b></p>
+      <div class="item"><p><b>${esc(tx(q, 'text'))}</b></p>
+      <p>${verdict(agr[q.id])}${(st.stars || {})[q.id] ? `<span class="tag star">★ ${t('Vale el doble')}</span>` : ''}</p>
+      <p class="pair">${t('Tú: ')}<b>${LABELS[st.answers[q.id]]}</b>${t(' · Partido: ')}<b>${STANCE[s]}</b></p>
       ${c.summary ? `<p>${esc(c.summary)}</p>` : ''}${c.quote ? `<p>«${esc(c.quote)}»</p>` : ''}
-      ${c.src ? `<p class="muted">${c.research_level === 7 ? 'De un socio o antecesor del partido: ' : c.approx ? 'Parecido, no exacto: ' : ''}${srcLink(c)}</p>` : h ? `<p class="muted">Lo más cercano que hemos encontrado: ${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? '<p class="muted">No hemos encontrado nada. No cuenta.</p>' : ''}</div>`; }).join('') || '<p class="muted">Aún no has respondido nada.</p>'}
+      ${c.src ? `<p class="muted">${c.research_level === 7 ? t('De un socio o antecesor del partido: ') : c.approx ? t('Parecido, no exacto: ') : ''}${srcLink(c)}</p>` : h ? `<p class="muted">${t('Lo más cercano que hemos encontrado: ')}${esc(h.summary)} ${srcLink(h)}</p>` : s === 'insufficient_evidence' ? `<p class="muted">${t('No hemos encontrado nada. No cuenta.')}</p>` : ''}</div>`; }).join('') || `<p class="muted">${t('Aún no has respondido nada.')}</p>`}
     </div>`;
 }
 
 // One plain verdict per statement, so nobody has to compare two labels in their head.
 function verdict(a) {
-  const [cls, txt] = a === undefined ? ['none', 'No lo sabemos'] : a >= 1 ? ['yes', '✓ Pensáis igual'] : a >= 0.75 ? ['yes', '✓ Casi igual'] : a >= 0.5 ? ['mid', '≈ A medias'] : a > 0 ? ['no', '✗ Casi al revés'] : ['no', '✗ Al revés'];
+  const [cls, txt] = a === undefined ? ['none', t('No lo sabemos')] : a >= 1 ? ['yes', t('✓ Pensáis igual')] : a >= 0.75 ? ['yes', t('✓ Casi igual')] : a >= 0.5 ? ['mid', t('≈ A medias')] : a > 0 ? ['no', t('✗ Casi al revés')] : ['no', t('✗ Al revés')];
   return `<span class="verdict ${cls}">${txt}</span>`;
 }
 
 function srcLink(c) {
-  const d = SO[c.src] || {}, where = c.page === 'web' ? '' : `, pág. ${esc(c.page)}`;
-  const label = `${d.level === 4 ? 'Lo dijo ' : d.level === 5 ? 'Votó: ' : ''}${esc(d.title || 'Fuente')}${d.level === 2 ? ' (programa anterior)' : ''}${where}`;
+  const d = SO[c.src] || {}, where = c.page === 'web' ? '' : `${t(', pág. ')}${esc(c.page)}`;
+  const label = `${d.level === 4 ? t('Lo dijo ') : d.level === 5 ? t('Votó: ') : ''}${esc(d.title || t('Fuente'))}${d.level === 2 ? t(' (programa anterior)') : ''}${where}`;
   return d.url ? `<a href="${esc(d.url)}" rel="noopener noreferrer" target="_blank">${label}</a>` : label;
 }
 
 function about() {
-  const KIND = (c) => { const d = SO[c.src] || {}; return c.research_level === 7 ? 'de un socio o antecesor' : c.approx || d.level === 6 ? 'parecidas' : { 1: 'de su programa 29N', 2: 'de un programa anterior', 3: 'de su web', 4: 'dichas en público', 5: 'votadas' }[d.level] || 'otras'; };
+  const KIND = (c) => { const d = SO[c.src] || {}; return c.research_level === 7 ? t('de un socio o antecesor') : c.approx || d.level === 6 ? t('parecidas') : { 1: t('de su programa 29N'), 2: t('de un programa anterior'), 3: t('de su web'), 4: t('dichas en público'), 5: t('votadas') }[d.level] || t('otras'); };
   const rows = P.parties.map((p) => { const cells = Object.entries(stancesOf(p)).filter(([q]) => Q.questions.some((x) => x.id === q)).map(([, c]) => c), by = {};
     cells.forEach((c) => { const k = KIND(c); by[k] = (by[k] || 0) + 1; });
-    return `<div class="item"><b>${esc(p.name)}</b> · ${cells.length} de ${Q.questions.length} posiciones<br><span class="muted">${Object.entries(by).sort((x, y) => y[1] - x[1]).map(([k, n]) => `${n} ${k}`).join(' · ')}${p.stancesFrom ? ' (las del PP)' : ''}</span></div>`; }).join('');
+    return `<div class="item"><b>${esc(p.name)}</b> · ${cells.length} de ${Q.questions.length}${t(' posiciones')}<br><span class="muted">${Object.entries(by).sort((x, y) => y[1] - x[1]).map(([k, n]) => `${n} ${k}`).join(' · ')}${p.stancesFrom ? t(' (las del PP)') : ''}</span></div>`; }).join('');
   return `
-    <button type="button" class="link" data-act="closeabout">← Volver</button>
-    <h1 tabindex="-1">Cómo funciona</h1>
+    <button type="button" class="link" data-act="closeabout">← ${t('Volver')}</button>
+    <h1 tabindex="-1">${t('Cómo funciona')}</h1>
     <div class="grow scroll about">
-      <h2>Para qué sirve</h2>
-      <p>Para ayudarte a ver qué partido piensa más como tú en estas elecciones.</p>
-      <h2>Cómo funciona</h2>
-      <p><b>1.</b> Tú respondes a ${Q.questions.length} frases.</p>
-      <p><b>2.</b> Antes, con ayuda de inteligencia artificial, hemos buscado qué piensa cada partido sobre cada frase: en su programa, en lo que ha votado y en lo que han dicho sus líderes.</p>
-      <p><b>3.</b> Comparamos tus respuestas con las de cada partido y te decimos cuánto os parecéis. Si marcas una frase con ★, vale el doble.</p>
-      <p>Toca cualquier partido y verás, frase a frase, qué piensa y de dónde lo hemos sacado, con su enlace.</p>
-      <h2>Lo que no es</h2>
-      <p>No quiere cambiar lo que piensas. No te dice a quién votar. Solo te ayuda a orientarte.</p>
-      <p>Tus respuestas no salen de tu móvil. Solo guardamos lo que nos escribas en el formulario de abajo.</p>
-      <h2>Puede haber errores</h2>
-      <p>Una IA buscó las fuentes y una persona no lo ha revisado todo. Hemos usado las mejores que encontramos.</p>
-      <p>Si no hay una fuente exacta, usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».</p>
-      <h2>Quién lo hace</h2>
-      <p>Lo hicimos en <a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a> para Núria, que quería saber a quién votar. Es gratis y no hay ningún partido detrás.</p>
-      <p>Todo es abierto: <a href="${REPO}" rel="noopener noreferrer" target="_blank">el código, los datos y el método</a>.</p>
-      <h2>¿Ves algo mal?</h2>
-      <p>Si no estás de acuerdo con algo, o crees que una fuente está mal o es antigua, dínoslo. Tu opinión es muy bienvenida.</p>
+      <h2>${t('Para qué sirve')}</h2>
+      <p>${t('Para ayudarte a ver qué partido piensa más como tú en estas elecciones.')}</p>
+      <h2>${t('Cómo funciona')}</h2>
+      <p><b>1.</b>${t(' Tú respondes a ')}${Q.questions.length}${t(' frases.')}</p>
+      <p><b>2.</b>${t(' Antes, con ayuda de inteligencia artificial, hemos buscado qué piensa cada partido sobre cada frase: en su programa, en lo que ha votado y en lo que han dicho sus líderes.')}</p>
+      <p><b>3.</b>${t(' Comparamos tus respuestas con las de cada partido y te decimos cuánto os parecéis. Si marcas una frase con ★, vale el doble.')}</p>
+      <p>${t('Toca cualquier partido y verás, frase a frase, qué piensa y de dónde lo hemos sacado, con su enlace.')}</p>
+      <h2>${t('Lo que no es')}</h2>
+      <p>${t('No quiere cambiar lo que piensas. No te dice a quién votar. Solo te ayuda a orientarte.')}</p>
+      <p>${t('Tus respuestas no salen de tu móvil. Solo guardamos lo que nos escribas en el formulario de abajo.')}</p>
+      <h2>${t('Puede haber errores')}</h2>
+      <p>${t('Una IA buscó las fuentes y una persona no lo ha revisado todo. Hemos usado las mejores que encontramos.')}</p>
+      <p>${t('Si no hay una fuente exacta, usamos la más cercana y lo decimos: «Parecido, no exacto» o «De un socio o antecesor del partido».')}</p>
+      <h2>${t('Quién lo hace')}</h2>
+      <p>${t('Lo hicimos en ')}<a href="https://bracai.eu" rel="noopener noreferrer" target="_blank">BRACAI</a>${t(' para Núria, que quería saber a quién votar. Es gratis y no hay ningún partido detrás.')}</p>
+      <p>${t('Todo es abierto: ')}<a href="${REPO}" rel="noopener noreferrer" target="_blank">${t('el código, los datos y el método')}</a>.</p>
+      <h2>${t('¿Ves algo mal?')}</h2>
+      <p>${t('Si no estás de acuerdo con algo, o crees que una fuente está mal o es antigua, dínoslo. Tu opinión es muy bienvenida.')}</p>
       <form id="fb" novalidate>
-        <div class="stars" role="group" aria-label="Nota de 1 a 5">${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-star="${n}" aria-pressed="false">${n}</button>`).join('')}</div>
-        <textarea id="fbm" rows="3" maxlength="1000" aria-label="Tu opinión" placeholder="¿Qué partido, qué frase y qué cambiarías?"></textarea>
-        <div class="btns"><button type="submit" class="cta">Enviar</button></div>
+        <div class="stars" role="group" aria-label="${t('Nota de 1 a 5')}">${[1, 2, 3, 4, 5].map((n) => `<button type="button" data-star="${n}" aria-pressed="false">${n}</button>`).join('')}</div>
+        <textarea id="fbm" rows="3" maxlength="1000" aria-label="${t('Tu opinión')}" placeholder="${t('¿Qué partido, qué frase y qué cambiarías?')}"></textarea>
+        <div class="btns"><button type="submit" class="cta">${t('Enviar')}</button></div>
         <p class="muted" id="fbs" role="status"></p>
       </form>
-      <details class="more"><summary>Fuentes de cada partido</summary>
-        <p class="muted">${esc(P.inclusion_rule)} Según donde votes ves solo los que puedes votar.</p>
-        <p class="muted">Aquí ves cuántas posiciones tenemos de cada partido y de dónde salen. El enlace de cada una está en la página del partido, tras responder.</p>
+      <details class="more"><summary>${t('Fuentes de cada partido')}</summary>
+        <p class="muted">${esc(tx(P, 'inclusion_rule'))}${t(' Según donde votes ves solo los que puedes votar.')}</p>
+        <p class="muted">${t('Aquí ves cuántas posiciones tenemos de cada partido y de dónde salen. El enlace de cada una está en la página del partido, tras responder.')}</p>
         ${rows}
       </details>
     </div>`;
@@ -212,18 +217,18 @@ function about() {
 
 function how() {
   return `
-    <button type="button" class="link" data-act="towhere">← Atrás</button>
-    <h1 tabindex="-1">Así funciona</h1>
+    <button type="button" class="link" data-act="towhere">← ${t('Atrás')}</button>
+    <h1 tabindex="-1">${t('Así funciona')}</h1>
     <ol class="steps grow">
-      <li><b>1</b><div><p>Lee ${Q.questions.length} frases y di qué piensas.</p>
-        <div class="mini" aria-hidden="true"><span class="pill on">A favor</span><span class="pill">En contra</span></div></div></li>
-      <li><b>2</b><div><p>¿Una te importa mucho? Márcala y <strong>vale el doble</strong>. Pruébalo:</p>
-        <div class="mini"><button type="button" class="starbtn" data-act="demostar" aria-pressed="false"><span aria-hidden="true">★</span> <span class="lbl">Muy importante</span></button><span class="x2" aria-hidden="true">×2</span></div></div></li>
-      <li><b>3</b><div><p>Mira qué partido piensa más como tú.</p>
+      <li><b>1</b><div><p>${t('Lee ')}${Q.questions.length}${t(' frases y di qué piensas.')}</p>
+        <div class="mini" aria-hidden="true"><span class="pill on">${t('A favor')}</span><span class="pill">${t('En contra')}</span></div></div></li>
+      <li><b>2</b><div><p>${t('¿Una te importa mucho? Márcala y <strong>vale el doble</strong>. Pruébalo:')}</p>
+        <div class="mini"><button type="button" class="starbtn" data-act="demostar" aria-pressed="false"><span aria-hidden="true">★</span> <span class="lbl">${t('Muy importante')}</span></button><span class="x2" aria-hidden="true">×2</span></div></div></li>
+      <li><b>3</b><div><p>${t('Mira qué partido piensa más como tú.')}</p>
         <div class="mini bars" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div></div></li>
     </ol>
-    <div class="btns"><button type="button" class="cta" data-act="go">Empezar</button></div>
-    <p class="note">5 minutos · anónimo · ves el resultado cada 5 frases</p>`;
+    <div class="btns"><button type="button" class="cta" data-act="go">${t('Empezar')}</button></div>
+    <p class="note">${t('5 minutos · anónimo · ves el resultado cada 5 frases')}</p>`;
 }
 const SCREENS = { start, where, how, question, result, why, about };
 function render() {
@@ -243,10 +248,14 @@ function answer(val) {
 }
 
 async function share() {
-  const data = { title: 'Guía de voto 29N', text: `¿Qué partido piensa como tú? ${Q.questions.length} preguntas, 5 minutos.`, url: location.origin + location.pathname };
-  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); app.querySelector('[data-act=share]').textContent = 'Enlace copiado'; } } catch { /* cancelled */ }
+  const data = { title: 'Guía de voto 29N', text: `${t('¿Qué partido piensa como tú? ')}${Q.questions.length}${t(' preguntas, 5 minutos.')}`, url: location.origin + location.pathname + (LANG === 'ca' ? '?lang=ca' : '') };
+  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); app.querySelector('[data-act=share]').textContent = t('Enlace copiado'); } } catch { /* cancelled */ }
 }
 
+document.documentElement.lang = LANG;
+document.querySelector('[data-act=lang]').textContent = LANG === 'ca' ? 'ES' : 'CA';
+document.querySelector('[data-act=lang]').setAttribute('aria-label', LANG === 'ca' ? 'Ver en castellano' : 'Veure en català');
+if (LANG === 'ca') { document.title = 'Guia de vot 29N'; document.querySelector('[data-act=about]').textContent = t('Cómo funciona'); document.querySelector('.brand').firstChild.textContent = 'Guia de vot '; }
 document.addEventListener('click', (e) => {
   if (!Q) return;
   const reg = e.target.closest('[data-region]'); if (reg) return pickRegion(reg.dataset.region);
@@ -266,8 +275,8 @@ document.addEventListener('click', (e) => {
   if (b.dataset.star) { b.parentElement.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); return; }
   switch (b.dataset.act) {
     case 'star': { const q = order()[st.idx]; st.stars = { ...(st.stars || {}) }; if (st.stars[q.id]) delete st.stars[q.id]; else st.stars[q.id] = true;
-      b.setAttribute('aria-pressed', String(!!st.stars[q.id])); b.querySelector('.lbl').textContent = st.stars[q.id] ? 'Vale el doble' : 'Muy importante'; return save(); }
-    case 'demostar': { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); b.querySelector('.lbl').textContent = on ? 'Vale el doble' : 'Muy importante'; b.parentElement.classList.toggle('on', on); return; }
+      b.setAttribute('aria-pressed', String(!!st.stars[q.id])); b.querySelector('.lbl').textContent = st.stars[q.id] ? t('Vale el doble') : t('Muy importante'); return save(); }
+    case 'demostar': { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); b.querySelector('.lbl').textContent = on ? t('Vale el doble') : t('Muy importante'); b.parentElement.classList.toggle('on', on); return; }
     case 'towhere': return go({ screen: 'where' }, true);
     case 'tostart': return go({ screen: 'start' });
     case 'begin': return go({ screen: 'how', idx: 0, answers: {}, stars: {}, info: false, seq: shuffle(Q.questions.map((q) => q.id)) }, true);
@@ -280,6 +289,7 @@ document.addEventListener('click', (e) => {
     case 'about': return st.screen === 'about' ? null : go({ prev: st.screen === 'why' ? 'result' : st.screen, screen: 'about' });
     case 'home': return st.screen === 'about' || st.screen === 'why' ? go({ screen: st.idx ? 'result' : 'start' }) : null;
     case 'share': return share();
+    case 'lang': try { localStorage.setItem('guia29n-lang', LANG === 'ca' ? 'es' : 'ca'); } catch { /* storage unavailable */ } return location.replace(location.pathname);
     case 'restart': return go({ ...FRESH });
   }
 });
@@ -296,13 +306,13 @@ document.addEventListener('submit', async (e) => {
   e.preventDefault();
   const f = e.target, status = f.querySelector('#fbs');
   const rating = f.querySelector('[data-star][aria-pressed=true]')?.dataset.star || '', message = f.querySelector('#fbm').value.trim();
-  if (!rating && !message) { status.textContent = 'Pon una nota o escribe algo.'; return; }
-  status.textContent = 'Enviando…';
+  if (!rating && !message) { status.textContent = t('Pon una nota o escribe algo.'); return; }
+  status.textContent = t('Enviando…');
   try {
     const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'feedback', rating, message }).toString() });
     if (!r.ok) throw new Error(String(r.status));
-    f.innerHTML = '<p><b>¡Gracias!</b></p>';
-  } catch { status.textContent = 'No se ha podido enviar. Prueba más tarde.'; }
+    f.innerHTML = `<p><b>${t('¡Gracias!')}</b></p>`;
+  } catch { status.textContent = t('No se ha podido enviar. Prueba más tarde.'); }
 });
 
 Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/stances.json'), load('data/sources.json'), load('data/map.json')])
@@ -312,4 +322,4 @@ Promise.all([load('data/questions.json'), load('data/parties.json'), load('data/
     if (!SCREENS[st.screen] || st.idx > q.questions.length || (st.screen === 'question' && st.idx >= q.questions.length)) st = { ...FRESH };
     render();
   })
-  .catch(() => { app.innerHTML = '<p>No se han podido cargar los datos. Recarga la página.</p>'; });
+  .catch(() => { app.innerHTML = `<p>${t('No se han podido cargar los datos. Recarga la página.')}</p>`; });

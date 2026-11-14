@@ -77,7 +77,8 @@
    "abbr": "PP",
    "site": "https://www.pp.es/",
    "logo": "pp.png",
-   "about": "Partido conservador, de centroderecha."
+   "about": "Partido conservador, de centroderecha.",
+   "about_ca": "Partit conservador, de centredreta."
   },
   {
    "id": "psoe",
@@ -97,7 +98,8 @@
    "abbr": "PSOE",
    "site": "https://www.psoe.es/",
    "logo": "psoe.png",
-   "about": "Partido socialista, de centroizquierda."
+   "about": "Partido socialista, de centroizquierda.",
+   "about_ca": "Partit socialista, de centreesquerra."
   },
   {
    "id": "vox",
@@ -117,7 +119,8 @@
    "abbr": "VOX",
    "site": "https://www.voxespana.es/",
    "logo": "vox.png",
-   "about": "Partido nacionalista español, a la derecha del PP."
+   "about": "Partido nacionalista español, a la derecha del PP.",
+   "about_ca": "Partit nacionalista espanyol, a la dreta del PP."
   },
   {
    "id": "fa",
@@ -146,7 +149,8 @@
    "abbr": "FA",
    "site": "https://frenteamplio.info",
    "logo": "fa.png",
-   "about": "Coalición nueva de izquierdas: Sumar, Izquierda Unida, Más Madrid, Comuns y otros. La encabeza Ada Colau."
+   "about": "Coalición nueva de izquierdas: Sumar, Izquierda Unida, Más Madrid, Comuns y otros. La encabeza Ada Colau.",
+   "about_ca": "Coalició nova d'esquerres: Sumar, Izquierda Unida, Más Madrid, Comuns i altres. L'encapçala Ada Colau."
   },
   {
    "id": "podemos",
@@ -178,7 +182,8 @@
    "abbr": "POD",
    "site": "https://podemos.info/",
    "logo": "podemos.png",
-   "about": "Partido de izquierdas, a la izquierda del PSOE."
+   "about": "Partido de izquierdas, a la izquierda del PSOE.",
+   "about_ca": "Partit d'esquerres, a l'esquerra del PSOE."
   },
   {
    "id": "erc",
@@ -203,7 +208,8 @@
    "abbr": "ERC",
    "site": "https://www.esquerra.cat/",
    "logo": "erc.png",
-   "about": "Partido catalán, independentista y de izquierdas."
+   "about": "Partido catalán, independentista y de izquierdas.",
+   "about_ca": "Partit català, independentista i d'esquerres."
   },
   {
    "id": "junts",
@@ -228,7 +234,8 @@
    "abbr": "JxC",
    "site": "https://junts.cat/",
    "logo": "junts.png",
-   "about": "Partido catalán, independentista y de centroderecha."
+   "about": "Partido catalán, independentista y de centroderecha.",
+   "about_ca": "Partit català, independentista i de centredreta."
   },
   {
    "id": "pnv",
@@ -252,7 +259,8 @@
    "abbr": "PNV",
    "site": "https://www.eaj-pnv.eus/",
    "logo": "pnv.png",
-   "about": "Partido nacionalista vasco, de centro."
+   "about": "Partido nacionalista vasco, de centro.",
+   "about_ca": "Partit nacionalista basc, de centre."
   },
   {
    "id": "bildu",
@@ -277,7 +285,8 @@
    "abbr": "EHB",
    "site": "https://ehbildu.eus/",
    "logo": "bildu.png",
-   "about": "Coalición vasca, independentista y de izquierdas."
+   "about": "Coalición vasca, independentista y de izquierdas.",
+   "about_ca": "Coalició basca, independentista i d'esquerres."
   },
   {
    "id": "bng",
@@ -302,7 +311,8 @@
    "abbr": "BNG",
    "site": "https://www.bng.gal/",
    "logo": "bng.png",
-   "about": "Partido nacionalista gallego, de izquierdas."
+   "about": "Partido nacionalista gallego, de izquierdas.",
+   "about_ca": "Partit nacionalista gallec, d'esquerres."
   },
   {
    "id": "cc",
@@ -325,7 +335,8 @@
    "abbr": "CC",
    "site": "https://coalicioncanaria.org/",
    "logo": "cc.png",
-   "about": "Partido nacionalista canario, de centro."
+   "about": "Partido nacionalista canario, de centro.",
+   "about_ca": "Partit nacionalista canari, de centre."
   },
   {
    "id": "upn-pp",
@@ -348,7 +359,8 @@
    "abbr": "UPN",
    "site": "https://www.upn.org/",
    "logo": "upn-pp.png",
-   "about": "Lista conjunta en Navarra de UPN, partido regionalista navarro, y el PP."
+   "about": "Lista conjunta en Navarra de UPN, partido regionalista navarro, y el PP.",
+   "about_ca": "Llista conjunta a Navarra d'UPN, partit regionalista navarrès, i el PP."
   },
   {
    "id": "compromis",
@@ -372,7 +384,8 @@
    "abbr": "COM",
    "site": "https://frontvalencia.org",
    "logo": "compromis.png",
-   "about": "Coalición valenciana de izquierdas: Compromís, Podem, Esquerra Unida y ERPV."
+   "about": "Coalición valenciana de izquierdas: Compromís, Podem, Esquerra Unida y ERPV.",
+   "about_ca": "Coalició valenciana d'esquerres: Compromís, Podem, Esquerra Unida i ERPV."
   },
   {
    "id": "d21",
@@ -417,7 +430,8 @@
      "https://democracia21.es/derechos-sociales"
     ]
    ],
-   "about": "Partido nuevo, de 2026, fundado por la abogada Miriam González. Va con Ciudadanos y UCIN."
+   "about": "Partido nuevo, de 2026, fundado por la abogada Miriam González. Va con Ciudadanos y UCIN.",
+   "about_ca": "Partit nou, del 2026, fundat per l'advocada Miriam González. Va amb Ciudadanos i UCIN."
   },
   {
    "id": "salf",
@@ -444,7 +458,8 @@
     "verified": false,
     "note": "PDF aportado por Finn el 13-11-2026. Enlace oficial sin localizar."
    },
-   "about": "Se Acabó La Fiesta. Partido fundado por Alvise Pérez en 2024."
+   "about": "Se Acabó La Fiesta. Partido fundado por Alvise Pérez en 2024.",
+   "about_ca": "Se Acabó La Fiesta. Partit fundat per Alvise Pérez el 2024."
   }
  ],
  "known_exclusions": [
@@ -454,5 +469,6 @@
   "Frente Obrero",
   "PACMA",
   "resto de candidaturas proclamadas"
- ]
+ ],
+ "inclusion_rule_ca": "Hi surten els partits que tenien diputats a l'últim Congrés. A més, hi hem afegit dos partits nous sense diputats: SALF (2,2 % a les enquestes, es presenta a 46 províncies) i Democracia 21 (només a Madrid i Barcelona). Aquests dos els hem triat nosaltres."
 }

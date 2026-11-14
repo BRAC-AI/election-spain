@@ -7,14 +7,16 @@
    "label": "Vivienda",
    "categories": [
     "housing"
-   ]
+   ],
+   "label_ca": "Habitatge"
   },
   {
    "id": "economia",
    "label": "Impuestos",
    "categories": [
     "economy"
-   ]
+   ],
+   "label_ca": "Impostos"
   },
   {
    "id": "empleo",
@@ -22,35 +24,40 @@
    "categories": [
     "employment",
     "social"
-   ]
+   ],
+   "label_ca": "Feina i ajuts"
   },
   {
    "id": "sanidad",
    "label": "Sanidad",
    "categories": [
     "health"
-   ]
+   ],
+   "label_ca": "Sanitat"
   },
   {
    "id": "educacion",
    "label": "Educación",
    "categories": [
     "education"
-   ]
+   ],
+   "label_ca": "Educació"
   },
   {
    "id": "inmigracion",
    "label": "Inmigración",
    "categories": [
     "immigration"
-   ]
+   ],
+   "label_ca": "Immigració"
   },
   {
    "id": "clima",
    "label": "Energía",
    "categories": [
     "climate"
-   ]
+   ],
+   "label_ca": "Energia"
   },
   {
    "id": "defensa",
@@ -58,21 +65,24 @@
    "categories": [
     "defence",
     "eu"
-   ]
+   ],
+   "label_ca": "Defensa"
   },
   {
    "id": "derechos",
    "label": "Derechos",
    "categories": [
     "rights"
-   ]
+   ],
+   "label_ca": "Drets"
   },
   {
    "id": "territorio",
    "label": "Territorio",
    "categories": [
     "territory"
-   ]
+   ],
+   "label_ca": "Territori"
   }
  ],
  "categories": {
@@ -95,210 +105,284 @@
    "category": "housing",
    "text": "El Gobierno debe poner un tope al precio de los alquileres.",
    "info": "Hoy solo se puede limitar en algunas zonas muy caras.",
-   "image": null
+   "image": null,
+   "text_ca": "El Govern ha de posar un límit al preu dels lloguers.",
+   "info_ca": "Avui només es pot limitar en algunes zones molt cares."
   },
   {
    "id": "Q02",
    "category": "housing",
    "text": "Solo quien vive en España debe poder comprar casa aquí.",
    "info": "Hay gente que vive fuera y compra pisos aquí para invertir o veranear.",
-   "image": null
+   "image": null,
+   "text_ca": "Només qui viu a Espanya ha de poder comprar casa aquí.",
+   "info_ca": "Hi ha gent que viu fora i compra pisos aquí per invertir o estiuejar."
   },
   {
    "id": "Q03",
    "category": "economy",
    "text": "Las personas muy ricas deben pagar un impuesto extra.",
    "info": "Desde 2022 existe uno para quien tiene más de 3 millones de euros. Nació como temporal.",
-   "image": null
+   "image": null,
+   "text_ca": "Les persones molt riques han de pagar un impost extra.",
+   "info_ca": "Des del 2022 n'hi ha un per a qui té més de 3 milions d'euros. Va néixer com a temporal."
   },
   {
    "id": "Q04",
    "category": "economy",
    "text": "Todo el mundo debe pagar menos impuestos por lo que gana.",
    "info": "Es el IRPF: lo que Hacienda se queda de tu sueldo.",
-   "image": null
+   "image": null,
+   "text_ca": "Tothom ha de pagar menys impostos pel que guanya.",
+   "info_ca": "És l'IRPF: el que Hisenda es queda del teu sou."
   },
   {
    "id": "Q05",
    "category": "employment",
    "text": "Hay que trabajar menos horas a la semana cobrando lo mismo.",
    "info": "Hoy el máximo son 40 horas. La propuesta es bajar a 37,5.",
-   "image": null
+   "image": null,
+   "text_ca": "Cal treballar menys hores a la setmana cobrant el mateix.",
+   "info_ca": "Avui el màxim són 40 hores. La proposta és baixar a 37,5."
   },
   {
    "id": "Q06",
    "category": "employment",
    "text": "El sueldo mínimo debe subir cada año tanto como los precios.",
    "info": "El sueldo mínimo lo decide el Gobierno cada año.",
-   "image": null
+   "image": null,
+   "text_ca": "El sou mínim ha de pujar cada any tant com els preus.",
+   "info_ca": "El sou mínim el decideix el Govern cada any."
   },
   {
    "id": "Q07",
    "category": "social",
    "text": "Todas las familias deben recibir una ayuda por cada hijo.",
    "info": "La recibirían todas las familias, ganen lo que ganen.",
-   "image": null
+   "image": null,
+   "text_ca": "Totes les famílies han de rebre un ajut per cada fill.",
+   "info_ca": "El rebrien totes les famílies, guanyin el que guanyin."
   },
   {
    "id": "Q08",
    "category": "health",
    "text": "Los inmigrantes sin papeles deben poder usar la sanidad pública.",
    "info": "Son personas extranjeras que viven aquí sin permiso de residencia.",
-   "image": null
+   "image": null,
+   "text_ca": "Els immigrants sense papers han de poder fer servir la sanitat pública.",
+   "info_ca": "Són persones estrangeres que viuen aquí sense permís de residència."
   },
   {
    "id": "Q09",
    "category": "health",
    "text": "La sanidad pública debe usar más los hospitales privados.",
    "info": "La sanidad pública ya paga a centros privados algunas pruebas y operaciones.",
-   "image": null
+   "image": null,
+   "text_ca": "La sanitat pública ha de fer servir més els hospitals privats.",
+   "info_ca": "La sanitat pública ja paga a centres privats algunes proves i operacions."
   },
   {
    "id": "Q10",
    "category": "education",
    "text": "Los colegios concertados deben seguir recibiendo dinero público.",
    "info": "Son colegios privados que reciben dinero público a cambio de cumplir unas normas.",
-   "image": null
+   "image": null,
+   "text_ca": "Les escoles concertades han de continuar rebent diners públics.",
+   "info_ca": "Són escoles privades que reben diners públics a canvi de complir unes normes."
   },
   {
    "id": "Q12",
    "category": "climate",
    "text": "Las centrales nucleares deben seguir abiertas más años.",
    "info": "El plan actual es cerrarlas poco a poco entre 2027 y 2035.",
-   "image": null
+   "image": null,
+   "text_ca": "Les centrals nuclears han de continuar obertes més anys.",
+   "info_ca": "El pla actual és tancar-les a poc a poc entre el 2027 i el 2035."
   },
   {
    "id": "Q13",
    "category": "immigration",
    "text": "Hay que dar papeles a los inmigrantes que ya viven y trabajan aquí.",
    "info": "«Dar papeles» es dar permiso para vivir y trabajar legalmente.",
-   "image": null
+   "image": null,
+   "text_ca": "Cal donar papers als immigrants que ja viuen i treballen aquí.",
+   "info_ca": "«Donar papers» és donar permís per viure i treballar legalment."
   },
   {
    "id": "Q14",
    "category": "immigration",
    "text": "Los españoles deben ir primero al repartir ayudas.",
    "info": "A esta idea la llaman «prioridad nacional».",
-   "image": null
+   "image": null,
+   "text_ca": "Els espanyols han d'anar primer a l'hora de repartir ajuts.",
+   "info_ca": "D'aquesta idea en diuen «prioritat nacional»."
   },
   {
    "id": "Q15",
    "category": "defence",
    "text": "España debe gastar más dinero en su ejército.",
    "info": "La OTAN pide gastar al menos el 2 % de lo que produce el país.",
-   "image": null
+   "image": null,
+   "text_ca": "Espanya ha de gastar més diners en el seu exèrcit.",
+   "info_ca": "L'OTAN demana gastar almenys el 2 % del que produeix el país."
   },
   {
    "id": "Q16",
    "category": "rights",
    "text": "Para cambiar de sexo en el DNI debe hacer falta un informe médico.",
    "info": "Desde 2023 basta con pedirlo, a partir de los 16 años.",
-   "image": null
+   "image": null,
+   "text_ca": "Per canviar de sexe al DNI ha de caldre un informe mèdic.",
+   "info_ca": "Des del 2023 n'hi ha prou amb demanar-ho, a partir dels 16 anys."
   },
   {
    "id": "Q17",
    "category": "rights",
    "text": "El derecho al aborto debe estar en la Constitución.",
    "info": "Hoy lo regula una ley normal, que el Congreso puede cambiar.",
-   "image": null
+   "image": null,
+   "text_ca": "El dret a l'avortament ha de ser a la Constitució.",
+   "info_ca": "Avui el regula una llei normal, que el Congrés pot canviar."
   },
   {
    "id": "Q18",
    "category": "territory",
    "text": "Una comunidad debe poder votar si quiere separarse de España.",
    "info": "La Constitución de hoy no lo permite.",
-   "image": null
+   "image": null,
+   "text_ca": "Una comunitat ha de poder votar si vol separar-se d'Espanya.",
+   "info_ca": "La Constitució d'avui no ho permet."
   },
   {
    "id": "Q19",
    "category": "territory",
    "text": "Cada comunidad debe poder cobrar todos sus impuestos.",
    "info": "Hoy solo lo hacen el País Vasco y Navarra.",
-   "image": null
+   "image": null,
+   "text_ca": "Cada comunitat ha de poder cobrar tots els seus impostos.",
+   "info_ca": "Avui només ho fan el País Basc i Navarra."
   },
   {
    "id": "Q20",
    "category": "eu",
    "text": "España debe seguir enviando armas a Ucrania.",
    "info": "España manda armas y munición desde que Rusia invadió Ucrania en 2022.",
-   "image": null
+   "image": null,
+   "text_ca": "Espanya ha de continuar enviant armes a Ucraïna.",
+   "info_ca": "Espanya envia armes i munició des que Rússia va envair Ucraïna el 2022."
   },
   {
    "id": "Q23",
    "category": "economy",
    "text": "Heredar de padres a hijos no debe pagar impuestos.",
    "info": "Hoy se paga un impuesto que cambia según la comunidad; en algunas, casi nada. Unos quieren quitarlo; otros, que paguen las herencias grandes.",
-   "image": null
+   "image": null,
+   "text_ca": "Heretar de pares a fills no ha de pagar impostos.",
+   "info_ca": "Avui es paga un impost que canvia segons la comunitat; en algunes, gairebé res. Uns el volen treure; d'altres, que paguin les herències grans."
   },
   {
    "id": "Q24",
    "category": "economy",
    "text": "Los bancos deben pagar un impuesto extra por sus beneficios.",
    "info": "En 2022 se creó un impuesto especial a los bancos, que ganaban mucho. Unos quieren mantenerlo; otros dicen que lo acaba pagando el cliente.",
-   "image": null
+   "image": null,
+   "text_ca": "Els bancs han de pagar un impost extra pels seus beneficis.",
+   "info_ca": "El 2022 es va crear un impost especial als bancs, que guanyaven molt. Uns el volen mantenir; d'altres diuen que l'acaba pagant el client."
   },
   {
    "id": "Q26",
    "category": "housing",
    "text": "Quien ocupa una casa ajena debe poder ser desalojado en 48 horas.",
    "info": "Okupar es entrar a vivir en una casa sin permiso. Hoy echar a un okupa puede tardar meses. Otros avisan: hay familias sin otro sitio adonde ir.",
-   "image": null
+   "image": null,
+   "text_ca": "Qui ocupa una casa d'un altre ha de poder ser desallotjat en 48 hores.",
+   "info_ca": "Ocupar és entrar a viure en una casa sense permís. Avui fer fora un ocupa pot trigar mesos. D'altres avisen: hi ha famílies sense cap altre lloc on anar."
   },
   {
    "id": "Q35",
    "category": "territory",
    "text": "El catalán, el euskera y el gallego deben poder usarse en el Congreso y en las oficinas del Estado.",
    "info": "Son oficiales en sus comunidades y, desde 2023, se usan en el Congreso. Unos las quieren en cualquier oficina del Estado; otros, solo el castellano.",
-   "image": null
+   "image": null,
+   "text_ca": "El català, l'euskera i el gallec s'han de poder fer servir al Congrés i a les oficines de l'Estat.",
+   "info_ca": "Són oficials a les seves comunitats i, des del 2023, es fan servir al Congrés. Uns les volen a qualsevol oficina de l'Estat; d'altres, només el castellà."
   },
   {
    "id": "Q37",
    "category": "rights",
    "text": "La eutanasia debe seguir siendo legal.",
    "info": "La eutanasia es ayudar a morir a una persona con una enfermedad muy grave que lo pide. En España es legal desde 2021, con controles médicos.",
-   "image": null
+   "image": null,
+   "text_ca": "L'eutanàsia ha de continuar sent legal.",
+   "info_ca": "L'eutanàsia és ajudar a morir una persona amb una malaltia molt greu que ho demana. A Espanya és legal des del 2021, amb controls mèdics."
   },
   {
    "id": "Q39",
    "category": "eu",
    "text": "España no debe comerciar con armas con Israel.",
    "info": "Por la guerra en Gaza, España aprobó en 2025 no vender ni comprar armas a Israel, con algunas excepciones. Unos quieren un veto total; otros, quitarlo.",
-   "image": null
+   "image": null,
+   "text_ca": "Espanya no ha de comerciar amb armes amb Israel.",
+   "info_ca": "Per la guerra a Gaza, Espanya va aprovar el 2025 no vendre ni comprar armes a Israel, amb algunes excepcions. Uns volen un veto total; d'altres, treure'l."
   },
   {
    "id": "Q41",
    "category": "climate",
    "text": "España debe cumplir las normas europeas contra el cambio climático, aunque cuesten dinero.",
    "info": "La UE tiene un plan, el Pacto Verde, para contaminar menos. Obliga a cambiar coches, fábricas y cultivos. Unos lo ven necesario; otros, demasiado caro.",
-   "image": null
+   "image": null,
+   "text_ca": "Espanya ha de complir les normes europees contra el canvi climàtic, encara que costin diners.",
+   "info_ca": "La UE té un pla, el Pacte Verd, per contaminar menys. Obliga a canviar cotxes, fàbriques i conreus. Uns el veuen necessari; d'altres, massa car."
   },
   {
    "id": "Q42",
    "category": "social",
    "text": "Las pensiones deben subir cada año tanto como los precios.",
    "info": "Hoy la ley sube las pensiones con el IPC, que mide cuánto suben los precios. Unos quieren mantenerlo; otros dicen que cuesta demasiado.",
-   "image": null
+   "image": null,
+   "text_ca": "Les pensions han de pujar cada any tant com els preus.",
+   "info_ca": "Avui la llei apuja les pensions amb l'IPC, que mesura quant pugen els preus. Uns ho volen mantenir; d'altres diuen que costa massa."
   },
   {
    "id": "Q43",
    "category": "eu",
    "text": "El Sáhara Occidental debe decidir su futuro en un referéndum.",
    "info": "Fue colonia española. Marruecos lo controla y ofrece que sea una región suya. España apoyó ese plan en 2022. Otros piden que voten los saharauis.",
-   "image": null
+   "image": null,
+   "text_ca": "El Sàhara Occidental ha de decidir el seu futur en un referèndum.",
+   "info_ca": "Va ser colònia espanyola. El Marroc el controla i ofereix que sigui una regió seva. Espanya va donar suport a aquest pla el 2022. D'altres demanen que votin els sahrauís."
   },
   {
    "id": "Q44",
    "category": "economy",
    "text": "Los autónomos que facturan poco deben poder elegir no poner IVA en sus facturas.",
    "info": "Hoy suman el IVA a cada factura y lo declaran cada tres meses. La idea: quien factura menos de 85.000 € al año podría no hacerlo. A cambio, no recupera el IVA de sus compras.",
-   "image": null
+   "image": null,
+   "text_ca": "Els autònoms que facturen poc han de poder triar no posar IVA a les seves factures.",
+   "info_ca": "Avui sumen l'IVA a cada factura i el declaren cada tres mesos. La idea: qui factura menys de 85.000 € l'any podria no fer-ho. A canvi, no recupera l'IVA de les seves compres."
   },
   {
    "id": "Q45",
    "category": "territory",
    "text": "Los trenes de cercanías los debe gestionar cada comunidad, no el Estado.",
    "info": "Hoy los lleva Renfe, que es del Estado. Cataluña ha pedido gestionar los suyos. Unos quieren lo mismo para todas; otros, una sola red.",
-   "image": null
+   "image": null,
+   "text_ca": "Els trens de rodalia els ha de gestionar cada comunitat, no l'Estat.",
+   "info_ca": "Avui els porta Renfe, que és de l'Estat. Catalunya ha demanat gestionar els seus. Uns volen el mateix per a totes; d'altres, una sola xarxa."
   }
- ]
+ ],
+ "categories_ca": {
+  "housing": "Habitatge",
+  "economy": "Economia i impostos",
+  "employment": "Feina",
+  "social": "Pensions i protecció social",
+  "health": "Sanitat",
+  "education": "Educació",
+  "climate": "Clima i energia",
+  "immigration": "Immigració",
+  "defence": "Seguretat i defensa",
+  "rights": "Drets i igualtat",
+  "territory": "Institucions i territori",
+  "eu": "UE i política exterior"
+ }
 }
