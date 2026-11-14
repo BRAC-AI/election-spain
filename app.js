@@ -121,7 +121,8 @@ function result() {
     ${meter(st.justLevel || 0)}
     ${hero(rows)}
     <div class="list grow scroll">${rows.filter((r) => r.conclusive).sort((x, y) => y.alignment - x.alignment || x.name.localeCompare(y.name, 'es')).map(row).join('')}
-      ${rows.filter((r) => !r.conclusive).map(row).join('')}</div>
+      ${rows.filter((r) => !r.conclusive).map(row).join('')}
+      <p class="note">Hay más listas. Estas tenían escaño, más dos nuevas.</p></div>
     <div class="btns">
       ${left > 0 ? `<button type="button" class="cta" data-act="more">Seguir: te faltan ${left}</button>` : `<button type="button" class="cta" data-act="share">Compartir</button>`}
       <button type="button" class="cta alt" data-act="restart" aria-label="Empezar de nuevo">↺</button>
